@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>COVID Like</fullName>
+        <default>false</default>
+        <label>COVID Like</label>
+    </customValue>
+    <customValue>
+        <fullName>Presumptive COVID</fullName>
+        <default>false</default>
+        <label>Presumptive COVID</label>
+    </customValue>
+    <customValue>
+        <fullName>Covid Positive</fullName>
+        <default>false</default>
+        <label>COVID Positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Comorbidity</fullName>
+        <default>false</default>
+        <label>Comorbidity</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Care Staff COVID Positive</fullName>
+        <default>false</default>
+        <label>Health Care Staff COVID Positive</label>
+    </customValue>
+    <customValue>
+        <fullName>Age Range</fullName>
+        <default>false</default>
+        <label>Age Range</label>
+    </customValue>
+    <customValue>
+        <fullName>Ventilator Beds</fullName>
+        <default>false</default>
+        <label>Ventilator Beds</label>
+    </customValue>
+    <customValue>
+        <fullName>Anaesthesia Machines</fullName>
+        <default>false</default>
+        <label>Anaesthesia Machines</label>
+    </customValue>
+    <customValue>
+        <fullName>N95 Masks</fullName>
+        <default>false</default>
+        <label>N95 Masks</label>
+    </customValue>
+    <customValue>
+        <fullName>Face Shields</fullName>
+        <default>false</default>
+        <label>Face Shields</label>
+    </customValue>
+    <customValue>
+        <fullName>Hoods</fullName>
+        <default>false</default>
+        <label>Hoods</label>
+    </customValue>
+    <customValue>
+        <fullName>Level 3 Gowns</fullName>
+        <default>false</default>
+        <label>Level 3 Gowns</label>
+    </customValue>
+    <customValue>
+        <fullName>Level 4 Gowns</fullName>
+        <default>false</default>
+        <label>Level 4 Gowns</label>
+    </customValue>
+    <customValue>
+        <fullName>Coveralls</fullName>
+        <default>false</default>
+        <label>Coveralls</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgical Gowns</fullName>
+        <default>false</default>
+        <label>Surgical Gowns</label>
+    </customValue>
+    <customValue>
+        <fullName>Fit Tests</fullName>
+        <default>false</default>
+        <label>Fit Tests</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgical Masks</fullName>
+        <default>false</default>
+        <label>Surgical Masks</label>
+    </customValue>
+    <customValue>
+        <fullName>Exam Masks</fullName>
+        <default>false</default>
+        <label>Exam Masks</label>
+    </customValue>
+    <customValue>
+        <fullName>Gloves (Nitrile)</fullName>
+        <default>false</default>
+        <label>Gloves (Nitrile)</label>
+    </customValue>
+    <customValue>
+        <fullName>Gloves (Sterile)</fullName>
+        <default>false</default>
+        <label>Gloves (Sterile)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hand Sanitizer</fullName>
+        <default>false</default>
+        <label>Hand Sanitizer</label>
+    </customValue>
+    <customValue>
+        <fullName>Disinfectant</fullName>
+        <default>false</default>
+        <label>Disinfectant</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Goggles</fullName>
+        <default>false</default>
+        <label>Safety Goggles</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Glasses</fullName>
+        <default>false</default>
+        <label>Safety Glasses</label>
+    </customValue>
+    <customValue>
+        <fullName>Shoe Covers</fullName>
+        <default>false</default>
+        <label>Shoe Covers</label>
+    </customValue>
+    <masterLabel>Status Report Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

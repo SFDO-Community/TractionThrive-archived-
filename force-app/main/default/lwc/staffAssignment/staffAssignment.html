@@ -1,0 +1,49 @@
+<!--
+ - Created by mmanik on 3/28/2020.
+ -->
+
+<!-- Staff Assignment -->
+<template >
+    <c-app-spinner></c-app-spinner>
+    <lightning-card title="New Staff Access" icon-name="action:new_account">
+        <div class="slds-m-around_medium slds-box">
+            <lightning-record-view-form record-id={recordId} object-api-name="Contact">
+                <div class="slds-grid">
+                        <label class="slds-text-title_bold">{recordName}</label>
+                        <div class="slds-p-left_xx-small">
+                            <lightning-output-field field-name="Name" variant="label-hidden"></lightning-output-field>
+                        </div>
+                </div>
+            </lightning-record-view-form>
+            <lightning-record-view-form record-id={recordId} object-api-name="Account">
+                <div class="slds-grid">
+                    <lightning-output-field field-name="Name" variant="label-hidden"></lightning-output-field>
+                </div>
+            </lightning-record-view-form>
+
+            <div class="slds-p-top_medium" >
+                <label class="slds-text-title_bold">{lookupName}</label>
+                <div class="slds-form-element slds-p-top_x-small" >
+                <c-lookup
+                        selection={lookupConfig.initialSelection}
+                        errors={lookupConfig.lookupErrors}
+                        is-multi-entry={lookupConfig.isMultiEntry}
+                        onsearch={handleLookupSearch}
+                        onselectionchange={handleLookupChange}
+                        placeholder="Search Care Facility"
+                        class="cmp-facility-lookup"
+                >
+                </c-lookup>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-p-top_x-small ">
+                <div class="slds-col slds-text-align_right">
+                    <lightning-button variant="brand" label="Save" disabled={disableSave} onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+
+        </div>
+    </lightning-card>
+
+</template>

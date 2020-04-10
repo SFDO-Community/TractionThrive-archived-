@@ -1,0 +1,100 @@
+<!--
+ - Created by Christian Wico - cwico@tractionondemand.com on 2020-03-25.
+ -->
+
+<!-- Staff Availability Item -->
+<template>
+
+	<div class="slds-card cmp-assignment" data-is-expanded={isExpanded}>
+
+		<div class="slds-grid slds-p-around_small" onclick={handleExpand}>
+			<div class="slds-col cmp-date-col">
+				<div class="cmp-date slds-text-color_default">
+					<lightning-formatted-date-time
+						value={date}
+						year="numeric"
+						day="numeric"
+						month="long"
+						time-zone="UTC"
+					>
+					</lightning-formatted-date-time>
+				</div>
+				<div class="cmp-day-of-week slds-color__text_gray-8">
+					<lightning-formatted-date-time
+						value={date}
+						weekday="long"
+						time-zone="UTC">
+					</lightning-formatted-date-time>
+				</div>
+
+				<div class="cmp-location" if:true={hasLocation}>
+					<lightning-icon icon-name="utility:checkin" size="xx-small"></lightning-icon>
+					<span class="cmp-facility-name">{facility.Name}</span>
+				</div>
+			</div>
+			<div class="slds-col cmp-availability-col">
+				<div class="cmp-availability-date-wrap">
+					<div class="cmp-availability" data-available={statusValue}>{statusValue}</div>
+
+					<div class="cmp-modify-date" if:true={record.LastModifiedDate}>
+						<span>UPDATED: </span>
+						<lightning-formatted-date-time
+							value={record.LastModifiedDate}
+							year="numeric"
+							month="numeric"
+							day="numeric"
+							time-zone="UTC">
+						</lightning-formatted-date-time>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cmp-record-form" if:true={isExpanded}>
+
+			<div class="slds-form_stacked slds-m-horizontal_small">
+				<div class="slds-form-element">
+					<lightning-input-field field-name={availableFieldName} value={available}></lightning-input-field>
+					<lightning-radio-group label="Availability"
+					                       class="cmp-availability-buttons"
+					                       variant="label-hidden"
+					                       options={statusOptions}
+					                       value={statusValue}
+					                       required
+					                       type="button"
+					                       onchange={handleStatusChange}
+					></lightning-radio-group>
+				</div>
+				<div class="slds-form-element" if:true={isAssigned}>
+					<c-lookup
+						selection={lookupConfig.initialSelection}
+						errors={lookupConfig.lookupErrors}
+						is-multi-entry={lookupConfig.isMultiEntry}
+						onsearch={handleLookupSearch}
+						onselectionchange={handleLookupChange}
+						label="Care Facility"
+						placeholder="Search Care Facility"
+						class="cmp-facility-lookup"
+					>
+					</c-lookup>
+				</div>
+			</div>
+
+
+			<div class="slds-grid slds-p-horizontal_large slds-p-top_x-small slds-p-bottom_medium">
+				<div class="slds-col slds-text-align_right">
+					<a class="cmp-cancel-button cmp-button" onclick={handleCancel}>
+						<lightning-icon icon-name="utility:close" variant="error" size="x-small"></lightning-icon>
+						<span class="slds-m-left_small">Cancel</span>
+					</a>
+					<a class="cmp-ok-button cmp-button slds-m-left_large" onclick={handleOK} >
+						<lightning-icon icon-name="utility:check" variant="success" size="x-small"></lightning-icon>
+						<span class="slds-m-left_x-small">OK</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</template>

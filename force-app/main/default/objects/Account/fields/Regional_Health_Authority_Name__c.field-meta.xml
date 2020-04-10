@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Health_Authority_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (RecordType.DeveloperName = &quot;Regional_Health_Authority&quot;,  Name , IF( Parent.RecordType.DeveloperName = &quot;Regional_Health_Authority&quot;, Parent.Name,Parent.Parent.Name))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Regional Health Authority Name</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

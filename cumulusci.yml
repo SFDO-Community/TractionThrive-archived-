@@ -1,0 +1,469 @@
+minimum_cumulusci_version: "3.9.0"
+project:
+    name: TractionThrive
+    package:
+        name: Traction Thrive
+        namespace: tractionthrive
+        api_version: "48.0"
+    source_format: sfdx
+    test:
+        name_match: "%TEST%"
+    git:
+        repo_url: https://github.com/SalesforceFoundation/Thrive
+        prefix_beta: beta/
+        prefix_release: release/
+
+tasks:
+    assign_role_to_user:
+        class_path: tasks.assign_role_to_user.AssignRole
+
+    create_community:
+        group: Traction Thrive Config
+        description: Creates the community
+        class_path: tasks.create_community_workaround.CreateCommunity
+        options:
+            template: "Traction Thrive"
+            name: "Traction Thrive"
+            url_path_prefix: TractionThrive
+
+    add_namespace_tokens:
+        class_path: tasks.add_namespace_tokens.AddNamespaceTokens
+
+    delete_data:
+        class_path: cumulusci.tasks.bulkdata.DeleteData
+        options:
+            objects:
+                - Assignment__c
+                - Credential__c
+                - Staff_Access__c
+                - Case
+                - Contact
+                - Staff_Levels__c
+                - Status_Report__c
+                - Account
+
+    delete_data_managed:
+        class_path: cumulusci.tasks.bulkdata.DeleteData
+        options:
+            objects:
+                - tractionthrive__Assignment__c
+                - tractionthrive__Credential__c
+                - tractionthrive__Staff_Access__c
+                - Case
+                - Contact
+                - tractionthrive__Staff_Levels__c
+                - tractionthrive__Status_Report__c
+                - Account
+
+    deploy_community_config:
+        description: Deploys the Community configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/community
+            namespace_inject: $project_config.project__package__namespace
+
+    deploy_navigation_config:
+        description: Deploys the Community navigation configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/navigation
+
+    deploy_profile_config:
+        description: Deploys the Profiles
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/profiles
+            namespace_inject: $project_config.project__package__namespace
+
+    deploy_kav_config:
+        description: Deploys the Knowledge configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/kav
+
+    deploy_wave_config:
+        description: Deploys the Wave configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/wave
+            namespace_inject: $project_config.project__package__namespace
+
+    get_available_licenses:
+        description: This preflight check examines available licenses in the org.
+        class_path: tasks.licenses_preflight.GetAvailableLicenses
+
+    get_available_psls:
+        description: This preflight check examines available Permission Set Licenses in the org.
+        class_path: tasks.licenses_preflight.GetAvailablePermissionSetLicenses
+
+    publish_community:
+        description: Publishes the community
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.PublishCommunity
+        options:
+            name: "Traction Thrive"
+
+    retrieve_community_config:
+        description: Retrieves the Community configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.RetrieveUnpackaged
+        options:
+            path: unpackaged/config/community
+            package_xml: manifests/community.xml
+
+    retrieve_navigation_config:
+        description: Retrieves the Community navigation configuration
+        group: Thrive Config
+        class_path: cumulusci.tasks.salesforce.RetrieveUnpackaged
+        options:
+            path: unpackaged/config/navigation
+            package_xml: manifests/navigation.xml
+
+    retrieve_profile_config:
+        description: Retrieves the relevant Profiles
+        group: Thrive Config
+        class_path: cumulusci.tasks.salesforce.RetrieveUnpackaged
+        options:
+            path: unpackaged/config/profiles
+            package_xml: manifests/profiles.xml
+
+    retrieve_wave_config:
+        description: Retrieves the Einstein Analytics configuration
+        group: Traction Thrive Config
+        class_path: cumulusci.tasks.salesforce.RetrieveUnpackaged
+        options:
+            path: unpackaged/config/wave
+            package_xml: manifests/wave.xml
+
+    robot:
+        options:
+            suites: robot/Crisis-Management/tests
+            options:
+                outputdir: robot/Crisis-Management/results
+
+    robot_testdoc:
+        options:
+            path: robot/Crisis-Management/tests
+            output: robot/Crisis-Management/doc/Crisis_Management_tests.html
+
+    set_organization_wide_defaults:
+        options:
+            org_wide_defaults:
+                - api_name: Account
+                  internal_sharing_model: ReadWrite
+                  external_sharing_model: ReadWrite
+                # - api_name: Contact
+                #   internal_sharing_model: ControlledByParent
+                #   external_sharing_model: ControlledByParent                  
+                #- api_name: Assignment__c
+                #  internal_sharing_model: ReadWrite
+                #  external_sharing_model: ReadWrite
+                #- api_name: Credential__c
+                #  internal_sharing_model: ReadWrite
+                #  external_sharing_model: ReadWrite
+
+    set_sharing_dependencies:
+        description: Deploy the Case and Opportunity sharing configuration
+        group: Traction Thrive Dependencies
+        class_path: cumulusci.tasks.metadata_etl.SetOrgWideDefaults
+        options:
+            org_wide_defaults:
+                - api_name: Case
+                  internal_sharing_model: Private
+                  external_sharing_model: Private
+                - api_name: Opportunity
+                  internal_sharing_model: Private
+                  external_sharing_model: Private
+
+    set_user_role_scratch_org:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            apex: >
+                delete [SELECT Id FROM UserRole];
+                UserRole ur = new UserRole(Name = 'CEO');
+                insert ur;
+                update new User(Id = UserInfo.getUserId(), UserRoleId = ur.Id);
+
+    update_admin_profile:
+        options:
+            record_types:
+                - record_type: "Account.{managed}Division"
+                  default: true
+                - record_type: "Account.{managed}Hospital"
+                - record_type: "Account.{managed}Regional_Health_Authority"
+            api_names:
+                - Admin
+                - Analytics Cloud Integration User
+
+    uninstall_packaged_incremental:
+        options:
+            ignore:
+                CustomApplication:
+                    - Crisis_Management
+                CompactLayout:
+                    - Lead.Leads_Custom_Compact_Layout
+                    - Opportunity.New_Awesome_Companct_Layout
+                CustomObject:
+                    - Knowledge__kav
+                Layout:
+                    - Knowledge__kav-Knowledge Layout
+                    - Staff_Access__c-Staff Access Layout
+                    - Staff_Levels__c-Staff Levels Layout
+                ListView:
+                    - Knowledge__kav.archived_articles
+                    - Knowledge__kav.draft_articles
+                    - Knowledge__kav.published_articles
+                QuickAction:
+                    - Snapins_Contact_PrechatQuickAction_08h2F0000004CKf_1585493095610
+                    - Snapins_Case_PrechatQuickAction_08h2F0000004CKf_1585493095785
+                    - Snapins_Case_OfflineCaseQuickAction_08h2F0000004CKf_1585495741456
+                WebLink:
+                    - Campaign.ViewCampaignInfluenceReport
+
+    check_case_owd:
+        class_path: tasks.owd_preflight.CheckOWDForObject
+        options:
+            sobject: Case
+            internal_sharing_model: Private
+            external_sharing_model: Private
+    
+    check_opportunity_owd:
+        class_path: tasks.owd_preflight.CheckOWDForObject
+        options:
+            sobject: Opportunity
+            internal_sharing_model: Private
+            external_sharing_model: Private
+
+    add_standard_value_set_entries:
+        options:
+            api_names:
+                - AccountType
+            entries:
+                - label: Clinic
+                  fullName: Clinic
+                - label: COVID Clinic
+                  fullName: COVID Clinic
+                - label: Hospital
+                  fullName: Hospital
+                - label: UPCC
+                  fullName: UPCC
+
+flows:
+    config_apextest:
+        steps:
+            3:
+                task: deploy_wave_config
+            4:
+                task: deploy_kav_config
+            5:
+                task: deploy_profile_config
+            6:
+                task: load_dataset
+            7:
+                task: set_organization_wide_defaults
+            8:
+                task: set_user_role_scratch_org
+                when: org_config.scratch
+
+    config_community:
+        description: Creates, configures, and publishes the Community
+        steps:
+            1:
+                task: create_community
+            2:
+                task: deploy_navigation_config
+            3:
+                task: deploy_community_config
+            4:
+                task: publish_community
+
+    config_managed:
+        steps:
+            3:
+                task: deploy_wave_config
+                options:
+                    unmanaged: False
+            4:
+                flow: config_community
+                options:
+                    deploy_community_config:
+                        unmanaged: False
+            5:
+                task: deploy_kav_config
+            6:
+                task: deploy_profile_config
+                options:
+                    unmanaged: False
+            7:
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping-managed.yml
+            8:
+                task: set_organization_wide_defaults
+            9:
+                task: set_user_role_scratch_org
+                when: org_config.scratch
+
+    config_default:
+        description: Deploys the default configuration for all environments
+        steps:
+            1:
+                task: deploy_wave_config
+            2:
+                flow: config_community
+            3:
+                task: deploy_kav_config
+            4:
+                task: deploy_profile_config
+            5:
+                task: load_dataset
+            6:
+                task: set_organization_wide_defaults
+            7:
+                task: set_user_role_scratch_org
+                when: org_config.scratch
+
+    config_dev:
+        steps:
+            3:
+                flow: config_default
+
+    config_qa:
+        steps:
+            3:
+                flow: config_default
+
+    config_packaging:
+        steps:
+            1:
+                options:
+                    managed: False
+            # Use the minimal configuration necessary to get apex tests to pass
+            3:
+                task: deploy_kav_config
+            4:
+                task: deploy_profile_config
+                namespaced_org: True
+            5:
+                task: set_organization_wide_defaults
+
+    custom_dependencies:
+        descriptions: Additional custom dependency tasks
+        steps:
+            1:
+                task: set_sharing_dependencies
+            2:
+                task: add_standard_value_set_entries
+
+    dependencies:
+        steps:
+            3:
+                flow: custom_dependencies
+
+    beta_dependencies:
+        steps:
+            3:
+                flow: custom_dependencies
+
+    retrieve_config_unmanaged:
+        steps:
+            1:
+                task: retrieve_navigation_config
+            1.1:
+                task: add_namespace_tokens
+                options:
+                    directories: unpackaged/config/navigation
+                    really_change_files: True
+            2:
+                task: retrieve_profile_config
+            2.1:
+                task: add_namespace_tokens
+                options:
+                    directories: unpackaged/config/profiles
+                    really_change_files: True
+            3:
+                task: retrieve_wave_config
+            3.1:
+                task: add_namespace_tokens
+                options:
+                    directories: unpackaged/config/wave
+                    really_change_files: True
+
+plans:
+    install:
+        slug: install
+        title: Install Traction Thrive
+        tier: primary
+        is_listed: True
+        checks:
+            #- when: "'PID_Customer_Community_Plus' not in tasks.get_available_licenses()"
+            #  action: error
+            #  message: "Please ensure you have Customer Community Plus licenses available prior to installing."
+            - when: "'EinsteinAnalyticsPlusPsl' not in tasks.get_available_psls() or 'EinsteinAnalyticsForCommunityLoginsPsl' not in tasks.get_available_psls()"
+              action: warn
+              message: "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing."
+            - when: "not tasks.check_case_owd()"
+              action: error
+              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Case object prior to installing."
+            - when: "not tasks.check_opportunity_owd()"
+              action: error
+              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing."
+        steps:
+            1:
+                task: add_standard_value_set_entries
+                ui_options:
+                    name: "Add Account Type Values"
+                    is_required: False
+            2:
+                task: install_managed
+            3:
+                task: deploy_post
+                options:
+                    unmanaged: False
+                ui_options:
+                    configuration:
+                        name: "Add Data Category Groups and Relabel Accounts"
+                    is_required: False
+            4:
+                task: deploy_wave_config
+                ui_options:
+                    name: Install Analytics
+                    is_required: False
+                options:
+                    unmanaged: False
+            5:
+                flow: config_community
+                options:
+                    deploy_community_config:
+                        unmanaged: False
+                        is_required: False
+                ui_options:
+                    create_community:
+                        name: Create Community
+                        is_required: False
+                    deploy_navigation_config:
+                        name: "Deploy Navigation"
+                        is_required: False
+                    #deploy_community_config:
+                    #    name: "Configure Community"
+                    #    is_required: False
+                    publish_community:
+                        name: "Publish Community"
+                        is_required: False
+            6:
+                task: deploy_kav_config
+                ui_options:
+                    name: "Configure Knowledge"
+                    is_required: False
+            7:
+                task: deploy_profile_config
+                ui_options:
+                    name: "Install Profiles"
+                    is_required: False
+                options:
+                    unmanaged: False

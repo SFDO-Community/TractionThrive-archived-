@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityThemeDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customThemeLayoutType>
+        <label>URKKI3exULkxHfr92hNKLB47r1fVYM</label>
+    </customThemeLayoutType>
+    <customThemeLayoutType>
+        <label>xXXy2Jw4LHNnfhMRnM2vaShb8aX7Th</label>
+    </customThemeLayoutType>
+    <defaultBrandingSet>Traction_Thrive</defaultBrandingSet>
+    <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
+    <masterLabel>Traction_Thrive</masterLabel>
+    <publisher>Traction On Demand and Thrive</publisher>
+    <themeSetting>
+        <themeLayout>Traction_Thrive_themeLayout_Login</themeLayout>
+        <themeLayoutType>Login</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <themeLayout>Traction_Thrive_themeLayout_Default</themeLayout>
+        <themeLayoutType>Inner</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <customThemeLayoutType>URKKI3exULkxHfr92hNKLB47r1fVYM</customThemeLayoutType>
+        <themeLayout>Traction_Thrive_themeLayout_Full_Menu</themeLayout>
+    </themeSetting>
+    <themeSetting>
+        <customThemeLayoutType>xXXy2Jw4LHNnfhMRnM2vaShb8aX7Th</customThemeLayoutType>
+        <themeLayout>Traction_Thrive_themeLayout_Staff_Only</themeLayout>
+    </themeSetting>
+</CommunityThemeDefinition>

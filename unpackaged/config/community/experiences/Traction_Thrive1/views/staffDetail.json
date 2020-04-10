@@ -1,0 +1,99 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "90a50918-9a36-4bd6-983b-dc600f481902",
+  "label" : "Staff Detail",
+  "regions" : [ {
+    "id" : "a24e9eb9-30d4-44f8-a719-c5b91250d2ba",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "74a3fedc-2fcf-4521-a225-9fd4e4655cc4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "tab1Type" : "details",
+        "tab2Type" : "none",
+        "tab3Type" : "none",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "be815633-39b4-4613-bcea-943ae22e5c28",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "relatedListApiName" : "Credentials__r",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:relatedListSingle",
+      "id" : "5255c653-d728-4f0c-a084-1791016c3a4a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e6809804-0d3e-48d6-a7fc-6a3b9ed012c9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "8df2a7b7-32a9-4ece-bb71-c1ffde9fada1",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6aa97ef2-8c2a-419f-9958-9e70004bcdad",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "400482d2-23eb-442d-850e-0574e388ce86",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "iconColorBackground" : "#041d3e",
+        "iconName" : "standard:task",
+        "recordId" : "{!recordId}",
+        "showIcon" : true,
+        "showTitleBar" : true,
+        "statusBackground" : "#e4e4e4",
+        "statusColorAssigned" : "#041d3e",
+        "statusColorAvailable" : "#1390c6",
+        "statusColorNotAvailable" : "#f04d23",
+        "titleText" : "MY AVAILABILITY",
+        "titleTextForContactRecord" : "AVAILABILITY"
+      },
+      "componentName" : "c:staffAvailability",
+      "id" : "a2526768-e0f6-41ec-8d0a-dc68a3a32efb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "56e30524-1224-4935-8ff3-40b0b1c7e04e",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-003"
+}

@@ -1,0 +1,110 @@
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+    Id: sf_id
+    Name: Name
+    tractionthrive__Active__c: Active__c
+    tractionthrive__Beds_Available__c: Beds_Available__c
+    tractionthrive__Beds_Inactive__c: Beds_Inactive__c
+    tractionthrive__Beds_Total__c: Beds_Total__c
+    tractionthrive__Beds_in_Use__c: Beds_in_Use__c
+    tractionthrive__Contingency_Plan__c: Contingency_Plan__c
+    tractionthrive__CustomerPriority__c: CustomerPriority__c
+    tractionthrive__Division__c: Division__c
+    tractionthrive__Health_Authority__c: Health_Authority__c
+    tractionthrive__Medical_Staff_Compensation_Model__c: Medical_Staff_Compensation_Model__c
+    tractionthrive__Medical_Staff_Redeployment_Comments__c: Medical_Staff_Redeployment_Comments__c
+    tractionthrive__NumberofLocations__c: NumberofLocations__c
+    RecordTypeId: RecordTypeId
+  lookups:
+    ParentId:
+      table: Account
+      after: Insert Account
+Insert tractionthrive__Status_Report__c:
+  sf_object: tractionthrive__Status_Report__c
+  table: Status_Report__c
+  fields:
+    Id: sf_id
+    Name: Name
+    tractionthrive__Category__c: Category__c
+    tractionthrive__Count__c: Count__c
+    tractionthrive__Date_Time__c: Date_Time__c
+    tractionthrive__Status__c: Status__c
+    tractionthrive__Type__c: Type__c
+  lookups:
+    tractionthrive__Department__c:
+      table: Account
+      key_field: department__c
+Insert tractionthrive__Staff_Levels__c:
+  sf_object: tractionthrive__Staff_Levels__c
+  table: Staff_Levels__c
+  fields:
+    Id: sf_id
+    tractionthrive__Current_Staff__c: Current_Staff__c
+    tractionthrive__Essential_Staff__c: Essential_Staff__c
+    tractionthrive__Full_Staff__c: Full_Staff__c
+    tractionthrive__Role__c: Role__c
+    tractionthrive__Total_COVID__c: Total_COVID__c
+    tractionthrive__Total_Isolation__c: Total_Isolation__c
+  lookups:
+    tractionthrive__Care_Facility__c:
+      table: Account
+      key_field: care_facility__c
+Insert Contact:
+  sf_object: Contact
+  table: Contact
+  fields:
+    Id: sf_id
+    FirstName: FirstName
+    LastName: LastName
+    tractionthrive__Assignment_Designation__c: Assignment_Designation__c
+    tractionthrive__Assignment_End_Date__c: Assignment_End_Date__c
+    tractionthrive__COVID_Diagnosis_Date__c: COVID_Diagnosis_Date__c
+    tractionthrive__Division__c: Division__c
+    DoNotCall: DoNotCall
+    tractionthrive__Exposure_Symptoms_Date__c: Exposure_Symptoms_Date__c
+    HasOptedOutOfEmail: HasOptedOutOfEmail
+    HasOptedOutOfFax: HasOptedOutOfFax
+    tractionthrive__Medical_Staff_Category__c: Medical_Staff_Category__c
+    tractionthrive__Position__c: Position__c
+    tractionthrive__Practice_Type__c: Practice_Type__c
+    tractionthrive__Provider_ID__c: Provider_ID__c
+    tractionthrive__Role_Global__c: Role_Global__c
+    tractionthrive__Skills__c: Skills__c
+    tractionthrive__Status__c: Status__c
+  lookups:
+    AccountId:
+      table: Account
+    ReportsToId:
+      table: Contact
+      after: Insert Contact
+Insert tractionthrive__Credential__c:
+  sf_object: tractionthrive__Credential__c
+  table: Credential__c
+  fields:
+    Id: sf_id
+    tractionthrive__Type__c: Type__c
+  lookups:
+    tractionthrive__Care_Facility__c:
+      table: Account
+      key_field: care_facility__c
+    tractionthrive__Staff__c:
+      table: Contact
+      key_field: staff__c
+Insert tractionthrive__Assignment__c:
+  sf_object: tractionthrive__Assignment__c
+  table: Assignment__c
+  fields:
+    Id: sf_id
+    tractionthrive__Available__c: Available__c
+    tractionthrive__Date__c: Date__c
+    tractionthrive__Reason__c: Reason__c
+    tractionthrive__User_Updated__c: User_Updated__c
+  lookups:
+    tractionthrive__Care_Facility__c:
+      table: Account
+      key_field: care_facility__c
+    tractionthrive__Staff__c:
+      table: Contact
+      key_field: staff__c

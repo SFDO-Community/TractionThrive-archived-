@@ -1,0 +1,147 @@
+/* buttons */
+
+.cmp-button {
+	display: inline-flex;
+}
+
+
+.cmp-cancel-button {
+	color: #333;
+}
+
+/* tile selected */
+
+.cmp-assignment[data-is-expanded=false] {
+	user-select: none;
+	cursor: pointer;
+}
+
+.cmp-assignment[data-is-expanded=true] {
+	box-shadow: 2px 4px 5px #ddd;
+	z-index: 1;
+}
+
+.cmp-assignment[data-is-expanded=true] .cmp-location {
+	display: none;
+}
+
+.cmp-assignment[data-is-expanded=true] .cmp-date,
+.cmp-assignment[data-is-expanded=true] .cmp-day-of-week {
+	margin-left: 5px;
+}
+
+.cmp-assignment[data-is-expanded=true] .cmp-day-of-week {
+	color: #607D8B !important;
+}
+
+.cmp-assignment[data-is-expanded=true] .cmp-availability-col {
+	display: none;
+}
+
+.cmp-assignment[data-is-expanded=true] .cmp-date {
+	font-size: 18px;
+}
+
+/* general */
+
+.cmp-date {
+	font-size: 14px;
+}
+
+.cmp-location {
+	margin-top: 16px;
+	margin-left: -5px;
+	display: flex;
+	align-items: center;
+}
+.cmp-location svg {
+	fill: #ccc;
+}
+
+.cmp-facility-name {
+	color: #607D8B;
+	font-size: 12px;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+
+.cmp-availability-col {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.cmp-availability {
+	background-color: var(--cmp-status-background-color);
+	display: flex;
+	width: 140px;
+	height: 44px;
+	border-radius: 3px;
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.cmp-availability[data-available='available' i] {
+	color: var(--cmp-status-available-color);
+}
+
+.cmp-availability[data-available='not available' i] {
+	color: var(--cmp-status-not-available-color);
+}
+
+.cmp-availability[data-available='assigned' i] {
+	color: var(--cmp-status-assigned-color);
+}
+
+
+.cmp-modify-date {
+	margin-top: 9px;
+	width: 140px;
+	font-size: 12px;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	color: #2E3D56;
+}
+
+.cmp-modify-date span {
+	color: #828282;
+	font-size: 10px;
+}
+
+/* lookup  -- TODO: not working */
+
+.cmp-availability-buttons .slds-radio_button__label {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	display: flex;
+
+}
+
+.cmp-availability-buttons .slds-radio_button {
+	align-self: stretch;
+}
+
+
+.cmp-facility-lookup .slds-form-element__label {
+	margin-bottom: 7px;
+	margin-left: 5px;
+}
+
+.cmp-facility-lookup .slds-form-element__label:after {
+	content: ' *';
+	color: darkred;
+}
+
+.cmp-facility-lookup .slds-combobox_container {
+	height: 50px;
+
+}
+
+.cmp-facility-lookup .slds-icon_container {
+	margin-left: 5px;
+	margin-right: 5px;
+}

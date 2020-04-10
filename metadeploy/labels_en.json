@@ -1,0 +1,62 @@
+{
+    "product": {
+        "title": {
+            "message": "Traction Thrive",
+            "description": "name of product"
+        }
+    },
+    "plan:install": {
+        "title": {
+            "message": "Install Traction Thrive",
+            "description": "title of installation plan"
+        }
+    },
+    "checks": {
+        "Customer Community Plus licenses are required for private security model.": {
+            "message": "Please ensure you have Customer Community Plus licenses available prior to installing.",
+            "description": "shown if validation fails"
+        },
+        "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing.": {
+            "message": "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing.",
+            "description": "shown if validation fails"
+        }
+    },
+    "steps": {
+        "Set Case, Contact, and Opportunity OWD": {
+            "message": "Set Case, Contact, and Opportunity OWD",
+            "description": "title of installation step"
+        },
+        "Add Account Type Values": {
+            "message": "Add Account Type Values",
+            "description": "title of installation step"
+        },
+        "Install {product} {version}": {
+            "message": "Install {product} {version}",
+            "description": "title of installation step"
+        },
+        "Create Community": {
+            "message": "Create Community",
+            "description": "title of installation step"
+        },
+        "Deploy Navigation": {
+            "message": "Deploy Navigation",
+            "description": "title of installation step"
+        },
+        "Configure Community": {
+            "message": "Configure Community",
+            "description": "title of installation step"
+        },
+        "Update Navigation": {
+            "message": "Update Navigation",
+            "description": "title of installation step"
+        },
+        "Publish Community": {
+            "message": "Publish Community",
+            "description": "title of installation step"
+        },
+        "Configure Knowledge": {
+            "message": "Configure Knowledge",
+            "description": "title of installation step"
+        }
+    }
+}

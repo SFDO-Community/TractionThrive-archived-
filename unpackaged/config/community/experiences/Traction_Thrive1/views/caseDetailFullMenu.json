@@ -1,0 +1,64 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "4ddf5e5f-52f6-4aef-b646-b34d6e11abc3",
+  "label" : "Case Detail - Full Menu",
+  "regions" : [ {
+    "id" : "f37fb7d9-32c3-47d5-8c5a-c968094a27d3",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "c2c2bc0b-22d7-4423-b415-00796c22770a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "tab1Type" : "details",
+        "tab2Type" : "related",
+        "tab3Type" : "chatter",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "93711817-9d6a-4f4a-880e-da594c1b1f24",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "20d69401-7b75-4221-98ce-fdcf9a945ec4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c1288fa2-bbce-44b4-b500-d832b60a0333",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cb01519b-6bae-418b-99bd-2a24b317947d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d05ac455-dbf7-44c6-9e09-633ef3090eb8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "URKKI3exULkxHfr92hNKLB47r1fVYM",
+  "type" : "view",
+  "viewType" : "detail-500"
+}

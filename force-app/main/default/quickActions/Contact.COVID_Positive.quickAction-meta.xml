@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Call COVID positive flow to update Staff status</description>
+    <flowDefinition>Update_Staff_COVID_Positive</flowDefinition>
+    <icon>icon_covid_positive</icon>
+    <label>COVID+</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

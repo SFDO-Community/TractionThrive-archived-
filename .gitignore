@@ -1,0 +1,25 @@
+# Salesforce / SFDX / CCI
+.cci
+.sfdx
+/src.orig
+/src
+test_results.json
+test_results.xml
+
+# Python
+*.pyc
+__pycache__
+
+# Robot Framework results
+robot/Crisis-Management/results/
+
+# Editors
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+.project
+.settings
+
+# Misc
+.DS_Store

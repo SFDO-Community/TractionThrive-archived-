@@ -1,0 +1,68 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "8571399f-5118-40fc-aebc-0f8aa7108859",
+  "label" : "Record Detail",
+  "regions" : [ {
+    "id" : "6d9a554e-1ba3-4145-8c43-7cae5cdd79b3",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "bed8be03-abf7-402f-a262-b496bb64bfd0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "tab1Type" : "details",
+        "tab2Type" : "related",
+        "tab3Type" : "none",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "f8800251-349f-4399-b37c-80dc55a00500",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a3aae2e6-d49b-4cba-b122-e8194b38bd4e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "37bff333-25ce-4459-99de-6a0517de2f25",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "be375ca3-b44a-4ed9-80c4-7a188d36d559",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "40587643-fa85-442b-a9ea-b368ba0bb753",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "45f9b867-fd97-41dc-98f0-7f151a2311a3",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail"
+}

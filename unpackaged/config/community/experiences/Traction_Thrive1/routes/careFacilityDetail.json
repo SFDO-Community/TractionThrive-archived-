@@ -1,0 +1,9 @@
+{
+  "activeViewId" : "0335ffff-8da4-409f-bf92-d8810e2b878f",
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "id" : "df0bd371-21e9-449f-aab8-a7c6b47e1ac2",
+  "label" : "Care Facility Detail",
+  "routeType" : "detail-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

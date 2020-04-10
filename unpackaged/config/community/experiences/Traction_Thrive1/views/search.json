@@ -1,0 +1,50 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "72cddb06-9cd1-4510-b85b-ec098b922819",
+  "label" : "Search",
+  "regions" : [ {
+    "id" : "d9f4aea6-d3ed-4690-a097-1f87b8d485a2",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "scopes" : [ {
+          "name" : "Knowledge__kav",
+          "isPublic" : false
+        }, {
+          "name" : "Account",
+          "isPublic" : false
+        }, {
+          "name" : "CollaborationGroup",
+          "isPublic" : false
+        }, {
+          "name" : "Case",
+          "isPublic" : false
+        }, {
+          "name" : "Contact",
+          "isPublic" : false
+        } ],
+        "searchResultFiltering" : true,
+        "searchTerm" : "{!term}",
+        "showTopResults" : true
+      },
+      "componentName" : "forceCommunity:search",
+      "id" : "a72e6b6b-0317-4479-aad3-fe3e183c875d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f99a26e5-b8e2-486d-9206-8cfcf4b99d65",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5ed4a574-ad6b-44b8-9365-cbe9a0ba960b",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "global-search"
+}

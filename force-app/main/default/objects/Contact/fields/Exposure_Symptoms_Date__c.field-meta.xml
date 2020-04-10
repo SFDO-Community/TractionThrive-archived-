@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exposure_Symptoms_Date__c</fullName>
+    <description>Enter the date of symptoms first reported or date of exposure to COVID-19 positive individual</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <label>Exposure/Symptoms Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

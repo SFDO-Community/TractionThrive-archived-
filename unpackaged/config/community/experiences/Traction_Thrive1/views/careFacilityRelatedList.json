@@ -1,0 +1,37 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "f36f4c6d-9301-4580-9e23-801b2e0d30c5",
+  "label" : "Care Facility Related List",
+  "regions" : [ {
+    "id" : "dfaccd36-7a4a-4893-8428-d68462d91ecf",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "parentRecordId" : "{!recordId}",
+        "relatedListName" : "{!relationshipApiName}",
+        "showBreadCrumbs" : true,
+        "showCustomTitle" : false,
+        "showManualRefreshButton" : true,
+        "showRowNumbers" : true
+      },
+      "componentName" : "forceCommunity:relatedList",
+      "id" : "325b1517-c5b1-4cc3-8766-7350644f2fe1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "437e34af-5f2b-4cf2-81e6-badd433ca215",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "3295bb10-cfc0-48ad-8c58-459faccaaa7c",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "relatedlist-001"
+}

@@ -1,0 +1,67 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "ad469451-af57-46b6-94c1-c837943a21eb",
+  "label" : "Supplies",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "04f00421-430b-455a-9ddf-2d7e3ff4a11b",
+          "columns" : [ {
+            "UUID" : "0bac9ca2-75a8-45ce-959e-acab1a7184a6",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "04f00421-430b-455a-9ddf-2d7e3ff4a11b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:allResources",
+          "id" : "02e012c6-e32d-4ef1-96e3-f280932c0a51",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0bac9ca2-75a8-45ce-959e-acab1a7184a6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6344b439-0659-4bae-a4c9-245bb6c77842",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Supplies"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6d4c6c97-8a74-4061-9726-6fa671e4fb31",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "246ea74e-91ba-4f08-95d0-18875bf50579",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Supplies"
+}

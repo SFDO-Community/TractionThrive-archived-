@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>a12520c1-43fa-42b1-bacd-d42e46b18235</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>1</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>b026705c-4fb0-4f26-af78-f04f3f7897f9</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>ea773</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>5f1414cd-796a-45ed-866a-51e93eb02e17</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>efe39</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <name>facet-indirection-0272396d-9e63-4e10-b058-35657a2cfeef</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>a12520c1-43fa-42b1-bacd-d42e46b18235</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img class=&quot;sfdcCbImage&quot; src=&quot;{!contentAsset.LogoToDTHSmall.1}&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;About Us&lt;/b&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Thrive Health is a Vancouver, BC based software company. One of the products Thrive offers is an assessment platform that hospitals and medical clinics use to screen, triage and assess patients. As COVID19 was beginning to breach our shores Thrive began to develop a simple version of their system to help the BC and Canadian governments provide their citizens with a way to self assess their symptoms and decide their best course of action. In the first week of deployment over 5 million people used the tool to self assess. Concurrently, the founders of Thrive were becoming increasingly concerned about the potential overloading of our healthcare system and the critical need to be able to monitor inventory and allocate critical human resources and vital supplies. However, Thrive was using all of their available resources supporting the delivery of the assessment app to keep citizens and public health agencies informed about Covid-19 across Canada.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;This is where Traction on Demand enters our story.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Traction on Demand is one of North America’s top system integrators and application developers. As it turns out David Helliwell, one of the founders of Thrive and Greg Malpass, the founder of Traction on Demand, met years before and had remained respected and trusted friends since. David reached out to discuss the challenge with Greg who immediately offered his complete support. Greg wasted no time marshalling all of the necessary resources to tackle the challenge at hand. Within hours the best and brightest from Traction and Thrive were collaborating, virtually and remotely as a team. And the sprint began.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Traction on Demand’s partnership and Greg’s alliance and friendship with top executives at Salesforce meant immediate activation of the world’s most trusted and influential technology companies. Rob Aker, CEO of &lt;/span&gt;&lt;a href=&quot;https://urldefense.proofpoint.com/v2/url?u=http-3A__Salesforce.org&amp;amp;d=DwMFaQ&amp;amp;c=YHcanBYpGrZxEbl-dEmkXYPwk0jOuY077yg_2uofQn0&amp;amp;r=CInS9h7XmCW4n0rd5s71hGj3sfKfsJH-m0xetfnWzg4&amp;amp;m=-hgsO3WdrCedw1rR8tqNYF2rSDnOg3J_GMBcAfSYyD8&amp;amp;s=jHR52HY8_HRdGacAoHlQo1U_gyJGZgzCFDq1UMiRkR4&amp;amp;e=&quot; target=&quot;null&quot; style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Salesforce.org&lt;/a&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt; who reports directly to Salesforce founder and CEO Marc Benioff, gave Greg his word that this initiative had every ounce of backing that Salesforce could provide and assembled a significant team chaired by Travis Fabian at Salesforce to support the effort however possible.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Salesforce immediately offered free licenses for this initiative. Excited by the potential to help more people, the united team (Thrive, Traction on Demand and Salesforce) began to develop a plan that could scale the impact of this initiative beyond BC or Canada, to global proportion. Knowing that innovation and speed were the only hope to scale in time and that any friction to the platform’s distribution, adaptability or quality would slow it’s adoption, the team together made the choice to move to an open source model. Salesforce brought on their opensource expert team, the same team that built and scaled the Non-Profit Success Platform to hundreds of thousands of NGO’s, to help apply the same scale to the platform.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;Our goal, all of ours, is to try to help save lives, to preserve the integrity of the healthcare systems and to support our invaluable healthcare workers. We applaud the tireless dedication and courage of all of our health care workers around the globe. It is our sincere hope that this product can make their jobs a little bit better.&lt;/span&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+ &lt;p class=&quot;ql-quote-block&quot; style=&quot;text-align: justify;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 16px; font-family: helvetica;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>forceCommunity:richTextInline</componentName>
+        </componentInstances>
+        <name>b026705c-4fb0-4f26-af78-f04f3f7897f9</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>5f1414cd-796a-45ed-866a-51e93eb02e17</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>background</name>
+                <value>background: rgba(0,0,0,0)</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>backgroundOverlay</name>
+                <value>rgba(0,0,0,0.5)</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>contentAreaWidth</name>
+                <value>100</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>regions</name>
+                <value>facet-indirection-0272396d-9e63-4e10-b058-35657a2cfeef</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>sectionConfig</name>
+                <value>{&quot;UUID&quot;:&quot;0272396d-9e63-4e10-b058-35657a2cfeef&quot;,&quot;columns&quot;:[{&quot;UUID&quot;:&quot;a12520c1-43fa-42b1-bacd-d42e46b18235&quot;,&quot;columnName&quot;:&quot;Column 1&quot;,&quot;columnKey&quot;:&quot;1&quot;,&quot;columnWidth&quot;:&quot;1&quot;,&quot;seedComponents&quot;:[]},{&quot;UUID&quot;:&quot;b026705c-4fb0-4f26-af78-f04f3f7897f9&quot;,&quot;columnName&quot;:&quot;Column 2&quot;,&quot;columnKey&quot;:&quot;ea773&quot;,&quot;columnWidth&quot;:&quot;10&quot;,&quot;seedComponents&quot;:[]},{&quot;UUID&quot;:&quot;5f1414cd-796a-45ed-866a-51e93eb02e17&quot;,&quot;columnName&quot;:&quot;Column 3&quot;,&quot;columnKey&quot;:&quot;efe39&quot;,&quot;columnWidth&quot;:&quot;1&quot;,&quot;seedComponents&quot;:[]}]}</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>sectionHeight</name>
+                <value>300</value>
+            </componentInstanceProperties>
+            <componentName>forceCommunity:section</componentName>
+        </componentInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>description</name>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>metaTags</name>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>About Us</value>
+            </componentInstanceProperties>
+            <componentName>forceCommunity:seoAssistant</componentName>
+        </componentInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>About Us</masterLabel>
+    <template>
+        <name>siteforce:dynamicLayout</name>
+    </template>
+    <type>CommAppPage</type>
+</FlexiPage>

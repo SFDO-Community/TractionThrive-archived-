@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>header</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>accountSectionTitle</name>
+                <value>Account</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>accountTabName</name>
+                <value>Account Details</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>connectedSourcesTabName</name>
+                <value>Connected Sources</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>emailNotificationsTitle</name>
+                <value>Email Notifications</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>emailSectionDescText</name>
+                <value>When email notifications are enabled, email me when someone:</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideChatterNotificationSettings</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideConnectedSources</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideEmailNotificationSettings</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideProfileVisibilitySettings</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>id</name>
+                <value>{!recordId}</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>locationTitle</name>
+                <value>Location</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>profileSectionDescText</name>
+                <value>Customize who is able to see what on your profile page</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>profileSectionToolTipText</name>
+                <value>Restricted: Visible to the employees of the company that created the site.\nMembers: Visible to logged-in members.\nPublic: Visible to anyone viewing pages that don&#39;t require login.</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>profileVisibilityTitle</name>
+                <value>Profile Visibility</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>settingsPageTitle</name>
+                <value>My Settings</value>
+            </componentInstanceProperties>
+            <componentName>forceCommunity:userSettingsCustomizable</componentName>
+        </componentInstances>
+        <name>content</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <name>footer</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <appendable>enabled</appendable>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>description</name>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>metaTags</name>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+            </componentInstanceProperties>
+            <componentName>forceCommunity:seoAssistant</componentName>
+        </componentInstances>
+        <name>sfdcHiddenRegion</name>
+        <prependable>enabled</prependable>
+        <replaceable>enabled</replaceable>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>User Settings</masterLabel>
+    <sobjectType>User</sobjectType>
+    <template>
+        <name>siteforce:sldsOneColLayout</name>
+    </template>
+    <type>CommRecordPage</type>
+</FlexiPage>

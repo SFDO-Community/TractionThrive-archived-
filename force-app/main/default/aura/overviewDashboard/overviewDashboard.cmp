@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"
+    access="global">
+    <div class="cmp-dashboard">
+        <wave:waveDashboard dashboardId="Overview" />
+    </div>
+</aura:component>	

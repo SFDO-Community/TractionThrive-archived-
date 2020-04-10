@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Sharing</fullName>
+    <availability>online</availability>
+    <description>Enables access to the manual sharing interface.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Account Sharing</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/p/share/AccSharingDetail?parentId={!Account.Id}</url>
+</WebLink>

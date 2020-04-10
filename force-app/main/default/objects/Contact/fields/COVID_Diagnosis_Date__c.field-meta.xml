@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COVID_Diagnosis_Date__c</fullName>
+    <description>Enter the date of positive diagnosis for COVID-19</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date of positive diagnosis for COVID-19</inlineHelpText>
+    <label>COVID Diagnosis Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

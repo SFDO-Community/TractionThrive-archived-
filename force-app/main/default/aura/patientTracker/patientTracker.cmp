@@ -1,0 +1,59 @@
+<!--
+ - Created by Heather Purvis on 2020-03-20.
+ -->
+
+<aura:component description="patientTracker"
+                implements="forceCommunity:availableForAllPageTypes"
+                access="global"
+                >
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="selectedDivisionId" type="Id"/>
+
+    <!--  HANDLERS -->
+    <aura:handler name="setAttribute" event="c:setAttributeEvent" action="{!c.setAttributeValue}"/>
+
+    <!-- MARKUP -->
+    <c:accountPicker/>
+
+    <aura:if isTrue="{!v.selectedDivisionId != null}"><!-- PPE (Headgear) Resource Tracking -->
+        <!-- Patient Data Header -->
+        <div class="c-container">
+            <div class="slds-modal__header title slds-m-vertical--small">
+                <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
+                                         value="Current Patient Status"/>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker title="Presenting 'COVID Like'"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-patient-covidlike.svg'}"
+                                         resource="COVID Like"
+                                         status="Total"/>
+            </div>
+<!--            <img src="{!$Resource.yourGraphics + '/images/logo.jpg'}"/>-->
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker title="Presumptive COVID"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-patient-presumptive.svg'}"
+                                         resource="Presumptive COVID"
+                                         status="Total"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker title="COVID Positive (Disposition)"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-patient-positive.svg'}"
+                                         resource="COVID Positive"
+                                         status="Total"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker title="Comorbidity"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-patient-cormobidity.svg'}"
+                                         resource="Comorbidity"
+                                         status="Total"/>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

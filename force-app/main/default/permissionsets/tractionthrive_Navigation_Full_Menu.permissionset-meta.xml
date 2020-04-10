@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>tractionthrive_Navigation_Full_Menu</name>
+    </customPermissions>
+    <description>Assigns Full Menu navigation in the Traction Thrive community using Full Menu Navigation Menu and Theme Layout</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>tractionthrive_Navigation - Full Menu</label>
+</PermissionSet>

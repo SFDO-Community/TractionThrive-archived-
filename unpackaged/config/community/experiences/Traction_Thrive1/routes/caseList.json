@@ -1,0 +1,9 @@
+{
+  "activeViewId" : "c9bbbab6-b5df-47c8-a5ae-a4fe434ce143",
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "id" : "cc6d042b-5ee6-4abc-b601-e8eeaffdd4e8",
+  "label" : "Case List",
+  "routeType" : "list-500",
+  "type" : "route",
+  "urlPrefix" : "case"
+}

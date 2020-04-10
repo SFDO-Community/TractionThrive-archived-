@@ -1,0 +1,93 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "060a39d4-0d01-4503-9db9-20767520ba76",
+  "label" : "About Us - Full Menu",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e2c5e4fd-c03c-42ad-8f99-a25df8ce1146",
+          "columns" : [ {
+            "UUID" : "cf744ae3-58d0-4dbf-b4c5-7bc5c3541007",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "71e2ad5f-0369-455b-bccf-65eab66f9b69",
+            "columnName" : "Column 2",
+            "columnKey" : "ea773",
+            "columnWidth" : "10",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "21532bd4-cf1b-4f67-83b2-908aa5cb6343",
+            "columnName" : "Column 3",
+            "columnKey" : "efe39",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e2c5e4fd-c03c-42ad-8f99-a25df8ce1146",
+      "regions" : [ {
+        "id" : "cf744ae3-58d0-4dbf-b4c5-7bc5c3541007",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br /></p>\n<p><br /></p>\n<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.LogoToDTHSmall.1}\" /></p>\n<p style=\"text-align: center;\"><br /></p>\n<blockquote>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><b style=\"font-size: 20px;\">About Us</b></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">Thrive Health is a Vancouver, BC based software company. One of the products Thrive offers is an assessment platform that hospitals and medical clinics use to screen, triage and assess patients. As COVID19 was beginning to breach our shores Thrive began to develop a simple version of their system to help the BC and Canadian governments provide their citizens with a way to self assess their symptoms and decide their best course of action. In the first week of deployment over 5 million people used the tool to self assess. Concurrently, the founders of Thrive were becoming increasingly concerned about the potential overloading of our healthcare system and the critical need to be able to monitor inventory and allocate critical human resources and vital supplies. However, Thrive was using all of their available resources supporting the delivery of the assessment app to keep citizens and public health agencies informed about Covid-19 across Canada.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">This is where Traction on Demand enters our story.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">Traction on Demand is one of North America’s top system integrators and application developers. As it turns out David Helliwell, one of the founders of Thrive and Greg Malpass, the founder of Traction on Demand, met years before and had remained respected and trusted friends since. David reached out to discuss the challenge with Greg who immediately offered his complete support. Greg wasted no time marshalling all of the necessary resources to tackle the challenge at hand. Within hours the best and brightest from Traction and Thrive were collaborating, virtually and remotely as a team. And the sprint began.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">Traction on Demand’s partnership and Greg’s alliance and friendship with top executives at Salesforce meant immediate activation of the world’s most trusted and influential technology companies. Rob Aker, CEO of </span><a href=\"https://urldefense.proofpoint.com/v2/url?u=http-3A__Salesforce.org&amp;d=DwMFaQ&amp;c=YHcanBYpGrZxEbl-dEmkXYPwk0jOuY077yg_2uofQn0&amp;r=CInS9h7XmCW4n0rd5s71hGj3sfKfsJH-m0xetfnWzg4&amp;m=-hgsO3WdrCedw1rR8tqNYF2rSDnOg3J_GMBcAfSYyD8&amp;s=jHR52HY8_HRdGacAoHlQo1U_gyJGZgzCFDq1UMiRkR4&amp;e=\" target=\"null\" style=\"font-family: helvetica; font-size: 16px;\">Salesforce.org</a><span style=\"font-family: helvetica; font-size: 16px;\"> who reports directly to Salesforce founder and CEO Marc Benioff, gave Greg his word that this initiative had every ounce of backing that Salesforce could provide and assembled a significant team chaired by Travis Fabian at Salesforce to support the effort however possible.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">Salesforce immediately offered free licenses for this initiative. Excited by the potential to help more people, the united team (Thrive, Traction on Demand and Salesforce) began to develop a plan that could scale the impact of this initiative beyond BC or Canada, to global proportion. Knowing that innovation and speed were the only hope to scale in time and that any friction to the platform’s distribution, adaptability or quality would slow it’s adoption, the team together made the choice to move to an open source model. Salesforce brought on their opensource expert team, the same team that built and scaled the Non-Profit Success Platform to hundreds of thousands of NGO’s, to help apply the same scale to the platform.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">Our goal, all of ours, is to try to help save lives, to preserve the integrity of the healthcare systems and to support our invaluable healthcare workers. We applaud the tireless dedication and courage of all of our health care workers around the globe. It is our sincere hope that this product can make their jobs a little bit better.</span></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n <p class=\"ql-quote-block\" style=\"text-align: justify;\"><br /></p>\n</blockquote>\n<p style=\"text-align: justify;\"><span style=\"font-family: helvetica; font-size: 16px;\">&nbsp;</span></p>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "662a9942-50c4-48af-bf27-2fb1a5ca0284",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "71e2ad5f-0369-455b-bccf-65eab66f9b69",
+        "regionLabel" : "Column 2",
+        "regionName" : "ea773",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "21532bd4-cf1b-4f67-83b2-908aa5cb6343",
+        "regionLabel" : "Column 3",
+        "regionName" : "efe39",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fcfe162e-02c4-45c3-9eb5-8a5731408141",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "About Us"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1a64f5fb-32c1-427d-98c0-dea4249957de",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f11266f6-95f0-4d5d-af25-2b9b65150f6d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "URKKI3exULkxHfr92hNKLB47r1fVYM",
+  "type" : "view",
+  "viewType" : "custom-about-us"
+}

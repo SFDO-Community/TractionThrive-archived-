@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Practice_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Practice Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clinical Scientist</fullName>
+                <default>false</default>
+                <label>Clinical Scientist</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Maxillofacial Surgeon</fullName>
+                <default>false</default>
+                <label>Maxillofacial Surgeon</label>
+            </value>
+            <value>
+                <fullName>Physician</fullName>
+                <default>false</default>
+                <label>Physician</label>
+            </value>
+            <value>
+                <fullName>Psychologist</fullName>
+                <default>false</default>
+                <label>Psychologist</label>
+            </value>
+            <value>
+                <fullName>Scientific &amp; Research</fullName>
+                <default>false</default>
+                <label>Scientific &amp; Research</label>
+            </value>
+            <value>
+                <fullName>Midwife</fullName>
+                <default>false</default>
+                <label>Midwife</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

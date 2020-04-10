@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Staff_Access__c</baseObject>
+    <category>accounts</category>
+    <deployed>true</deployed>
+    <description>Report on Staff and which divisions they have access to.</description>
+    <label>Staff Access</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Care_Facility__c</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Division__c</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Staff__c</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <masterLabel>Staff Access</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Care_Facility__c.RecordType.DeveloperName</field>
+            <table>Staff_Access__c</table>
+        </columns>
+        <masterLabel>Care Facility</masterLabel>
+    </sections>
+</ReportType>

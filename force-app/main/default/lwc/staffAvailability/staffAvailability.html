@@ -1,0 +1,46 @@
+<!--
+ - Created by Christian Wico - cwico@tractionondemand.com
+ -->
+
+<!-- Staff Availability -->
+<template>
+	<div class="cmp-availability" data-has-id={hasRecordId} style={customStyle}>
+		<template if:true={error}>
+			<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-m-bottom_small" role="alert">
+				<span class="slds-assistive-text">error</span>
+				<h2 class="slds-m-right_small">ERROR: </h2>
+				<p>
+					<template if:true={errorMessage}>
+						{errorMessage} :: {stackTrace}
+					</template>
+				</p>
+			</div>
+		</template>
+
+		<div class="slds-grid slds-m-bottom_x-small cmp-availability-title" if:true={showTitleBar}>
+			<div class="slds-shrink cmp-icon" if:true={showIcon}><lightning-icon class="cmp-assignments-icon" icon-name={iconName} alternative-text="Assignments" title="Assignments"></lightning-icon></div>
+			<div class="slds-col slds-align-middle">
+				<span class="cmp-title slds-section-title slds-m-left_x-small">
+					<template if:true={hasRecordId}>
+						{titleTextForContactRecord}
+					</template>
+					<template if:false={hasRecordId}>
+						{titleText}
+					</template>
+				</span>
+			</div>
+		</div>
+
+		<div class="slds-card cmp-availability-card">
+			<template if:true={data}>
+				<ul class="cmp-grid">
+					<template for:each={data.assignments} for:item="assignment" for:index="index">
+						<li key={assignment} class="slds-border_bottom">
+							<c-staff-availability-item namespace={namespace} assignment={assignment} account-id={data.accountId} account-name={data.accountName}></c-staff-availability-item>
+						</li>
+					</template>
+				</ul>
+			</template>
+		</div>
+	</div>
+</template>

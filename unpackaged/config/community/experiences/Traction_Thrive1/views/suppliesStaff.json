@@ -1,0 +1,67 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "21c06d60-2b9c-452b-9b8b-53f830a8124b",
+  "label" : "Supplies - Staff",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a432cedc-f740-4b35-9632-9eb9bde75a3f",
+          "columns" : [ {
+            "UUID" : "de742e37-d2c8-406e-b491-c84be48b60f6",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a432cedc-f740-4b35-9632-9eb9bde75a3f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:allResources",
+          "id" : "26c6cdaf-f395-4e99-94f2-2cdec3eb9ec5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "de742e37-d2c8-406e-b491-c84be48b60f6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c058980e-7957-42fb-9290-b5e2d619c65e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "Collect snapshots counts of supplies in at the facility",
+        "metaTags" : "",
+        "title" : "Supplies"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d41dffa2-2c24-44a1-9ed0-9b4df82d70ca",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3d41282b-acfa-49cb-b7c5-dddde7aa0099",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "xXXy2Jw4LHNnfhMRnM2vaShb8aX7Th",
+  "type" : "view",
+  "viewType" : "custom-supplies"
+}

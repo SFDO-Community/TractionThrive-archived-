@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Compact_Layout_Community</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>Phone</fields>
+    <fields>Role_Global__c</fields>
+    <fields>Status__c</fields>
+    <label>Staff Compact Layout - Community</label>
+</CompactLayout>

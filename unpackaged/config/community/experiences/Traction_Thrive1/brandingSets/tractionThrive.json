@@ -1,0 +1,28 @@
+{
+  "definitionName" : "ember:branding-ember",
+  "id" : "4754dbdc-5337-47f5-992a-63dd41facac7",
+  "label" : "Traction Thrive",
+  "type" : "brandingSet",
+  "values" : {
+    "ActionColor" : "rgb(19, 144, 198)",
+    "BorderColor" : "rgb(228, 228, 228)",
+    "CardBackgroundColor" : "rgba(255, 255, 255, 0)",
+    "CompanyLogo" : "/file-asset/TractionThriveLogo?v=1",
+    "DetailTextColor" : "rgb(4, 29, 62)",
+    "ErrorFontColor" : "#ff9e9e",
+    "HeaderFonts" : "Helvetica",
+    "LinkColor" : "rgb(19, 144, 198)",
+    "LoginBackgroundColor" : "#F4F4F4",
+    "LoginBackgroundImage" : "../../../../sfsites/picasso/core/external/salesforceIdentity/images/background.jpg?v=1",
+    "OverlayTextColor" : "rgb(255, 255, 255)",
+    "PageBackgroundColor" : "rgb(255, 255, 255)",
+    "PrimaryFont" : "Helvetica",
+    "TextColor" : "rgb(4, 29, 62)",
+    "TextTransformStyle" : "none",
+    "_ActionColorDarker" : "#0f6e97",
+    "_ActionColorTrans" : "rgba(19, 144, 198, 0.9)",
+    "_HoverColor" : "rgba(19, 144, 198, 0.05)",
+    "_LinkColorDarker" : "#0f75a1",
+    "_OverlayTextColorShadow" : "#000000"
+  }
+}

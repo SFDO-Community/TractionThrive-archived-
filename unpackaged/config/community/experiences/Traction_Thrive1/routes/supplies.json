@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "ad469451-af57-46b6-94c1-c837943a21eb",
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "id" : "59fb5545-60d7-45e4-addb-ed745132485a",
+  "label" : "Supplies",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-Supplies",
+  "type" : "route",
+  "urlPrefix" : "supplies"
+}

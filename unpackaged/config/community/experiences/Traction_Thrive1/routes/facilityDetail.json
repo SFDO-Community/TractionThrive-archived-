@@ -1,0 +1,9 @@
+{
+  "activeViewId" : "c3e64da2-5572-4b5e-8844-5aa7ea0ad3f4",
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "id" : "c5d2d7f0-3857-48ee-8f93-c3f0dc3f1b1d",
+  "label" : "Facility Detail",
+  "routeType" : "detail-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

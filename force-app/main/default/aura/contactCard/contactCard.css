@@ -1,0 +1,54 @@
+.THIS .cmp-account-info {
+	margin-right: 20px;
+	position: relative;
+}
+
+.THIS .cmp-contact-grid .cmp-edit-button {
+	position: absolute;
+	top: -10px;
+	right: -30px;
+}
+
+
+@media (max-width: 767px) {
+	.THIS .cmp-contact-grid > div {
+		flex: 1 1 100%;
+		text-align: center;
+	}
+
+	.THIS .cmp-contact-grid > div:not(last-child) {
+		margin-bottom: 5px;
+	}
+
+	.THIS .cmp-contact-grid .slds-avatar {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.THIS .cmp-contact-grid .cmp-account-name {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+	}
+
+	.THIS .cmp-contact-grid .cmp-account-parent {
+		font-size: 0.8rem;
+	}
+
+	.THIS .cmp-contact-grid .cmp-edit-button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		border: unset;
+	}
+
+	.THIS .cmp-account-info {
+		margin-right: 0;
+		position: unset;
+	}
+
+	.THIS .cmp-account-parent-wrap {
+		padding-top: 10px;
+	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Date__c</fullName>
+    <description>Release Date provides ability to project the future Availability of Staff. It&#39;s default is set to two weeks from the date that the Staff member was set to Not Available using the Not Available Action. Modify the formula field to change the number of days.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL( Exposure_Symptoms_Date__c ),  COVID_Diagnosis_Date__c + 14,  Exposure_Symptoms_Date__c + 14)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Release Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

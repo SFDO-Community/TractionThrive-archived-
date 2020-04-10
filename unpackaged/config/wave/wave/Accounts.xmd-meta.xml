@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataset>Accounts</dataset>
+    <dimensions>
+        <field>Name</field>
+        <isDerived>false</isDerived>
+        <label>Division</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Hospital</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>ParentId.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>ParentId.ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Health Authority</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>ParentId.ParentId.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>RecordTypeId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Record Type</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+</WaveXmd>

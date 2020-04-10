@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>MD - Medical Doctor</fullName>
+        <default>false</default>
+        <label>MD - Medical Doctor</label>
+    </customValue>
+    <customValue>
+        <fullName>RN - Registered Nurse</fullName>
+        <default>false</default>
+        <label>RN - Registered Nurse</label>
+    </customValue>
+    <customValue>
+        <fullName>RT - Respiratory Therapist</fullName>
+        <default>false</default>
+        <label>RT - Respiratory Therapist</label>
+    </customValue>
+    <customValue>
+        <fullName>NP - Nurse Practitioner</fullName>
+        <default>false</default>
+        <label>NP - Nurse Practitioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Emergency Registrant</fullName>
+        <default>false</default>
+        <label>Emergency Registrant</label>
+    </customValue>
+    <customValue>
+        <fullName>Resident</fullName>
+        <default>false</default>
+        <label>Resident</label>
+    </customValue>
+    <description>Defines Staff roles at Facilities to allow for reporting by role</description>
+    <masterLabel>Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

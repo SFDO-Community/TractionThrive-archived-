@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EclairGeoData xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <maps>
+        <mapLabel>canada_divisions1</mapLabel>
+        <mapName>map_1584685911602</mapName>
+        <projection>Mercator</projection>
+    </maps>
+    <masterLabel>canada_divisions1</masterLabel>
+</EclairGeoData>

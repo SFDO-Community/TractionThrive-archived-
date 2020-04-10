@@ -1,0 +1,89 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "8bd22b71-a6e3-4e41-9d31-d5a24beea803",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "607705ac-1d35-4525-bfaa-0882bf0f9c0f",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "22b0f6a5-45eb-4431-8298-d177d926dcb8",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "showAccountInfo" : "Desktop and Mobile",
+        "showAvatar" : "Desktop and Mobile",
+        "showContactInfo" : "Desktop and Mobile"
+      },
+      "componentName" : "c:contactCard",
+      "id" : "b6c9c242-f2a2-4bf1-9c93-5d07096bc397",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "iconColorBackground" : "#041d3e",
+        "iconName" : "standard:task",
+        "recordId" : "{!recordId}",
+        "showIcon" : true,
+        "showTitleBar" : true,
+        "statusBackground" : "#e4e4e4",
+        "statusColorAssigned" : "#041d3e",
+        "statusColorAvailable" : "#1390c6",
+        "statusColorNotAvailable" : "#f04d23",
+        "titleText" : "MY AVAILABILITY",
+        "titleTextForContactRecord" : "AVAILABILITY"
+      },
+      "componentName" : "c:staffAvailability",
+      "id" : "d4ecd98c-7498-4ea7-9804-35978d85cfe8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "514500d6-ee3e-4863-907c-cc2747dfcedc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "741471ee-e3ab-4da8-b459-b79871a6a56c",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfArticles" : 5,
+        "showTitle" : true,
+        "title" : "Top Articles",
+        "topicList" : [ ]
+      },
+      "componentName" : "forceCommunity:topArticleList",
+      "id" : "b8ac07f5-9411-41dd-8d1d-edd779dfc62f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8680c59d-6dbf-48e0-b555-6c38bd4b3605",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Traction Thrive"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8cf15bab-e7d7-4acf-980b-44c2b86cd996",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1f03d1fb-5443-453c-b7e4-d2b18acc270b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

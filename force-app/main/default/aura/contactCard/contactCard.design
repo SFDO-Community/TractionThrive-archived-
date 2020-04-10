@@ -1,0 +1,5 @@
+<design:component label="Contact Card">
+	<design:attribute name="showAvatar" label="Select where to display the avatar" dataSource="Desktop and Mobile, Mobile, Desktop, None"/>
+	<design:attribute name="showContactInfo" label="Select where to display Contact information" dataSource="Desktop and Mobile, Mobile, Desktop, None"/>
+	<design:attribute name="showAccountInfo" label="Select where to display Account information" dataSource="Desktop and Mobile, Mobile, Desktop, None"/>
+</design:component>

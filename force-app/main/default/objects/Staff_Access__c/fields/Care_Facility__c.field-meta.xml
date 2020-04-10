@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_Facility__c</fullName>
+    <description>The care facility account the staff is being added to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Adding this staff member to this department or facility will share access to that department.</inlineHelpText>
+    <label>Care Facility</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipName>StaffAccess</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

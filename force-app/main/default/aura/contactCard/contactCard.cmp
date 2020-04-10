@@ -1,0 +1,58 @@
+<!--
+ - Created by Heather Purvis on 2020-03-19.
+ -->
+
+<aura:component description="contactCard"
+                implements="forceCommunity:availableForAllPageTypes"
+        				controller="ContactCardCtrl" 
+				        access="global">
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="contactInfo" type="Contact"/>
+    <aura:attribute name="userInfo" type="User"/>
+    <aura:attribute name="showEditForm" type="Boolean" default="false"/>
+    <!-- DESIGN ATTRIBUTES -->
+    <aura:attribute name="showAvatar" type="String" access="global"/>
+    <aura:attribute name="showContactInfo" type="String" access="global"/>
+    <aura:attribute name="showAccountInfo" type="String" access="global"/>
+    <aura:attribute name="designAttributeCssClasses" type="Object" />
+
+    <!-- HANDLERS -->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <!-- MARKUP -->
+    <div class="slds-card slds-is-relative slds-p-around_medium">
+	    <div class="slds-grid slds-wrap slds-grid_vertical-align-center cmp-contact-grid">
+	        <div claass="slds-shrink cmp-user-icon">
+		        <lightning:avatar src="{!v.userInfo.FullPhotoUrl}" size="large" variant="circle" fallbackIconName="standard:person_account" alternativeText="{!v.contactInfo.Name}"/>
+	        </div>
+		    <div class="slds-col slds-align-middle slds-m-horizontal_small slds-col_bump-right cmp-contact-info">
+			    <div class="slds-size_1-of-1">
+				    <lightning:formattedText class="slds-text-heading_large" value="{!v.contactInfo.Name}"/>
+			    </div>
+			    <div class="slds-size_1-of-1">
+				    <lightning:formattedText class="slds-text-heading_small" value="{!v.contactInfo.Role_Global__c}"/>
+			    </div>
+		    </div>
+		    <div class="slds-shrink cmp-account-info slds-is-relative">
+			    <div class="slds-size_1-of-1 cmp-account-name-wrap">
+				    <lightning:formattedText class="slds-text-heading_large cmp-account-name" value="{!v.contactInfo.Account.Name}"/>
+			    </div>
+			    <aura:if isTrue="{!not(empty(v.contactInfo.Account.Parent.Name))}">
+				    <div class="slds-size_1-of-1">
+					    <div class="cmp-account-parent-wrap">
+					        <lightning:formattedText class="slds-text-heading_small cmp-account-parent" value="{!v.contactInfo.Account.Parent.Name}"/>
+						</div>
+				    </div>
+			    </aura:if>
+			    <div class="cmp-edit-button">
+				    <lightning:buttonIcon onclick="{!c.toggleContactForm}" variant="bare" iconName="{!not(v.showEditForm)? 'utility:edit':'utility:close'}"  alternativeText="Edit" title="Edit" />
+			    </div>
+		    </div>
+	    </div>
+
+        <aura:if isTrue="{!v.showEditForm}">
+            <c:contactEditForm oncancelevent="{!c.toggleContactForm}" />
+        </aura:if>
+    </div>
+</aura:component>

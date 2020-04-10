@@ -1,0 +1,67 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "2d14af06-67be-497c-ac55-1470b552d128",
+  "label" : "Patients",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9dcf898a-dffb-4dfd-88a0-5286905c5773",
+          "columns" : [ {
+            "UUID" : "8b504556-d9ac-4371-b6be-7fe9aa143ad6",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9dcf898a-dffb-4dfd-88a0-5286905c5773",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:patientTracker",
+          "id" : "84fa39f9-a249-453a-adb7-d34d88521329",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8b504556-d9ac-4371-b6be-7fe9aa143ad6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "65cd17b2-818e-4105-82c7-e304c3c2fcf4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Patients"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e405a1d8-ab1f-4873-b2e0-7d21b356239b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "afe00445-b27a-46e4-9cf9-dbdf2d769766",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Patients"
+}

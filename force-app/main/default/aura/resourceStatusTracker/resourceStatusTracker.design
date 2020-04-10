@@ -1,0 +1,10 @@
+<!--
+ - Created by Heather Purvis on 2020-03-18.
+ -->
+
+<design:component>
+    <design:attribute name="title" label="Title"/>
+    <design:attribute name="iconURL" label="Icon URL" description="Url of icon"/>
+    <design:attribute name="resource" label="Resource" datasource="apex://StatusReportTypePicklist"/>
+    <design:attribute name="status" label="Status" datasource="apex://StatusReportStatusPicklist"/>
+</design:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Calls Isolation flow to update record</description>
+    <flowDefinition>Update_Staff_to_Isolation</flowDefinition>
+    <icon>icon_covid_like</icon>
+    <label>Not Available</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

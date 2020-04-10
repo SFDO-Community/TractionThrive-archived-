@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset>Status_Reports</dataset>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>Available</bin>
+                <formatValue>#3AE867</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>In use</bin>
+                <formatValue>#FF9897</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>Inactive</bin>
+                <formatValue>#FFCD95</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>2</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>N/A</bin>
+                <formatValue>#98B1FF</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>3</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>Total</bin>
+                <formatValue>#C6D3E1</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>4</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>%%%NAMESPACE%%%Status__c</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>categories</type>
+        </conditionalFormatting>
+        <field>%%%NAMESPACE%%%Status__c</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Department__c.Name</field>
+        <isDerived>false</isDerived>
+        <label>Division</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>%%%NAMESPACE%%%Department__c.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Department__c.ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Hospital</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>%%%NAMESPACE%%%Department__c.ParentId.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Department__c.ParentId.ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Health Authority</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>%%%NAMESPACE%%%Department__c.ParentId.ParentId.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>CreatedById.Name</field>
+        <isDerived>false</isDerived>
+        <label>Created by Name</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordDisplayFields>
+            <recordDisplayField>CreatedById.Name</recordDisplayField>
+            <sortIndex>0</sortIndex>
+        </recordDisplayFields>
+        <recordDisplayFields>
+            <recordDisplayField>%%%NAMESPACE%%%Department__c.Name</recordDisplayField>
+            <sortIndex>1</sortIndex>
+        </recordDisplayFields>
+        <recordDisplayFields>
+            <recordDisplayField>%%%NAMESPACE%%%Department__c.ParentId.Name</recordDisplayField>
+            <sortIndex>2</sortIndex>
+        </recordDisplayFields>
+        <recordIdField>CreatedById.ContactId</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Department__c</field>
+        <isDerived>false</isDerived>
+        <label>Division ID</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Department__c.Id</field>
+        <isDerived>false</isDerived>
+        <label>Division ID ID</label>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>CreatedById.ContactId</field>
+        <isDerived>false</isDerived>
+        <label>Created by Contact ID</label>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+</WaveXmd>

@@ -1,0 +1,62 @@
+{
+  "orgName": "Thrive - Beta Test Org",
+  "edition": "Developer",
+  "features": [
+    "AnalyticsAdminPerms", 
+    "CMSUnlimitedUse", 
+    "Communities", 
+    "DevelopmentWave", 
+    "InsightsPlatform", 
+    "Knowledge", 
+    "LightningServiceConsole", 
+    "LiveAgent",
+    "ServiceCloud", 
+    "Sites", 
+    "WavePlatform" 
+  ],
+  "settings": {
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true,
+      "enableOotbProfExtUserOpsEnable": true
+    },
+    "knowledgeSettings": {
+      "enableKnowledge": true,
+      "enableLightningKnowledge": true,
+      "showValidationStatusField": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "nameSettings": {
+      "enableMiddleName": true,
+      "enableNameSuffix": true
+    },
+    "enhancedNotesSettings": {
+      "enableEnhancedNotes": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "securitySettings": {
+      "enableAdminLoginAsAnyUser": true,
+      "sessionSettings": {
+        "forceRelogin": false
+      }
+    },
+    "socialProfileSettings": {
+      "enableSocialProfiles": true
+    },
+    "userManagementSettings": {
+      "enableNewProfileUI": true
+    }
+  }
+}

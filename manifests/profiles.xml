@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Customer Community Login - Traction Thrive</members>
+        <members>Customer Community Plus - Health Authority</members>
+        <members>Customer Community Plus - Hospital Administrator</members>
+        <members>Customer Community Plus - Medical Staff</members>
+        <members>Customer Community - Health Authority</members>
+        <members>Customer Community - Hospital Administrator</members>
+        <members>Customer Community - Medical Staff</members>
+        <members>Health Authority</members>
+        <members>Hospital Administrator</members>
+        <members>Medical Staff</members>
+        <members>Regional Overview</members>
+        <name>Profile</name>
+    </types>
+    <version>48.0</version>
+</Package>

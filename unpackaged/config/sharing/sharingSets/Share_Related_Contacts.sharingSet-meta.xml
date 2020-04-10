@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Account</object>
+        <objectField>Parent</objectField>
+        <userField>Contact.Account</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Contact</object>
+        <objectField>Account.Parent</objectField>
+        <userField>Account</userField>
+    </accessMappings>
+    <description>Provide the ability to edit immediate Account and Contact child records.</description>
+    <name>Share Related Child Records</name>
+    <profiles>Health Authority</profiles>
+    <profiles>Hospital Administrator</profiles>
+    <profiles>Crisis Management - Executive</profiles>
+    <profiles>Crisis Management - Facility Manager</profiles>
+    <profiles>Crisis Management - Medical Staff</profiles>    
+</SharingSet>

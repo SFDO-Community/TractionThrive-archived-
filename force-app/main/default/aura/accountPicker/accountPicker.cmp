@@ -1,0 +1,77 @@
+<!--
+ - Created by Heather Purvis on 2020-03-24.
+ -->
+
+<aura:component description="accountPicker"
+                controller="AccountPickerCtrl"
+                access="global"
+                >
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="healthAuthorities" type="List"/>
+    <aura:attribute name="hospitals" type="List"/>
+    <aura:attribute name="divisions" type="List"/>
+
+    <aura:attribute name="selectedAuthority" type="String"/>
+    <aura:attribute name="selectedHospital" type="Id"/>
+    <aura:attribute name="selectedDivision" type="Id"/>
+
+    <aura:attribute name="divisionMap" type="Map"/>
+    <aura:attribute name="hospitalMap" type="Map"/>
+
+    <!-- HANDLERS -->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <!--  EVENTS  -->
+    <aura:registerEvent name="setAttribute" type="c:setAttributeEvent"/>
+
+    <!-- MARKUP -->
+    <div class="c-container">
+        <lightning:layout multipleRows="true" class="slds-box">
+            <lightning:layoutItem size="12" class="slds-p-around--x-small">
+                <div class="slds-size--1-of-1">
+                    <lightning:formattedText class="slds-text-title_bold" value="Select the Division for which you are tracking resources:"/>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="3" largeDeviceSize="3"
+                                                         class="slds-p-around--x-small">
+                <div class="slds-size--1-of-1">
+                    <lightning:combobox name="authority"
+                                        label="Health Authority"
+                                        class="slds-text-heading--small"
+                                        value="{!v.selectedAuthority}"
+                                        placeholder="Select a Health Authority"
+                                        options="{! v.healthAuthorities }"
+                                        onchange="{! c.handleAuthorityChange }"
+                                        required="true"/>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="3" largeDeviceSize="3"
+                                  class="slds-p-around--x-small">
+                <div class="slds-size--1-of-1">
+                    <lightning:combobox name="hospital"
+                                        label="Hospital"
+                                        class="slds-text-heading--small"
+                                        value="{! v.selectedHospital }"
+                                        placeholder="Select a Hospital"
+                                        options="{! v.hospitals }"
+                                        onchange="{! c.handleHospitalChange }"
+                                        required="true"/>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="3" largeDeviceSize="3"
+                                  class="slds-p-around--x-small">
+                <div class="slds-size--1-of-1">
+                    <lightning:combobox name="division"
+                                        label="Division"
+                                        class="slds-text-heading--small"
+                                        value="{! v.selectedDivision }"
+                                        placeholder="Select a Division"
+                                        options="{! v.divisions }"
+                                        onchange="{! c.handleDivisionChange }"
+                                        required="true"/>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

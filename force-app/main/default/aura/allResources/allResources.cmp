@@ -1,0 +1,274 @@
+<!--
+ - Created by Heather Purvis on 2020-03-20.
+ -->
+
+<aura:component description="allResources"
+                implements="forceCommunity:availableForAllPageTypes"
+                controller="AllResourceCtrl"
+                access="global">
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="selectedDivisionId" type="Id"/>
+    <aura:attribute name="isReadOnly" type="Boolean"/>
+    <aura:attribute name="genericHelpText" default="Please enter the number of individual units, not the number of boxes or packages." type="String"/>
+
+    <!--  HANDLERS -->
+    <aura:handler name="setAttribute" event="c:setAttributeEvent" action="{!c.setAttributeValue}"/>
+
+    <!-- MARKUP -->
+    <c:accountPicker/>
+
+    <aura:if isTrue="{!v.selectedDivisionId != null}"><!-- PPE (Headgear) Resource Tracking -->
+        <div class="c-container">
+            <div class="slds-modal__header title slds-m-vertical--small">
+                <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
+                                         value="PPE (Headgear) Resourcing Status"/>
+            </div>
+        </div>
+        <br/>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <!--  Face wear  -->
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Fit Tests Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-fittest-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Fit Tests"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="N95 Masks Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-maskn95-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="N95 Masks"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Surgical Masks Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-masksurgical-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Surgical Masks"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Exam Masks Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-maskexam-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Exam Masks"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Hoods Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-hood-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Hoods"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Face Shields Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-shield-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Face Shields"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Safety Goggles Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-goggles-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Safety Goggles"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Safety Glasses Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-glasses-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Safety Glasses"
+                                         status="Available"/>
+            </div>
+        </div>
+
+        <!-- PPE (Body) Resource Tracking -->
+        <div class="c-container">
+            <div class="slds-modal__header title slds-m-vertical--small">
+                <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
+                                         value="PPE (Body) Resourcing Status"/>
+            </div>
+        </div>
+        <br/>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <!--  Body wear  -->
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Level 3 Gowns Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-gown3-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Level 3 Gowns"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Level 4 Gowns Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-gown4-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Level 4 Gowns"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Coveralls Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-coverall-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Coveralls"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Surgical Gowns Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-gownsurgical-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Surgical Gowns"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Gloves (Nitrile) Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-glovesnitrile-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Gloves (Nitrile)"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Gloves (Sterile) Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-glovessterile-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Gloves (Sterile)"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Shoe Covers Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-shoecover-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Shoe Covers"
+                                         status="Available"/>
+            </div>
+        </div>
+
+        <!--    Cleaning Products -->
+        <div class="c-container">
+            <div class="slds-modal__header title slds-m-vertical--small">
+                <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
+                                         value="Cleaning Products Status"/>
+            </div>
+        </div>
+        <br/>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Hand Sanitizer Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-sanitizer-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Hand Sanitizer"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Disinfectant Remaining"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-disinfect-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Disinfectant"
+                                         status="Available"/>
+            </div>
+        </div>
+
+        <!--    ICU Facility Tracking-->
+        <div class="c-container">
+            <div class="slds-modal__header title slds-m-vertical--small">
+                <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
+                                         value="ICU Facility Status"/>
+            </div>
+        </div>
+        <br/>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Ventilator Beds - Available"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-ventbed-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Ventilator Beds"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Ventilator Beds - In Use"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-ventbed-inuse.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Ventilator Beds"
+                                         status="In Use"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Ventilator Beds - Inactive"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-ventbed-inactive.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Ventilator Beds"
+                                         status="Inactive"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Anaesthesia Machines - Available"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-anmach-available.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Anaesthesia Machines"
+                                         status="Available"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Anaesthesia Machines - In Use"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-anmach-inuse.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Anaesthesia Machines"
+                                         status="In Use"/>
+            </div>
+            <div class="slds-col slds-m-vertical--small">
+                <c:resourceStatusTracker aura:id="resource" title="Anaesthesia Machines - Inactive"
+                                         divisionId="{!v.selectedDivisionId}"
+                                         iconURL="{!$Resource.resource_icons + '/icon-anmach-inactive.svg'}"
+                                         isReadOnly="{! v.isReadOnly }"
+                                         helpText="{! v.genericHelpText }"
+                                         resource="Anaesthesia Machines"
+                                         status="Inactive"/>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

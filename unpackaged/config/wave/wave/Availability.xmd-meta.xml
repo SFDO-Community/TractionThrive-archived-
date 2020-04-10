@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataset>Availability</dataset>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Staff__c.%%%NAMESPACE%%%Status__c</field>
+        <isDerived>false</isDerived>
+        <label>Staff Status</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Available__c</field>
+        <isDerived>false</isDerived>
+        <label>Availability Status</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Staff__c.AccountId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Division</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Staff__c.AccountId.ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Hospital</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Staff__c.AccountId.ParentId.ParentId.Name</field>
+        <isDerived>false</isDerived>
+        <label>Health Authority</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>%%%NAMESPACE%%%Staff__c.Name</field>
+        <isDerived>false</isDerived>
+        <label>Staff Name</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+</WaveXmd>

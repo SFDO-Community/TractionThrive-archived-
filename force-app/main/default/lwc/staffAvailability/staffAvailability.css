@@ -1,0 +1,18 @@
+.cmp-grid {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.cmp-assignments-icon.slds-icon_container {
+	background-color: var(--cmp-icon-background-color);
+}
+
+@media only screen and (min-device-width: 481px) {
+	.cmp-availability[data-has-id=false] ul.cmp-grid {
+		grid-template-columns: auto auto;
+	}
+
+	.cmp-availability[data-has-id=false] ul.cmp-grid li:not(:last-child) {
+		border-right: 1px solid var(--lwc-colorBorderButtonDefault);
+	}
+}

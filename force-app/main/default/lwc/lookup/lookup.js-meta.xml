@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="lookup">
+    <apiVersion>48.0</apiVersion>
+    <description>Custom LWC Lookoup Component from
+		https://github.com/pozil/sfdc-ui-lookup-lwc/tree/master/src/main/default/lwc/lookup
+	</description>
+    <isExposed>false</isExposed>
+    <masterLabel>Lookup</masterLabel>
+</LightningComponentBundle>

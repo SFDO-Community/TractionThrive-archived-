@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#041D3E</backgroundColor>
+    <bodyColor>#ffffff</bodyColor>
+    <bottomLine>
+        <color>#041D3E</color>
+        <height>0</height>
+    </bottomLine>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Traction_Thrive/Traction_and_Thrive_Small_Logo.png</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#041D3E</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Traction_Thrive/Traction_Thrive_CCRMS_Small_Logo.png</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#ffffff</color>
+        <height>0</height>
+    </middleLine>
+    <name>Traction Thrive Letterhead</name>
+    <topLine>
+        <color>#041D3E</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

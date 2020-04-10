@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BC_COVID_19_Layout</fullName>
+    <fields>Name</fields>
+    <label>DEPRECATED - BC COVID-19 Layout</label>
+</CompactLayout>

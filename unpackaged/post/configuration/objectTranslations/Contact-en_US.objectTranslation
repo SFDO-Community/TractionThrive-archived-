@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Staff</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Staff</value>
+    </caseValues>
+    <quickActions>
+        <label><!-- COVID+ --></label>
+        <name>COVID_Positive</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Not Available --></label>
+        <name>Isolation</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <fields>
+        <label><!-- %%%NAMESPACE%%%Assignment Designation --></label>
+        <name>%%%NAMESPACE%%%Assignment_Designation__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation><!-- Secondary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation><!-- Tertiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- %%%NAMESPACE%%%Assignment - End Date --></label>
+        <name>%%%NAMESPACE%%%Assignment_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the date of positive diagnosis for COVID-19 --></help>
+        <label><!-- COVID Diagnosis Date --></label>
+        <name>%%%NAMESPACE%%%COVID_Diagnosis_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>%%%NAMESPACE%%%Division__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Medicine</masterLabel>
+            <translation><!-- Emergency Medicine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Medicine</masterLabel>
+            <translation><!-- Internal Medicine --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Exposure/Symptoms Date --></label>
+        <name>%%%NAMESPACE%%%Exposure_Symptoms_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Staff Category --></label>
+        <name>%%%NAMESPACE%%%Medical_Staff_Category__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate</masterLabel>
+            <translation><!-- Associate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clinical Associate</masterLabel>
+            <translation><!-- Clinical Associate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honorary</masterLabel>
+            <translation><!-- Honorary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locum Tenens</masterLabel>
+            <translation><!-- Locum Tenens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation><!-- Provisional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific and Research</masterLabel>
+            <translation><!-- Scientific and Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary</masterLabel>
+            <translation><!-- Temporary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>%%%NAMESPACE%%%Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Practice Type --></label>
+        <name>%%%NAMESPACE%%%Practice_Type__c</name>
+        <picklistValues>
+            <masterLabel>Clinical Scientist</masterLabel>
+            <translation><!-- Clinical Scientist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation><!-- Dentist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maxillofacial Surgeon</masterLabel>
+            <translation><!-- Maxillofacial Surgeon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwife</masterLabel>
+            <translation><!-- Midwife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation><!-- Physician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychologist</masterLabel>
+            <translation><!-- Psychologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific &amp; Research</masterLabel>
+            <translation><!-- Scientific &amp; Research --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Provider ID --></label>
+        <name>%%%NAMESPACE%%%Provider_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Date --></label>
+        <name>%%%NAMESPACE%%%Release_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>%%%NAMESPACE%%%Role_Global__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the valid competencies --></help>
+        <label><!-- Competencies --></label>
+        <name>%%%NAMESPACE%%%Skills__c</name>
+        <picklistValues>
+            <masterLabel>CARE</masterLabel>
+            <translation><!-- CARE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Critical Care</masterLabel>
+            <translation><!-- Critical Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPAC</masterLabel>
+            <translation><!-- EPAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation><!-- ER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General GYN</masterLabel>
+            <translation><!-- General GYN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV Therapy</masterLabel>
+            <translation><!-- IV Therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neonatal</masterLabel>
+            <translation><!-- Neonatal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nephrology/Dialysis</masterLabel>
+            <translation><!-- Nephrology/Dialysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Obstetrics</masterLabel>
+            <translation><!-- Obstetrics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perinatal</masterLabel>
+            <translation><!-- Perinatal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perioperative</masterLabel>
+            <translation><!-- Perioperative --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- On Staff = available to work, Not Available = all future availability records will automatically be set to Not Available --></help>
+        <label><!-- Status --></label>
+        <name>%%%NAMESPACE%%%Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation><!-- Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On staff</masterLabel>
+            <translation><!-- On staff --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Access</value>
+        </caseValues>
+        <name>contact_access</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Access Level</value>
+        </caseValues>
+        <name>contact_access_level</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Account</value>
+        </caseValues>
+        <name>contact_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Currency</value>
+        </caseValues>
+        <name>contact_currency</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Description</value>
+        </caseValues>
+        <name>contact_description</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Division</value>
+        </caseValues>
+        <name>contact_division</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Edit</value>
+        </caseValues>
+        <name>contact_edit</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Email</value>
+        </caseValues>
+        <name>contact_email</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Fax</value>
+        </caseValues>
+        <name>contact_fax</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Field</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Fields</value>
+        </caseValues>
+        <name>contact_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff History</value>
+        </caseValues>
+        <name>contact_history</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff History Report</value>
+        </caseValues>
+        <name>contact_history_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff ID</value>
+        </caseValues>
+        <name>contact_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Information</value>
+        </caseValues>
+        <name>contact_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Mobile</value>
+        </caseValues>
+        <name>contact_mobile</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Name</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Names</value>
+        </caseValues>
+        <name>contact_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Note</value>
+        </caseValues>
+        <name>contact_note</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Number</value>
+        </caseValues>
+        <name>contact_number</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Owner</value>
+        </caseValues>
+        <name>contact_owner</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Owner Alias</value>
+        </caseValues>
+        <name>contact_owner_alias</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Phone</value>
+        </caseValues>
+        <name>contact_phone</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Record</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Records</value>
+        </caseValues>
+        <name>contact_record</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Record Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Record Types</value>
+        </caseValues>
+        <name>contact_record_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Reports To Staff</value>
+        </caseValues>
+        <name>contact_reports_to</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Role</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Roles</value>
+        </caseValues>
+        <name>contact_role</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Role ID</value>
+        </caseValues>
+        <name>contact_role_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Role Report</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Role Reports</value>
+        </caseValues>
+        <name>contact_role_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Stage ID</value>
+        </caseValues>
+        <name>contact_stage_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Status</value>
+        </caseValues>
+        <name>contact_status</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff Type</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Types</value>
+        </caseValues>
+        <name>contact_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Staff View</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Staff Views</value>
+        </caseValues>
+        <name>contact_view</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+</CustomObjectTranslation>

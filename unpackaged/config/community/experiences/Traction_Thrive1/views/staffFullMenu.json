@@ -1,0 +1,82 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "28b1d7cb-0126-4e0b-963a-2ec8dc0a246d",
+  "label" : "Staff - Full Menu",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "30bbb98e-b1a6-4b8d-895f-98a167e158e7",
+          "columns" : [ {
+            "UUID" : "991750f7-613c-4d00-bc7a-3ee2d3e3cd2d",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "30bbb98e-b1a6-4b8d-895f-98a167e158e7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "00B5W000000TdXGUA0",
+            "layout" : "FULL",
+            "pageSize" : 25,
+            "scope" : "Contact",
+            "showActionBar" : false,
+            "showChartsPanel" : false,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : false,
+            "showManualRefreshButton" : true,
+            "showObjectName" : false,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "8b8f2a36-ae90-4cd1-a966-c7c4a3d722d8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "991750f7-613c-4d00-bc7a-3ee2d3e3cd2d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "26a8ccb8-d4d2-4fc6-ad31-60fd33b2c192",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "Review Staff in a listview",
+        "metaTags" : "",
+        "title" : "Staff"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b8e27b05-707e-40f0-aafd-ac163a21e021",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8139f7a8-2ee1-4a60-b4e5-b368f5ea4901",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "URKKI3exULkxHfr92hNKLB47r1fVYM",
+  "type" : "view",
+  "viewType" : "custom-staff"
+}

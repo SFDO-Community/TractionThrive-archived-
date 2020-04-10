@@ -1,0 +1,131 @@
+<!--
+ - Created by pserquiz on 3/27/2020.
+ -->
+
+<!-- Contact Edit Form -->
+<template>
+	
+	<c-app-spinner></c-app-spinner>
+	<hr />
+		<template if:true={contact}>
+			<div class="slds-text-heading_large slds-m-vertical_medium">Staff Information</div>
+			<lightning-layout multiple-rows="true">
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium" if:true={account}>
+					<lightning-input class="slds-m-top_small" type="text" value={contact.Account.Name} label="Care Facility" disabled></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+					<lightning-input class="slds-m-top_small" type="text" value={contact.Email} disabled label="Email"></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+					<lightning-input class="slds-m-top_small" type="text" value={contact.Name} label="Name" disabled></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+					<lightning-input class="slds-m-top_small"
+									 data-field="Mobile"
+									 type="tel"
+									 value={contact.MobilePhone}
+									 label="Mobile"></lightning-input></lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+					<lightning-input class="slds-m-top_small"
+									 data-field="Phone"
+									 type="tel"
+									 value={contact.Phone}
+									 label="Phone"></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+					<lightning-combobox
+							name="competencies"
+							label="Competencies"
+							value={selectedCompetenciesPicklistValues}
+							placeholder="Select competence"
+							options={competenciesPicklistValues}
+							class="slds-m-top_small"
+							onchange={handleCompetenciesPicklistChange} ></lightning-combobox>
+					<div class="slds-m-top_x-small">
+						<template iterator:it={selectedCompetenciesPicklistValues}>
+							<lightning-pill key={it.value} data-item={it.value} label={it.value} onclick={handleCompetenciesPicklistRemoval}></lightning-pill>
+						</template>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<lightning-layout multiple-rows="false">
+				<lightning-layout-item size="12" class="slds-p-horizontal_medium slds-text-align_right slds-p-top_medium">
+					<lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={cancel}></lightning-button>
+					<lightning-button label="Save" title="Save" variant="brand" class="slds-m-left_x-small" onclick={updateContact}></lightning-button>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<hr />
+
+			<lightning-layout multiple-rows="false" class="slds-m-vertical_medium">
+				<lightning-layout-item size="6" class="slds-p-horizontal_medium">
+					<h1 class="slds-text-heading_large">Credentials</h1>
+				</lightning-layout-item>
+				<lightning-layout-item size="6" class="slds-p-horizontal_medium slds-text-align_right">
+					<lightning-button variant="base" label="Add" title="Add new credential" icon-name="utility:add" class="slds-m-left_x-small" onclick={openCredentialModal}></lightning-button>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<lightning-layout multiple-rows="false" if:true={credentialsData}>
+				<lightning-layout-item size="12" class="slds-p-horizontal_medium">
+					<lightning-datatable
+							key-field="Id"
+							data={credentialsData}
+							columns={credentialsColumns}
+							onrowaction={handleCredentialAction}
+							hide-checkbox-column="true">
+					</lightning-datatable>
+				</lightning-layout-item>
+			</lightning-layout>
+
+			<!-- Modal-->
+			<c-app-modal header-name="Create a new credential" modal-size="small">
+				<span slot="content">
+					<lightning-layout multiple-rows="true">
+						<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12" class="slds-p-horizontal_medium">
+							<lightning-input class="slds-m-top_small" data-field="Staff" type="text" value={contact.Name} label="Staff Name" disabled></lightning-input>
+						</lightning-layout-item>
+						<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+							<div class="slds-form-element slds-m-top_small">
+								<template if:false={isEditCredential}>
+									<c-lookup
+											selection={lookupConfig.initialSelection}
+											errors={lookupConfig.lookupErrors}
+											is-multi-entry={lookupConfig.isMultiEntry}
+											onsearch={handleLookupSearch}
+											onselectionchange={handleLookupChange}
+											label="Care Facility"
+											placeholder="Search Care Facility">
+									</c-lookup>
+								</template>
+								<template if:true={isEditCredential}>
+									<lightning-input class="slds-m-top_small" type="text" value={selectedCredentialAccount} label="Care Facility" disabled></lightning-input>
+								</template>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" class="slds-p-horizontal_medium">
+							<lightning-combobox
+									name="registrantType"
+									label="Registrant Type"
+									dropdown-alignment="bottom-left"
+									value={selectedCredentialPicklistValue}
+									placeholder="Registrant Type"
+									options={credentialPicklistValues}
+									class="slds-m-top_small"
+									onchange={handleCredentialPicklistChange} ></lightning-combobox>
+						</lightning-layout-item>
+					</lightning-layout>
+				</span>
+					<!-- Footer and Add new Credential Button -->
+				<span slot="footer">
+					<template if:false={isEditCredential}>
+						<button class="slds-button slds-button_brand" onclick={insertCredential}>Save</button>
+					</template>
+					<template if:true={isEditCredential}>
+						<button class="slds-button slds-button_brand" onclick={editCredential}>Save</button>
+					</template>
+				</span>
+			</c-app-modal>
+		</template>
+</template>

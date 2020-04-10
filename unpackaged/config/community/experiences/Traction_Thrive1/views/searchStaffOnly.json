@@ -1,0 +1,47 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "43418f65-b126-45b2-b3cc-46f63ecffdc5",
+  "label" : "Search - Staff Only",
+  "regions" : [ {
+    "id" : "3056fcb8-224f-46f0-b2c5-39dd4d7774d5",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "scopes" : [ {
+          "name" : "Account",
+          "isPublic" : false
+        }, {
+          "name" : "Contact",
+          "isPublic" : false
+        }, {
+          "name" : "CollaborationGroup",
+          "isPublic" : false
+        }, {
+          "name" : "Case",
+          "isPublic" : false
+        } ],
+        "searchResultFiltering" : true,
+        "searchTerm" : "{!term}",
+        "showTopResults" : true
+      },
+      "componentName" : "forceCommunity:search",
+      "id" : "a5fece83-179b-4bf3-9e7a-f999691d715b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b6a34e33-2181-444b-8df7-a7688d81c4f5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "fcd77cfa-d48b-4396-81f5-fc996fc8d802",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "xXXy2Jw4LHNnfhMRnM2vaShb8aX7Th",
+  "type" : "view",
+  "viewType" : "global-search"
+}

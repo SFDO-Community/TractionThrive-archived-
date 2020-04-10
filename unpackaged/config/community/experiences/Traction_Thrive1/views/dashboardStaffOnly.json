@@ -1,0 +1,59 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "25c96c38-84ca-423a-a04b-a4318768f2fc",
+  "label" : "Dashboard - Staff Only",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d1ccb90b-24a1-4b8c-a4dc-259a1a81ce1f",
+          "columns" : [ {
+            "UUID" : "26fc9eaf-d74f-4c12-b055-35a062070540",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d1ccb90b-24a1-4b8c-a4dc-259a1a81ce1f",
+      "regions" : [ {
+        "id" : "26fc9eaf-d74f-4c12-b055-35a062070540",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b40a2e84-46cd-4e91-b3f1-d0c2718c8cb6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "Run advanced analytics on staff availability and supply inventory",
+        "metaTags" : "",
+        "title" : "Dashboard"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "912b75ca-9951-4991-8ae8-356b0e5bcb38",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1f611b12-2e32-4630-aa92-8478400d93f4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "xXXy2Jw4LHNnfhMRnM2vaShb8aX7Th",
+  "type" : "view",
+  "viewType" : "custom-dashboard"
+}

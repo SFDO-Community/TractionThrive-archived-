@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>COVID Like</fullName>
+                <default>true</default>
+                <label>COVID Like</label>
+            </value>
+            <value>
+                <fullName>Presumptive COVID</fullName>
+                <default>false</default>
+                <label>Presumptive COVID</label>
+            </value>
+            <value>
+                <fullName>COVID Positive</fullName>
+                <default>false</default>
+                <label>COVID Positive</label>
+            </value>
+            <value>
+                <fullName>Comorbidity</fullName>
+                <default>false</default>
+                <label>Comorbidity</label>
+            </value>
+            <value>
+                <fullName>Health Care Staff COVID Positive</fullName>
+                <default>false</default>
+                <label>Health Care Staff COVID Positive</label>
+            </value>
+            <value>
+                <fullName>Age Range</fullName>
+                <default>false</default>
+                <label>Age Range</label>
+            </value>
+            <value>
+                <fullName>Ventilator Beds</fullName>
+                <default>false</default>
+                <label>Ventilator Beds</label>
+            </value>
+            <value>
+                <fullName>Anaesthesia Machines</fullName>
+                <default>false</default>
+                <label>Anaesthesia Machines</label>
+            </value>
+            <value>
+                <fullName>N95 Masks</fullName>
+                <default>false</default>
+                <label>N95 Masks</label>
+            </value>
+            <value>
+                <fullName>Face Shields</fullName>
+                <default>false</default>
+                <label>Face Shields</label>
+            </value>
+            <value>
+                <fullName>Hoods</fullName>
+                <default>false</default>
+                <label>Hoods</label>
+            </value>
+            <value>
+                <fullName>Level 3 Gowns</fullName>
+                <default>false</default>
+                <label>Level 3 Gowns</label>
+            </value>
+            <value>
+                <fullName>Level 4 Gowns</fullName>
+                <default>false</default>
+                <label>Level 4 Gowns</label>
+            </value>
+            <value>
+                <fullName>Coveralls</fullName>
+                <default>false</default>
+                <label>Coveralls</label>
+            </value>
+            <value>
+                <fullName>Surgical Gowns</fullName>
+                <default>false</default>
+                <label>Surgical Gowns</label>
+            </value>
+            <value>
+                <fullName>Fit Tests</fullName>
+                <default>false</default>
+                <label>Fit Tests</label>
+            </value>
+            <value>
+                <fullName>Surgical Masks</fullName>
+                <default>false</default>
+                <label>Surgical Masks</label>
+            </value>
+            <value>
+                <fullName>Exam Masks</fullName>
+                <default>false</default>
+                <label>Exam Masks</label>
+            </value>
+            <value>
+                <fullName>Gloves (Nitrile)</fullName>
+                <default>false</default>
+                <label>Gloves (Nitrile)</label>
+            </value>
+            <value>
+                <fullName>Gloves (Sterile)</fullName>
+                <default>false</default>
+                <label>Gloves (Sterile)</label>
+            </value>
+            <value>
+                <fullName>Hand Sanitizer</fullName>
+                <default>false</default>
+                <label>Hand Sanitizer</label>
+            </value>
+            <value>
+                <fullName>Disinfectant</fullName>
+                <default>false</default>
+                <label>Disinfectant</label>
+            </value>
+            <value>
+                <fullName>Safety Goggles</fullName>
+                <default>false</default>
+                <label>Safety Goggles</label>
+            </value>
+            <value>
+                <fullName>Safety Glasses</fullName>
+                <default>false</default>
+                <label>Safety Glasses</label>
+            </value>
+            <value>
+                <fullName>Shoe Covers</fullName>
+                <default>false</default>
+                <label>Shoe Covers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

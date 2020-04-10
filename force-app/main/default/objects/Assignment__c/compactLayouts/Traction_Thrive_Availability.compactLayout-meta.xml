@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Traction_Thrive_Availability</fullName>
+    <fields>Name</fields>
+    <fields>Date__c</fields>
+    <fields>Available__c</fields>
+    <fields>Care_Facility__c</fields>
+    <fields>Staff__c</fields>
+    <label>Traction Thrive Availability</label>
+</CompactLayout>

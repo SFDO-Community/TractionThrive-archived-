@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/appModal": [
+                "appModal/appModal.js"
+            ],
+            "c/appSpinner": [
+                "appSpinner/appSpinner.js"
+            ],
+            "c/appUtils": [
+                "appUtils/appUtils.js"
+            ],
+            "c/contactEditForm": [
+                "contactEditForm/contactEditForm.js"
+            ],
+            "c/lookup": [
+                "lookup/lookup.js"
+            ],
+            "c/staffAssignment": [
+                "staffAssignment/staffAssignment.js"
+            ],
+            "c/staffAvailability": [
+                "staffAvailability/staffAvailability.js"
+            ],
+            "c/staffAvailabilityItem": [
+                "staffAvailabilityItem/staffAvailabilityItem.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

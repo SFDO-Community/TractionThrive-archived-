@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Staff Availability</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Staff Availability</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="showTitleBar" type="Boolean" label="Show Title Bar" description="Show or hide the title bar and icon" default="true"/>
+            <property name="titleText" type="String" label="Title" default="MY AVAILABILITY" description="Default component title text"/>
+            <property name="titleTextForContactRecord" type="String" label="Title on Contact Record" default="AVAILABILITY" description="Component title text when embedded in a contact detail"/>
+            <property name="showIcon" type="Boolean" label="Show Title Icon" description="Show or hide the title icon" default="true"/>
+            <property name="iconName" type="String" label="Standard Icon (SLDS)" description="Lightning Design System Icon, see https://lightningdesignsystem.com (Standard only icons recommended)" default="standard:task"/>
+            <property name="iconColorBackground" type="Color" label="Icon Color Background" default="#041d3e"/>
+            <property name="statusBackground" type="Color" label="Status Background" default="#e4e4e4"/>
+            <property name="statusColorAvailable" type="Color" label="Available Status Color" default="#1390c6"/>
+            <property name="statusColorNotAvailable" type="Color" label="Not Available Status Color" default="#f04d23"/>
+            <property name="statusColorAssigned" type="Color" label="Assigned Status Color" default="#041d3e"/>
+            <property name="recordId" type="String" label="Record ID" description="Automatically bind the page's record id to the component variable" default="{!recordId}"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

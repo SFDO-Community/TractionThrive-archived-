@@ -1,0 +1,122 @@
+{
+  "appPageId" : "aecdc5bb-cb47-42aa-93cc-0281a777ddc5",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "b75b165e-03d4-45f3-bd9e-54ef78d12da1",
+  "label" : "Collaboration",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "39340f7b-a351-46e8-bb80-afe4d932d1f5",
+          "columns" : [ {
+            "UUID" : "bf078fe3-654e-4ad5-9fab-5af740e5a8ff",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "9",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "75e4c80f-4682-4cbd-86e8-d1788a086e5f",
+            "columnName" : "Column 2",
+            "columnKey" : "90a6d",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "39340f7b-a351-46e8-bb80-afe4d932d1f5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "context" : "GLOBAL",
+            "recordId" : "{!recordId}",
+            "width" : "MEDIUM"
+          },
+          "componentName" : "forceCommunity:feedPublisher",
+          "id" : "635aa8d2-2380-4855-89cb-82dc170fcf18",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "canChangeSorting" : true,
+            "defaultFilter" : "",
+            "defaultSortOrderHomeFeed" : "Relevance",
+            "defaultSortOrderTopicsFeed" : "Relevance",
+            "feedDesign" : "DEFAULT",
+            "hasFeedSearch" : true,
+            "subjectId" : "{!recordId}",
+            "type" : "News"
+          },
+          "componentName" : "forceCommunity:forceCommunityFeed",
+          "id" : "a78382d2-9267-4c9d-b2a0-a70110f8641c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bf078fe3-654e-4ad5-9fab-5af740e5a8ff",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "00B3h000002JW2tEAG",
+            "layout" : "COMPACT",
+            "pageSize" : 25,
+            "scope" : "CollaborationGroup",
+            "showActionBar" : true,
+            "showChartsPanel" : false,
+            "showDisplay" : "grid",
+            "showFilterPanel" : true,
+            "showImageIcon" : false,
+            "showManualRefreshButton" : false,
+            "showObjectName" : false,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "06bc3048-e9fc-4546-a4fc-b5087c77b037",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "75e4c80f-4682-4cbd-86e8-d1788a086e5f",
+        "regionLabel" : "Column 2",
+        "regionName" : "90a6d",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "24964b27-5b78-435d-9713-3280f392bd8c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Collaboration"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d45cdd3f-3255-4f2b-9a52-ad99a9d2bf99",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1aeb781f-3b1d-4ce2-aa2e-86318cbde439",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-Collaboration"
+}

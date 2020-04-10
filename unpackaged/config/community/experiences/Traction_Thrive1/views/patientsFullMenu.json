@@ -1,0 +1,67 @@
+{
+  "appPageId" : "0cb1376e-b1a9-4b1a-8ba5-2dc1adedd078",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "3087e131-58ed-4296-9a5a-ce118814fbc3",
+  "label" : "Patients - Full Menu",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "731077ef-cf8f-4155-8a19-a4b753ee33f9",
+          "columns" : [ {
+            "UUID" : "6fab7632-ccfa-461c-a0a3-b35fb678aee1",
+            "columnName" : "Column 1",
+            "columnKey" : "1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "731077ef-cf8f-4155-8a19-a4b753ee33f9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:patientTracker",
+          "id" : "7f2ec6c6-c16f-40be-95c0-228f2670a277",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6fab7632-ccfa-461c-a0a3-b35fb678aee1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "773622c4-744c-49cc-93ef-082450463c08",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "Collect snapshots counts of patients in different states",
+        "metaTags" : "",
+        "title" : "Patients"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bf00d148-4cc1-4588-bcea-ec3f2e1b14c2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fb53b2fd-7384-4142-9bd2-98272309c5d1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "URKKI3exULkxHfr92hNKLB47r1fVYM",
+  "type" : "view",
+  "viewType" : "custom-patients"
+}
