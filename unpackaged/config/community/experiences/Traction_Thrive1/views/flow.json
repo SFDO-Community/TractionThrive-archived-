@@ -8,16 +8,9 @@
     "regionName" : "header",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "flowLayout" : "oneColumn"
-      },
-      "componentName" : "forceCommunity:flowCommunity",
-      "id" : "99162496-fa53-4bf9-8ca7-95caa5d2f9fa",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
+    "components" : [
+
+  ],
     "id" : "2003dad8-66ee-4e80-a79f-bab036c70a1a",
     "regionName" : "content",
     "type" : "region"
