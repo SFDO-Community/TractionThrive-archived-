@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Class to get picklist values for the Status__c field of the status_report__c object
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-18
  */

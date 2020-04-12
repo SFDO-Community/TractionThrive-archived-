@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Controller class for resourceStatusTracker aura component
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-18
  */
@@ -53,6 +54,7 @@ public with sharing class ResourceStatusTrackerCtrl {
      * @description             Updates the count of a given item
      * @param resourceType      The resource you are retrieving the status of, eg. Beds, respirators
      * @param status            The status of the count - e.g. available, in use, total
+     * @param divisionId        The division the resource is being tracked in
      * @param count             The number of that item
      */
     @AuraEnabled

@@ -28,23 +28,40 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Controller class for the accountPicker aura component
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-24
  */
 public with sharing class AccountPickerCtrl {
 
+    /**
+     * @description Gets all child accounts for the given parent account
+     * @param       parentId Id of the parent account
+     * @return      List of account records
+     */
     @AuraEnabled
     public static List<Account> getChildAccounts(Id parentId){
         List<Account> accounts =  AccountsSelector.getChildAccountsByParent(parentId);
         return accounts;
     }
 
+    /**
+     * @description Gets all child hospitals for the given authority name
+     * @param       authorityName
+     * @return      List of hospital records
+     */
     @AuraEnabled
     public static List<Account> getChildHospitals(String authorityName){
         List<Account> accounts =  AccountsSelector.getHospitalsByAuthorityName(authorityName);
         return accounts;
     }
 
+    /**
+     * @description Gets the relevant health authorities, hospitals and divisions for the running user to populate
+     *              in the pick-lists. Defaults the selection to users primary care facility. Returns list of health
+     *              authorities if user is not a community user.
+     * @return      User's complete Account Data with mappings populated and current selections for pick-lists
+     */
     @AuraEnabled
     public static AccountData getAccountSelections(){
         AccountData usersAccountData = new AccountData();
@@ -79,6 +96,10 @@ public with sharing class AccountPickerCtrl {
         return usersAccountData;
     }
 
+    /**
+     * @description Gets the valid account maps for the picklist. I.e. health auths > Hospitals, hospitals > divisions
+     * @return      User's Account Data with mappings populated for picklists
+     */
     private static AccountData getValidAccounts(){
         List<Account> divisions =  AccountsSelector.getDivisionTree();
 
@@ -119,6 +140,9 @@ public with sharing class AccountPickerCtrl {
         return userAccountData;
     }
 
+    /**
+     * Structured account data for populating pick lists
+     */
     public class AccountData {
 
         @AuraEnabled

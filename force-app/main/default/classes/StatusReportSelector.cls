@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Selector class for status report records
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-22
  */
@@ -37,10 +38,10 @@ public with sharing class StatusReportSelector {
      * @description Gets the latest status report of a resource
      *
      * @param resourceType  E.g. ventilator beds, patients with symptoms
-     * @param status        E.g. in use, available
+     * @param status        E.g. in use, available, inactive
      * @param departmentId  The location of this resource
      *
-     * @return
+     * @return Status_Report__c
      */
     public static Status_Report__c getLatestStatusReport(String resourceType, String status, Id departmentId) {
         Status_Report__c result;

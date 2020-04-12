@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Selector class for contacts records
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-23
  */
@@ -35,8 +36,8 @@ public with sharing class ContactsSelector {
 
     /**
      * @description Gets current user's contact info
-     * @param currentUser
-     * @return
+     * @param       currentUser
+     * @return      List of contacts
      */
     public static List<Contact> getCurrentContact(User currentUser) {
         List<Contact> currentContact = [
@@ -64,7 +65,7 @@ public with sharing class ContactsSelector {
 
     /**
      * @description Gets current user info
-     * @return
+     * @return      User
      */
     public static User getCurrentUser() {
         User currentUser = [

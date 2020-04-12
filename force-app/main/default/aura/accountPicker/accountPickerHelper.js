@@ -4,7 +4,7 @@
 ({
 
     /**
-     * @description Gets relevant accounts for each picklists for this user
+     * @description Gets relevant accounts for each picklist for this user
      * @param component
      * @param event
      * @param helper
@@ -33,7 +33,7 @@
     },
 
     /**
-     * @description Stores the account data retrieved
+     * @description Organises and stores the account data retrieved
      * @param component
      * @param event
      * @param helper
@@ -137,7 +137,7 @@
     },
 
     /**
-     * @description Generates an list of names with the id as a value
+     * @description Generates a list of names with the id as a value and name as label
      * @param objectList
      */
     generateOptionList: function (objectList) {

@@ -28,15 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * This is an example class
- *
- * @group   ExampleComponent
- *
+ * @description Class to hold shared constants
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-24
- *
- * @example
- * MyCommentExample example = new MyCommentExample('Uncle Bob');
  */
 public with sharing class Constants {
 

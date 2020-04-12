@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Utility class containing shared methods for test classes
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-18
  */

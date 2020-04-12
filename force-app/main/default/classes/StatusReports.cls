@@ -28,7 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Class to handle domain level logic for Status Reports
+ * @description Class to handle domain level logic for Status Reports
  *
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-22

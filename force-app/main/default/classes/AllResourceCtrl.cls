@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Controller class for the allResources aura component
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-27
  */
