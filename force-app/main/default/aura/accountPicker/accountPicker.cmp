@@ -4,8 +4,7 @@
 
 <aura:component description="accountPicker"
                 controller="AccountPickerCtrl"
-                access="global"
-                >
+                access="global">
 
     <!-- ATTRIBUTES -->
     <aura:attribute name="healthAuthorities" type="List"/>

@@ -3,7 +3,8 @@
  */
 ({
     /**
-     * @description
+     * @description Gets the division id from an event and sets it in the component to know which division to track
+     *              resources in
      * @param component
      * @param event
      * @param helper

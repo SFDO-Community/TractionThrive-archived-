@@ -28,17 +28,16 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Selector class for account records
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-24
  */
 public with sharing class AccountsSelector {
 
     /**
-     * @description
-     *
-     * @param recordTypeId
-     *
-     * @return
+     * @description Gets accounts with a specific record type
+     * @param       recordTypeId
+     * @return      List of accounts
      */
     public static List<Account> getAccountByRecordType(Id recordTypeId) {
         List<Account> accounts = [
@@ -52,11 +51,9 @@ public with sharing class AccountsSelector {
     }
 
     /**
-     * @description
-     *
-     * @param parentId
-     *
-     * @return
+     * @description Gets an accounts child accounts
+     * @param       parentId Id of parent account
+     * @return      List of accounts
      */
     public static List<Account> getChildAccountsByParent(Id parentId) {
         List<Account> accounts = [
@@ -70,11 +67,9 @@ public with sharing class AccountsSelector {
     }
 
     /**
-     * @description
-     *
-     * @param authorityName
-     *
-     * @return
+     * @description Gets all child hospitals for the given authority name
+     * @param       authorityName Health Authority's name
+     * @return      List of accounts
      */
     public static List<Account> getHospitalsByAuthorityName(String authorityName) {
         List<Account> accounts = [
@@ -89,9 +84,8 @@ public with sharing class AccountsSelector {
     }
 
     /**
-     * @description
-     *
-     * @return
+     * @description Gets all divisions and their parent hospitals and health authority names
+     * @return      List of accounts
      */
     public static List<Account> getDivisionTree() {
         List<Account> accounts = [
@@ -113,11 +107,9 @@ public with sharing class AccountsSelector {
     }
     
     /**
-     * @description
-     *
-     * @param accountIds
-     *
-     * @return
+     * @description Gets a list of accounts and their names
+     * @param       accountIds
+     * @return      List of accounts
      */
     public static List<Account> getAccount(Set<Id> accountIds) {
         List<Account> accounts = [

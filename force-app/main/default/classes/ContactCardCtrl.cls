@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Controller class for the contactCard aura component
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-19
  */
@@ -35,6 +36,7 @@ public with sharing class ContactCardCtrl {
 
     /**
      * @description Finds the community users contact info to display on their home page
+     * @return      ContactData
      */
     @AuraEnabled
     public static ContactData getContactInfo() {

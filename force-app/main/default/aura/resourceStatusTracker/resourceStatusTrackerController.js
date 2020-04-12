@@ -54,7 +54,7 @@
     },
 
     /**
-     * @description Handles a cell value change
+     * @description Handles a cell value change by checking validity and activating save button if valid
      * @param component
      * @param event
      * @param helper

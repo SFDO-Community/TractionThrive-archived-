@@ -13,7 +13,8 @@
     },
 
     /**
-     * @description
+     * @description Handles when a user changes the selected authority. Finds the hospital list for the new authority
+     *              and resets the division
      * @param component
      * @param event
      * @param helper
@@ -27,7 +28,8 @@
     },
 
     /**
-     * @description
+     * @description Handles when a user changes the selected hospital. Finds the division list for the new hospital.
+     *              Fires an event to alert that no division is currently selected
      * @param component
      * @param event
      * @param helper
@@ -39,7 +41,7 @@
     },
 
     /**
-     * @description
+     * @description Fires an event to alert other components of the division selected
      * @param component
      * @param event
      * @param helper

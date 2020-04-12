@@ -3,7 +3,8 @@
  */
 ({
     /**
-     * @description Finds the most recent status report of a given status of a resource (e.g. available beds)
+     * @description Finds the most recent status report of a given status of a resource in a specific division
+     *              (e.g. available beds, in use beds)
      * @param component
      * @param event
      * @param helper
@@ -47,7 +48,7 @@
     },
 
     /**
-     * @description Updates the current total count of a resource and its status
+     * @description Updates the total count of a resource with the selected status in this division
      * @param component
      * @param event
      * @param helper
@@ -88,10 +89,8 @@
     },
 
     /**
-     * @description Activates the save button
+     * @description Allows the user to press the save button
      * @param component
-     * @param event
-     * @param helper
      */
     activateSaveButton: function (component) {
         let saveButton = component.find("save");
@@ -105,8 +104,6 @@
     /**
      * @description Deactivates the save button
      * @param component
-     * @param event
-     * @param helper
      */
     deactivateSaveButton: function (component) {
         let saveButton = component.find("save");

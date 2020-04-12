@@ -28,6 +28,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Test class for StatusReportTypePicklist
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-23
  */
