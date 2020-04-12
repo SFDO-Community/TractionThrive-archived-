@@ -203,6 +203,11 @@ tasks:
     uninstall_packaged_incremental:
         options:
             ignore:
+                ApexClass:
+                    - CommunitiesLoginController
+                    - CommunitiesLoginControllerTest
+                    - SiteLoginController
+                    - SiteLoginControllerTest
                 CustomApplication:
                     - Crisis_Management
                 CompactLayout:
