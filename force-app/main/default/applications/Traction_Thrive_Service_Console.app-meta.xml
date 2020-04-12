@@ -20,7 +20,7 @@
     <tabs>standard-LiveChatTranscript</tabs>
     <tabs>standard-Task</tabs>
     <tabs>standard-home</tabs>
-    <tabs>Knowledge__kav</tabs>
+    <!-- <tabs>Knowledge__kav</tabs> -->
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Account</tabs>
@@ -39,9 +39,9 @@
             <fieldName>Staff__c</fieldName>
             <tab>Credential__c</tab>
         </mappings>
-        <mappings>
+        <!-- <mappings>
             <tab>Knowledge__kav</tab>
-        </mappings>
+        </mappings> -->
         <mappings>
             <tab>standard-Account</tab>
         </mappings>
