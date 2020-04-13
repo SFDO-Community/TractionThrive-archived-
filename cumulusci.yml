@@ -258,6 +258,20 @@ tasks:
                 - label: UPCC
                   fullName: UPCC
 
+    create_community_user:
+        description: Creates a user and contact for community
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/community_user_setup.cls
+            apex: createCommunityContactUser();
+
+    assign_community_permissions:
+        description: Assigns appropriate permissions to user for community
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/community_user_setup.cls
+            apex: assignCommunityPermissionSet();
+
 flows:
     config_apextest:
         steps:
@@ -342,6 +356,10 @@ flows:
         steps:
             3:
                 flow: config_default
+            4:
+                task: create_community_user
+            5:
+                task: assign_community_permissions
 
     config_packaging:
         steps:
