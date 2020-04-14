@@ -23,25 +23,6 @@
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "iconColorBackground" : "#041d3e",
-        "iconName" : "standard:task",
-        "recordId" : "{!recordId}",
-        "showIcon" : true,
-        "showTitleBar" : true,
-        "statusBackground" : "#e4e4e4",
-        "statusColorAssigned" : "#041d3e",
-        "statusColorAvailable" : "#1390c6",
-        "statusColorNotAvailable" : "#f04d23",
-        "titleText" : "MY AVAILABILITY",
-        "titleTextForContactRecord" : "AVAILABILITY"
-      },
-      "componentName" : "c:staffAvailability",
-      "id" : "d4ecd98c-7498-4ea7-9804-35978d85cfe8",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
     } ],
     "id" : "514500d6-ee3e-4863-907c-cc2747dfcedc",
     "regionName" : "content",
