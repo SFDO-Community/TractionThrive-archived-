@@ -12,7 +12,9 @@ For more information, please visit https://tractionondemand.com/traction-thrive/
 
 Install the Salesforce CLI (sfdx), connect it to a DevHub, and set the config var `defaultdevhubusername`
 
-Next, install CumulusCI per the instructions at https://cumulusci.readthedocs.io/en/latest/install.html
+Next, install CumulusCI per the instructions at https://trailhead.salesforce.com/content/learn/modules/cumulusci-setup
+
+Learn more about CumulusCI at https://cumulusci.readthedocs.io/en/latest/install.html
 
 ### Creating a development scratch org
 
