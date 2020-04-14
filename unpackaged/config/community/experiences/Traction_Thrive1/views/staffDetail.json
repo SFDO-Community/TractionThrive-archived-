@@ -69,26 +69,7 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "iconColorBackground" : "#041d3e",
-        "iconName" : "standard:task",
-        "recordId" : "{!recordId}",
-        "showIcon" : true,
-        "showTitleBar" : true,
-        "statusBackground" : "#e4e4e4",
-        "statusColorAssigned" : "#041d3e",
-        "statusColorAvailable" : "#1390c6",
-        "statusColorNotAvailable" : "#f04d23",
-        "titleText" : "MY AVAILABILITY",
-        "titleTextForContactRecord" : "AVAILABILITY"
-      },
-      "componentName" : "c:staffAvailability",
-      "id" : "a2526768-e0f6-41ec-8d0a-dc68a3a32efb",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
+    "components" : [ ],
     "id" : "56e30524-1224-4935-8ff3-40b0b1c7e04e",
     "regionName" : "sidebar",
     "type" : "region"
