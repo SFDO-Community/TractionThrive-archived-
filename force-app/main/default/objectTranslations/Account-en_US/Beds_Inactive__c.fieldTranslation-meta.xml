@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- For example a closed ward that isn&apos;t staffed. --></help>
-    <label><!-- Beds Inactive --></label>
-    <name>Beds_Inactive__c</name>
-</CustomFieldTranslation>

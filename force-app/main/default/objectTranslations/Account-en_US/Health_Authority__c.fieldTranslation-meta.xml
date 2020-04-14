@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Text version of the top level health authority, system field for sharing rules. A workflow rule populates this field based on the facility hierarchy. --></help>
-    <label><!-- Health Authority --></label>
-    <name>Health_Authority__c</name>
-</CustomFieldTranslation>

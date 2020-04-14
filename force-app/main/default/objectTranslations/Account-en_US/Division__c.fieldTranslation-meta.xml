@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- If multiple departments are added and part of the same division, that division name can be entered here. --></help>
-    <label><!-- Group --></label>
-    <name>Division__c</name>
-</CustomFieldTranslation>
