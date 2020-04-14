@@ -28,7 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 3/25/2020.
+ * @description Test class for StatusReports
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-03-25
  */
 @IsTest
 private with sharing class StatusReportsTest {
