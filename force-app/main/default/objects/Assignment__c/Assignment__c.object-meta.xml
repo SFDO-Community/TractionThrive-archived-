@@ -162,9 +162,10 @@
     </nameField>
     <pluralLabel>Availabilities</pluralLabel>
     <searchLayouts>
+        <searchResultsAdditionalFields>Staff__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Date__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Available__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Care_Facility__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
