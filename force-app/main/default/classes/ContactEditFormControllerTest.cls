@@ -28,7 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 3/28/2020.
+ * @description Test class for ContactEditFormController
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-03-28
  */
 @IsTest(isParallel=true)
 public with sharing class ContactEditFormControllerTest {

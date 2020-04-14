@@ -28,10 +28,18 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 3/27/2020.
+ * @description Controller class for the appUtils Lightning Web Component
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-03-27
  */
-
 public with sharing class CredentialsSelector {
+	/**
+	 * Get credentials from a given contact Id
+	 *
+	 * @param contactId
+	 *
+	 * @return a list of credentials associated with the given contact Id
+	 */
 	public static List<Credential__c> selectCredentialsByContactId(Id contactId) {
 		List<Credential__c> credentials = [
 				SELECT Id,
@@ -47,6 +55,13 @@ public with sharing class CredentialsSelector {
 		return credentials;
 	}
 
+	/**
+	 * Get credentials from a given credential Id
+	 *
+	 * @param credentialId
+	 *
+	 * @return a list of credentials associated with the given credential Id
+	 */
 	public static Credential__c selectCredentialsById(Id credentialId) {
 		Credential__c credentials = [
 				SELECT Id,
