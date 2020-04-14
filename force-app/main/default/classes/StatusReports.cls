@@ -45,7 +45,7 @@ public with sharing class StatusReports extends SObjectDomain{
     }
 
     public override void onAfterInsert() {
-        StatusReportsHandler statusReportsHandler = new StatusReportsHandler((List<Status_Report__c>) records, null);
-        statusReportsHandler.stampBedCountOnDivision();
+//        StatusReportsHandler statusReportsHandler = new StatusReportsHandler((List<Status_Report__c>) records, null);
+//        statusReportsHandler.stampBedCountOnDivision();
     }
 }
