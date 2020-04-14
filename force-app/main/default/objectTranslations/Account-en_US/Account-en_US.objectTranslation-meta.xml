@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facility</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Facilities</value>
+    </caseValues>
+    <layouts>
+        <layout>Division</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Division - Community</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital - Community</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority - Community</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Facility Planning --></label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Division --></label>
+        <name>Division</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hospital --></label>
+        <name>Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Regional Health Authority --></label>
+        <name>Regional_Health_Authority</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Account_Sharing --></label>
+        <name>Account_Sharing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Staff_Access --></label>
+        <name>Manage_Staff_Access</name>
+    </webLinks>
+</CustomObjectTranslation>

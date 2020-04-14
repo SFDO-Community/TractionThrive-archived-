@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Capture any notes on potential for staff redeployments, limitations, skills --></help>
+    <label><!-- Medical Staff Redeployment Comments --></label>
+    <name>Medical_Staff_Redeployment_Comments__c</name>
+</CustomFieldTranslation>

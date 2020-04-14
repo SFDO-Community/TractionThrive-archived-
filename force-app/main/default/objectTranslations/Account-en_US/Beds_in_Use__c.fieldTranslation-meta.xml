@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Beds in Use --></label>
+    <name>Beds_in_Use__c</name>
+</CustomFieldTranslation>
