@@ -9,16 +9,16 @@
     </bottomLine>
     <footer>
         <backgroundColor>#FFFFFF</backgroundColor>
-        <height>0</height>
+        <height>100</height>
         <horizontalAlignment>Center</horizontalAlignment>
-        <logo>Traction_Thrive/Traction_and_Thrive_Small_Logo</logo>
+        <logo>Traction_Thrive/Traction_and_Thrive_Small_Logo.png</logo>
         <verticalAlignment>Middle</verticalAlignment>
     </footer>
     <header>
         <backgroundColor>#041D3E</backgroundColor>
-        <height>0</height>
+        <height>100</height>
         <horizontalAlignment>Center</horizontalAlignment>
-        <logo>Traction_Thrive/Traction_Thrive_CCRMS_Small_Logo</logo>
+        <logo>Traction_Thrive/Traction_Thrive_CCRMS_Small_Logo.png</logo>
         <verticalAlignment>Middle</verticalAlignment>
     </header>
     <middleLine>
