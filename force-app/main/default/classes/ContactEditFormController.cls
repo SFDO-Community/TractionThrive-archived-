@@ -28,14 +28,20 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 3/27/2020.
+ * @description Controller class for the contactEditForm Lightning Web Component
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-03-27
  */
-
 public with sharing class ContactEditFormController {
 	// =========================================================
 	//  PUBLIC METHODS
 	// =========================================================
 
+	/**
+	 * @description Gets the initial data to be used in the edit form
+	 * @return InitData Wrapper with contact info, picklist values
+	 * and credentials related to the contact
+	 */
 	@AuraEnabled
 	public static InitData getInitData() {
 		ContactCardCtrl.ContactData contactInfo = ContactCardCtrl.getContactInfo();
@@ -44,6 +50,12 @@ public with sharing class ContactEditFormController {
 		return new InitData(contactInfo, getPicklistValuesFromObjectAndField('Contact', UTIL_Namespace.StrTokenNSPrefix('Skills__c')), contactCredentials);
 	}
 
+	/**
+	 * @description Updates the contact record
+	 * @param contactToUpdate the given contact record to update
+	 * @return InitData Wrapper with contact updated info, picklist values
+	 * and credentials related to the contact
+	 */
 	@AuraEnabled
 	public static InitData updateContact(Contact contactToUpdate) {
 		if (contactToUpdate == null) {
@@ -56,6 +68,11 @@ public with sharing class ContactEditFormController {
 		return getInitData();
 	}
 
+	/**
+	 * @description Updates the credential record
+	 * @param credentialToUpdate the given credential record to update
+	 * @return the credential record with its updated data
+	 */
 	@AuraEnabled
 	public static Credential__c updateCredential(Credential__c credentialToUpdate) {
 		if (credentialToUpdate == null) {
@@ -68,6 +85,11 @@ public with sharing class ContactEditFormController {
 		return CredentialsSelector.selectCredentialsById(credentialToUpdate.Id);
 	}
 
+	/**
+	 * @description Insert a new credential record
+	 * @param credentialToInsert
+	 * @return the newly created credential record
+	 */
 	@AuraEnabled
 	public static Credential__c insertCredential(Credential__c credentialToInsert) {
 //		Credential__c credentialToInsert = (Credential__c)(JSON.deserialize(credentialToInsertJSON, Credential__c.class));
@@ -85,11 +107,19 @@ public with sharing class ContactEditFormController {
 		return CredentialsSelector.selectCredentialsById(credentialToInsert.Id);
 	}
 
+	/**
+	 * @description Gets the credentials picklist values
+	 * @return a list with all the picklist values
+	 */
 	@AuraEnabled
 	public static List<String> getCredentialsTypePicklistValues() {
 		return getPicklistValuesFromObjectAndField(UTIL_Namespace.StrTokenNSPrefix('Credential__c'), UTIL_Namespace.StrTokenNSPrefix('Type__c'));
 	}
 
+	/**
+	 * @description Deletes a given credential
+	 * @param credentialId the credential Id to be deleted
+	 */
 	@AuraEnabled
 	public static void deleteCredential(Id credentialId) {
 		if (credentialId == null) {
@@ -104,6 +134,17 @@ public with sharing class ContactEditFormController {
 	//  PRIVATE METHODS
 	// =========================================================
 
+	/**
+	 * Gets the picklist values for the given object name and field name
+	 *
+	 * @param objectName the object name i.e Credential__c
+	 * @param fieldName the picklist field name related to the given object i.e Type__c
+	 *
+	 * @return a list with all the picklist values
+	 *
+	 * @example
+	 * getPicklistValuesFromObjectAndField(UTIL_Namespace.StrTokenNSPrefix('Credential__c'), UTIL_Namespace.StrTokenNSPrefix('Type__c'))
+	 */
 	private static List<String> getPicklistValuesFromObjectAndField(String objectName, String fieldName) {
 		List<String> picklistValues = new List<String>();
 		Schema.SObjectType s = Schema.getGlobalDescribe().get(objectName) ;
