@@ -1,7 +1,8 @@
 /**
- * Created by pserquiz on 3/27/2020.
+ * @author Pedro Serquiz - pserquiz@tractionondemand.com
+ * @description Contact Edit Form Component for communities
+ * @date    2020-03-27
  */
-
 import {LightningElement, track} from 'lwc';
 import getInitData from '@salesforce/apex/ContactEditFormController.getInitData';
 import updateContact from '@salesforce/apex/ContactEditFormController.updateContact';
