@@ -28,10 +28,16 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 4/7/2020.
+ * @description Controller class for the appUtils Lightning Web Component
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-04-7
  */
-
 public with sharing class AppUtils {
+	/**
+	 * Gets the namespace org namespace
+	 *
+	 * @return if its in a unpackaged environment returns '' otherwise returns the namespace
+	 */
 	@AuraEnabled
 	public static String getNamespace() {
 		return UTIL_Namespace.getNamespace();
