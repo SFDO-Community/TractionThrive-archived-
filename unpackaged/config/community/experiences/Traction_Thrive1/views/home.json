@@ -18,27 +18,8 @@
         "showAvatar" : "Desktop and Mobile",
         "showContactInfo" : "Desktop and Mobile"
       },
-      "componentName" : "c:contactCard",
+      "componentName" : "%%%NAMESPACE_OR_C%%%:contactCard",
       "id" : "b6c9c242-f2a2-4bf1-9c93-5d07096bc397",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "iconColorBackground" : "#041d3e",
-        "iconName" : "standard:task",
-        "recordId" : "{!recordId}",
-        "showIcon" : true,
-        "showTitleBar" : true,
-        "statusBackground" : "#e4e4e4",
-        "statusColorAssigned" : "#041d3e",
-        "statusColorAvailable" : "#1390c6",
-        "statusColorNotAvailable" : "#f04d23",
-        "titleText" : "MY AVAILABILITY",
-        "titleTextForContactRecord" : "AVAILABILITY"
-      },
-      "componentName" : "c:staffAvailability",
-      "id" : "d4ecd98c-7498-4ea7-9804-35978d85cfe8",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"

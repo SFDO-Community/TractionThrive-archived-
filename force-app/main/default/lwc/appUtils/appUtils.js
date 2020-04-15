@@ -1,5 +1,7 @@
 /**
- * Created by pserquiz on 3/28/2020.
+ * @author Pedro Serquiz - pserquiz@tractionondemand.com
+ * @description utils to use on Lightning Web Components
+ * @date    2020-03-28
  */
 
 import {ShowToastEvent} from "lightning/platformShowToastEvent";

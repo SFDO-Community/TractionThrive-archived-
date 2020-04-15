@@ -28,7 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 3/29/2020.
+ * @description Test class for CredentialsSelector
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-03-29
  */
 @IsTest(IsParallel=true)
 public with sharing class CredentialsSelectorTest {

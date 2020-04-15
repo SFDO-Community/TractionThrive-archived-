@@ -1,10 +1,10 @@
 /*
     Copyright (c) 2020, Traction Sales And Marketing Inc.
     All rights reserved.
-    
+
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are met:
-    
+
     * Redistributions of source code must retain the above copyright
       notice, this List of conditions and the following disclaimer.
     * Redistributions in binary form must reproduce the above copyright
@@ -13,27 +13,27 @@
     * Neither the name of Salesforce.org nor the names of
       its contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
- 
+
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
-    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
-    FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE 
-    COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
-    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
-    BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
-    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
-    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
-    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
-    ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+    FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+    COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+    BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+    ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * @description Test class for StaffAssignmentService
+ * @description Test class for AccountShareSelector
  * @author  Pedro Serquiz, Traction on Demand
- * @date    2020-03-29
+ * @date    2020-04-14
  */
 @IsTest(IsParallel=true)
-public with sharing class StaffAssignmentServiceTest {
+public with sharing class ConstantsTest {
 	static Account account;
 	static Contact contact;
 	static User communityUser;
@@ -53,20 +53,11 @@ public with sharing class StaffAssignmentServiceTest {
 		}
 	}
 
-
 	@IsTest
-	static void deleteAccountSharing() {
+	static void getStatusReportTypeMapping() {
 		prepareData();
-		List<AccountShare> accShareBefore = [SELECT Id, AccountId FROM AccountShare WHERE AccountId = :account.Id];
-
-		Test.startTest();
-		Staff_Access__c staffAssignment = new Staff_Access__c(Staff__c = contact.Id, Care_Facility__c = account.Id, Name = 'Full Access');
-		insert staffAssignment;
-		delete staffAssignment;
-		Test.stopTest();
-
-		List<AccountShare> accShareAfter = [SELECT Id, AccountId FROM AccountShare WHERE AccountId = :account.Id];
-
-		System.assertEquals(accShareBefore.size(), accShareAfter.size(), 'Should get the same acc shares as before since it should be deleted in the trigger onBeforeDelete');
+		System.runAs(communityUser) {
+			Map<String, String> typeMap = Constants.getStatusReportTypeMapping();
+		}
 	}
 }

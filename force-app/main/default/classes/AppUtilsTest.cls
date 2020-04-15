@@ -28,7 +28,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by pserquiz on 4/7/2020.
+ * @description Test class for AppUtils
+ * @author  Pedro Serquiz, Traction on Demand
+ * @date    2020-04-07
  */
 @IsTest(IsParallel=true)
 public with sharing class AppUtilsTest {
