@@ -161,7 +161,16 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Status Reports</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Department__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Count__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_Time__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
