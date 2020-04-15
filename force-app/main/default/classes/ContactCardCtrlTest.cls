@@ -42,7 +42,7 @@ public with sharing class ContactCardCtrlTest {
         testContact.AccountId = account.Id;
         insert testContact;
 
-        User communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, testContact.Id);
+        User communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
         System.runAs(new User(Id = UserInfo.getUserId())){
             insert communityUser;
