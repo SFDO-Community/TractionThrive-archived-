@@ -32,25 +32,25 @@
  * @date    2020-03-28
  */
 
-public with sharing class StaffAssignmentService extends SObjectDomain {
+public with sharing class StaffAssignmentService {
 
-    public StaffAssignmentService(List<Staff_Access__c> sObjectList) {
-        super((List<Staff_Access__c>)sObjectList);
-    }
+//    public StaffAssignmentService(List<Staff_Access__c> sObjectList) {
+//        super((List<Staff_Access__c>)sObjectList);
+//    }
 
-    public class Constructor implements SObjectDomain.IConstructable {
-        public SObjectDomain construct(List<SObject> sObjectList) {
-            return new StaffAssignmentService(sObjectList);
-        }
-    }
+//    public class Constructor implements SObjectDomain.IConstructable {
+//        public SObjectDomain construct(List<SObject> sObjectList) {
+//            return new StaffAssignmentService(sObjectList);
+//        }
+//    }
 
-    public override void onBeforeInsert() {
+//    public override void onBeforeInsert() {
         // StaffAssignmentHandler staffHandler = new StaffAssignmentHandler((List<Staff_Access__c>) records, null);
         // staffHandler.shareAccountsWithUser();
-    }
+//    }
 
-    public override void onBeforeDelete() {
+//    public override void onBeforeDelete() {
         // StaffAssignmentHandler staffHandler = new StaffAssignmentHandler((List<Staff_Access__c>) records, null);
         // staffHandler.deleteAccountSharing();
-    }
+//    }
 }
