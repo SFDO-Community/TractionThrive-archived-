@@ -12,6 +12,7 @@
         <members>Hospital Administrator</members>
         <members>Medical Staff</members>
         <members>Regional Overview</members>
+        <members>System Administrator</members>
         <name>Profile</name>
     </types>
     <version>48.0</version>
