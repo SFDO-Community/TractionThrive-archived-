@@ -33,19 +33,19 @@
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-03-22
  */
-public with sharing class StatusReports extends SObjectDomain{
-    public StatusReports(List<Status_Report__c> sObjectList) {
-        super((List<Status_Report__c>)sObjectList);
-    }
+public with sharing class StatusReports{
+//    public StatusReports(List<Status_Report__c> sObjectList) {
+//        super((List<Status_Report__c>)sObjectList);
+//    }
+//
+//    public class Constructor implements SObjectDomain.IConstructable {
+//        public SObjectDomain construct(List<SObject> sObjectList) {
+//            return new StatusReports(sObjectList);
+//        }
+//    }
 
-    public class Constructor implements SObjectDomain.IConstructable {
-        public SObjectDomain construct(List<SObject> sObjectList) {
-            return new StatusReports(sObjectList);
-        }
-    }
-
-    public override void onAfterInsert() {
-        StatusReportsHandler statusReportsHandler = new StatusReportsHandler((List<Status_Report__c>) records, null);
-        statusReportsHandler.stampBedCountOnDivision();
-    }
+//    public override void onAfterInsert() {
+//        StatusReportsHandler statusReportsHandler = new StatusReportsHandler((List<Status_Report__c>) records, null);
+//        statusReportsHandler.stampBedCountOnDivision();
+//    }
 }
