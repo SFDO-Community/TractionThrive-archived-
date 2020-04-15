@@ -35,61 +35,61 @@
 //@SecurityException Needs access to update the division account
 public with sharing class StatusReportsHandler {
 
-    private static final String BED_TYPE = 'Ventilator Beds';
-    @TestVisible private static final String IN_USE = 'In Use';
-    @TestVisible private static final String AVAILABLE = 'Available';
-    @TestVisible private static final String INACTIVE = 'Inactive';
-
-    private List<Status_Report__c> statusReports;
-    private Map<Id, Status_Report__c> oldStatusReports;
-
-    /**
-    * @description          Constructor
-    *
-    * @param statusReports     [Trigger.new StatusReports]
-    * @param oldStatusReports  [Trigger.oldMap StatusReports]
-    */
-    public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
-        this.statusReports = statusReports;
-        this.oldStatusReports = oldStatusReports;
-    }
-
-    /**
-     * Update the accounts bed amount with Count__c
-     * from the recently created status report based on its status
-     */
-    public void stampBedCountOnDivision(){
-        Map<Id, Account> accountIdToAccount = new Map<Id, Account>();
-        for(Status_Report__c statusReport : statusReports) {
-            if (statusReport.Department__c != null && statusReport.Type__c == BED_TYPE) {
-                accountIdToAccount.put(statusReport.Department__c, filterAccountsByStatus(statusReport));
-            }
-        }
-        if(!accountIdToAccount.isEmpty()) {
-            SecureDml updateObject = new SecureDml();
-            updateObject.dmlUpdate(accountIdToAccount.values());
-        }
-    }
-
-    /**
-     * Filter all the accounts and associate the Count__c to each field
-     * base on the status report status
-     *
-     * @param statusReport the status report record
-     *
-     * @return the accounts to be updated
-     */
-    private Account filterAccountsByStatus(Status_Report__c statusReport) {
-        Account account = new Account(
-                    Id = statusReport.Department__c
-        );
-        if (statusReport.Status__c == AVAILABLE) {
-            account.Beds_Available__c = statusReport.Count__c;
-        } else if (statusReport.Status__c == IN_USE) {
-            account.Beds_in_Use__c = statusReport.Count__c;
-        } else if (statusReport.Status__c == INACTIVE) {
-            account.Beds_Inactive__c = statusReport.Count__c;
-        }
-        return account;
-    }
+//    private static final String BED_TYPE = 'Ventilator Beds';
+//    @TestVisible private static final String IN_USE = 'In Use';
+//    @TestVisible private static final String AVAILABLE = 'Available';
+//    @TestVisible private static final String INACTIVE = 'Inactive';
+//
+//    private List<Status_Report__c> statusReports;
+//    private Map<Id, Status_Report__c> oldStatusReports;
+//
+//    /**
+//    * @description          Constructor
+//    *
+//    * @param statusReports     [Trigger.new StatusReports]
+//    * @param oldStatusReports  [Trigger.oldMap StatusReports]
+//    */
+//    public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
+//        this.statusReports = statusReports;
+//        this.oldStatusReports = oldStatusReports;
+//    }
+//
+//    /**
+//     * Update the accounts bed amount with Count__c
+//     * from the recently created status report based on its status
+//     */
+//    public void stampBedCountOnDivision(){
+//        Map<Id, Account> accountIdToAccount = new Map<Id, Account>();
+//        for(Status_Report__c statusReport : statusReports) {
+//            if (statusReport.Department__c != null && statusReport.Type__c == BED_TYPE) {
+//                accountIdToAccount.put(statusReport.Department__c, filterAccountsByStatus(statusReport));
+//            }
+//        }
+//        if(!accountIdToAccount.isEmpty()) {
+//            SecureDml updateObject = new SecureDml();
+//            updateObject.dmlUpdate(accountIdToAccount.values());
+//        }
+//    }
+//
+//    /**
+//     * Filter all the accounts and associate the Count__c to each field
+//     * base on the status report status
+//     *
+//     * @param statusReport the status report record
+//     *
+//     * @return the accounts to be updated
+//     */
+//    private Account filterAccountsByStatus(Status_Report__c statusReport) {
+//        Account account = new Account(
+//                    Id = statusReport.Department__c
+//        );
+//        if (statusReport.Status__c == AVAILABLE) {
+//            account.Beds_Available__c = statusReport.Count__c;
+//        } else if (statusReport.Status__c == IN_USE) {
+//            account.Beds_in_Use__c = statusReport.Count__c;
+//        } else if (statusReport.Status__c == INACTIVE) {
+//            account.Beds_Inactive__c = statusReport.Count__c;
+//        }
+//        return account;
+//    }
 }

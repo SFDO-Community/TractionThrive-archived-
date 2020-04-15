@@ -78,5 +78,6 @@ public with sharing class Constants {
 
     //Access level
     public final static String READ_ACCESS = 'Read';
+    public final static String EDIT_ACCESS = 'Edit';
 
 }
