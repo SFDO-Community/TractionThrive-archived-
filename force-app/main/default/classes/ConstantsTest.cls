@@ -46,7 +46,7 @@ public with sharing class ConstantsTest {
 		contact.AccountId = account.Id;
 		insert contact;
 
-		communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, contact.Id);
+		communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), contact.Id);
 
 		System.runAs(new User(Id = UserInfo.getUserId())){
 			insert communityUser;
