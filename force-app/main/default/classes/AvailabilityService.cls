@@ -28,7 +28,8 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
- * Created by mmanik on 3/26/2020.
+ * @author  Manik, Traction on Demand
+ * @date    2020-03-26
  */
 
 public with sharing class AvailabilityService {

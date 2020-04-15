@@ -159,6 +159,29 @@ public class TestUtils {
         return u;
     }
 
+    public static User createAdminUser() {
+        Profile p = [SELECT Id, Name FROM Profile WHERE Name =: 'System Administrator'];
+
+        String orgId = UserInfo.getOrganizationId();
+        String dateString = String.valueOf(Datetime.now()).replace(' ','').replace(':','').replace('-','');
+        Integer randomInt = Integer.valueOf(Math.rint(Math.random()*1000000));
+        String uniqueName = orgId + dateString + randomInt;
+        User u = new User(
+                FirstName = 'test',
+                LastName = 'test',
+                Email = uniqueName + '@test' + orgId + '.org',
+                Username = uniqueName + '@test' + orgId + '.org',
+                EmailEncodingKey = 'ISO-8859-1',
+                Alias = uniqueName.substring(18, 23),
+                TimeZoneSidKey = 'America/Los_Angeles',
+                LocaleSidKey = 'en_US',
+                LanguageLocaleKey = 'en_US',
+                ProfileId = p.Id,
+                IsActive = true
+        );
+        return u;
+    }
+
     public static void insertContactCustomSettings(Boolean insertRoles) {
         Update_Contact__c setting = new Update_Contact__c();
         if(insertRoles){

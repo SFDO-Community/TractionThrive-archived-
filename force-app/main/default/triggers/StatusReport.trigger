@@ -28,5 +28,5 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 trigger StatusReport on Status_Report__c (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
-    SObjectDomain.triggerHandler(StatusReports.class);
+//    SObjectDomain.triggerHandler(StatusReports.class);
 }
