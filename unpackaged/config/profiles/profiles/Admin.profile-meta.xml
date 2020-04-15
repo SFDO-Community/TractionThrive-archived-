@@ -478,6 +478,10 @@
         <recordType>Account.%%%NAMESPACE%%%Hospital</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Account-%%%NAMESPACE%%%Regional Health Authority</layout>
+        <recordType>Account.%%%NAMESPACE%%%Regional_Health_Authority</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Contact-%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
