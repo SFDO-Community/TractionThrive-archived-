@@ -36,7 +36,7 @@
 public with sharing class StatusReportSelectorTest {
 	private final static String resourceType = Status_Report__c.Type__c.getDescribe().getPicklistValues()[0].value;
 	private final static String resourceStatus = Status_Report__c.Status__c.getDescribe().getPicklistValues()[0].value;
-	private final static String PROFILE_NAME = Constants.COMMUNITY_PROFILE_NAME;
+	private final static String PROFILE_NAME = Constants.getCommunityProfileName();
 
 	@TestSetup
 	static void setup() {

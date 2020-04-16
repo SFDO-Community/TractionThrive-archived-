@@ -50,7 +50,7 @@ private class StaffAssignmentControllerTest {
         contact2 = TestUtils.createCommunityContact('Test', false);
         contact2.AccountId = account.Id;
         insert contact2;
-        user = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, contact1.Id);
+        user = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), contact1.Id);
         insert user;
         }
 
