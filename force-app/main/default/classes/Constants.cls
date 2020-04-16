@@ -38,18 +38,20 @@ public with sharing class Constants {
     public final static Id HEALTH_AUTH_RECORDTYPE_ID = Account.SObjectType.getDescribe().getRecordTypeInfosByDeveloperName().get('Regional_Health_Authority').recordTypeId;
     public final static Id HOSPITAL_RECORDTYPE_ID = Account.SObjectType.getDescribe().getRecordTypeInfosByDeveloperName().get('Hospital').recordTypeId;
     public final static Id DIVISION_RECORDTYPE_ID = Account.SObjectType.getDescribe().getRecordTypeInfosByDeveloperName().get('Division').recordTypeId;
-
-    //Profile
-    public final static String COMMUNITY_PROFILE_NAME = [
-            SELECT Id, Name, UserLicense.Name
-            FROM Profile
-            WHERE UserLicense.Name = 'Customer Community Login' AND Name LIKE '%Admin%'
-            LIMIT 1
-    ].Name;
-
+    
     //Availability
     public final static String AVAILABLE_ASSIGNMENT_STATUS = 'Available';
     public final static String NOT_AVAILABLE_ASSIGNMENT_STATUS = 'Not Available';
+
+    //Community Profile
+    public static String getCommunityProfileName() {
+        return [
+                SELECT Id, Name, UserLicense.Name
+                FROM Profile
+                WHERE UserLicense.Name = 'Customer Community Login' AND Name LIKE '%Admin%'
+                LIMIT 1
+        ].Name;
+    }
 
     //Status Report Categories
     public static Map<String, String> getStatusReportTypeMapping() {

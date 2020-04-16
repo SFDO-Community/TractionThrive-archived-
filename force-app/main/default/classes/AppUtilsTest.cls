@@ -44,7 +44,7 @@ public with sharing class AppUtilsTest {
 		testContact.AccountId = account.Id;
 		insert testContact;
 
-		communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, testContact.Id);
+		communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
 		System.runAs(new User(Id = UserInfo.getUserId())){
 			insert communityUser;
