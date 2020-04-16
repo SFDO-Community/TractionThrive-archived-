@@ -54,7 +54,7 @@ public with sharing class ContactEditFormControllerTest {
 
 		insert credentials;
 
-		communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, contact.Id);
+		communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), contact.Id);
 		//insert user;
 
 		System.runAs(new User(Id = UserInfo.getUserId())){
