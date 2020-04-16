@@ -1079,6 +1079,10 @@
     <layoutAssignments>
         <layout>User-%%%NAMESPACE%%%User Layout</layout>
     </layoutAssignments>
+	<layoutAssignments>
+        <layout>Knowledge__kav-FAQ - Reader</layout>
+        <recordType>Knowledge__kav.FAQ</recordType>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
