@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>स्थिति रिपोर्ट</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>स्थिति रिपोर्ट</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>स्थिति रिपोर्ट</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>स्थिति रिपोर्ट</value>
+    </caseValues>
+    <fields>
+        <help>जिस प्रकार का डेटा ट्रैक किया जा रहा है</help>
+        <label>श्रेणी</label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <help>राशि</help>
+        <label>गिनती</label>
+        <name>Count__c</name>
+    </fields>
+    <fields>
+        <help>जिस समय यह दर्ज किया गया था</help>
+        <label>दिनांक और समय</label>
+        <name>Date_Time__c</name>
+    </fields>
+    <fields>
+        <help>स्थान जो यह स्थिति रिपोर्ट के लिए है</help>
+        <label>विभाग</label>
+        <name>Department__c</name>
+        <relationshipLabel>स्थिति रिपोर्ट</relationshipLabel>
+    </fields>
+    <fields>
+        <help>निष्क्रिय: एक ऐसे बेड का संदर्भ हैं जो एक अप्रभावित वार्ड में है और अभी तक उपलब्ध नहीं है।</help>
+        <label>स्थिति</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In use</masterLabel>
+            <translation><!-- In use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total</masterLabel>
+            <translation><!-- Total --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>यह ट्रैक किए जाने वाले मुख्य डेटा बिंदु द्वारा व्यक्तिगत स्थिति रिपोर्ट रिकॉर्ड हैं।</help>
+        <label>प्रकार</label>
+        <name>Type__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Status Report Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>स्थिति रिपोर्ट का नाम</nameFieldLabel>
+    <validationRules>
+        <errorMessage>आपको एक पॉजिटिव नंबर डालना होगा</errorMessage>
+        <name>Count_must_be_non_negative</name>
+    </validationRules>
+</CustomObjectTranslation>

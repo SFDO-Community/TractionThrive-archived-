@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>मामला</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>मामले</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>मामला</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>मामले</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला अभिगम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_access</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला पहुंच स्तर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_access_level</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला खाता (अस्पताल)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला सूचना</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_alert</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला अनुच्छेद</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_article</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला अनुच्छेद आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_article_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला संपत्ति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_asset</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला असाइनमेंट नियम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_assignment_rule</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कब्जा</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_capture</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कब्जा सूचना</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_capture_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कब्जा पृष्ठ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_capture_page</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला बन्द (समाप्ति)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_close</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला बन्द (समाप्त )</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_closed</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला समापन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_closure</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टिप्पणी</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला टिप्पणियाँ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_comment</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टिप्पणी आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_comment_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टिप्पणी जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_comment_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कंपनी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_company</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला संपर्क (कर्मचारी)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला संपर्क (कर्मचारी) भूमिका</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_contact_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला रचना तिथि</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_created_date</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला रचनाकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_creator</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला मुद्रा</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_currency</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कस्टम फील्ड</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला कस्टम फील्ड्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_custom_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला  डिटेल (विस्तार)</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला Details</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_detail</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला डिटेल (विस्तार) लिंक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_detail_link</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला विभाग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला संपादित करें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला ईमेल</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_email</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला फ़ीड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_feed</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला फ़ील्ड</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला फ़ील्ड्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history_info</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास मालिक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला इतिहास स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_history_status</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला अंतिम बार संशोधित</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_last_modified</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला जीवन चक्र</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_lifecycle</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला जीवनचक्र रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_lifecycle_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला सूची</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_list</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला माइलस्टोन</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला मिलेस्तोनेस</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_milestone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला संख्या</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_number</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला मूल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_origin</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला मालिक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला मालिक उपनाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_owner_alias</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला मालिक भूमिका</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_owner_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_phone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला चुनी जाने वाली सूची</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला चुनी जाने वाली सूची</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_picklist</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला प्राथमिकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_priority</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला पंक्ति</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला पंक्ति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_queue</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला कारण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_reason</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला रिकॉर्ड का प्रकार</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला रिकॉर्ड का प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_record_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला रिकॉर्ड का प्रकार आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_record_type_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला रिपोर्ट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला उपाय</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_solution</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला उपाय आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_solution_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला स्रोत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_source</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला पृष्ठ दिखाना</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_splash_page</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला चरण आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_stage_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_status</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला विषय</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_subject</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टीम</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला टीम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_team</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टीम सदस्य</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला टीम सदस्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_team_member</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टीम सदस्य भूमिका</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला टीम सदस्य  भूमिका</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_team_member_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला टीम रिकॉर्ड</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला टीम रिकॉर्ड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_team_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला देखे</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला देखे</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>case_view</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामले विस्तार पृष्ठ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>cases_detail_page</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामले टैब</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>cases_tab</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सम्बंधित मामला</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>सम्बंधित मामले</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>child_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>टिप्पणी</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>टिप्पणियाँ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>comment_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>description_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>गहनता वृद्धि की तारीख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>escalation_date_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सभी अपडेट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_all</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कॉल लॉग</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कॉल लॉग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_call_log</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मामला नोट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>मामला नोट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_case_note</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>समुदाय उत्तर</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>समुदाय उत्तर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_community_answer</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सभी ईमेल</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>सभी ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_email</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फेसबुक पोस्ट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>फेसबुक पोस्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_facebook_post</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>लिंकडिन पोस्ट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>लिंकडिन पोस्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_linkedin_post</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>चैट ट्रांसक्रिप्ट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>चैट ट्रांसक्रिप्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_live_chat_transcript</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>निजी उत्तर</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>निजी उत्तर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_portal_answer</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>स्थिति परिवर्तन</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>स्थिति परिवर्तन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_status_change</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>टास्क और इवेंट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>टास्क और इवेंट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>feed_filter_task_and_event</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>आंतरिक टिप्पणियाँ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>internal_comments_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक मामला</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>जनक मामले</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक मामला आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_case_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>प्राथमिकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>priority_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>उत्तर ग्राहक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_answer_customer</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>स्थिति बदलो</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_change_status</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_email</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कॉल लॉग करें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_log_a_call</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>समुदाय</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_portal</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>Write मामला Note</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_private_answer</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>View मामला Details</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>publisher_view_details</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>status_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>विषय</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>subject_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>type_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वेब कंपनी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>web_company_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वेब ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>web_email_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वेब नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>web_name_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वेब फोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>web_phone_case</name>
+    </fields>
+    <fields>
+        <label>उप-प्रकार</label>
+        <name>Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>Add New User</masterLabel>
+            <translation><!-- Add New User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Can&apos;t Log On</masterLabel>
+            <translation><!-- Can&apos;t Log On --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Department</masterLabel>
+            <translation><!-- Change Department --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Division</masterLabel>
+            <translation><!-- Change Division --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Heath Auth</masterLabel>
+            <translation><!-- Change Heath Auth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Hospital</masterLabel>
+            <translation><!-- Change Hospital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Permissions/Profie</masterLabel>
+            <translation><!-- Change Permissions/Profie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dashboard Questions</masterLabel>
+            <translation><!-- Dashboard Questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edit my Contact Info</masterLabel>
+            <translation><!-- Edit my Contact Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forgot Password</masterLabel>
+            <translation><!-- Forgot Password --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Support Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label>प्राथमिकता बदलें</label>
+        <name>Change_Priority</name>
+    </quickActions>
+    <quickActions>
+        <label>मामले को बंद करो</label>
+        <name>Close_the_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+</CustomObjectTranslation>

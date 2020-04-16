@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Staff Access</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Staff Access</value>
+    </caseValues>
+    <fields>
+        <help><!-- Adding this staff member to this department or facility will share access to that department. --></help>
+        <label><!-- Care Facility --></label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel><!-- कर्मचारी अभिगम --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If a division has many department records in it, the division group field is a label that can be used to group them. --></help>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help><!-- The staff member to add to the department or facility. --></help>
+        <label><!-- Staff --></label>
+        <name>Staff__c</name>
+        <relationshipLabel><!-- Staff Access --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Staff Access Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

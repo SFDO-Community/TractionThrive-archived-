@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Staff Levels</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Staff Levels</value>
+    </caseValues>
+    <fields>
+        <label><!-- Care Facility --></label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel><!-- कर्मचारी दरजा --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Staff --></label>
+        <name>Current_Staff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Essential Staff Gap --></label>
+        <name>Essential_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Essential Needs --></label>
+        <name>Essential_Staff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Staff --></label>
+        <name>Extra_Staff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Staff Gap --></label>
+        <name>Full_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Complement --></label>
+        <name>Full_Staff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total COVID+ --></label>
+        <name>Total_COVID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Isolation --></label>
+        <name>Total_Isolation__c</name>
+    </fields>
+    <layouts>
+        <layout>Staff Levels Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

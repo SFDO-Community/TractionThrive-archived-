@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>उपलब्धता</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>उपलब्धताएं</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>उपलब्धता</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>उपलब्धताएं</value>
+    </caseValues>
+    <fields>
+        <label>स्थिति</label>
+        <name>Available__c</name>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation><!-- Not Available --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>अस्पताल</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>उपलब्धताएं</relationshipLabel>
+    </fields>
+    <fields>
+        <label>तारीख</label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label>कारण</label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Immunocompromised</masterLabel>
+            <translation><!-- Immunocompromised --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maternity/Paternity Leave</masterLabel>
+            <translation><!-- Maternity/Paternity Leave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacation</masterLabel>
+            <translation><!-- Vacation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>कर्मचारी</label>
+        <name>Staff__c</name>
+        <relationshipLabel>उपलब्धताएं</relationshipLabel>
+    </fields>
+    <fields>
+        <label>उपयोगकर्ता अद्यतन (अपडेट )</label>
+        <name>User_Updated__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Assignment Layout</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>उपलब्धता का नाम</nameFieldLabel>
+</CustomObjectTranslation>

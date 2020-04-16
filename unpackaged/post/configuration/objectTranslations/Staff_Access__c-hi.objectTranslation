@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी अभिगम</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी अभिगम</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी अभिगम</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी अभिगम</value>
+    </caseValues>
+    <fields>
+        <help>इस विभाग या अस्पताल में इस कर्मचारी सदस्य को जोड़ने से उस विभाग तक पहुंच साझा हो जाएगी।</help>
+        <label>चिकित्सा सेवा</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>कर्मचारी अभिगम</relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If a division has many department records in it, the division group field is a label that can be used to group them. --></help>
+        <label>विभाग</label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help>विभाग या अस्पताल में जोड़ने के लिए कर्मचारी सदस्य।</help>
+        <label>कर्मचारी</label>
+        <name>Staff__c</name>
+        <relationshipLabel>कर्मचारी अभिगम</relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Staff Access Layout</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>कर्मचारी अभिगम</nameFieldLabel>
+</CustomObjectTranslation>
