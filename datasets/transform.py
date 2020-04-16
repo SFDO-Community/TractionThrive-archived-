@@ -15,7 +15,6 @@ def createInsertLine(id, networkId, count):
 
 networkId = list()
 ids = list()
-linesToInsert = list()
 count = 0
 extractFile = open('nmg-extract.sql')
 loadFile = open('nmg-load.sql', 'a')
@@ -30,13 +29,10 @@ for line in extractFile:
     if '"Network" VALUES' in line:
         networkId.append(getId(line=line))
 
+loadFile.write('\n')
 for id in ids:
     count += 1
-    linesToInsert.append( createInsertLine(id = id, networkId = networkId[0], count = count) )
-
-loadFile.write('\n')
-for line in linesToInsert:
-    loadFile.write(line)
+    loadFile.write( createInsertLine(id = id, networkId = networkId[0], count = count ))
     loadFile.write('\n')
 
 loadFile.close()
