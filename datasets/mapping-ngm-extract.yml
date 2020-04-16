@@ -5,6 +5,12 @@ Insert PermissionSet:
     Id: id
     Name: name
 
+Insert Profile:
+  sf_object: Profile
+  table: Profile
+  fields:
+    Id: id
+    Name: name
 
 Insert Network:
   sf_object: Network
