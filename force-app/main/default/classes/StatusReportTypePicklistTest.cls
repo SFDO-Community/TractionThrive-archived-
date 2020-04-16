@@ -35,7 +35,7 @@
 @IsTest
 private class StatusReportTypePicklistTest {
 
-    private final static String PROFILE_NAME = Constants.COMMUNITY_PROFILE_NAME;
+    private final static String PROFILE_NAME = Constants.getCommunityProfileName();
 
     @TestSetup
     static void setup() {
