@@ -26,7 +26,7 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : { },
-          "componentName" : "%%%NAMESPACE_OR_C%%%:overviewDashboard",
+          "componentName" : "c:overviewDashboard",
           "id" : "db529ee5-fb9e-4461-9c5c-55c906948da3",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },

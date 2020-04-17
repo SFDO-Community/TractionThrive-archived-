@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Anaesthesia_Machines_Available</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Anaesthesia Machines - Available</shortDescription>
+        <value>Anaesthesia Machines - Available</value>
+    </labels>
+    <labels>
+        <fullName>Anaesthesia_Machines_In_Use</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Anaesthesia Machines - In Use</shortDescription>
+        <value>Anaesthesia Machines - In Use</value>
+    </labels>
+    <labels>
+        <fullName>Anaesthesia_Machines_Inactive</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Anaesthesia Machines - Inactive</shortDescription>
+        <value>Anaesthesia Machines - Inactive</value>
+    </labels>
+    <labels>
+        <fullName>Available</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Available</shortDescription>
+        <value>Available</value>
+    </labels>
+    <labels>
+        <fullName>COVID_Positive_Disposition</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>COVID Positive (Disposition)</shortDescription>
+        <value>COVID Positive (Disposition)</value>
+    </labels>
+    <labels>
+        <fullName>Cleaning_Products_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cleaning Products Status</shortDescription>
+        <value>Cleaning Products Status</value>
+    </labels>
+    <labels>
+        <fullName>Comorbidity_Patient_Tracking</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Comorbidity Patient Tracking</shortDescription>
+        <value>Comorbidity</value>
+    </labels>
+    <labels>
+        <fullName>Coveralls_Resource</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Coveralls Resource</shortDescription>
+        <value>Coveralls</value>
+    </labels>
+    <labels>
+        <fullName>Current_Patient_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Current Patient Status</shortDescription>
+        <value>Current Patient Status</value>
+    </labels>
+    <labels>
+        <fullName>Disinfectant_Resource</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Disinfectant Resource</shortDescription>
+        <value>Disinfectant</value>
+    </labels>
+    <labels>
+        <fullName>Division</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Division</shortDescription>
+        <value>Division</value>
+    </labels>
+    <labels>
+        <fullName>Division_Placeholder</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Placeholder for Division</shortDescription>
+        <value>Select a Division</value>
+    </labels>
+    <labels>
+        <fullName>Exam_Masks</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Exam Masks</shortDescription>
+        <value>Exam Masks</value>
+    </labels>
+    <labels>
+        <fullName>Face_Shields</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Face Shields</shortDescription>
+        <value>Face Shields</value>
+    </labels>
+    <labels>
+        <fullName>Fit_Tests</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fit Tests</shortDescription>
+        <value>Fit Tests</value>
+    </labels>
+    <labels>
+        <fullName>Generic_HelpText_resource</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Generic helptext for resource</shortDescription>
+        <value>Please enter the number of individual units, not the number of boxes or packages.</value>
+    </labels>
+    <labels>
+        <fullName>Gloves_Nitrile</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Gloves (Nitrile)</shortDescription>
+        <value>Gloves (Nitrile)</value>
+    </labels>
+    <labels>
+        <fullName>Gloves_Sterile</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Gloves (Sterile)</shortDescription>
+        <value>Gloves (Sterile)</value>
+    </labels>
+    <labels>
+        <fullName>Hand_Sanitizer</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Hand Sanitizer</shortDescription>
+        <value>Hand Sanitizer</value>
+    </labels>
+    <labels>
+        <fullName>Health_Authority_Label</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Health Authority Label</shortDescription>
+        <value>Health Authority</value>
+    </labels>
+    <labels>
+        <fullName>Health_Authority_Placeholder</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Health Authority Placeholder</shortDescription>
+        <value>Select a Health Authority</value>
+    </labels>
+    <labels>
+        <fullName>Hoods_Resource</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Hoods Resource</shortDescription>
+        <value>Hoods</value>
+    </labels>
+    <labels>
+        <fullName>Hospital</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Hospital</shortDescription>
+        <value>Hospital</value>
+    </labels>
+    <labels>
+        <fullName>Hospital_Placeholder</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Placeholder for Hospital</shortDescription>
+        <value>Select a Hospital</value>
+    </labels>
+    <labels>
+        <fullName>ICU_Facility_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>ICU Facility Status</shortDescription>
+        <value>ICU Facility Status</value>
+    </labels>
+    <labels>
+        <fullName>In_Use_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>In Use Status</shortDescription>
+        <value>In Use</value>
+    </labels>
+    <labels>
+        <fullName>Inactive_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Inactive Status</shortDescription>
+        <value>Inactive</value>
+    </labels>
+    <labels>
+        <fullName>Label_for_Division_Selection</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for Division Selection</shortDescription>
+        <value>Select the Division for which you are tracking resources:</value>
+    </labels>
+    <labels>
+        <fullName>Level_3_Gowns</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Level 3 Gowns</shortDescription>
+        <value>Level 3 Gowns</value>
+    </labels>
+    <labels>
+        <fullName>Level_4_Gowns</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Level 4 Gowns</shortDescription>
+        <value>Level 4 Gowns</value>
+    </labels>
+    <labels>
+        <fullName>N95_Masks</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>N95 Masks</shortDescription>
+        <value>N95 Masks</value>
+    </labels>
+    <labels>
+        <fullName>PPE_Body_Resourcing_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPE Body Resourcing Status</shortDescription>
+        <value>PPE (Body) Resourcing Status</value>
+    </labels>
+    <labels>
+        <fullName>PPE_Resourcing_Status</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PPE Resourcing Status</shortDescription>
+        <value>PPE (Headgear) Resourcing Status</value>
+    </labels>
+    <labels>
+        <fullName>Presenting_COVID_Like</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Presenting COVID Like</shortDescription>
+        <value>Presenting &amp;apos;COVID Like&amp;apos;</value>
+    </labels>
+    <labels>
+        <fullName>Presumptive_COVID</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Presumptive COVID</shortDescription>
+        <value>Presumptive COVID</value>
+    </labels>
+    <labels>
+        <fullName>Remaining</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remaining</shortDescription>
+        <value>Remaining</value>
+    </labels>
+    <labels>
+        <fullName>Safety_Glasses</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Safety Glasses</shortDescription>
+        <value>Safety Glasses</value>
+    </labels>
+    <labels>
+        <fullName>Safety_Goggles</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Safety Goggles</shortDescription>
+        <value>Safety Goggles</value>
+    </labels>
+    <labels>
+        <fullName>Save_Action</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Save Action</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Shoe_Covers</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Shoe Covers</shortDescription>
+        <value>Shoe Covers</value>
+    </labels>
+    <labels>
+        <fullName>Surgical_Gowns</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Surgical Gowns</shortDescription>
+        <value>Surgical Gowns</value>
+    </labels>
+    <labels>
+        <fullName>Surgical_Masks</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Surgical Masks</shortDescription>
+        <value>Surgical Masks</value>
+    </labels>
+    <labels>
+        <fullName>Total</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Total</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>Ventilator_Beds_Available</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Ventilator Beds - Available</shortDescription>
+        <value>Ventilator Beds - Available</value>
+    </labels>
+    <labels>
+        <fullName>Ventilator_Beds_In_Use</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Ventilator Beds - In Use</shortDescription>
+        <value>Ventilator Beds - In Use</value>
+    </labels>
+    <labels>
+        <fullName>Ventilator_Beds_Inactive</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>hi</language>
+        <protected>true</protected>
+        <shortDescription>Ventilator Beds - Inactive</shortDescription>
+        <value>Ventilator Beds - Inactive</value>
+    </labels>
+</CustomLabels>

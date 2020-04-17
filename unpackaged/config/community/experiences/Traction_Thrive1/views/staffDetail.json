@@ -69,7 +69,6 @@
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
   }, {
-    "components" : [ ],
     "id" : "56e30524-1224-4935-8ff3-40b0b1c7e04e",
     "regionName" : "sidebar",
     "type" : "region"

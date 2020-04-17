@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>अस्पताल</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>अस्पताल</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>संस्थान</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>संस्थान</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल पहुंच</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_access</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल पहुंच स्तर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_access_level</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल कर्मचारी भूमिका</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल कर्मचारी भूमिकाएँ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_contact_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल रचनाकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_creator</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल मुद्रा</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_currency</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल विस्तार पृष्ठ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_detail_page</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल विभाग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल संपादित करें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल फैक्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_fax</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल फ़ील्ड</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल Fields</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल सामान्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_general</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल अनुक्रम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_hierarchy</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल इतिहास</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_history</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल इतिहास पुरालेख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_history_archive</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल इतिहास रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_history_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल का नाम</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल का नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल का नाम (स्थानीय)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_name_local</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल का नंबर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_number</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल का मालिक</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल के मालिक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल मालिक उपनाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_owner_alias</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल मालिक रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_owner_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल मालिक भूमिका</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_owner_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल स्वामित्व</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_ownership</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_phone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल रेटिंग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_rating</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल अभिलेख</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल अभिलेख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल अभिलेख प्रकार</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल अभिलेख प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_record_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल रिपोर्ट</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल शेयरिंग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_sharing</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल की साइटें</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल की साइटें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_site</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल स्रोत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_source</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल स्टेज आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_stage_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल टीम</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल टीम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_team</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल टीम सदस्य</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल टीम सदस्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_team_member</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल टीम सदस्य आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_team_member_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल टीम सदस्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_team_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल क्षेत्र</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल क्षेत्र</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_territory</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल साधन</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल साधन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_tool</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल प्रकार</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अस्पताल अवलोकन</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>अस्पताल अवलोकन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>account_view</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>address_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>पता जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>address_information_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वार्षिक राजस्व</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>annual_revenue_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग जियोकोड सटीकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_accuracy_geocode_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिल भेजने का पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_address_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग सिटी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_city_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_country_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग देश कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_country_code_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग अक्षांश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_latitude_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग देशांतर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_longitude_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग राज्य / प्रांत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_state_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग राज्य / प्रांत कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_state_code_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग स्ट्रीट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_street_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग ज़िप / पोस्टल कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_zip_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शहर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>city_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>साफ स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>cleanstatus_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>country_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मुद्रा</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>currency_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डेटा डॉट कॉम कुंजी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>datadotcom_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>description_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारियों</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>employees_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फैक्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>fax_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ग्लोबल पार्टी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>global_party_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>उद्योग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>industry_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>स्वामित्व / मालिकी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>ownership_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक अस्पताल</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>जनक अस्पताल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक अस्पताल विभाग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_account_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक  अस्पताल आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_account_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक  अस्पताल साइट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>parent_account_site</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जनक अस्पताल अभिलेख</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>जनक  अस्पताल अभिलेख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>person_account_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>phone_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>रेटिंग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>rating_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग जिओकोड सटीकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_accuracy_geocode_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_address_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग सिटी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_city_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_country_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग देश कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_country_code_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग अक्षांश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_latitude_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग देशांतर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_longitude_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग राज्य / प्रांत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_state_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग राज्य / प्रांत कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_state_code_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग स्ट्रीट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_street_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शिपिंग ज़िप / पोस्टल कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>shipping_zip_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>एसआईसी कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>sic_code</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>एसआईसी विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>sic_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>साइट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>site_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>राज्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>state_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सड़क</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>street_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>type_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>वेबसाइट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>website_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>साल शुरू हुआ</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>year_started</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ज़िप / पोस्टल कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>zip_account</name>
+    </fields>
+    <fields>
+        <label>सक्रिय</label>
+        <name>Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>नहीं</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>हाँ</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>बिस्तर उपलब्ध</label>
+        <name>Beds_Available__c</name>
+    </fields>
+    <fields>
+        <help>उदाहरण के लिए, एक बंद वार्ड जाहा कर्मचारी नहीं है</help>
+        <label>बिस्तर उपयोग में नहीं</label>
+        <name>Beds_Inactive__c</name>
+    </fields>
+    <fields>
+        <label>कुल बिस्तर</label>
+        <name>Beds_Total__c</name>
+    </fields>
+    <fields>
+        <label>उपयोग में बिस्तर</label>
+        <name>Beds_in_Use__c</name>
+    </fields>
+    <fields>
+        <label>आकस्मिक योजना</label>
+        <name>Contingency_Plan__c</name>
+    </fields>
+    <fields>
+        <label>ग्राहक प्राथमिकता</label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation>उच्च</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation>कम</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation>मध्यम</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>यदि कई विभागों को एक ही डिवीजन के भाग के रूप में जोड़ा जाता है, तो उस डिवीजन का नाम यहाँ दर्ज किया जा सकता है।</help>
+        <label>समूह</label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help>शीर्ष स्तरीय स्वास्थ्य प्राधिकरण का पाठ संस्करण, नियमों को साझा करने के लिए सिस्टम फ़ील्ड। वर्कफ़्लो नियम अस्पताल पदानुक्रम के आधार पर इस फ़ील्ड को पॉप्युलेट करता है।</help>
+        <label>स्वास्थ्य प्राधिकारी</label>
+        <name>Health_Authority__c</name>
+    </fields>
+    <fields>
+        <label>मेडिकल स्टाफ मुआवजा मॉडल</label>
+        <name>Medical_Staff_Compensation_Model__c</name>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation>अनुबंध</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee for Service</masterLabel>
+            <translation>सेवा के अनुरूप  शुल्क</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Dollars</masterLabel>
+            <translation><!-- Program Dollars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salaried</masterLabel>
+            <translation>वेतनभोगी</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>स्टाफ पुनः तैनाती, सीमाएं और कौशल  क्षमता पर नोट कैद करें</help>
+        <label>चिकित्सा स्टाफ पुनः तैनाती टिप्पणियाँ</label>
+        <name>Medical_Staff_Redeployment_Comments__c</name>
+    </fields>
+    <fields>
+        <label>स्थान की संख्या</label>
+        <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
+        <label>जनक की सुविधा</label>
+        <name>Parent_Facility_Name__c</name>
+    </fields>
+    <fields>
+        <label>क्षेत्रीय स्वास्थ्य प्राधिकरण का नाम</label>
+        <name>Regional_Health_Authority_Name__c</name>
+    </fields>
+    <fields>
+        <label>सलए समाप्ति तिथि</label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label>सलए क्रमांक</label>
+        <name>SLASerialNumber__c</name>
+    </fields>
+    <fields>
+        <label>सलए</label>
+        <name>SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>पीतल</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>सोना</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation>सोना</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>चांदी</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>अपसेल अवसर</label>
+        <name>UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation>शायद</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>नहीं</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>हाँ</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Division</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Division - Community</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital - Community</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority - Community</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>अस्पताल योजना</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label>सम्बंधित अस्पताल (बाल शाखा)</label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <label>विभाजन</label>
+        <name>Division</name>
+    </recordTypes>
+    <recordTypes>
+        <label>अस्पताल</label>
+        <name>Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <label>क्षेत्रीय स्वास्थ्य प्राधिकरण</label>
+        <name>Regional_Health_Authority</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Account_Sharing --></label>
+        <name>Account_Sharing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Billing --></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Staff_Access --></label>
+        <name>Manage_Staff_Access</name>
+    </webLinks>
+</CustomObjectTranslation>

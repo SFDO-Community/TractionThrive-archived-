@@ -26,7 +26,7 @@
       "regions" : [ {
         "components" : [ {
           "componentAttributes" : { },
-          "componentName" : "%%%NAMESPACE_OR_C%%%:allResources",
+          "componentName" : "c:allResources",
           "id" : "02e012c6-e32d-4ef1-96e3-f280932c0a51",
           "renderPriority" : "NEUTRAL",
           "renditionMap" : { },

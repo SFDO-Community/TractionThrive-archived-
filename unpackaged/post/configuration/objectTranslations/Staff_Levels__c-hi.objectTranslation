@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी दरजा</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी दरजा</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी दरजा</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी दरजा</value>
+    </caseValues>
+    <fields>
+        <label>चिकित्सा सेवा</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>कर्मचारी दरजा</relationshipLabel>
+    </fields>
+    <fields>
+        <label>वर्तमान कर्मचारी</label>
+        <name>Current_Staff__c</name>
+    </fields>
+    <fields>
+        <label>आवश्यक कर्मचारी अन्तराल</label>
+        <name>Essential_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label>आवश्यक जरूरतें</label>
+        <name>Essential_Staff__c</name>
+    </fields>
+    <fields>
+        <label>अतिरिक्त कर्मचारी</label>
+        <name>Extra_Staff__c</name>
+    </fields>
+    <fields>
+        <label>पूर्ण कर्मचारी अन्तराल</label>
+        <name>Full_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label>पूर्ण पूरक</label>
+        <name>Full_Staff__c</name>
+    </fields>
+    <fields>
+        <label>भूमिका</label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label>कुल कोरोना पॉजिटिव</label>
+        <name>Total_COVID__c</name>
+    </fields>
+    <fields>
+        <label>कुल कोरोना अलगाव</label>
+        <name>Total_Isolation__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Staff Levels Layout</layout>
+        <sections>
+            <label>कस्टम लिंक</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>कर्मचारी दरजे का शीर्षक</nameFieldLabel>
+</CustomObjectTranslation>

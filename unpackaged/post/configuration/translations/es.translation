@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Traction Thrive --></label>
+        <name>Crisis_Management</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Traction Thrive Service Console --></label>
+        <name>Traction_Thrive_Service_Console</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- AboutUs Details Part One --></label>
+        <name>AboutUs_Details_Part_One</name>
+    </customLabels>
+    <customLabels>
+        <label>Máquinas de anestesia: disponibles</label>
+        <name>Anaesthesia_Machines_Available</name>
+    </customLabels>
+    <customLabels>
+        <label>Máquinas de anestesia: en uso</label>
+        <name>Anaesthesia_Machines_In_Use</name>
+    </customLabels>
+    <customLabels>
+        <label>Máquinas de anestesia - Inactivas</label>
+        <name>Anaesthesia_Machines_Inactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available --></label>
+        <name>Available</name>
+    </customLabels>
+    <customLabels>
+        <label>COVID Positivo (Disposición)</label>
+        <name>COVID_Positive_Disposition</name>
+    </customLabels>
+    <customLabels>
+        <label>Estado de productos de limpieza</label>
+        <name>Cleaning_Products_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>Comorbilidad</label>
+        <name>Comorbidity_Patient_Tracking</name>
+    </customLabels>
+    <customLabels>
+        <label>Overoles</label>
+        <name>Coveralls_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>Estado actual del paciente</label>
+        <name>Current_Patient_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>Desinfectante</label>
+        <name>Disinfectant_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>División</label>
+        <name>Division</name>
+    </customLabels>
+    <customLabels>
+        <label>Selecciona una división</label>
+        <name>Division_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>Máscaras de examen</label>
+        <name>Exam_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label>Caretas</label>
+        <name>Face_Shields</name>
+    </customLabels>
+    <customLabels>
+        <label>Pruebas de ajuste</label>
+        <name>Fit_Tests</name>
+    </customLabels>
+    <customLabels>
+        <label>Ingrese el número de unidades individuales, no el número de cajas o paquetes.</label>
+        <name>Generic_HelpText_resource</name>
+    </customLabels>
+    <customLabels>
+        <label>Guantes (nitrilo)</label>
+        <name>Gloves_Nitrile</name>
+    </customLabels>
+    <customLabels>
+        <label>Guantes (estériles)</label>
+        <name>Gloves_Sterile</name>
+    </customLabels>
+    <customLabels>
+        <label>Alcohol en gel</label>
+        <name>Hand_Sanitizer</name>
+    </customLabels>
+    <customLabels>
+        <label>Autoridad sanitaria</label>
+        <name>Health_Authority_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione una autoridad de salud</label>
+        <name>Health_Authority_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>Campanas</label>
+        <name>Hoods_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>Hospital</label>
+        <name>Hospital</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione un hospital</label>
+        <name>Hospital_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>Estado de la instalación de la UCI</label>
+        <name>ICU_Facility_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- In Use Status --></label>
+        <name>In_Use_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactive Status --></label>
+        <name>Inactive_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>Seleccione la división para la que está rastreando recursos:</label>
+        <name>Label_for_Division_Selection</name>
+    </customLabels>
+    <customLabels>
+        <label>Vestidos de nivel 3</label>
+        <name>Level_3_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>Vestidos de nivel 4</label>
+        <name>Level_4_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>Máscaras N95</label>
+        <name>N95_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label>PPE (Cuerpo) Estado de recursos</label>
+        <name>PPE_Body_Resourcing_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>PPE (Headgear) Estado de recursos</label>
+        <name>PPE_Resourcing_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>Presentando &amp;apos;COVID Like&amp;apos;</label>
+        <name>Presenting_COVID_Like</name>
+    </customLabels>
+    <customLabels>
+        <label>COVID presunto</label>
+        <name>Presumptive_COVID</name>
+    </customLabels>
+    <customLabels>
+        <label>Restante</label>
+        <name>Remaining</name>
+    </customLabels>
+    <customLabels>
+        <label>Lentes de seguridad</label>
+        <name>Safety_Glasses</name>
+    </customLabels>
+    <customLabels>
+        <label>Gafas protectoras</label>
+        <name>Safety_Goggles</name>
+    </customLabels>
+    <customLabels>
+        <label>Salvar</label>
+        <name>Save_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>Cubrezapatos</label>
+        <name>Shoe_Covers</name>
+    </customLabels>
+    <customLabels>
+        <label>Batas quirúrgicas</label>
+        <name>Surgical_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>Máscaras quirúrgicas</label>
+        <name>Surgical_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total --></label>
+        <name>Total</name>
+    </customLabels>
+    <customLabels>
+        <label>Camas de ventilador - disponibles</label>
+        <name>Ventilator_Beds_Available</name>
+    </customLabels>
+    <customLabels>
+        <label>Camas de ventilador - En uso</label>
+        <name>Ventilator_Beds_In_Use</name>
+    </customLabels>
+    <customLabels>
+        <label>Camas del ventilador - Inactivo</label>
+        <name>Ventilator_Beds_Inactive</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- About Us --></label>
+        <name>About_Us</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <screens>
+                <fields>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_to_Isolation-1</fullName>
+            <screens>
+                <fields>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Follow Up --></label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- tractionthrive_CommunityCase --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Care Facility All --></description>
+        <label><!-- Care Facility All --></label>
+        <name>Care_Facility_All</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Staff Access --></description>
+        <label><!-- Staff Access --></label>
+        <name>Staff_Access</name>
+        <sections>
+            <label><!-- Care Facility --></label>
+            <name>Care Facility</name>
+        </sections>
+        <sections>
+            <label><!-- Staff Access --></label>
+            <name>Staff Access</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Staff at Hospitals --></description>
+        <label><!-- Staff at Hospitals --></label>
+        <name>Staff_at_Hospitals</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Status Reports --></description>
+        <label><!-- Status Reports --></label>
+        <name>Status_Reports</name>
+        <sections>
+            <label><!-- Status Reports --></label>
+            <name>Status Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Status Reports with Departments --></description>
+        <label><!-- Status Reports with Departments --></label>
+        <name>Status_Reports_with_Departments</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Contacts --></description>
+        <label><!-- Users with Contacts --></label>
+        <name>Users_with_Contacts</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+</Translations>
