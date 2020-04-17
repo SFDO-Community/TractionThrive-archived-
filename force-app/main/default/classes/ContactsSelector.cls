@@ -95,4 +95,9 @@ public with sharing class ContactsSelector {
                     (select Id, Name from Users )
                 FROM Contact    WHERE ID IN :contactIds];
     }
+
+    public static List<Contact> selectContactById(Id contactId) {
+        List<Contact> cont = [SELECT Id, FirstName, Status__c, LastName, AccountId, Account.Name  FROM Contact WHERE Id = :contactId];
+        return cont;
+    }
 }

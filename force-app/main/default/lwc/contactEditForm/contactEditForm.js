@@ -130,10 +130,9 @@ export default class ContactEditForm extends LightningElement {
 	}
 
 	editCredential() {
-		let editedCredential = {
-			Id: this.selectedRowToEdit.Id,
-			Type__c: this.selectedCredentialPicklistValue
-		};
+		let editedCredential = {};
+		editedCredential["Id"] = this.selectedRowToEdit.Id;
+		editedCredential[this.namespace+"Type__c"] = this.selectedCredentialPicklistValue;
 
 		updateCredential({credentialToUpdate: editedCredential}).then(result => {
 			let tempCredentialsData = this.credentialsData;
@@ -162,12 +161,11 @@ export default class ContactEditForm extends LightningElement {
 
 		const selection = this.template.querySelector('c-lookup').getSelection();
 
-		let newCredentialToInsert = {
-			SObjectType: "Credential__c",
-			Care_Facility__c: selection[0].id,
-			Type__c: this.selectedCredentialPicklistValue,
-			Staff__c: this.contact.Id
-		};
+		let newCredentialToInsert = {};
+		newCredentialToInsert["SObjectType"] = this.namespace+"Credential__c";
+		newCredentialToInsert[this.namespace+"Care_Facility__c"] = selection[0].id;
+		newCredentialToInsert[this.namespace+"Type__c"] = this.selectedCredentialPicklistValue;
+		newCredentialToInsert[this.namespace+"Staff__c"] = this.contact.Id;
 
 		this.template.querySelector("c-app-modal").displayModal(true);
 
@@ -315,7 +313,7 @@ export default class ContactEditForm extends LightningElement {
 				hasChanges = true;
 			}
 			if (getFieldValue(originalContactData, 'Skills__c', this.namespace) != selectedCompetencies) {
-				contactToUpdate.Skills__c = selectedCompetencies;
+				contactToUpdate[this.namespace+"Skills__c"] = selectedCompetencies;
 				hasChanges = true;
 			}
 
