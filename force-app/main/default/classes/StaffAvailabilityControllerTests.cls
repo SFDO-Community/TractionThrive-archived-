@@ -77,6 +77,18 @@ public class StaffAvailabilityControllerTests {
 
 			System.assertEquals(assignments.size(), data.assignmentRecords.size());
 			System.assertEquals(14, data.assignments.size());
+			System.assertEquals(contact.Status__c, data.contact.Status__c);
+		}
+	}
+
+	@IsTest
+	static void  updateStaffStatus() {
+		prepareData();
+
+		System.runAs(user) {
+			Contact data = StaffAvailabilityController.updateStaffStatus(contact.Id, false);
+			System.assert(data != null);
+			System.assertEquals(Constants.NOT_AVAILABLE_STATUS, data.Status__c);
 		}
 	}
 
