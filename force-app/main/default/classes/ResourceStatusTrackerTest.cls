@@ -58,7 +58,7 @@ private class ResourceStatusTrackerTest {
         testContact.AccountId = hospital.Id;
         insert testContact;
 
-        User communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, testContact.Id);
+        User communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
         System.runAs(new User(Id = UserInfo.getUserId())){
             insert communityUser;
@@ -81,7 +81,7 @@ private class ResourceStatusTrackerTest {
 
     @IsTest
     static void getResourceCount() {
-        User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
         Account department = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID ORDER BY CreatedDate DESC];
 
         Status_Report__c statusReport;
@@ -97,7 +97,7 @@ private class ResourceStatusTrackerTest {
 
     @IsTest
     static void setResourceCount() {
-        User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
         Account department = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID ORDER BY CreatedDate DESC];
 
         Test.startTest();

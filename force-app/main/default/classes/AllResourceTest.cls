@@ -49,7 +49,7 @@ private with sharing class AllResourceTest {
         testContact.AccountId = division.Id;
         insert testContact;
 
-        User communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, testContact.Id);
+        User communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
         System.runAs(new User(Id = UserInfo.getUserId())) {
             insert communityUser;
@@ -58,7 +58,7 @@ private with sharing class AllResourceTest {
 
     @IsTest
     static void getContactInfo() {
-        User communityUser = [SELECT Id FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User communityUser = [SELECT Id FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
 
         User currentUser;
         Test.startTest();
@@ -68,6 +68,6 @@ private with sharing class AllResourceTest {
         Test.stopTest();
 
         System.assertEquals(communityUser.Id, currentUser.Id, 'Expected current user to be returned');
-        System.assertEquals(Constants.COMMUNITY_PROFILE_NAME, currentUser.Profile.Name, 'Expected correct profile to be returned');
+        System.assertEquals(Constants.getCommunityProfileName(), currentUser.Profile.Name, 'Expected correct profile to be returned');
     }
 }

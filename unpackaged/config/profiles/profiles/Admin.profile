@@ -478,6 +478,10 @@
         <recordType>Account.%%%NAMESPACE%%%Hospital</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Account-%%%NAMESPACE%%%Regional Health Authority</layout>
+        <recordType>Account.%%%NAMESPACE%%%Regional_Health_Authority</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Contact-%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -491,6 +495,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Division_Role__c-%%%NAMESPACE%%%Division Role Layout</layout>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Knowledge__kav-FAQ - Author</layout>
+        <recordType>Knowledge__kav.FAQ</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Staff_Access__c-%%%NAMESPACE%%%Staff Access Layout</layout>
@@ -577,6 +585,17 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.%%%NAMESPACE%%%Regional_Health_Authority</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>Knowledge__kav.FAQ</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Knowledge__kav.Procedure</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>

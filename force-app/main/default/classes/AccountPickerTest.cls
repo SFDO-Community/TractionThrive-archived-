@@ -67,7 +67,7 @@ public with sharing class AccountPickerTest {
         testContact.AccountId = hospital.Id;
         insert testContact;
 
-        User communityUser = TestUtils.createCommunityUser(Constants.COMMUNITY_PROFILE_NAME, testContact.Id);
+        User communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
         System.runAs(new User(Id = UserInfo.getUserId())) {
             insert communityUser;
@@ -76,7 +76,7 @@ public with sharing class AccountPickerTest {
 
     @IsTest
     static void getHealthAuthorities() {
-        User communityUser = [SELECT Id FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User communityUser = [SELECT Id FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
 
         List<Account> childHospitals;
         Test.startTest();
@@ -90,7 +90,7 @@ public with sharing class AccountPickerTest {
 
     @IsTest
     static void getChildAccounts() {
-        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
         Account account = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
         Account hosp2 = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: HOSP_ACCOUNT_NAME + '2' AND RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID LIMIT 1];
 
@@ -111,7 +111,7 @@ public with sharing class AccountPickerTest {
 
     @IsTest
     static void getAccountSelectionHospitalUser() {
-        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.COMMUNITY_PROFILE_NAME ORDER BY CreatedDate DESC LIMIT 1];
+        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
         Account account = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
         Account hosp2 = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME + '2' AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
 

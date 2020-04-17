@@ -32,7 +32,7 @@
  * @date    2020-03-26
  */
 
-public with sharing class CreateAvailabilityBatch implements Schedulable, Database.Batchable<SObject>  {
+global with sharing class CreateAvailabilityBatch implements Schedulable, Database.Batchable<SObject>  {
 
     public Database.QueryLocator start(Database.BatchableContext BC){
         String queryString = 'SELECT Id, Role_Global__c, Status__c, ' +

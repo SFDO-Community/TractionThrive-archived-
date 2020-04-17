@@ -445,6 +445,7 @@ plans:
                 flow: config_community
                 options:
                     deploy_community_config:
+                        name: "Configure Community"
                         unmanaged: False
                         is_required: False
                 ui_options:

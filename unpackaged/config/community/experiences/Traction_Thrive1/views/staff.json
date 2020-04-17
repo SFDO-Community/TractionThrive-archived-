@@ -27,7 +27,7 @@
         "components" : [ {
           "componentAttributes" : {
             "enableInlineEdit" : true,
-            "filterName" : "00B8A000002elQRUAY",
+            "filterName" : "All Staff",
             "layout" : "FULL",
             "pageSize" : 25,
             "scope" : "Contact",
@@ -38,7 +38,7 @@
             "showImageIcon" : false,
             "showManualRefreshButton" : true,
             "showObjectName" : false,
-            "showPinnedList" : true,
+            "showPinnedList" : false,
             "showSearchBar" : true
           },
           "componentName" : "forceCommunity:objectHome",
