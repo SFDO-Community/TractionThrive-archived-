@@ -24,6 +24,9 @@ export default class AppModal extends LightningElement {
 	@api
 	modalSize;
 
+	@api
+	hideCloseButton = false;
+
 	@track
 	shouldHideBackdrop = false;
 
