@@ -55,6 +55,10 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>active</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>body</name>
                 <value>Facet-b37528c4-fc66-4bcc-aaab-adf31288ccae</value>
             </componentInstanceProperties>
@@ -67,7 +71,7 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>active</name>
-                <value>true</value>
+                <value>false</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>body</name>
@@ -94,6 +98,36 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Staff_Level__r</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.RecordType.Name}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Division</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
                 <name>parentFieldApiName</name>

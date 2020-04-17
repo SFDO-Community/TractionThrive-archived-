@@ -496,6 +496,10 @@
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Division_Role__c-%%%NAMESPACE%%%Division Role Layout</layout>
     </layoutAssignments>
+	<layoutAssignments>
+        <layout>Knowledge__kav-FAQ - Author</layout>
+        <recordType>Knowledge__kav.FAQ</recordType>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Staff_Access__c-%%%NAMESPACE%%%Staff Access Layout</layout>
     </layoutAssignments>
