@@ -14,8 +14,8 @@ export default class StaffAvailabilityItem extends LightningElement {
 	ASSIGNED_STATUS = 'Assigned';
 
 	isExpanded = false;
-	statusValue;
-	record;
+	@track statusValue;
+	@track record;
 
 	@api namespace;
 	@api assignment;
@@ -35,13 +35,14 @@ export default class StaffAvailabilityItem extends LightningElement {
 		notifyViaAlerts: false // Use alerts instead of toast to notify user
 	};
 
-	renderedCallback() {
-
+	@api
+	get assignmentRecord() {
+		return '';
 	}
 
-	connectedCallback() {
-		this.record = {...this.assignment, sobjectType: this.namespace+'Assignment__c'};
-		this.statusValue = getFieldValue(this.record, 'Available__c', this.namespace);
+	set assignmentRecord(value) {
+		this.record = {...value, sobjectType: this.namespace+'Assignment__c'};
+		this.statusValue = getFieldValue(value, 'Available__c', this.namespace);
 	}
 
 	get isAssigned() {
