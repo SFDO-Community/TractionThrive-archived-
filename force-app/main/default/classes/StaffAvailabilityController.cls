@@ -50,7 +50,7 @@ public with sharing class StaffAvailabilityController {
 	public static AssignmentData getAssignmentData(Id contactId) {
 		AssignmentData data = new AssignmentData();
 		data.contactId = !String.isBlank(contactId)? contactId:user.ContactId;
-		List<Contact> contacts = [SELECT Id, FirstName, LastName, AccountId, Account.Name  FROM Contact WHERE Id = :data.contactId];
+		List<Contact> contacts = ContactsSelector.selectContactById(data.contactId);
 		data.contact = contacts.size() > 0? contacts[0]:new Contact();
 		data.daysAhead = DEFAULT_DAYS_AHEAD;
 		data.startDate = Date.today();
@@ -92,6 +92,28 @@ public with sharing class StaffAvailabilityController {
 		return data;
 	}
 
+	@AuraEnabled
+	public static Contact updateStaffStatus(Id contactId, Boolean isStaffAvailable) {
+		if (contactId == null) {
+			throw new AuraHandledException('Wrong object was passed');
+		}
+
+		List<Contact> contact = ContactsSelector.selectContactById(contactId);
+
+		if (contact.size() > 0) {
+			if (isStaffAvailable) {
+				contact[0].Status__c = Constants.AVAILABLE_STATUS;
+			} else {
+				contact[0].Status__c = Constants.NOT_AVAILABLE_STATUS;
+			}
+			SecureDml updateObject = new SecureDml();
+			updateObject.dmlUpdate(contact);
+			return contact[0];
+		} else {
+			throw new AuraHandledException('No Staff Found');
+		}
+
+	}
 	@AuraEnabled
 	public static Assignment__c save(Assignment__c assignment) {
 
