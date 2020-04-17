@@ -8,7 +8,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>richTextValue</name>
-                <value>&lt;p&gt;&lt;b style=&quot;font-size: 14px; color: rgb(4, 29, 62);&quot;&gt;Traction Thrive Critical Care Resource Management - &lt;/b&gt;&lt;a href=&quot;http://https://tractionondemand.com/traction-thrive/&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; color: rgb(4, 29, 62);&quot;&gt;&lt;b&gt;About Us&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</value>
+                <value>&lt;p&gt;&lt;b style=&quot;color: rgb(4, 29, 62); font-size: 14px;&quot;&gt;Traction Thrive Critical Care Resource Management - &lt;/b&gt;&lt;a href=&quot;https://tractionondemand.com/traction-thrive/&quot; target=&quot;_blank&quot; style=&quot;color: rgb(4, 29, 62); font-size: 14px;&quot;&gt;&lt;b&gt;About Us&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;</value>
             </componentInstanceProperties>
             <componentName>flexipage:richText</componentName>
         </componentInstances>
