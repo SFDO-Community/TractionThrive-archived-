@@ -36,7 +36,7 @@
 						<lightning-input class="slds-float_right" type="toggle"
 										 label={staffStatus}
 										 name="input1"
-										 checked={staffAvailability}
+										 checked={isStaffAvailable}
 										 onchange={handleToggleStatus}
 										 message-toggle-active=""
 										 message-toggle-inactive=""></lightning-input>
@@ -46,7 +46,7 @@
 		</div>
 
 		<div class="slds-card cmp-availability-card">
-			<template if:true={staffAvailability}>
+			<template if:true={isStaffAvailable}>
 				<ul class="cmp-grid">
 					<template for:each={data.assignments} for:item="assignment" for:index="index">
 						<li key={assignment} class="slds-border_bottom">
@@ -55,7 +55,7 @@
 					</template>
 				</ul>
 			</template>
-			<template if:false={staffAvailability}>
+			<template if:false={isStaffAvailable}>
 				<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
 					<span class="slds-assistive-text">warning</span>
 					<h2>No Availability To Show.</h2>
@@ -65,12 +65,12 @@
 	</div>
 
 	<!-- Modal-->
-	<c-app-modal header-name="Create a new credential" modal-size="small" hide-close-button="true">
+	<c-app-modal header-name="Create a new credential" modal-size="small" is-close-button-hidden="true">
 		<span slot="content">
-			<template if:true={staffAvailability}>
+			<template if:true={isStaffAvailable}>
 				<p>Staff Status set to Available from today’s date. All future availability records will be set to Available.</p>
 			</template>
-			<template if:false={staffAvailability}>
+			<template if:false={isStaffAvailable}>
 				<p>Staff Status set to Not Available from today’s date. All future availability records will be set to Not Available.</p>
 			</template>
 		</span>

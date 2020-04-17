@@ -23,7 +23,7 @@ export default class StaffAvailability extends LightningElement {
 	@api statusColorNotAvailable;
 	@api statusColorAssigned;
 
-	@track staffAvailability;
+	@track isStaffAvailable;
 	@track staffStatus;
 
 	data;
@@ -64,7 +64,7 @@ export default class StaffAvailability extends LightningElement {
 			console.log('ASSIGNMENT DATA', result);
 			this.data = result;
 			this.staffStatus = getFieldValue(result.contact, 'Status__c', this.namespace);
-			this.staffAvailability = getFieldValue(result.contact, 'Status__c', this.namespace) == 'On staff' ? true : false;
+			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) == 'On staff' ? true : false;
 		}).catch(error => {
 			this.error = error;
 			this.formatError(error);
@@ -88,16 +88,15 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	handleToggleStatus(event) {
-		this.staffAvailability = event.target.checked;
+		this.isStaffAvailable = event.target.checked;
 		this.template.querySelector("c-app-modal").displayModal(true);
 	}
 
 	updateStaffStatus() {
 		this.template.querySelector("c-app-modal").displayModal(false);
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
-		updateStaffStatus({contactId: this.data.contact.Id, isStaffAvailable: this.staffAvailability}).then(result => {
-			this.staffStatus = getFieldValue(result, 'Status__c', this.namespace);
-			if (this.staffAvailability) {
+		updateStaffStatus({contactId: this.data.contact.Id, isStaffAvailable: this.isStaffAvailable}).then(() => {
+			if (this.isStaffAvailable) {
 				this.loadAssignmentData();
 			}
 		}).catch(error => {
@@ -110,10 +109,10 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	cancelStatusModal() {
-		if(this.staffAvailability) {
-			this.staffAvailability = false;
+		if(this.isStaffAvailable) {
+			this.isStaffAvailable = false;
 		} else {
-			this.staffAvailability = true;
+			this.isStaffAvailable = true;
 		}
 		this.template.querySelector("c-app-modal").displayModal(false);
 	}
