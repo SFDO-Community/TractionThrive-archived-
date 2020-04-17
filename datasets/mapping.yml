@@ -102,8 +102,3 @@ Insert Assignment__c:
       table: Account
     Staff__c:
       table: Contact
-Insert NetworkMemberGroup:
-  sf_object: NetworkMemberGroup
-  table: NetworkMemberGroup
-  fields:
-    Parentid: Parentid

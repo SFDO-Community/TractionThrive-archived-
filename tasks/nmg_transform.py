@@ -28,7 +28,11 @@ class ngmTransform(BaseSalesforceApiTask):
             #To add additional names to look for: 
             #Copy paste lines 28 and 29
             #Replace 'Einstein_Analytics_Community_User' with the name you want
-            if 'Einstein_Analytics_Community_User' in line:
+            if 'Customer Community - Medical Staff' in line:
+                ids.append(getId(line=line))
+            if 'Customer Community - Hospital Administrator' in line:
+                ids.append(getId(line=line))
+            if 'Customer Community - Health Authority' in line:
                 ids.append(getId(line=line))
             if '"Network" VALUES' in line:
                 networkId.append(getId(line=line))

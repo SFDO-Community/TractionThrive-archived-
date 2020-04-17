@@ -25,7 +25,7 @@ public static void createCommunityContactUser() {
     dmo.EmailHeader.triggerAutoResponseEmail = false;       
     dmo.optAllOrNone = false;
 
-    Profile profile = [select Id from Profile where Name = 'Customer Community Plus - Medical Staff'];
+    Profile profile = [select Id from Profile where Name = 'Customer Community - Medical Staff'];
     
     // create portal user
     string nick = newContact.email!=null?newContact.email.substring(0, newContact.email.indexOf('@')):'';

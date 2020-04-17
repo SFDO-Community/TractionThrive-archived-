@@ -276,6 +276,10 @@ tasks:
         description: Assign appropriate permission to community's network member group
         class_path: tasks.nmg_transform.ngmTransform
 
+    reset_nmg_load:
+        description: Reset network member group load file to prevent modified file for commit
+        class_path: tasks.nmg_load_reset.NgmLoadReset
+
 flows:
     config_apextest:
         steps:
@@ -362,8 +366,10 @@ flows:
                 flow: config_default
             4:
                 task: create_community_user
-            5:
-                task: assign_community_permissions
+            # 5:
+            #     task: assign_community_permissions
+            6:
+                flow: add_nmg_permissions
 
     config_packaging:
         steps:
@@ -436,6 +442,8 @@ flows:
                 options:
                     mapping: datasets/mapping-nmg-load.yml
                     sql_path: datasets/nmg-load.sql
+            4:
+                task: reset_nmg_load
 
 plans:
     install:
