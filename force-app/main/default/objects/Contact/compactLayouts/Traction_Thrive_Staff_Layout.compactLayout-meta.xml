@@ -4,6 +4,7 @@
     <fields>Name</fields>
     <fields>AccountId</fields>
     <fields>Phone</fields>
+    <fields>Role_Global__c</fields>
     <fields>Status__c</fields>
     <label>Traction Thrive Staff Layout</label>
 </CompactLayout>
