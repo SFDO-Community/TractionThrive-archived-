@@ -272,6 +272,10 @@ tasks:
             path: scripts/community_user_setup.cls
             apex: assignCommunityPermissionSet();
 
+    add_permissions_to_nmg:
+        description: Assign appropriate permission to community's network member group
+        class_path: tasks.nmg_transform.ngmTransform
+
 flows:
     config_apextest:
         steps:
@@ -416,6 +420,22 @@ flows:
                 options:
                     directories: unpackaged/config/wave
                     really_change_files: True
+
+    add_nmg_permissions:
+        descriptions: Extracts newtwork and permissions then generates a new files to load permissions for network memeber group
+        steps:
+            1:
+                task: extract_dataset
+                options: 
+                    mapping: datasets/mapping-nmg-extract.yml
+                    sql_path: datasets/nmg-extract.sql
+            2:
+                task: add_permissions_to_nmg
+            3:
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping-nmg-load.yml
+                    sql_path: datasets/nmg-load.sql
 
 plans:
     install:

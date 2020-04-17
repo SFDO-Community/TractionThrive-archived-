@@ -4,4 +4,3 @@ CREATE TABLE "NetworkMemberGroup" (
 	"Networkid" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "NetworkMemberGroup" VALUES(1,'0PSR0000000U8UrOAK','0DBR00000008hr8OAA');
