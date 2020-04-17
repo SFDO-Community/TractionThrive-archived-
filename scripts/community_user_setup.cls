@@ -1,5 +1,7 @@
 public static void createCommunityContactUser() {
-    Account newAccount = new Account (name = 'JJ Corp',
+
+    // Create an account
+    Account newAccount = new Account (name = 'Julian Account',
     BillingCity ='San Diego',
     BillingState ='CA',
     BillingCountry ='USA',
@@ -9,6 +11,7 @@ public static void createCommunityContactUser() {
     
     insert newAccount;
     
+    // Create a Contact related to Account
     Contact newContact = new Contact (
         FirstName = 'Julian',
         LastName = 'Joseph',
@@ -19,15 +22,17 @@ public static void createCommunityContactUser() {
     
     insert newContact;
     
+    // Set options to prevent user setup emails
     Database.DMLOptions dmo = new Database.DMLOptions();
     dmo.EmailHeader.triggerUserEmail = false;       
     dmo.EmailHeader.triggerOtherEmail = false;
     dmo.EmailHeader.triggerAutoResponseEmail = false;       
     dmo.optAllOrNone = false;
 
+    // Choose profile to assign user
     Profile profile = [select Id from Profile where Name = 'Customer Community - Medical Staff'];
     
-    // create portal user
+    // Create user
     string nick = newContact.email!=null?newContact.email.substring(0, newContact.email.indexOf('@')):'';
     nick += Datetime.now().getTime();
     User newUser = new User(

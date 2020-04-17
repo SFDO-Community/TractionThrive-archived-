@@ -274,7 +274,7 @@ tasks:
 
     add_permissions_to_nmg:
         description: Assign appropriate permission to community's network member group
-        class_path: tasks.nmg_transform.ngmTransform
+        class_path: tasks.nmg_transform.NgmTransForm
 
     reset_nmg_sql:
         description: Reset network member group load file to prevent modified file for commit

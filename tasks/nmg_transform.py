@@ -1,6 +1,6 @@
 from cumulusci.tasks.salesforce import BaseSalesforceApiTask
 
-class ngmTransform(BaseSalesforceApiTask):
+class NgmTransForm(BaseSalesforceApiTask):
     def _run_task(self):
         def getId(line):
             index1 = line.find('(') + 1
@@ -25,9 +25,10 @@ class ngmTransform(BaseSalesforceApiTask):
 
         for line in extractFile:
 
-            #To add additional names to look for: 
-            #Copy paste lines 28 and 29
-            #Replace 'Einstein_Analytics_Community_User' with the name you want
+            # To add additional names to look for: 
+            # Copy & paste each if statement below
+            # Replace 'Customer Community - Medical Staff' with the permission set or 
+            # profile you'd like to add a network member group for
             if 'Customer Community - Medical Staff' in line:
                 ids.append(getId(line=line))
             if 'Customer Community - Hospital Administrator' in line:
