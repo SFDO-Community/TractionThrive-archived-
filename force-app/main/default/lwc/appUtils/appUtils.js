@@ -24,4 +24,8 @@ const getFieldValue = (obj, fieldName, namespace) => {
 	return obj[namespace + fieldName];
 }
 
-export {handleToastMessage, getOrgNamespace, getFieldValue}
+const applyNamepace = (obj, namespace) => {
+	return JSON.parse(JSON.stringify(obj).replace(/[a-z]*__[cr]/ig, namespace+'$&'));
+}
+
+export {handleToastMessage, getOrgNamespace, getFieldValue, applyNamepace}
