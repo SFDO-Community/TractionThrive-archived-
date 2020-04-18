@@ -8,6 +8,7 @@ Suite Setup     Run keywords
 ...             Open Test Browser
 Suite Teardown  Delete Records and Close Browser
 
+
 ***Keywords***
 
 Verify Traction Thrive Image Link Works
@@ -22,6 +23,7 @@ Verify Origina Store Is On About Us
     Click Link  link=About Us
     # Checks first few words of story
     SeleniumLibrary.Page Should Contain  Thrive Health is a Vancouver
+
 
 *** Test Cases ***
 
