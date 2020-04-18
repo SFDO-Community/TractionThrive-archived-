@@ -17,7 +17,8 @@ public static void createCommunityContactUser() {
         LastName = 'Joseph',
         AccountId = newAccount.Id,
         Email = 'jjoseph@salesforce.com',
-        Status__c = 'On Staff'
+        Status__c = 'On Staff',
+        Role_Global__c = 'Resident'
     );
     
     insert newContact;

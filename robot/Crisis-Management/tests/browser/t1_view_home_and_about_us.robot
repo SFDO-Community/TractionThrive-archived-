@@ -17,7 +17,7 @@ Verify Traction Thrive Image Link Works
 Verify User Details Are Visible
     SeleniumLibrary.Page Should Contain  Julian Joseph
     SeleniumLibrary.Page Should Contain  Resident
-    SeleniumLibrary.Page Should Contain  JJ Corp
+    SeleniumLibrary.Page Should Contain  Julian Account
 
 Verify Origina Store Is On About Us
     Click Link  link=About Us

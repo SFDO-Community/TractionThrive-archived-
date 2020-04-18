@@ -11,12 +11,12 @@ Suite Teardown  Delete Records and Close Browser
 
 ***Keywords***
 
-Verify There Is 1 Availibility At JJ Corp
+Verify There Is 1 Availibility At Julian Account
     @{assignment_assigned}=               Salesforce Query  Assignment__c   
     ...                                   select=Id   
     ...                                   Available__c=Assigned      
     ...                                   Staff__r.Email=jjoseph@salesforce.com
-    ...                                   Care_Facility__r.Name=JJ Corp
+    ...                                   Care_Facility__r.Name=Julian Account
     Store Session Record                  Assignment__c                    
     ...                                   ${assignment_assigned}[0][Id]
     ${num_of_assiangment_assigned}=       Get Length	        
@@ -45,11 +45,11 @@ Set 1st Availibility to Not Available
     Click Element                           //*//div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
     SeleniumLibrary.Element Text Should Be  //*/li[1]/c-staff-availability-item/div/div/div[2]/div/div[1][@class="cmp-availability"]  Not Available  #1st Availibility Button
 
-Set 4th Availibility to Availible at JJ Corp
+Set 4th Availibility to Availible at Julian Account
     Click Element                           //*/li[4]/c-staff-availability-item/div/div/div[2]/div/div[@data-available="Available"]  #4th Availibility Button
     Click Element                           //*/li[4]/c-staff-availability-item/div/div[2]/div[1]/div/lightning-radio-group/fieldset/div/div/span[3]/label/span[@class="slds-radio_faux"]  #Assigned Option
     Click Element                           //*/li[4]/c-staff-availability-item/div/div[2]/div[2]/div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
-    SeleniumLibrary.Element Text Should Be  //*/li[4]/c-staff-availability-item/div/div/div[1]/div[3]/span[@class="cmp-facility-name"]  JJ Corp  #Account
+    SeleniumLibrary.Element Text Should Be  //*/li[4]/c-staff-availability-item/div/div/div[1]/div[3]/span[@class="cmp-facility-name"]  Julian Account  #Account
 
 
 *** Test Cases ***
@@ -58,6 +58,6 @@ User is able to update availability from Staff Tab
     Login To Community As Julian Joseph
     Verify There Are 14 Availibilities
     Set 1st Availibility to Not Available
-    Set 4th Availibility to Availible at JJ Corp
-    Verify There Is 1 Availibility At JJ Corp
+    Set 4th Availibility to Availible at Julian Account
+    Verify There Is 1 Availibility At Julian Account
     Verify There Is 1 Unavailibility
