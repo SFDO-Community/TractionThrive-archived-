@@ -441,6 +441,14 @@
         <value>New Staff Access</value>
     </labels>
     <labels>
+        <fullName>No_Availability_Message</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Availability Message</shortDescription>
+        <value>No Availability To Show.</value>
+    </labels>
+    <labels>
         <fullName>Not_Available_Label</fullName>
         <categories>Thrive, Multilingual</categories>
         <language>en_US</language>
@@ -567,6 +575,22 @@
         <protected>true</protected>
         <shortDescription>Staff Name</shortDescription>
         <value>Staff Name</value>
+    </labels>
+    <labels>
+        <fullName>Staff_Status_Available_from_today_future</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Staff Status set to Available from today for future</shortDescription>
+        <value>Staff Status set to Available from today’s date. All future availability records will be set to Available.</value>
+    </labels>
+    <labels>
+        <fullName>Staff_Status_Not_Available_from_today_future</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Staff Status set to Not Available from today for future</shortDescription>
+        <value>Staff Status set to Not Available from today’s date. All future availability records will be set to Not Available.</value>
     </labels>
     <labels>
         <fullName>Success_Label</fullName>

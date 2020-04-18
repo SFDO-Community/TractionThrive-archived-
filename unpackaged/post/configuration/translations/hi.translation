@@ -229,6 +229,10 @@
         <name>New_Staff_Access</name>
     </customLabels>
     <customLabels>
+        <label>दिखाने के लिए कोई उपलब्धता नहीं।</label>
+        <name>No_Availability_Message</name>
+    </customLabels>
+    <customLabels>
         <label>उपलब्ध नहीं है</label>
         <name>Not_Available_Label</name>
     </customLabels>
@@ -291,6 +295,14 @@
     <customLabels>
         <label>स्टाफ का नाम</label>
         <name>Staff_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ की स्थिति आज की तारीख से उपलब्ध है। सभी भविष्य की उपलब्धता रिकॉर्ड उपलब्ध पर सेट की जाएगी।</label>
+        <name>Staff_Status_Available_from_today_future</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ की स्थिति आज की तारीख से उपलब्ध नहीं है। भविष्य की उपलब्धता के सभी रिकॉर्ड उपलब्ध नहीं होंगे।</label>
+        <name>Staff_Status_Not_Available_from_today_future</name>
     </customLabels>
     <customLabels>
         <label>सफलता</label>

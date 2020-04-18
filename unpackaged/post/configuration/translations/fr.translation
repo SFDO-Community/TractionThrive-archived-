@@ -229,6 +229,10 @@
         <name>New_Staff_Access</name>
     </customLabels>
     <customLabels>
+        <label>Aucune disponibilité à afficher.</label>
+        <name>No_Availability_Message</name>
+    </customLabels>
+    <customLabels>
         <label>Indisponible</label>
         <name>Not_Available_Label</name>
     </customLabels>
@@ -291,6 +295,14 @@
     <customLabels>
         <label>Nom du personnel</label>
         <name>Staff_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Statut du personnel défini sur Disponible à partir de la date d&apos;aujourd&apos;hui. Tous les enregistrements de disponibilité futurs seront définis sur Disponible.</label>
+        <name>Staff_Status_Available_from_today_future</name>
+    </customLabels>
+    <customLabels>
+        <label>Statut du personnel défini sur Non disponible à partir de la date d&apos;aujourd&apos;hui. Tous les enregistrements de disponibilité futurs seront définis sur Non disponible.</label>
+        <name>Staff_Status_Not_Available_from_today_future</name>
     </customLabels>
     <customLabels>
         <label>Succès</label>
