@@ -7,6 +7,18 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import save from '@salesforce/apex/StaffAvailabilityController.save';
 import searchAccountLookup from '@salesforce/apex/StaffAvailabilityController.searchAccountLookup';
+import CARE_FACILITY_PLACEHOLDER_SEARCH from '@salesforce/label/c.Care_Facility_Placeholder_Search';
+import CARE_FACILITY from '@salesforce/label/c.Care_Facility';
+import CANCEL from '@salesforce/label/c.Cancel_Action';
+import AVAILABLE_LABEL from '@salesforce/label/c.Available_Label';
+import ASSIGNED_LABEL from '@salesforce/label/c.Assigned_Label';
+import NOT_AVAILABLE_LABEL from '@salesforce/label/c.Not_Available_Label';
+import OK_ACTION from '@salesforce/label/c.Ok_Action';
+import UPDATED from '@salesforce/label/c.Updated_label';
+import AVAILABILITY from '@salesforce/label/c.Availability_Label';
+import CARE_FACILITY_SELECTION_ERROR from '@salesforce/label/c.Care_Facility_Selection_Error';
+import SEARCHING_LOOKUP_FIELD_ERROR from '@salesforce/label/c.Searching_Lookup_field_Error';
+import LOOKUP_ERROR_LABEL from '@salesforce/label/c.Lookup_Error_Label';
 import { getFieldValue } from 'c/appUtils';
 
 export default class StaffAvailabilityItem extends LightningElement {
@@ -23,9 +35,9 @@ export default class StaffAvailabilityItem extends LightningElement {
 	@api accountName;
 
 	@track statusOptions = [
-		{'label': 'Not Available', 'value': 'Not Available'},
-		{'label': 'Available', 'value': 'Available'},
-		{'label': 'Assigned', 'value': 'Assigned'},
+		{'label': NOT_AVAILABLE_LABEL, 'value': 'Not Available'},
+		{'label': AVAILABLE_LABEL, 'value': 'Available'},
+		{'label': ASSIGNED_LABEL, 'value': 'Assigned'},
 	];
 
 	@track lookupConfig = {
@@ -35,6 +47,21 @@ export default class StaffAvailabilityItem extends LightningElement {
 		notifyViaAlerts: false // Use alerts instead of toast to notify user
 	};
 
+	label = {
+		CARE_FACILITY_PLACEHOLDER_SEARCH,
+		CARE_FACILITY,
+		CANCEL,
+		AVAILABLE_LABEL,
+		ASSIGNED_LABEL,
+		NOT_AVAILABLE_LABEL,
+		OK_ACTION,
+		UPDATED,
+		AVAILABILITY,
+		CARE_FACILITY_SELECTION_ERROR,
+		SEARCHING_LOOKUP_FIELD_ERROR,
+		LOOKUP_ERROR_LABEL
+	}
+
 	renderedCallback() {
 
 	}
@@ -42,6 +69,13 @@ export default class StaffAvailabilityItem extends LightningElement {
 	connectedCallback() {
 		this.record = {...this.assignment, sobjectType: this.namespace+'Assignment__c'};
 		this.statusValue = getFieldValue(this.record, 'Available__c', this.namespace);
+	}
+
+	get statusLabelFromValue() {
+		const result = this.statusOptions.filter(val => {
+			return val.value === this.statusValue
+		});
+		return result ? result[0].label : '';
 	}
 
 	get isAssigned() {
@@ -139,7 +173,7 @@ export default class StaffAvailabilityItem extends LightningElement {
 				this.template.querySelector('c-lookup').setSearchResults(results);
 			})
 			.catch((error) => {
-				this.notifyLookupUser('Lookup Error', 'An error occured while searching with the lookup field.', 'error');
+				this.notifyLookupUser(this.label.LOOKUP_ERROR_LABEL, this.label.SEARCHING_LOOKUP_FIELD_ERROR, 'error');
 				// eslint-disable-next-line no-console
 				console.error('Lookup error', JSON.stringify(error));
 				this.lookupConfig.lookupErrors = [error];
@@ -154,7 +188,7 @@ export default class StaffAvailabilityItem extends LightningElement {
 		const selection = this.template.querySelector('c-lookup').getSelection();
 		if (selection.length === 0) {
 			this.lookupConfig.lookupErrors = [
-				{ message: 'Please choose your care facility to continue...' }
+				{ message: this.label.CARE_FACILITY_SELECTION_ERROR }
 			];
 		} else {
 			this.lookupConfig.lookupErrors = [];

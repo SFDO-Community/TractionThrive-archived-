@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Translations xmlns="http://soap.sforce.com/2006/04/metadata">
     <customApplications>
-        <label><!-- Traction Thrive --></label>
+        <label>Traction Thrive Gestion de crise</label>
         <name>Crisis_Management</name>
     </customApplications>
     <customApplications>
-        <label><!-- Traction Thrive Service Console --></label>
+        <label>Console de service Traction Thrive</label>
         <name>Traction_Thrive_Service_Console</name>
     </customApplications>
     <customLabels>
-        <label><!-- AboutUs Details Part One --></label>
-        <name>AboutUs_Details_Part_One</name>
+        <label>Ajouter</label>
+        <name>Add_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>Ajouter de nouvelles informations d&apos;identification</label>
+        <name>Add_credential</name>
     </customLabels>
     <customLabels>
         <label>Machines d&apos;anesthésie - Disponible</label>
@@ -25,12 +29,44 @@
         <name>Anaesthesia_Machines_Inactive</name>
     </customLabels>
     <customLabels>
+        <label>Attribué</label>
+        <name>Assigned_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Affectations</label>
+        <name>Assignments</name>
+    </customLabels>
+    <customLabels>
+        <label>Disponibilité</label>
+        <name>Availability_Label</name>
+    </customLabels>
+    <customLabels>
         <label><!-- Available --></label>
         <name>Available</name>
     </customLabels>
     <customLabels>
+        <label>Disponible</label>
+        <name>Available_Label</name>
+    </customLabels>
+    <customLabels>
         <label>COVID Positif (Disposition)</label>
         <name>COVID_Positive_Disposition</name>
+    </customLabels>
+    <customLabels>
+        <label>Annuler</label>
+        <name>Cancel_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>Établissement de soins</label>
+        <name>Care_Facility</name>
+    </customLabels>
+    <customLabels>
+        <label>Rechercher un établissement de soins</label>
+        <name>Care_Facility_Placeholder_Search</name>
+    </customLabels>
+    <customLabels>
+        <label>Veuillez choisir votre établissement de soins pour continuer ...</label>
+        <name>Care_Facility_Selection_Error</name>
     </customLabels>
     <customLabels>
         <label>Statut des produits de nettoyage</label>
@@ -41,12 +77,32 @@
         <name>Comorbidity_Patient_Tracking</name>
     </customLabels>
     <customLabels>
+        <label>Sélectionnez la compétence</label>
+        <name>Competence_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>Compétences</label>
+        <name>Competencies</name>
+    </customLabels>
+    <customLabels>
         <label>Combinaisons</label>
         <name>Coveralls_Resource</name>
     </customLabels>
     <customLabels>
+        <label>Créer un nouveau justificatif d&apos;identité</label>
+        <name>Create_Credential</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiants</label>
+        <name>Credentials</name>
+    </customLabels>
+    <customLabels>
         <label>Statut actuel du patient</label>
         <name>Current_Patient_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>Supprimer les informations d&apos;identification</label>
+        <name>Delete_Credential</name>
     </customLabels>
     <customLabels>
         <label>Désinfectant</label>
@@ -59,6 +115,18 @@
     <customLabels>
         <label>Sélectionnez une division</label>
         <name>Division_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>Modifier les informations d&apos;identification</label>
+        <name>Edit_Credential</name>
+    </customLabels>
+    <customLabels>
+        <label>Email</label>
+        <name>Email</name>
+    </customLabels>
+    <customLabels>
+        <label>Erreur</label>
+        <name>Error_Label</name>
     </customLabels>
     <customLabels>
         <label>Masques d&apos;examen</label>
@@ -133,8 +201,40 @@
         <name>Level_4_Gowns</name>
     </customLabels>
     <customLabels>
+        <label>Erreur de recherche</label>
+        <name>Lookup_Error_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Identifiant supprimé avec succès</label>
+        <name>Message_Credential_Deletion</name>
+    </customLabels>
+    <customLabels>
+        <label>Informations d&apos;identification mises à jour avec succès</label>
+        <name>Message_Credential_Update</name>
+    </customLabels>
+    <customLabels>
+        <label>Mobile</label>
+        <name>Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>Ma disponibilité</label>
+        <name>My_Availability</name>
+    </customLabels>
+    <customLabels>
         <label>Masques N95</label>
         <name>N95_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label>Nouvel accès pour le personnel</label>
+        <name>New_Staff_Access</name>
+    </customLabels>
+    <customLabels>
+        <label>Indisponible</label>
+        <name>Not_Available_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>D&apos;accord</label>
+        <name>Ok_Action</name>
     </customLabels>
     <customLabels>
         <label>Statut de ressourcement des EPI (corps)</label>
@@ -145,12 +245,20 @@
         <name>PPE_Resourcing_Status</name>
     </customLabels>
     <customLabels>
+        <label>Téléphone</label>
+        <name>Phone</name>
+    </customLabels>
+    <customLabels>
         <label>Présentation de &amp;apos;COVID Like&amp;apos;</label>
         <name>Presenting_COVID_Like</name>
     </customLabels>
     <customLabels>
         <label>COVID présomptif</label>
         <name>Presumptive_COVID</name>
+    </customLabels>
+    <customLabels>
+        <label>Type de titulaire</label>
+        <name>Registrant_Type</name>
     </customLabels>
     <customLabels>
         <label>Restante</label>
@@ -169,8 +277,32 @@
         <name>Save_Action</name>
     </customLabels>
     <customLabels>
+        <label>Une erreur s&apos;est produite lors de la recherche avec le champ de recherche.</label>
+        <name>Searching_Lookup_field_Error</name>
+    </customLabels>
+    <customLabels>
         <label>Couvre-chaussures</label>
         <name>Shoe_Covers</name>
+    </customLabels>
+    <customLabels>
+        <label>Information du personnel</label>
+        <name>Staff_Information</name>
+    </customLabels>
+    <customLabels>
+        <label>Nom du personnel</label>
+        <name>Staff_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Succès</label>
+        <name>Success_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Nouvelle information d&apos;identification insérée avec succès</label>
+        <name>Success_Message_Credential_Insertion</name>
+    </customLabels>
+    <customLabels>
+        <label>Les informations sur le personnel ont été mises à jour avec succès</label>
+        <name>Success_Message_Staff_Info_Update</name>
     </customLabels>
     <customLabels>
         <label>Blouses chirurgicales</label>
@@ -185,6 +317,10 @@
         <name>Total</name>
     </customLabels>
     <customLabels>
+        <label>Mise à jour</label>
+        <name>Updated_label</name>
+    </customLabels>
+    <customLabels>
         <label>Lits de ventilation - Disponible</label>
         <name>Ventilator_Beds_Available</name>
     </customLabels>
@@ -196,8 +332,16 @@
         <label>Lits de ventilateur - inactifs</label>
         <name>Ventilator_Beds_Inactive</name>
     </customLabels>
+    <customLabels>
+        <label>avertissement</label>
+        <name>Warning_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Aucun changement trouvé</label>
+        <name>Warning_message_for_no_changes_found</name>
+    </customLabels>
     <customTabs>
-        <label><!-- About Us --></label>
+        <label>À propos de nous</label>
         <name>About_Us</name>
     </customTabs>
     <flowDefinitions>
@@ -237,39 +381,39 @@
         <fullName>Update_Staff_to_Isolation</fullName>
     </flowDefinitions>
     <quickActions>
-        <label><!-- Follow Up --></label>
+        <label>Suivre</label>
         <name>Follow_Up</name>
     </quickActions>
     <quickActions>
-        <label><!-- Guest Community Case --></label>
+        <label>Cas de la communauté des invités</label>
         <name>GuestCommunityCase</name>
     </quickActions>
     <quickActions>
-        <label><!-- Log a Call --></label>
+        <label>Enregistrer un appel</label>
         <name>LogACall</name>
     </quickActions>
     <quickActions>
-        <label><!-- NewAccount --></label>
+        <label>Nouvel hôpital</label>
         <name>NewAccount</name>
     </quickActions>
     <quickActions>
-        <label><!-- NewCase --></label>
+        <label>Nouveau cas</label>
         <name>NewCase</name>
     </quickActions>
     <quickActions>
-        <label><!-- tractionthrive_CommunityCase --></label>
+        <label>Cas communautaire Traction Thrive</label>
         <name>NewCommunityCase</name>
     </quickActions>
     <quickActions>
-        <label><!-- New Contact --></label>
+        <label>Nouvelle équipe</label>
         <name>NewContact</name>
     </quickActions>
     <quickActions>
-        <label><!-- New Event --></label>
+        <label>Nouvel évènement</label>
         <name>NewEvent</name>
     </quickActions>
     <quickActions>
-        <label><!-- NewGroup --></label>
+        <label>Nouveau groupe</label>
         <name>NewGroup</name>
     </quickActions>
     <quickActions>
@@ -281,7 +425,7 @@
         <name>NewNote</name>
     </quickActions>
     <quickActions>
-        <label><!-- New Opportunity --></label>
+        <label>Nouvelle opportunité</label>
         <name>NewOpportunity</name>
     </quickActions>
     <quickActions>

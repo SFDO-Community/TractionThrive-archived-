@@ -8,7 +8,7 @@
 		<template if:true={error}>
 			<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-m-bottom_small" role="alert">
 				<span class="slds-assistive-text">error</span>
-				<h2 class="slds-m-right_small">ERROR: </h2>
+				<h2 class="slds-m-right_small">{label.ERROR}: </h2>
 				<p>
 					<template if:true={errorMessage}>
 						{errorMessage} :: {stackTrace}
@@ -18,14 +18,14 @@
 		</template>
 
 		<div class="slds-grid slds-m-bottom_x-small cmp-availability-title" if:true={showTitleBar}>
-			<div class="slds-shrink cmp-icon" if:true={showIcon}><lightning-icon class="cmp-assignments-icon" icon-name={iconName} alternative-text="Assignments" title="Assignments"></lightning-icon></div>
+			<div class="slds-shrink cmp-icon" if:true={showIcon}><lightning-icon class="cmp-assignments-icon" icon-name={iconName} alternative-text={label.ASSIGNMENTS} title={label.ASSIGNMENTS}></lightning-icon></div>
 			<div class="slds-col slds-align-middle">
 				<span class="cmp-title slds-section-title slds-m-left_x-small">
 					<template if:true={hasRecordId}>
-						{titleTextForContactRecord}
+						<span class="slds-text-title_caps">{titleTextForContactRecord}</span>
 					</template>
 					<template if:false={hasRecordId}>
-						{titleText}
+						<span class="slds-text-title_caps">{titleText}</span>
 					</template>
 				</span>
 			</div>

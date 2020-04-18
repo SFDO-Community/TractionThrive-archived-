@@ -7,14 +7,18 @@ import {LightningElement, track, wire, api} from 'lwc';
 
 import getAssignmentData from '@salesforce/apex/StaffAvailabilityController.getAssignmentData';
 import { getOrgNamespace } from 'c/appUtils';
+import ASSIGNMENTS from '@salesforce/label/c.Assignments';
+import ERROR from '@salesforce/label/c.Error_Label';
+import MY_AVAILABILITY from '@salesforce/label/c.My_Availability'
+import AVAILABILITY from '@salesforce/label/c.Availability_Label';
 
 export default class StaffAvailability extends LightningElement {
 	// design time attribute
 	@api recordId;
 	@api showTitleBar;
 	@api showIcon;
-	@api titleText;
-	@api titleTextForContactRecord;
+	@api titleText = MY_AVAILABILITY;
+	@api titleTextForContactRecord = AVAILABILITY;
 	@api iconColorBackground;
 	@api iconName;
 	@api statusBackground;
@@ -28,6 +32,11 @@ export default class StaffAvailability extends LightningElement {
 	errorMessage;
 	stackTrace;
 	isFirstRender = false;
+	label = {
+		ASSIGNMENTS,
+		ERROR,
+		MY_AVAILABILITY
+	};
 
 	renderedCallback() {
 		console.log('RECORD ID: ', this.recordId);
