@@ -15,11 +15,7 @@ Suite Teardown  Delete Records and Close Browser
 *** Test Cases ***
 
 Navigate To Community Home
-    @{community_contact}=  Salesforce Query  Contact  select=Id,Name   email=jjoseph@salesforce.com
-    Log To Console  @{community_contact}
-    Log To Console  ${community_contact}[0][Id]
-    Go To Page         Details    Contact       object_id=${community_contact}[0][Id]
-    CrisisManagement.Login To Community As User
+    Login To Community As Julian Joseph
     SeleniumLibrary.Page Should Contain  Julian Joseph
     SeleniumLibrary.Page Should Contain  Resident
     SeleniumLibrary.Page Should Contain  JJ Corp
