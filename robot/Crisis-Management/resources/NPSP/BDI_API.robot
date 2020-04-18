@@ -1,8 +1,8 @@
 *** Settings ***
 
 Resource       cumulusci/robotframework/Salesforce.robot
-Resource       robot/Cumulus/resources/Data.robot
-Library        robot/Cumulus/resources/BDI_API.py
+Resource       robot/Crisis-Management/resources/NPSP/Data.robot
+Library        robot/Crisis-Management/resources/NPSP/BDI_API.robot
 
 
 *** Keywords ***
