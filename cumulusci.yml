@@ -173,6 +173,9 @@ tasks:
         class_path: cumulusci.tasks.metadata_etl.SetOrgWideDefaults
         options:
             org_wide_defaults:
+                - api_name: Account
+                  internal_sharing_model: ReadWrite
+                  external_sharing_model: Read
                 - api_name: Case
                   internal_sharing_model: Private
                   external_sharing_model: Private
