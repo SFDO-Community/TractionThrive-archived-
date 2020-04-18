@@ -26,7 +26,8 @@
 
                 if(data != null){
                     component.set("v.statusReport", data);
-                    component.set("v.count", data.Count__c);
+                    let count = component.get("v.statusReport.Count__c");
+                    component.set("v.count", count);
                 } else {
                     component.set("v.count", 0);
                     component.set("v.statusReport", null);

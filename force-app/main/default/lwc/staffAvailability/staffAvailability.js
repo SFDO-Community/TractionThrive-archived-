@@ -6,11 +6,12 @@
 import {LightningElement, track, wire, api} from 'lwc';
 
 import getAssignmentData from '@salesforce/apex/StaffAvailabilityController.getAssignmentData';
-import { getOrgNamespace } from 'c/appUtils';
 import ASSIGNMENTS from '@salesforce/label/c.Assignments';
 import ERROR from '@salesforce/label/c.Error_Label';
 import MY_AVAILABILITY from '@salesforce/label/c.My_Availability'
 import AVAILABILITY from '@salesforce/label/c.Availability_Label';
+import updateStaffStatus from '@salesforce/apex/StaffAvailabilityController.updateStaffStatus';
+import {getFieldValue, getOrgNamespace} from 'c/appUtils';
 
 export default class StaffAvailability extends LightningElement {
 	// design time attribute
@@ -26,8 +27,11 @@ export default class StaffAvailability extends LightningElement {
 	@api statusColorNotAvailable;
 	@api statusColorAssigned;
 
-	namespace;
+	@track isStaffAvailable;
+	@track staffStatus;
+
 	data;
+	namespace;
 	error;
 	errorMessage;
 	stackTrace;
@@ -64,15 +68,19 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	loadAssignmentData() {
+		this.template.querySelector("c-app-spinner").displaySpinner(true);
 		getAssignmentData({contactId: this.recordId? this.recordId:null}).then(result => {
 			console.log('ASSIGNMENT DATA', result);
 			this.data = result;
-		})
-			.catch(error => {
-				this.error = error;
-				this.formatError(error);
-				console.log('LOAD ASSIGNMENT ERROR', error);
-			});
+			this.staffStatus = getFieldValue(result.contact, 'Status__c', this.namespace);
+			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) == 'On staff' ? true : false;
+		}).catch(error => {
+			this.error = error;
+			this.formatError(error);
+			console.log('LOAD ASSIGNMENT ERROR', error);
+		}).finally(() => {
+			this.template.querySelector("c-app-spinner").displaySpinner(false);
+		});
 	}
 
 	formatError(error) {
@@ -86,6 +94,36 @@ export default class StaffAvailability extends LightningElement {
 		else {
 			this.errorMessage = JSON.stringify(error);
 		}
+	}
+
+	handleToggleStatus(event) {
+		this.isStaffAvailable = event.target.checked;
+		this.template.querySelector("c-app-modal").displayModal(true);
+	}
+
+	updateStaffStatus() {
+		this.template.querySelector("c-app-modal").displayModal(false);
+		this.template.querySelector("c-app-spinner").displaySpinner(true);
+		updateStaffStatus({contactId: this.data.contact.Id, isStaffAvailable: this.isStaffAvailable}).then(() => {
+			if (this.isStaffAvailable) {
+				this.loadAssignmentData();
+			}
+		}).catch(error => {
+			this.error = error;
+			this.formatError(error);
+			console.log('UPDATE STAFF STATUS ERROR', error);
+		}).finally(() => {
+			this.template.querySelector("c-app-spinner").displaySpinner(false);
+		});
+	}
+
+	cancelStatusModal() {
+		if(this.isStaffAvailable) {
+			this.isStaffAvailable = false;
+		} else {
+			this.isStaffAvailable = true;
+		}
+		this.template.querySelector("c-app-modal").displayModal(false);
 	}
 
 	get hasRecordId() {
