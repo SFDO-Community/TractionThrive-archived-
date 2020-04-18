@@ -24,8 +24,8 @@ export default class StaffAvailability extends LightningElement {
 	@api recordId;
 	@api showTitleBar;
 	@api showIcon;
-	@api titleText = MY_AVAILABILITY;
-	@api titleTextForContactRecord = AVAILABILITY;
+	@api titleText;
+	@api titleTextForContactRecord;
 	@api iconColorBackground;
 	@api iconName;
 	@api statusBackground;
