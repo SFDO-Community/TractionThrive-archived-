@@ -29,4 +29,4 @@ const applyNamespace = (obj, namespace) => {
 	return JSON.parse(JSON.stringify(obj).replace(/[a-z]*__[cr]/ig, namespace+'$&'));
 }
 
-export {handleToastMessage, getOrgNamespace, getFieldValue, applyNamepace}
+export {handleToastMessage, getOrgNamespace, getFieldValue, applyNamespace}
