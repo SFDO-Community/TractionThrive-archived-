@@ -5,8 +5,8 @@
         <name>Crisis_Management</name>
     </customApplications>
     <customApplications>
-        <label>कोरोना वायरस सेवा कंसोल</label>
-        <name>ट्रैक्शन थ्राइव सर्विस कंसोल</name>
+        <label>ट्रैक्शन थ्राइव सर्विस कंसोल</label>
+        <name>Traction_Thrive_Service_Console</name>
     </customApplications>
     <customLabels>
         <label>जोड़ना</label>
