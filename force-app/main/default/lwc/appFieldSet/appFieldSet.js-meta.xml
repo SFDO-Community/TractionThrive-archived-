@@ -10,8 +10,8 @@
 	</targets>
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default">
-			<property name="fieldSetObject" type="String" label="What is the object" description="Which object has the fieldset"/>
-			<property name="fieldSetApiName" type="String" label="What is the fieldSet api" description="The api name of the fieldset that will be used"/>
+			<property name="fieldSetObject" type="String" label="The Object Api Name" description="Which object has the fieldset"/>
+			<property name="fieldSetApiName" type="String" label="The FieldSet Api Name" description="The api name of the fieldset that will be used"/>
 			<property name="isUsedInCommunityBuilder" type="Boolean" label="Check if its being used in the community builder" description="This is component is embed to a parent component?" default="false"/>
 		</targetConfig>
 	</targetConfigs>
