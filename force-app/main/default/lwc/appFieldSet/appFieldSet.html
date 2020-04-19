@@ -1,0 +1,45 @@
+<!--
+ - Created by Pedro Serquiz on 4/18/2020.
+ -->
+
+<!-- App Field Set -->
+<template>
+	<c-app-spinner></c-app-spinner>
+	<div class="slds-grid slds-wrap slds-gutters">
+		<template for:each={fieldSetData} for:item="field">
+			<div key={field.fieldPath} class="slds-col slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+				<template if:true={field.isCheckboxField}>
+					<lightning-input class="slds-m-top_x-large slds-form-element" name={field.fieldPath} type="Checkbox" value="" label={field.label}></lightning-input>
+				</template>
+				<template if:true={field.isPicklistField}>
+					<lightning-combobox
+							name={field.fieldPath}
+							label={field.label}
+							value={selectedCredentialPicklistValue}
+							placeholder={field.label}
+							options={field.picklistEntries}
+							class="slds-m-top_medium"></lightning-combobox>
+				</template>
+				<template if:true={field.isMultiPicklistField}>
+					<lightning-dual-listbox name={field.fieldPath}
+											class="slds-m-top_medium"
+											label={field.label}
+											source-label="Available"
+											selected-label="Selected"
+											options={field.picklistEntries}></lightning-dual-listbox>
+				</template>
+				<template if:true={field.isRegularField}>
+					<lightning-input class="slds-m-top_medium" name={field.fieldPath} type={field.type} value="" label={field.label} required={field.required}></lightning-input>
+				</template>
+			</div>
+		</template>
+	</div>
+	<template if:true={isUsedInCommunityBuilder}>
+		<div class="slds-grid">
+			<div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_right slds-p-top_medium">
+				<lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={cancel}></lightning-button>
+				<lightning-button label="Save" title="Save" variant="brand" class="slds-m-left_x-small" onclick={saveAndValidate}></lightning-button>
+			</div>
+		</div>
+	</template>
+</template>
