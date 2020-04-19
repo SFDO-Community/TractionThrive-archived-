@@ -268,13 +268,6 @@ tasks:
             path: scripts/community_user_setup.cls
             apex: createCommunityContactUser();
 
-    assign_community_permissions:
-        description: Assigns appropriate permissions to user for community
-        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-        options:
-            path: scripts/community_user_setup.cls
-            apex: assignCommunityPermissionSet();
-
     add_permissions_to_nmg:
         description: Assign appropriate permission to community's network member group
         class_path: tasks.nmg_transform.NgmTransForm
@@ -369,9 +362,7 @@ flows:
                 flow: config_default
             4:
                 task: create_community_user
-            # 5:
-            #     task: assign_community_permissions
-            6:
+            5:
                 flow: add_nmg_permissions
 
     config_packaging:
