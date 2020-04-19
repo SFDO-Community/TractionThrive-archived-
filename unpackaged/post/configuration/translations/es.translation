@@ -397,7 +397,7 @@
         <name>Follow_Up</name>
     </quickActions>
     <quickActions>
-        <label>Caso de la comunidad de invitados</label>
+        <label><!-- GuestCommunityCase --></label>
         <name>GuestCommunityCase</name>
     </quickActions>
     <quickActions>
