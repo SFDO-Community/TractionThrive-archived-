@@ -6,19 +6,11 @@
     </types>
     <types>
         <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
         <members>*</members>
         <name>GlobalValueSetTranslation</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Picklist</name>
     </types>
     <types>
         <members>*</members>
