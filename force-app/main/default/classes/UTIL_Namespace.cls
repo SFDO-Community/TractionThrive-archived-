@@ -42,18 +42,20 @@ public class UTIL_Namespace {
     * @description String helper property for getNamespace() method.
     *******************************************************************************************************/
     private static string plainNamespace;
+    private static final String TEST_NAMESPACE = 'thrive';
+    private static final String CLASS_NAME = 'UTIL_Namespace';
     /*******************************************************************************************************
     * @description Finds the namespace for the current context.
     * @return string The current namespace as a string, or a blank string if we're not in a namespaced context.
     ********************************************************************************************************/
     public static string getNamespace() {
         if (plainNamespace == null) {
-            string withDotNotation = UTIL_Namespace.class.getName();
-
-            if (withDotNotation.contains('.')) {
-                plainNamespace = withDotNotation.substringBefore('.');
-            } else {
-                plainNamespace = '';
+            plainNamespace = UTIL_Namespace.class
+                    .getName()
+                    .substringBefore(CLASS_NAME)
+                    .removeEnd('.');
+            if (Test.isRunningTest() && String.isBlank(plainNamespace)) {
+                plainNamespace = TEST_NAMESPACE;
             }
         }
         return plainNamespace;
