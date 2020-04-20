@@ -34,7 +34,7 @@
 			</div>
 		</template>
 	</div>
-	<template if:true={isUsedInCommunityBuilder}>
+	<template if:false={hasParent}>
 		<div class="slds-grid">
 			<div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_right slds-p-top_medium">
 				<lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={cancel}></lightning-button>

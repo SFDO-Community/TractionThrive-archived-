@@ -20,7 +20,6 @@ export default class AppFieldSet extends LightningElement {
 	// Design time attribute
 	@api fieldSetObject;
 	@api fieldSetApiName;
-	@api isUsedInCommunityBuilder = false;
 
 	namespace;
 	fieldSetData;
@@ -28,15 +27,16 @@ export default class AppFieldSet extends LightningElement {
 	@track multiPicklistFields;
 	@track checkboxFields;
 	@track inputFields;
+	@api hasParent = false;
 
 	@api
-	isValid() {
+	get isValid() {
 		return this.validateForm();
 	}
 
 	@api
-	getFormInputObject() {
-		return this.buildObjectToInsert();
+	get record() {
+		return this.buildRecord();
 	}
 
 	renderedCallback() {
@@ -90,7 +90,7 @@ export default class AppFieldSet extends LightningElement {
 	saveAndValidate() {
 		if (this.validateForm()) {
 			this.template.querySelector("c-app-spinner").displaySpinner(true);
-			this.buildObjectToInsert();
+			this.buildRecord();
 			let promise = this.insertObject();
 			promise.catch(error => {
 				console.error('SAVE ERROR: ', error);
@@ -102,13 +102,13 @@ export default class AppFieldSet extends LightningElement {
 	}
 
 	insertObject() {
-		return insertSObject({jSONSObject: JSON.stringify(this.buildObjectToInsert()), sObjectApiName: this.fieldSetObject}).then(() => {
+		return insertSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(() => {
 			this.handleToastMessage('Success', 'Successfully Inserted', 'success');
 		})
 	}
 
 	//Support methods
-	buildObjectToInsert() {
+	buildRecord() {
 		let newObjectToInsert = {};
 
 		this.template.querySelectorAll('lightning-input').forEach(function (input) {
