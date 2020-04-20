@@ -42,7 +42,7 @@ public class UTIL_Namespace {
     * @description String helper property for getNamespace() method.
     *******************************************************************************************************/
     private static string plainNamespace;
-    private static final String TEST_NAMESPACE = 'thrive';
+    private static final String TEST_NAMESPACE = 'thrive_test';
     private static final String CLASS_NAME = 'UTIL_Namespace';
     /*******************************************************************************************************
     * @description Finds the namespace for the current context.
@@ -54,11 +54,19 @@ public class UTIL_Namespace {
                     .getName()
                     .substringBefore(CLASS_NAME)
                     .removeEnd('.');
-            if (Test.isRunningTest() && String.isBlank(plainNamespace)) {
-                plainNamespace = TEST_NAMESPACE;
-            }
         }
         return plainNamespace;
+    }
+
+    /*******************************************************************************************************
+    * @description sets the namespace for the current context.
+    * @return void
+    ********************************************************************************************************/
+    @TestVisible
+    private static void setNamespace() {
+        if (Test.isRunningTest() && String.isBlank(getNamespace())) {
+            plainNamespace = TEST_NAMESPACE;
+        }
     }
 
     /*******************************************************************************************************
