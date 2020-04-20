@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Traction Thrive --></label>
+        <name>Crisis_Management</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Traction Thrive Service Console --></label>
+        <name>Traction_Thrive_Service_Console</name>
+    </customApplications>
+    <customTabs>
+        <label><!-- About Us --></label>
+        <name>About_Us</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_to_Isolation-1</fullName>
+            <label>Mettre à jour le personnel pour qu&apos;il ne soit pas disponible</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3); background-color: rgb(255, 255, 255);&quot;&gt;Statut du personnel défini sur Non disponible à partir de la date d&apos;aujourd&apos;hui. Tous les enregistrements de disponibilité futurs seront définis sur Non disponible.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(234, 9, 9); background-color: rgb(255, 255, 255);&quot;&gt;Personnel &lt;/span&gt;&lt;span style=&quot;color: rgb(234, 9, 9); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,&amp;quot;Salesforce Sans&amp;quot;, Arial, sans-serif);&quot;&gt;est déjà indisponible. Veuillez vérifier leur statut si vous souhaitez changer.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <label>Mettre à jour le COVID du personnel positif</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://thrivehealth--c.documentforce.com/sfc/servlet.shepherd/version/download/0683h000001Mg0w?asPdf=false&amp;amp;operationContext=CHATTER&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3);&quot;&gt;Statut de l&apos;employé défini sur COVID positif avec la date du jour. Mettez à jour la date de diagnostic COVID si ce n&apos;est pas aujourd&apos;hui&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(240, 3, 3);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt;Le personnel est déjà dans ce statut. Veuillez vérifier leur statut si vous souhaitez changer.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label>Suivre</label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label>Merci d&apos;avoir soumis votre cas!</label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description>Créer un type de rapport pour signaler tous les établissements de soins, y compris l&apos;autorité sanitaire, le parent et l&apos;enfant.</description>
+        <label>Centre de soins Tous</label>
+        <name>Care_Facility_All</name>
+        <sections>
+            <label>Comptes</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Rapport sur le personnel et à quelle division ils ont accès</description>
+        <label>Accès du personnel</label>
+        <name>Staff_Access</name>
+        <sections>
+            <label>Établissement de soins</label>
+            <name>Care Facility</name>
+        </sections>
+        <sections>
+            <label>Accès du personnel</label>
+            <name>Staff Access</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Contacts et comptes</description>
+        <label>Personnel à l&apos;hôpital</label>
+        <name>Staff_at_Hospitals</name>
+        <sections>
+            <label>Comptes</label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label>Contacts</label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Créez des rapports sur les rapports d&apos;état.</description>
+        <label>Rapports de situation</label>
+        <name>Status_Reports</name>
+        <sections>
+            <label>Rapports de situation</label>
+            <name>Status Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Créez des rapports d&apos;état avec plus d&apos;informations du département associé.</description>
+        <label>Rapports d&apos;étape avec les ministères</label>
+        <name>Status_Reports_with_Departments</name>
+        <sections>
+            <label>Comptes</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Contacts en tant que personnel dans les hôpitaux</description>
+        <label>Utilisateurs avec contacts</label>
+        <name>Users_with_Contacts</name>
+        <sections>
+            <label>Utilisateurs</label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+</Translations>

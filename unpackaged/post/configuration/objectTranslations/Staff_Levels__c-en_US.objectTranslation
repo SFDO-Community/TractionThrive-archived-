@@ -11,7 +11,7 @@
     <fields>
         <label><!-- Care Facility --></label>
         <name>Care_Facility__c</name>
-        <relationshipLabel><!-- कर्मचारी दरजा --></relationshipLabel>
+        <relationshipLabel><!-- Staff Levels --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Current Staff --></label>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label>कोरोना वायरस</label>
+        <name>Crisis_Management</name>
+    </customApplications>
+    <customApplications>
+        <label>कोरोना वायरस सेवा कंसोल</label>
+        <name>Traction_Thrive_Service_Console</name>
+    </customApplications>
+    <customTabs>
+        <label><!-- About Us --></label>
+        <name>About_Us</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_to_Isolation-1</fullName>
+            <label>अपडेट कर्मचारी उपलब्ध नहीं है</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी की स्थिति आज की तारीख से उपलब्ध नहीं है। भविष्य की उपलब्धता के सभी रिकॉर्ड उपलब्ध नहीं होंगे।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(234, 9, 9); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी &lt;/span&gt;&lt;span style=&quot;color: rgb(234, 9, 9); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,&amp;quot;Salesforce Sans&amp;quot;, Arial, sans-serif);&quot;&gt;पहले से उपलब्ध नहीं है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <label>अपडेट कर्मचारी कोरोना (COVID) पॉजिटिव</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://thrivehealth--c.documentforce.com/sfc/servlet.shepherd/version/download/0683h000001Mg0w?asPdf=false&amp;amp;operationContext=CHATTER&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3);&quot;&gt;कर्मचारी की स्थिति कोरोना (COVID) के लिए आज की तारीख के साथ सकारात्मक है। आज नहीं तो कोरोना (COVID) निदान तिथि अपडेट करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(240, 3, 3);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt;कर्मचारी पहले से ही उस स्थिति में है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label>सहायता करना</label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label>अपना मामला प्रस्तुत करने के लिए धन्यवाद!</label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description>स्वास्थ्य प्राधिकरण, अभिभावक, बाल सहित सभी चिकित्सा सेवा पर रिपोर्ट करने के लिए कस्टम रिपोर्ट प्रकार</description>
+        <label>सभी चिकित्सा सेवा</label>
+        <name>Care_Facility_All</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>कर्मचारी पर रिपोर्ट और उनके पास किस विभाग की पहुंच है।</description>
+        <label>कर्मचारी पहुंच</label>
+        <name>Staff_Access</name>
+        <sections>
+            <label>चिकित्सा सेवा</label>
+            <name>Care Facility</name>
+        </sections>
+        <sections>
+            <label>कर्मचारी अभिगम</label>
+            <name>Staff Access</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>संपर्क और खाता</description>
+        <label>अस्पताल में कर्मचारी</label>
+        <name>Staff_at_Hospitals</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label>कर्मचारी</label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>स्थति रिपोर्ट पर रिपोर्ट बनाएं</description>
+        <label>स्थिति रिपोर्ट</label>
+        <name>Status_Reports</name>
+        <sections>
+            <label>स्थिति रिपोर्ट</label>
+            <name>Status Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>संबंधित डिपार्टमेंट से अधिक जानकारी के साथ स्थिति रिपोर्ट बनाएं</description>
+        <label>डिपार्टमेंट के साथ स्थिति रिपोर्ट</label>
+        <name>Status_Reports_with_Departments</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>अस्पताल में संपर्क कर्मचारी को संभोदित करता है</description>
+        <label>संपर्कों के साथ उपयोगकर्ता</label>
+        <name>Users_with_Contacts</name>
+        <sections>
+            <label>उपयोगकर्ता</label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+</Translations>

@@ -960,11 +960,11 @@
         <name>Active__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation><!-- No --></translation>
+            <translation>नहीं</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation><!-- Yes --></translation>
+            <translation>हाँ</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -993,15 +993,15 @@
         <name>CustomerPriority__c</name>
         <picklistValues>
             <masterLabel>High</masterLabel>
-            <translation><!-- High --></translation>
+            <translation>उच्च</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Low</masterLabel>
-            <translation><!-- Low --></translation>
+            <translation>कम</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Medium</masterLabel>
-            <translation><!-- Medium --></translation>
+            <translation>मध्यम</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1019,11 +1019,11 @@
         <name>Medical_Staff_Compensation_Model__c</name>
         <picklistValues>
             <masterLabel>Contract</masterLabel>
-            <translation><!-- Contract --></translation>
+            <translation>अनुबंध</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Fee for Service</masterLabel>
-            <translation><!-- Fee for Service --></translation>
+            <translation>सेवा के अनुरूप  शुल्क</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Program Dollars</masterLabel>
@@ -1031,7 +1031,7 @@
         </picklistValues>
         <picklistValues>
             <masterLabel>Salaried</masterLabel>
-            <translation><!-- Salaried --></translation>
+            <translation>वेतनभोगी</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1064,19 +1064,19 @@
         <name>SLA__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
-            <translation><!-- Bronze --></translation>
+            <translation>पीतल</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gold</masterLabel>
-            <translation><!-- Gold --></translation>
+            <translation>सोना</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Platinum</masterLabel>
-            <translation><!-- Platinum --></translation>
+            <translation>सोना</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Silver</masterLabel>
-            <translation><!-- Silver --></translation>
+            <translation>चांदी</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1084,15 +1084,15 @@
         <name>UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
-            <translation><!-- Maybe --></translation>
+            <translation>शायद</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>No</masterLabel>
-            <translation><!-- No --></translation>
+            <translation>नहीं</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Yes</masterLabel>
-            <translation><!-- Yes --></translation>
+            <translation>हाँ</translation>
         </picklistValues>
     </fields>
     <gender>Feminine</gender>
@@ -1167,7 +1167,7 @@
         <name>Child_Account</name>
     </quickActions>
     <recordTypes>
-        <label>विभाजन</label>
+        <label>विभाग</label>
         <name>Division</name>
     </recordTypes>
     <recordTypes>
@@ -1179,27 +1179,27 @@
         <name>Regional_Health_Authority</name>
     </recordTypes>
     <webLinks>
-        <label><!-- Account_Sharing --></label>
+        <label>खाता (अस्पताल) साझा करना</label>
         <name>Account_Sharing</name>
     </webLinks>
     <webLinks>
-        <label><!-- Billing --></label>
+        <label>बिलिंग</label>
         <name>Billing</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleMaps --></label>
+        <label>गूगल मैप्स</label>
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleNews --></label>
+        <label>गूगल समाचार</label>
         <name>GoogleNews</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleSearch --></label>
+        <label>गूगल खोज</label>
         <name>GoogleSearch</name>
     </webLinks>
     <webLinks>
-        <label><!-- Manage_Staff_Access --></label>
+        <label>स्टाफ एक्सेस प्रबंधित करें</label>
         <name>Manage_Staff_Access</name>
     </webLinks>
 </CustomObjectTranslation>

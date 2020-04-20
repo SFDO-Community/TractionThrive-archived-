@@ -132,7 +132,7 @@
         <caseValues>
             <caseType>Nominative</caseType>
             <plural>false</plural>
-            <value>कर्मचारी विभाग</value>
+            <value>कर्मचारी विभाजन</value>
         </caseValues>
         <gender>Feminine</gender>
         <name>contact_division</name>
@@ -875,19 +875,19 @@
         <name>Assignment_Designation__c</name>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>अन्य</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Primary</masterLabel>
-            <translation><!-- Primary --></translation>
+            <translation>मुख्य</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Secondary</masterLabel>
-            <translation><!-- Secondary --></translation>
+            <translation>माध्यमिक</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Tertiary</masterLabel>
-            <translation><!-- Tertiary --></translation>
+            <translation>तृतीयक</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -904,11 +904,11 @@
         <name>Division__c</name>
         <picklistValues>
             <masterLabel>Emergency Medicine</masterLabel>
-            <translation><!-- Emergency Medicine --></translation>
+            <translation>आपातकालीन दवा</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Internal Medicine</masterLabel>
-            <translation><!-- Internal Medicine --></translation>
+            <translation>आंतरिक दवा</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -920,39 +920,39 @@
         <name>Medical_Staff_Category__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
-            <translation><!-- Active --></translation>
+            <translation>सक्रिय</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Associate</masterLabel>
-            <translation><!-- Associate --></translation>
+            <translation>सहयोगी</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Clinical Associate</masterLabel>
-            <translation><!-- Clinical Associate --></translation>
+            <translation>क्लिनिकल एसोसिएट(सहयोगी)</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Consulting</masterLabel>
-            <translation><!-- Consulting --></translation>
+            <translation>परामर्श चिकित्सक</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Honorary</masterLabel>
-            <translation><!-- Honorary --></translation>
+            <translation>माननीय</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Locum Tenens</masterLabel>
-            <translation><!-- Locum Tenens --></translation>
+            <translation>लोकोम टेनेंस</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Provisional</masterLabel>
-            <translation><!-- Provisional --></translation>
+            <translation>अनंतिम</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Scientific and Research</masterLabel>
-            <translation><!-- Scientific and Research --></translation>
+            <translation>वैज्ञानिक और अनुसंधान</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Temporary</masterLabel>
-            <translation><!-- Temporary --></translation>
+            <translation>अस्थायी</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -964,31 +964,31 @@
         <name>Practice_Type__c</name>
         <picklistValues>
             <masterLabel>Clinical Scientist</masterLabel>
-            <translation><!-- Clinical Scientist --></translation>
+            <translation>नैदानिक वैज्ञानिक</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dentist</masterLabel>
-            <translation><!-- Dentist --></translation>
+            <translation>दंत चिकित्सक</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Maxillofacial Surgeon</masterLabel>
-            <translation><!-- Maxillofacial Surgeon --></translation>
+            <translation>मैक्सिलोफेशियल सर्जन</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Midwife</masterLabel>
-            <translation><!-- Midwife --></translation>
+            <translation>दाई</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Physician</masterLabel>
-            <translation><!-- Physician --></translation>
+            <translation>चिकित्सक (फिजीशियन)</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Psychologist</masterLabel>
-            <translation><!-- Psychologist --></translation>
+            <translation>मनोविज्ञानी</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Scientific &amp; Research</masterLabel>
-            <translation><!-- Scientific &amp; Research --></translation>
+            <translation>वैज्ञानिक और अनुसंधान</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1009,47 +1009,47 @@
         <name>Skills__c</name>
         <picklistValues>
             <masterLabel>CARE</masterLabel>
-            <translation><!-- CARE --></translation>
+            <translation>देखभाल</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Critical Care</masterLabel>
-            <translation><!-- Critical Care --></translation>
+            <translation>नाजुक देख - रेख</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>EPAC</masterLabel>
-            <translation><!-- EPAC --></translation>
+            <translation>EPAC</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>ER</masterLabel>
-            <translation><!-- ER --></translation>
+            <translation>ईआर</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>General GYN</masterLabel>
-            <translation><!-- General GYN --></translation>
+            <translation>सामान्य स्त्री रोग</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>IV Therapy</masterLabel>
-            <translation><!-- IV Therapy --></translation>
+            <translation>IV थेरेपी</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Neonatal</masterLabel>
-            <translation><!-- Neonatal --></translation>
+            <translation>नवजात</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Nephrology/Dialysis</masterLabel>
-            <translation><!-- Nephrology/Dialysis --></translation>
+            <translation>नेफ्रोलॉजी / डायलिसिस</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Obstetrics</masterLabel>
-            <translation><!-- Obstetrics --></translation>
+            <translation>जनाई का काम</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Perinatal</masterLabel>
-            <translation><!-- Perinatal --></translation>
+            <translation>प्रसवकालीन</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Perioperative</masterLabel>
-            <translation><!-- Perioperative --></translation>
+            <translation>पेरी को-ऑपरेटिव</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -1058,11 +1058,11 @@
         <name>Status__c</name>
         <picklistValues>
             <masterLabel>Not Available</masterLabel>
-            <translation><!-- Not Available --></translation>
+            <translation>अनुपलब्ध कर्मचारी</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>On staff</masterLabel>
-            <translation><!-- On staff --></translation>
+            <translation>उपलब्ध कर्मचारी</translation>
         </picklistValues>
     </fields>
     <gender>Feminine</gender>
@@ -1089,11 +1089,11 @@
         <name>Isolation</name>
     </quickActions>
     <webLinks>
-        <label><!-- GoogleMaps --></label>
+        <label>गूगल मैप्स</label>
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleSearch --></label>
+        <label>गूगल खोज</label>
         <name>GoogleSearch</name>
     </webLinks>
 </CustomObjectTranslation>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Age Range</masterLabel>
+        <translation>Tranche d&apos;âge</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Anaesthesia Machines</masterLabel>
+        <translation>Appareil d&apos;anesthésie</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>COVID Like</masterLabel>
+        <translation>COVID Like</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>COVID Positive</masterLabel>
+        <translation>COVID Positif</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Comorbidity</masterLabel>
+        <translation>Comorbidité</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Coveralls</masterLabel>
+        <translation>Combinaisons</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Disinfectant</masterLabel>
+        <translation>Désinfectant</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Exam Masks</masterLabel>
+        <translation>Masques d&apos;examen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Face Shields</masterLabel>
+        <translation>Boucliers faciaux</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fit Tests</masterLabel>
+        <translation>Tests d&apos;ajustement</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gloves (Nitrile)</masterLabel>
+        <translation>Gants (nitrile)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gloves (Sterile)</masterLabel>
+        <translation>Gants (stériles)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hand Sanitizer</masterLabel>
+        <translation>Gel hydroalcoolique</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Health Care Staff COVID Positive</masterLabel>
+        <translation>Personnel soignant COVID Positif</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hoods</masterLabel>
+        <translation>Hottes</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Level 3 Gowns</masterLabel>
+        <translation>Robes de niveau 4</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Level 4 Gowns</masterLabel>
+        <translation>Robes de niveau 4</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N95 Masks</masterLabel>
+        <translation>Masques N95</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Presumptive COVID</masterLabel>
+        <translation>COVID présomptif</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Glasses</masterLabel>
+        <translation>Lunettes de protection</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Goggles</masterLabel>
+        <translation>Lunettes de sécurité</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shoe Covers</masterLabel>
+        <translation>Couvre-chaussures</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Surgical Gowns</masterLabel>
+        <translation>Blouses chirurgicales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Surgical Masks</masterLabel>
+        <translation>Masques chirurgicaux</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ventilator Beds</masterLabel>
+        <translation>Lits de ventilateur</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

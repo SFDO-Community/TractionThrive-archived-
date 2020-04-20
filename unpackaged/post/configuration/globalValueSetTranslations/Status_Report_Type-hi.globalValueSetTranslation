@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Age Range</masterLabel>
+        <translation>आयु सीमा</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Anaesthesia Machines</masterLabel>
+        <translation>संज्ञाहरण मशीन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>COVID Like</masterLabel>
+        <translation>कोरोना शक्य</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>COVID Positive</masterLabel>
+        <translation>कोरोना पॉजिटिव</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Comorbidity</masterLabel>
+        <translation>कोमोरबिडिटी</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Coveralls</masterLabel>
+        <translation>कोवेराल्स</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Disinfectant</masterLabel>
+        <translation>निस्संक्रामक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Exam Masks</masterLabel>
+        <translation>परीक्षा मास्क</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Face Shields</masterLabel>
+        <translation>चेहरा कवच</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fit Tests</masterLabel>
+        <translation>फिट टेस्ट</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gloves (Nitrile)</masterLabel>
+        <translation>दस्ताने (नाइट्राइल)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gloves (Sterile)</masterLabel>
+        <translation>दस्ताने (विसंक्रमित)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hand Sanitizer</masterLabel>
+        <translation>हैंड सैनिटाइज़र</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Health Care Staff COVID Positive</masterLabel>
+        <translation>स्वास्थ्य देखभाल कर्मचारी कोरोना सकारात्मक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hoods</masterLabel>
+        <translation>हुड</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Level 3 Gowns</masterLabel>
+        <translation>स्तर 3 गाउन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Level 4 Gowns</masterLabel>
+        <translation>स्तर 4 गाउन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N95 Masks</masterLabel>
+        <translation>N95 मास्क</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Presumptive COVID</masterLabel>
+        <translation>प्रकल्पित कोरोना</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Glasses</masterLabel>
+        <translation>सुरक्षा कांच</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Goggles</masterLabel>
+        <translation>सुरक्षा चश्मे</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shoe Covers</masterLabel>
+        <translation>जूतों का खोल</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Surgical Gowns</masterLabel>
+        <translation>सर्जिकल गाउन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Surgical Masks</masterLabel>
+        <translation>सर्जिकल मास्क</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ventilator Beds</masterLabel>
+        <translation>वेंटिलेटर बेड</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

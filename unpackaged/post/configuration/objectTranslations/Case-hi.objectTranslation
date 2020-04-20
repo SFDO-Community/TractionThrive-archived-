@@ -1128,47 +1128,47 @@
         <name>Sub_Type__c</name>
         <picklistValues>
             <masterLabel>Add New User</masterLabel>
-            <translation><!-- Add New User --></translation>
+            <translation>नई उपयोगकर्ता को जोड़ना</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Can&apos;t Log On</masterLabel>
-            <translation><!-- Can&apos;t Log On --></translation>
+            <translation>लॉग ऑन नहीं कर सकते</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Change Department</masterLabel>
-            <translation><!-- Change Department --></translation>
+            <translation>डिपार्टमेंट बदलें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Change Division</masterLabel>
-            <translation><!-- Change Division --></translation>
+            <translation>विभाग बदलें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Change Heath Auth</masterLabel>
-            <translation><!-- Change Heath Auth --></translation>
+            <translation>स्वास्थ्य प्राधिकरण बदलें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Change Hospital</masterLabel>
-            <translation><!-- Change Hospital --></translation>
+            <translation>अस्पताल बदलें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Change Permissions/Profie</masterLabel>
-            <translation><!-- Change Permissions/Profie --></translation>
+            <translation>अनुमति / प्रोफ़ाइल बदलें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Dashboard Questions</masterLabel>
-            <translation><!-- Dashboard Questions --></translation>
+            <translation>डैशबोर्ड प्रश्न</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Edit my Contact Info</masterLabel>
-            <translation><!-- Edit my Contact Info --></translation>
+            <translation>मेरे संपर्क (कर्मचारी) सूचना को संपादित करें</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Forgot Password</masterLabel>
-            <translation><!-- Forgot Password --></translation>
+            <translation>पासवर्ड भूल गए</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>अन्य</translation>
         </picklistValues>
     </fields>
     <gender>Feminine</gender>

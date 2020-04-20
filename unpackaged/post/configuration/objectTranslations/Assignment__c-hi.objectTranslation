@@ -25,15 +25,15 @@
         <name>Available__c</name>
         <picklistValues>
             <masterLabel>Assigned</masterLabel>
-            <translation><!-- Assigned --></translation>
+            <translation>निरुपित</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Available</masterLabel>
-            <translation><!-- Available --></translation>
+            <translation>उपलब्ध</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Not Available</masterLabel>
-            <translation><!-- Not Available --></translation>
+            <translation>उपलब्ध नहीं है</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -50,19 +50,19 @@
         <name>Reason__c</name>
         <picklistValues>
             <masterLabel>Immunocompromised</masterLabel>
-            <translation><!-- Immunocompromised --></translation>
+            <translation>प्रतिरक्षा प्रणाली बिगड़ना</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Maternity/Paternity Leave</masterLabel>
-            <translation><!-- Maternity/Paternity Leave --></translation>
+            <translation>मातृत्व / पितृत्व अवकाश</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <translation>अन्य</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Vacation</masterLabel>
-            <translation><!-- Vacation --></translation>
+            <translation>छुट्टी</translation>
         </picklistValues>
     </fields>
     <fields>

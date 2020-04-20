@@ -5,9 +5,28 @@
         <name>DataCategoryGroup</name>
     </types>
     <types>
-        <members>Contact-en_US</members>
-        <members>Account-en_US</members>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Picklist</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StandardValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Translations</name>
     </types>
     <version>48.0</version>
 </Package>

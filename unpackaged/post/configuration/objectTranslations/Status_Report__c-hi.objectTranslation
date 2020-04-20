@@ -37,7 +37,7 @@
     </fields>
     <fields>
         <help>स्थान जो यह स्थिति रिपोर्ट के लिए है</help>
-        <label>विभाग</label>
+        <label>डिपार्टमेंट</label>
         <name>Department__c</name>
         <relationshipLabel>स्थिति रिपोर्ट</relationshipLabel>
     </fields>
@@ -47,19 +47,19 @@
         <name>Status__c</name>
         <picklistValues>
             <masterLabel>Available</masterLabel>
-            <translation><!-- Available --></translation>
+            <translation>उपलब्ध</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In use</masterLabel>
-            <translation><!-- In use --></translation>
+            <translation>उपयोग में</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Inactive</masterLabel>
-            <translation><!-- Inactive --></translation>
+            <translation>निष्क्रिय</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Total</masterLabel>
-            <translation><!-- Total --></translation>
+            <translation>संपूर्ण</translation>
         </picklistValues>
     </fields>
     <fields>
