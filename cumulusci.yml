@@ -192,16 +192,16 @@ tasks:
                 insert ur;
                 update new User(Id = UserInfo.getUserId(), UserRoleId = ur.Id);
 
-    update_admin_profile:
-        options:
-            record_types:
-                - record_type: "Account.{managed}Division"
-                  default: true
-                - record_type: "Account.{managed}Hospital"
-                - record_type: "Account.{managed}Regional_Health_Authority"
-            api_names:
-                - Admin
-                - Analytics Cloud Integration User
+    # update_admin_profile:
+    #     options:
+    #         record_types:
+    #             - record_type: "Account.{managed}Division"
+    #               default: true
+    #             - record_type: "Account.{managed}Hospital"
+    #             - record_type: "Account.{managed}Regional_Health_Authority"
+    #         api_names:
+    #             - Admin
+    #             - Analytics Cloud Integration User
 
     uninstall_packaged_incremental:
         options:
