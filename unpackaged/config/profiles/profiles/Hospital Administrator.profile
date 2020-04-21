@@ -1179,12 +1179,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>%%%NAMESPACED_ORG%%%Knowledge__kav.FAQ</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>%%%NAMESPACED_ORG%%%Knowledge__kav.Procedure</recordType>
+        <recordType>Knowledge__kav.FAQ</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
@@ -1196,7 +1191,7 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>%%%NAMESPACED_ORG%%%Knowledge__kav</tab>
+        <tab>Knowledge__kav</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

@@ -75,11 +75,4 @@
         <description>This can be used for simple question and answer articles.</description>
         <label>FAQ</label>
     </recordTypes>
-    <recordTypes>
-        <fullName>Procedure</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>Recommended_Compact_Layout</compactLayoutAssignment>
-        <description>This can be used for defining how to do something or the steps of a procedure.</description>
-        <label>Procedure</label>
-    </recordTypes>
 </CustomObject>

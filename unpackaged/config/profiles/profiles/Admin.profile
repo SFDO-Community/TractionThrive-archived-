@@ -496,6 +496,10 @@
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Division_Role__c-%%%NAMESPACE%%%Division Role Layout</layout>
     </layoutAssignments>
+	<layoutAssignments>
+        <layout>Knowledge__kav-FAQ - Author</layout>
+        <recordType>Knowledge__kav.FAQ</recordType>
+    </layoutAssignments>
     <layoutAssignments>
         <layout>%%%NAMESPACE%%%Staff_Access__c-%%%NAMESPACE%%%Staff Access Layout</layout>
     </layoutAssignments>
@@ -581,6 +585,12 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.%%%NAMESPACE%%%Regional_Health_Authority</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>Knowledge__kav.FAQ</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
