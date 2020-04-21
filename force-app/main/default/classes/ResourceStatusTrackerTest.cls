@@ -84,15 +84,15 @@ private class ResourceStatusTrackerTest {
         User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
         Account department = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID ORDER BY CreatedDate DESC];
 
-        Status_Report__c statusReport;
+        ResourceStatusTrackerCtrl.StatusReport statusReport;
         Test.startTest();
         System.runAs(testUsr) {
             statusReport = ResourceStatusTrackerCtrl.getStatusReport(resourceType, resourceStatus, department.Id);
         }
         Test.stopTest();
 
-        System.assertEquals(department.Id, statusReport.Department__c, 'Expected department to match');
-        System.assertEquals(15, statusReport.Count__c, 'Expected count to match');
+        System.assertEquals(department.Id, statusReport.record.Department__c, 'Expected department to match');
+        System.assertEquals(15, statusReport.record.Count__c, 'Expected count to match');
     }
 
     @IsTest
@@ -107,8 +107,8 @@ private class ResourceStatusTrackerTest {
         Test.stopTest();
 
         System.runAs(testUsr) {
-            Status_Report__c statusReport = ResourceStatusTrackerCtrl.getStatusReport(resourceType, resourceStatus, department.Id);
-            System.assertEquals(44, statusReport.Count__c, 'Expected count to be updated');
+            ResourceStatusTrackerCtrl.StatusReport statusReport = ResourceStatusTrackerCtrl.getStatusReport(resourceType, resourceStatus, department.Id);
+            System.assertEquals(44, statusReport.record.Count__c, 'Expected count to be updated');
         }
     }
 }
