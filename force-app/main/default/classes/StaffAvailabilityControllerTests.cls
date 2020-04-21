@@ -92,8 +92,6 @@ public class StaffAvailabilityControllerTests {
 		}
 	}
 
-
-	// TODO: Fix Failing Test - TRACTION-122
 	@IsTest
 	static void save() {
 		prepareData();
