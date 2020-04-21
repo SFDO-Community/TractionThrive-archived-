@@ -37,7 +37,7 @@
     </fields>
     <fields>
         <help>स्थान जो यह स्थिति रिपोर्ट के लिए है</help>
-        <label>विभाग</label>
+        <label>डिपार्टमेंट</label>
         <name>Department__c</name>
         <relationshipLabel>स्थिति रिपोर्ट</relationshipLabel>
     </fields>

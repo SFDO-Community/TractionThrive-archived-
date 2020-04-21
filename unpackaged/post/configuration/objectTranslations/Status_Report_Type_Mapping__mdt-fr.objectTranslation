@@ -1,144 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
-        <caseType>Nominative</caseType>
         <plural>false</plural>
         <value><!-- Status Report Type Mapping --></value>
     </caseValues>
     <caseValues>
-        <caseType>Nominative</caseType>
-        <plural>true</plural>
-        <value><!-- Status Report Type Mapping --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Objective</caseType>
-        <plural>false</plural>
-        <value><!-- Status Report Type Mapping --></value>
-    </caseValues>
-    <caseValues>
-        <caseType>Objective</caseType>
         <plural>true</plural>
         <value><!-- Status Report Type Mapping --></value>
     </caseValues>
     <fields>
-        <label>श्रेणी</label>
+        <label>Catégorie</label>
         <name>Category__c</name>
         <picklistValues>
             <masterLabel>Equipment</masterLabel>
-            <translation>उपकरण</translation>
+            <translation>Équipement</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Patient</masterLabel>
-            <translation>मरीज़</translation>
+            <translation>Patient</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Supplies</masterLabel>
-            <translation>आपूर्ति</translation>
+            <translation>Provisions</translation>
         </picklistValues>
     </fields>
     <fields>
-        <label>प्रकार</label>
+        <label>Type</label>
         <name>Type__c</name>
         <picklistValues>
             <masterLabel>Age Range</masterLabel>
-            <translation>आयु सीमा</translation>
+            <translation>Tranche d&apos;âge</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Anaesthesia Machines</masterLabel>
-            <translation>संज्ञाहरण मशीन</translation>
+            <translation>Appareil d&apos;anesthésie</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>COVID Like</masterLabel>
-            <translation>कोरोना शक्य</translation>
+            <translation>COVID Like</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>COVID Positive</masterLabel>
-            <translation>कोरोना पॉजिटिव</translation>
+            <translation>COVID Positif</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Comorbidity</masterLabel>
-            <translation>कोमोरबिडिटी</translation>
+            <translation>Comorbidité</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Coveralls</masterLabel>
-            <translation>कोवेराल्स</translation>
+            <translation>Combinaisons</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Disinfectant</masterLabel>
-            <translation>निस्संक्रामक</translation>
+            <translation>Désinfectant</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Exam Masks</masterLabel>
-            <translation>परीक्षा मास्क</translation>
+            <translation>Masques d&apos;examen</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Face Shields</masterLabel>
-            <translation>चेहरा कवच</translation>
+            <translation>Boucliers faciaux</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Fit Tests</masterLabel>
-            <translation>फिट टेस्ट</translation>
+            <translation>Tests d&apos;ajustement</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gloves (Nitrile)</masterLabel>
-            <translation>दस्ताने (नाइट्राइल)</translation>
+            <translation>Gants (nitrile)</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Gloves (Sterile)</masterLabel>
-            <translation>दस्ताने (विसंक्रमित)</translation>
+            <translation>Gants (stériles)</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hand Sanitizer</masterLabel>
-            <translation>हैंड सैनिटाइज़र</translation>
+            <translation>Gel hydroalcoolique</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Health Care Staff COVID Positive</masterLabel>
-            <translation>स्वास्थ्य देखभाल कर्मचारी कोरोना सकारात्मक</translation>
+            <translation>Personnel soignant COVID Positif</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Hoods</masterLabel>
-            <translation>हुड</translation>
+            <translation>Hottes</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Level 3 Gowns</masterLabel>
-            <translation>स्तर 3 गाउन</translation>
+            <translation>Robes de niveau 4</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Level 4 Gowns</masterLabel>
-            <translation>स्तर 4 गाउन</translation>
+            <translation>Robes de niveau 4</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>N95 Masks</masterLabel>
-            <translation>N95 मास्क</translation>
+            <translation>Masques N95</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Presumptive COVID</masterLabel>
-            <translation>प्रकल्पित कोरोना</translation>
+            <translation>COVID présomptif</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Safety Glasses</masterLabel>
-            <translation>सुरक्षा कांच</translation>
+            <translation>Lunettes de protection</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Safety Goggles</masterLabel>
-            <translation>सुरक्षा चश्मे</translation>
+            <translation>Lunettes de sécurité</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Shoe Covers</masterLabel>
-            <translation>जूतों का खोल</translation>
+            <translation>Couvre-chaussures</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Surgical Gowns</masterLabel>
-            <translation>सर्जिकल गाउन</translation>
+            <translation>Blouses chirurgicales</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Surgical Masks</masterLabel>
-            <translation>सर्जिकल मास्क</translation>
+            <translation>Masques chirurgicaux</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Ventilator Beds</masterLabel>
-            <translation>वेंटिलेटर बेड</translation>
+            <translation>Lits de ventilateur</translation>
         </picklistValues>
     </fields>
-    <gender><!-- Feminine --></gender>
+    <gender><!-- Masculine --></gender>
+    <startsWith><!-- Consonant --></startsWith>
 </CustomObjectTranslation>

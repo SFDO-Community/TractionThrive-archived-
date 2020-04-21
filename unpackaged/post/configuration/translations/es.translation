@@ -358,39 +358,45 @@
     </customTabs>
     <flowDefinitions>
         <flows>
-            <fullName>Update_Staff_COVID_Positive-1</fullName>
-            <screens>
-                <fields>
-                    <name>Success</name>
-                </fields>
-                <name>Staff_Updated</name>
-            </screens>
-            <screens>
-                <fields>
-                    <name>StatusNotChanged</name>
-                </fields>
-                <name>Status_Not_Changed</name>
-            </screens>
-        </flows>
-        <fullName>Update_Staff_COVID_Positive</fullName>
-    </flowDefinitions>
-    <flowDefinitions>
-        <flows>
             <fullName>Update_Staff_to_Isolation-1</fullName>
+            <label>Actualizar personal a no disponible</label>
             <screens>
                 <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3); background-color: rgb(255, 255, 255);&quot;&gt;Estado del personal establecido en No disponible desde la fecha de hoy. Todos los registros de disponibilidad futura se establecerán en No disponible.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <name>Success</name>
                 </fields>
                 <name>Staff_Updated</name>
             </screens>
             <screens>
                 <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(234, 9, 9); background-color: rgb(255, 255, 255);&quot;&gt;Personal &lt;/span&gt;&lt;span style=&quot;color: rgb(234, 9, 9); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,&amp;quot;Salesforce Sans&amp;quot;, Arial, sans-serif);&quot;&gt;Ya no está disponible. Por favor revise su estado si desea cambiar.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <name>StatusNotChanged</name>
                 </fields>
                 <name>Status_Not_Changed</name>
             </screens>
         </flows>
         <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <label>Actualización del personal COVID Positivo</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://thrivehealth--c.documentforce.com/sfc/servlet.shepherd/version/download/0683h000001Mg0w?asPdf=false&amp;amp;operationContext=CHATTER&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3);&quot;&gt;Estado del empleado establecido en COVID positivo con la fecha de hoy. Actualice la fecha de diagnóstico de COVID si no es hoy.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(240, 3, 3);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt;El personal ya está en ese estado. Por favor revise su estado si desea cambiar.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
     </flowDefinitions>
     <quickActions>
         <label>Seguimiento</label>
@@ -449,64 +455,64 @@
         <name>SendEmail</name>
     </quickActions>
     <reportTypes>
-        <description><!-- Care Facility All --></description>
-        <label><!-- Care Facility All --></label>
+        <description>Cree un tipo de informe para informar sobre todos los centros de atención, incluida la autoridad de salud, padres, hijos.</description>
+        <label>Centro de atención a todos</label>
         <name>Care_Facility_All</name>
         <sections>
-            <label><!-- Accounts --></label>
+            <label>Cuentas</label>
             <name>Accounts</name>
         </sections>
     </reportTypes>
     <reportTypes>
-        <description><!-- Staff Access --></description>
-        <label><!-- Staff Access --></label>
+        <description>Informe sobre el personal y a qué división tienen acceso</description>
+        <label>Acceso del personal</label>
         <name>Staff_Access</name>
         <sections>
-            <label><!-- Care Facility --></label>
+            <label>Instalación de cuidado</label>
             <name>Care Facility</name>
         </sections>
         <sections>
-            <label><!-- Staff Access --></label>
+            <label>Acceso del personal</label>
             <name>Staff Access</name>
         </sections>
     </reportTypes>
     <reportTypes>
-        <description><!-- Staff at Hospitals --></description>
-        <label><!-- Staff at Hospitals --></label>
+        <description>Contactos y cuentas</description>
+        <label>Personal del hospital</label>
         <name>Staff_at_Hospitals</name>
         <sections>
-            <label><!-- Accounts --></label>
+            <label>Cuentas</label>
             <name>Accounts</name>
         </sections>
         <sections>
-            <label><!-- Contacts --></label>
+            <label>Contactos</label>
             <name>Contacts</name>
         </sections>
     </reportTypes>
     <reportTypes>
-        <description><!-- Status Reports --></description>
-        <label><!-- Status Reports --></label>
+        <description>Crear informes sobre informes de estado.</description>
+        <label>Reportes de estado</label>
         <name>Status_Reports</name>
         <sections>
-            <label><!-- Status Reports --></label>
+            <label>Reportes de estado</label>
             <name>Status Reports</name>
         </sections>
     </reportTypes>
     <reportTypes>
-        <description><!-- Status Reports with Departments --></description>
-        <label><!-- Status Reports with Departments --></label>
+        <description>Cree informes de estado con más información del departamento asociado.</description>
+        <label>Informes de estado con departamentos</label>
         <name>Status_Reports_with_Departments</name>
         <sections>
-            <label><!-- Accounts --></label>
+            <label>Cuentas</label>
             <name>Accounts</name>
         </sections>
     </reportTypes>
     <reportTypes>
-        <description><!-- Users with Contacts --></description>
-        <label><!-- Users with Contacts --></label>
+        <description>Contactos como personal en hospitales</description>
+        <label>Usuarios con contactos</label>
         <name>Users_with_Contacts</name>
         <sections>
-            <label><!-- Users --></label>
+            <label>Los usuarios</label>
             <name>Users</name>
         </sections>
     </reportTypes>

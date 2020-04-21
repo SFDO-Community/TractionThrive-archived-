@@ -27,7 +27,7 @@
         <relationshipLabel>कर्मचारी अभिगम</relationshipLabel>
     </fields>
     <fields>
-        <help><!-- If a division has many department records in it, the division group field is a label that can be used to group them. --></help>
+        <help>यदि किसी विभाग में कई डिपार्टमेंट रिकॉर्ड हैं, तो विभाग ग्रुप फील्ड लेबल है जिसका उपयोग उन्हें ग्रुप करने के लिए किया जा सकता है।</help>
         <label>विभाग</label>
         <name>Division__c</name>
     </fields>

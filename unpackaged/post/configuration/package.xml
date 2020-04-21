@@ -2,6 +2,10 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
+        <name>DataCategoryGroup</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
@@ -16,9 +20,5 @@
         <members>*</members>
         <name>Translations</name>
     </types>
-    <types>
-        <members>ExperienceBundle</members>
-        <name>Settings</name>
-    </types>    
     <version>48.0</version>
 </Package>

@@ -1089,11 +1089,11 @@
         <name>Isolation</name>
     </quickActions>
     <webLinks>
-        <label><!-- GoogleMaps --></label>
+        <label>गूगल मैप्स</label>
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleSearch --></label>
+        <label>गूगल खोज</label>
         <name>GoogleSearch</name>
     </webLinks>
 </CustomObjectTranslation>

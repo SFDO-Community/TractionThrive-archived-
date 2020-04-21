@@ -358,39 +358,45 @@
     </customTabs>
     <flowDefinitions>
         <flows>
-            <fullName>Update_Staff_COVID_Positive-1</fullName>
-            <screens>
-                <fields>
-                    <name>Success</name>
-                </fields>
-                <name>Staff_Updated</name>
-            </screens>
-            <screens>
-                <fields>
-                    <name>StatusNotChanged</name>
-                </fields>
-                <name>Status_Not_Changed</name>
-            </screens>
-        </flows>
-        <fullName>Update_Staff_COVID_Positive</fullName>
-    </flowDefinitions>
-    <flowDefinitions>
-        <flows>
             <fullName>Update_Staff_to_Isolation-1</fullName>
+            <label>अपडेट कर्मचारी उपलब्ध नहीं है</label>
             <screens>
                 <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी की स्थिति आज की तारीख से उपलब्ध नहीं है। भविष्य की उपलब्धता के सभी रिकॉर्ड उपलब्ध नहीं होंगे।&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <name>Success</name>
                 </fields>
                 <name>Staff_Updated</name>
             </screens>
             <screens>
                 <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(234, 9, 9); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी &lt;/span&gt;&lt;span style=&quot;color: rgb(234, 9, 9); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,&amp;quot;Salesforce Sans&amp;quot;, Arial, sans-serif);&quot;&gt;पहले से उपलब्ध नहीं है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <name>StatusNotChanged</name>
                 </fields>
                 <name>Status_Not_Changed</name>
             </screens>
         </flows>
         <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <label>अपडेट कर्मचारी कोरोना (COVID) पॉजिटिव</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://thrivehealth--c.documentforce.com/sfc/servlet.shepherd/version/download/0683h000001Mg0w?asPdf=false&amp;amp;operationContext=CHATTER&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3);&quot;&gt;कर्मचारी की स्थिति कोरोना (COVID) के लिए आज की तारीख के साथ सकारात्मक है। आज नहीं तो कोरोना (COVID) निदान तिथि अपडेट करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(240, 3, 3);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt;कर्मचारी पहले से ही उस स्थिति में है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
     </flowDefinitions>
     <quickActions>
         <label>सहायता करना</label>
@@ -458,7 +464,7 @@
         </sections>
     </reportTypes>
     <reportTypes>
-        <description>कर्मचारी पर रिपोर्ट और उनके पास किस डिवीजन की पहुंच है।</description>
+        <description>कर्मचारी पर रिपोर्ट और उनके पास किस विभाग की पहुंच है।</description>
         <label>कर्मचारी पहुंच</label>
         <name>Staff_Access</name>
         <sections>
@@ -493,8 +499,8 @@
         </sections>
     </reportTypes>
     <reportTypes>
-        <description>संबंधित विभाग से अधिक जानकारी के साथ स्थिति रिपोर्ट बनाएं</description>
-        <label>विभागों के साथ स्थिति रिपोर्ट</label>
+        <description>संबंधित डिपार्टमेंट से अधिक जानकारी के साथ स्थिति रिपोर्ट बनाएं</description>
+        <label>डिपार्टमेंट के साथ स्थिति रिपोर्ट</label>
         <name>Status_Reports_with_Departments</name>
         <sections>
             <label>अस्पताल</label>

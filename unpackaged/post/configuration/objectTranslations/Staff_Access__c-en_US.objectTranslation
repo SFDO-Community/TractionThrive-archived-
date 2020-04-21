@@ -9,7 +9,7 @@
         <value>Staff Access</value>
     </caseValues>
     <fields>
-        <help><!-- इस विभाग या अस्पताल में इस कर्मचारी सदस्य को जोड़ने से उस विभाग तक पहुंच साझा हो जाएगी। --></help>
+        <help><!-- Adding this staff member to this department or facility will share access to that department. --></help>
         <label><!-- Care Facility --></label>
         <name>Care_Facility__c</name>
         <relationshipLabel><!-- Staff Access --></relationshipLabel>
@@ -20,7 +20,7 @@
         <name>Division__c</name>
     </fields>
     <fields>
-        <help><!-- विभाग या अस्पताल में जोड़ने के लिए कर्मचारी सदस्य। --></help>
+        <help><!-- The staff member to add to the department or facility. --></help>
         <label><!-- Staff --></label>
         <name>Staff__c</name>
         <relationshipLabel><!-- Staff Access --></relationshipLabel>

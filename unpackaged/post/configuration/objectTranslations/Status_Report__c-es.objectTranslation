@@ -2,69 +2,70 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>Status Report</value>
+        <value><!-- Status Report --></value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Status Reports</value>
+        <value><!-- Status Report --></value>
     </caseValues>
     <fields>
-        <help><!-- The type of data being tracked --></help>
-        <label><!-- Category --></label>
+        <help>El tipo de datos que se rastrean</help>
+        <label>Categoría</label>
         <name>Category__c</name>
     </fields>
     <fields>
-        <help><!-- The amount --></help>
-        <label><!-- Count --></label>
+        <help>La cantidad</help>
+        <label>Contar</label>
         <name>Count__c</name>
     </fields>
     <fields>
-        <help><!-- The time this was recorded --></help>
-        <label><!-- Date/Time --></label>
+        <help>El tiempo que esto fue grabado</help>
+        <label>Fecha y hora</label>
         <name>Date_Time__c</name>
     </fields>
     <fields>
-        <help><!-- The location this status report is for. --></help>
-        <label><!-- Department --></label>
+        <help>La ubicación de este informe de estado es</help>
+        <label>Departamento</label>
         <name>Department__c</name>
-        <relationshipLabel><!-- Status Reports --></relationshipLabel>
+        <relationshipLabel>informes de estado</relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Inactive can refer to a bed that&apos;s in an unstaffed ward and not available yet. --></help>
-        <label><!-- Status --></label>
+        <help>Inactivo puede referirse a una cama que está en una sala sin personal y que aún no está disponible.</help>
+        <label>Estado</label>
         <name>Status__c</name>
         <picklistValues>
             <masterLabel>Available</masterLabel>
-            <translation><!-- Available --></translation>
+            <translation>Disponible</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>In use</masterLabel>
-            <translation><!-- In use --></translation>
+            <translation>En uso</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Inactive</masterLabel>
-            <translation><!-- Inactive --></translation>
+            <translation>Inactivo</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Total</masterLabel>
-            <translation><!-- Total --></translation>
+            <translation>Total</translation>
         </picklistValues>
     </fields>
     <fields>
-        <help><!-- These are the individual status report records by the core data point being tracked. --></help>
-        <label><!-- Type --></label>
+        <help>Estos son los registros de informes de estado individuales por el punto de datos central que se está rastreando.</help>
+        <label>Tipo</label>
         <name>Type__c</name>
     </fields>
+    <gender><!-- Feminine --></gender>
     <layouts>
         <layout>Status Report Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>Enlaces personalizados</label>
             <section>Custom Links</section>
         </sections>
     </layouts>
-    <startsWith>Consonant</startsWith>
+    <nameFieldLabel><!-- Status Report Name --></nameFieldLabel>
     <validationRules>
-        <errorMessage><!-- You must enter a positive number --></errorMessage>
+        <errorMessage>debes ingresar un número positivo</errorMessage>
         <name>Count_must_be_non_negative</name>
     </validationRules>
 </CustomObjectTranslation>

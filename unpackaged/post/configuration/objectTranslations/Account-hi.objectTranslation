@@ -1179,27 +1179,27 @@
         <name>Regional_Health_Authority</name>
     </recordTypes>
     <webLinks>
-        <label><!-- Account_Sharing --></label>
+        <label>खाता (अस्पताल) साझा करना</label>
         <name>Account_Sharing</name>
     </webLinks>
     <webLinks>
-        <label><!-- Billing --></label>
+        <label>बिलिंग</label>
         <name>Billing</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleMaps --></label>
+        <label>गूगल मैप्स</label>
         <name>GoogleMaps</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleNews --></label>
+        <label>गूगल समाचार</label>
         <name>GoogleNews</name>
     </webLinks>
     <webLinks>
-        <label><!-- GoogleSearch --></label>
+        <label>गूगल खोज</label>
         <name>GoogleSearch</name>
     </webLinks>
     <webLinks>
-        <label><!-- Manage_Staff_Access --></label>
+        <label>स्टाफ एक्सेस प्रबंधित करें</label>
         <name>Manage_Staff_Access</name>
     </webLinks>
 </CustomObjectTranslation>
