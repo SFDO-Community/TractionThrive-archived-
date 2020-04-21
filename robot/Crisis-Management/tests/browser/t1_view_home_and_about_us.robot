@@ -15,14 +15,14 @@ Verify Traction Thrive Image Link Works
     Click Link  link=Traction Thrive
 
 Verify User Details Are Visible
-    SeleniumLibrary.Page Should Contain  Julian Joseph
-    SeleniumLibrary.Page Should Contain  Resident
-    SeleniumLibrary.Page Should Contain  Julian Account
+    Page Should Contain  Julian Joseph
+    Page Should Contain  Resident
+    Page Should Contain  Julian Account
 
 Verify Origina Store Is On About Us
     Click Link  link=About Us
     # Checks first few words of story
-    SeleniumLibrary.Page Should Contain  Thrive Health is a Vancouver
+    Page Should Contain  Thrive Health is a Vancouver
 
 
 *** Test Cases ***

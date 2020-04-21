@@ -51,9 +51,7 @@ class CrisisManagement(BaseNPSPPage,SalesforceRobotLibraryBase):
 
     def login_to_community_as_user(self):
         """ Click on 'Show more actions' drop down and select the option to log in to community as user """
-        locator_actions = contact_locators["show_more_actions"]
         locator_login_link = contact_locators["login_to_community"]
-        locator_login_error = contact_locators["community_login_error"]
 
         self.selenium.wait_until_page_contains_element(
             locator_login_link,
