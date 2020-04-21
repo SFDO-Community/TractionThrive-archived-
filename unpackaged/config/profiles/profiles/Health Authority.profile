@@ -894,32 +894,32 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Answer__c</field>
+        <field>Knowledge__kav.Answer__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Procedure_Audience__c</field>
+        <field>Knowledge__kav.Procedure_Audience__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Procedure_Purpose__c</field>
+        <field>Knowledge__kav.Procedure_Purpose__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Procedure_Steps__c</field>
+        <field>Knowledge__kav.Procedure_Steps__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Procedure_Warnings__c</field>
+        <field>Knowledge__kav.Procedure_Warnings__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Question__c</field>
+        <field>Knowledge__kav.Question__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1140,7 +1140,7 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-        <object>%%%NAMESPACED_ORG%%%Knowledge__kav</object>
+        <object>Knowledge__kav</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -1178,12 +1178,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <recordType>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%FAQ</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>%%%NAMESPACED_ORG%%%Knowledge__kav.%%%NAMESPACED_ORG%%%Procedure</recordType>
+        <recordType>Knowledge__kav.FAQ</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
@@ -1195,7 +1190,7 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>%%%NAMESPACED_ORG%%%Knowledge__kav</tab>
+        <tab>Knowledge__kav</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>

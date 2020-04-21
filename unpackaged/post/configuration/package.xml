@@ -20,5 +20,9 @@
         <members>*</members>
         <name>Translations</name>
     </types>
+    <types>
+        <members>ExperienceBundle</members>
+        <name>Settings</name>
+    </types>    
     <version>48.0</version>
 </Package>
