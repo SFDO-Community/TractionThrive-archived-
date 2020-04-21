@@ -111,4 +111,22 @@ private class ResourceStatusTrackerTest {
             System.assertEquals(44, statusReport.Count__c, 'Expected count to be updated');
         }
     }
+
+    @IsTest
+    static void setResourceCount_error() {
+        final Boolean exceptionThrown;
+        User testUsr = [SELECT Id, Contact.AccountId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
+
+        Test.startTest();
+        System.runAs(testUsr) {
+            try {
+                ResourceStatusTrackerCtrl.updateLatestCountForUserDepartment(null, null, null, null);
+                exceptionThrown = false;
+            } catch(AuraHandledException ex) {
+                exceptionThrown = true;
+            }
+        }
+        Test.stopTest();
+        System.assert(exceptionThrown);
+    }
 }
