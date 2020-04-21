@@ -193,6 +193,7 @@ tasks:
                 update new User(Id = UserInfo.getUserId(), UserRoleId = ur.Id);
 
     update_admin_profile:
+        class_path: tasks.update_profile.ProfileGrantAllAccess
         options:
             record_types:
                 - record_type: "Account.{managed}Division"
