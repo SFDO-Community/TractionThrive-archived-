@@ -9,13 +9,13 @@
 		<template for:each={fieldSetData} for:item="field">
 			<div key={field.fieldPath} class="slds-col slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
 				<template if:true={field.isCheckboxField}>
-					<lightning-input class="slds-m-top_x-large slds-form-element" name={field.fieldPath} type="Checkbox" value="" label={field.label}></lightning-input>
+					<lightning-input class="slds-m-top_x-large slds-form-element" name={field.fieldPath} type="Checkbox" value={field.value} label={field.label}></lightning-input>
 				</template>
 				<template if:true={field.isPicklistField}>
 					<lightning-combobox
 							name={field.fieldPath}
 							label={field.label}
-							value={selectedCredentialPicklistValue}
+							value={field.value}
 							placeholder={field.label}
 							options={field.picklistEntries}
 							class="slds-m-top_medium"></lightning-combobox>
@@ -24,12 +24,13 @@
 					<lightning-dual-listbox name={field.fieldPath}
 											class="slds-m-top_medium"
 											label={field.label}
+											value={field.value}
 											source-label="Available"
 											selected-label="Selected"
 											options={field.picklistEntries}></lightning-dual-listbox>
 				</template>
 				<template if:true={field.isRegularField}>
-					<lightning-input class="slds-m-top_medium" name={field.fieldPath} type={field.type} value="" label={field.label} required={field.required}></lightning-input>
+					<lightning-input class="slds-m-top_medium" name={field.fieldPath} type={field.type} value={field.value} label={field.label} required={field.required}></lightning-input>
 				</template>
 			</div>
 		</template>

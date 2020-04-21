@@ -65,14 +65,59 @@ public without sharing class AppFieldSetController {
 		return fieldSetMembersWrapper;
 	}
 
+	@AuraEnabled
+	public static SObject getRecordToEdit(Id recordId, List<String> fieldNames) {
+		String fields = 'Id ';
+		for (String fieldName : fieldNames) {
+			fields += ', '+fieldName;
+		}
+
+		String qryString = 'SELECT ' + fields + ' FROM ' + recordId.getSObjectType() + ' WHERE Id =: recordId';
+		SObject recordToEdit = Database.query(qryString);
+
+		return recordToEdit;
+	}
+
 	/**
-	 * Inserts a generic sobject
+	* Inserts a generic sobject
+	*
+	* @param jSONSObject the object to be inserted
+	* @param sObjectApiName the object api name
+	*/
+	@AuraEnabled
+	public static SObject insertSObject(String jSONSObject, String sObjectApiName) {
+		SObject objectToInsert = convertGenericSObject(jSONSObject, sObjectApiName);
+		SecureDml insertObject = new SecureDml();
+		insertObject.dmlInsert(new List<SObject>{convertGenericSObject(jSONSObject, sObjectApiName)});
+		return objectToInsert;
+	}
+
+	/**
+	* Updates a generic sobject
+	*
+	* @param jSONSObject the object to be updated
+	* @param sObjectApiName the object api name
+	*/
+	@AuraEnabled
+	public static SObject updateSObject(String jSONSObject, String sObjectApiName) {
+		SObject objectToUpdate = convertGenericSObject(jSONSObject, sObjectApiName);
+		SecureDml updateObject = new SecureDml();
+		updateObject.dmlUpdate(new List<SObject>{objectToUpdate});
+		return objectToUpdate;
+	}
+
+
+	// =========================================================
+	//  Private METHODS
+	// =========================================================
+
+	/**
+	 * build
 	 *
-	 * @param jSONSObject the object to be inserted
+	 * @param jSONSObject the object to be converted
 	 * @param sObjectApiName the object api name
 	 */
-	@AuraEnabled
-	public static void insertSObject(String jSONSObject, String sObjectApiName) {
+	private static SObject convertGenericSObject(String jSONSObject, String sObjectApiName) {
 		Map<String, Object> fieldMap = (Map<String, Object>)JSON.deserializeUntyped(jSONSObject);
 		Schema.SObjectType targetType = Schema.getGlobalDescribe().get(sObjectApiName);
 		SObject newSobject = targetType.newSObject();
@@ -102,8 +147,7 @@ public without sharing class AppFieldSetController {
 			else
 					newSobject.put(key, value);
 		}
-		SecureDml insertObject = new SecureDml();
-		insertObject.dmlInsert(newSobject);
+		return newSobject;
 	}
 
 	// =========================================================
@@ -116,6 +160,7 @@ public without sharing class AppFieldSetController {
 		@AuraEnabled public String label;
 		@AuraEnabled public Boolean required;
 		@AuraEnabled public String type;
+		@AuraEnabled public String value;
 		@AuraEnabled public Boolean isLookupField;
 		@AuraEnabled public Boolean isPicklistField;
 		@AuraEnabled public Boolean isCheckboxField;
@@ -129,6 +174,7 @@ public without sharing class AppFieldSetController {
 			this.label = f.label;
 			this.required = f.required;
 			this.type = String.valueOf(f.getType());
+			this.value = '';
 			this.isLookupField = f.type == Schema.DisplayType.REFERENCE;
 			this.isPicklistField = f.type == Schema.DisplayType.PICKLIST;
 			this.isCheckboxField = f.type == Schema.DisplayType.BOOLEAN;

@@ -10,24 +10,29 @@ import {getOrgNamespace} from 'c/appUtils';
 //Apex methods
 import getFieldSetFields from '@salesforce/apex/AppFieldSetController.getFieldSetFields';
 import insertSObject from '@salesforce/apex/AppFieldSetController.insertSObject';
+import updateSObject from '@salesforce/apex/AppFieldSetController.updateSObject';
+import getRecordToEdit from '@salesforce/apex/AppFieldSetController.getRecordToEdit';
 
 export default class AppFieldSet extends LightningElement {
 	isFirstRender = false;
 	error;
 	errorMessage;
 	stack;
+	namespace;
+	fieldSetData;
+	recordToEdit;
 
 	// Design time attribute
 	@api fieldSetObject;
 	@api fieldSetApiName;
 
-	namespace;
-	fieldSetData;
+	@api hasParent = false;
+	@api recordId;
+
 	@track picklistFields;
 	@track multiPicklistFields;
 	@track checkboxFields;
 	@track inputFields;
-	@api hasParent = false;
 
 	@api
 	get isValid() {
@@ -78,6 +83,9 @@ export default class AppFieldSet extends LightningElement {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
 		getFieldSetFields({fieldSetName: this.namespace+this.fieldSetApiName, ObjectName: this.namespace+this.fieldSetObject}).then(result => {
 			this.fieldSetData = result;
+			if (this.recordId) {
+				this.getRecordToEdit();
+			}
 		}).catch(error => {
 				this.error = error;
 				console.error('ERROR', error);
@@ -87,11 +95,38 @@ export default class AppFieldSet extends LightningElement {
 		});
 	}
 
+	getRecordToEdit() {
+		this.template.querySelector("c-app-spinner").displaySpinner(true);
+
+		let fieldNames = [];
+		this.fieldSetData.forEach(function (field) {
+			fieldNames.push(field.fieldPath);
+		});
+
+		getRecordToEdit({recordId: this.recordId, fieldNames: fieldNames}).then(result => {
+			this.recordToEdit = result;
+			this.setupEditRecord(result);
+		}).catch(error => {
+			this.error = error;
+			console.error('ERROR', error);
+			this.handleToastMessage(error.statusText, error.body.message, 'error');
+		}).finally(() => {
+			this.template.querySelector("c-app-spinner").displaySpinner(false);
+		});
+	}
+
 	saveAndValidate() {
 		if (this.validateForm()) {
 			this.template.querySelector("c-app-spinner").displaySpinner(true);
 			this.buildRecord();
-			let promise = this.insertObject();
+			let promise;
+
+			if (this.recordId) {
+				promise = this.updateSObject();
+			} else {
+				promise = this.insertObject();
+			}
+
 			promise.catch(error => {
 				console.error('SAVE ERROR: ', error);
 				this.handleToastMessage(error.statusText, error.body.message, 'error');
@@ -102,14 +137,44 @@ export default class AppFieldSet extends LightningElement {
 	}
 
 	insertObject() {
-		return insertSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(() => {
+		return insertSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(result => {
+			this.setupEditRecord(result);
+			this.handleToastMessage('Success', 'Successfully Inserted', 'success');
+		})
+	}
+
+	updateSObject() {
+		return updateSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(result => {
+			this.setupEditRecord(result);
 			this.handleToastMessage('Success', 'Successfully Inserted', 'success');
 		})
 	}
 
 	//Support methods
+	setupEditRecord(result) {
+		let allInputs = this.template.querySelectorAll('lightning-input');
+		this.fieldSetData.forEach(function (field) {
+			var value = result[field.fieldPath];
+			if (field.isMultiPicklistField && value) {
+				field.value = value.split(';');
+			} else {
+				field.value = value;
+			}
+			allInputs.forEach(function (input) {
+				if (input.type == 'checkbox' && input.name == field.fieldPath) {
+					input.checked = value;
+				}
+			});
+		});
+
+		this.fieldSetData = [...this.fieldSetData];
+	}
+
 	buildRecord() {
 		let newObjectToInsert = {};
+		if (this.recordId) {
+			newObjectToInsert["Id"] = this.recordId;
+		}
 
 		this.template.querySelectorAll('lightning-input').forEach(function (input) {
 			if (input.type == 'checkbox') {
@@ -153,5 +218,13 @@ export default class AppFieldSet extends LightningElement {
 				variant: variant
 			})
 		);
+	}
+
+	cancel() {
+		this.fieldSetData.forEach(function (field) {
+			field.value = "";
+		});
+
+		this.fieldSetData = [...this.fieldSetData];
 	}
 }

@@ -7,9 +7,10 @@
 	<targets>
 		<target>lightningCommunity__Default</target>
 		<target>lightningCommunity__Page</target>
+		<target>lightning__RecordPage</target>
 	</targets>
 	<targetConfigs>
-		<targetConfig targets="lightningCommunity__Default">
+		<targetConfig targets="lightningCommunity__Default, lightning__RecordPage">
 			<property name="fieldSetObject" type="String" label="The Object Api Name" description="Which object has the fieldset"/>
 			<property name="fieldSetApiName" type="String" label="The FieldSet Api Name" description="The api name of the fieldset that will be used"/>
 		</targetConfig>
