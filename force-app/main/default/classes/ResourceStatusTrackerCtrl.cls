@@ -83,7 +83,8 @@ public with sharing class ResourceStatusTrackerCtrl {
         public Status_Report__c  record {get; set;}
 
         public StatusReport(Status_Report__c statusReport) {
-            this.namespace = UTIL_Namespace.getNamespace();
+            String namespace = UTIL_Namespace.getNamespace();
+            this.namespace = String.isBlank(namespace)? namespace:namespace + '__';
             this.record = statusReport;
         }
     }
