@@ -24,9 +24,9 @@
             if (state === "SUCCESS") {
                 let data = response.getReturnValue();
 
-                if(data != null){
-                    component.set("v.statusReport", data);
-                    let count = component.get("v.statusReport.Count__c");
+                if(data.record != null) {
+                    component.set("v.statusReport", data.record);
+                    let count = component.get("v.statusReport." +  data.namespace + "Count__c");
                     component.set("v.count", count);
                 } else {
                     component.set("v.count", 0);
