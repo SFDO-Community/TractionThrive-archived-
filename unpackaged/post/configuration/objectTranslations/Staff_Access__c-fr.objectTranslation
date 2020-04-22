@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Accès du personnel</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Accès du personnel</value>
+    </caseValues>
+    <fields>
+        <help>L&apos;ajout de ce membre du personnel à ce service ou établissement partagera l&apos;accès à ce service.</help>
+        <label>Établissement de soins</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>Accès du personnel</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Si une division contient de nombreux enregistrements de service, le champ du groupe de divisions est une étiquette qui peut être utilisée pour les regrouper.</help>
+        <label>Division</label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help>Le membre du personnel à ajouter au service ou à l&apos;installation.</help>
+        <label>Personnel</label>
+        <name>Staff__c</name>
+        <relationshipLabel>Accès du personnel</relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Staff Access Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Accès du personnel</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

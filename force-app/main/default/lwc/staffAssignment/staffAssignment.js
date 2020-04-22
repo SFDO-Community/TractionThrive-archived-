@@ -6,6 +6,9 @@ import { api, LightningElement, track, wire } from "lwc";
 import searchAccountLookup from "@salesforce/apex/StaffAssignmentController.searchLookup";
 import save from "@salesforce/apex/StaffAssignmentController.save";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
+import SAVE from '@salesforce/label/c.Save_Action';
+import CARE_FACILITY_PLACEHOLDER_SEARCH from '@salesforce/label/c.Care_Facility_Placeholder_Search';
+import NEW_STAFF_ACCESS from '@salesforce/label/c.New_Staff_Access';
 
 export default class StaffAssignment extends LightningElement {
   @api objectApiName;
@@ -15,6 +18,11 @@ export default class StaffAssignment extends LightningElement {
   @track recordName;
   @track lookupName;
   del = false;
+  label = {
+    SAVE,
+    CARE_FACILITY_PLACEHOLDER_SEARCH,
+    NEW_STAFF_ACCESS
+  };
 
   connectedCallback() {
     if (this.objectApiName === "Contact") {

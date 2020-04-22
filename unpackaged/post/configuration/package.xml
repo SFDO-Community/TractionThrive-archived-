@@ -5,13 +5,24 @@
         <name>DataCategoryGroup</name>
     </types>
     <types>
-        <members>Contact-en_US</members>
-        <members>Account-en_US</members>
+        <members>*</members>
         <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StandardValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Translations</name>
     </types>
     <types>
         <members>ExperienceBundle</members>
         <name>Settings</name>
-    </types>    
+    </types>
     <version>48.0</version>
 </Package>
