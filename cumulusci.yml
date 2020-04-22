@@ -261,6 +261,28 @@ tasks:
                 - label: UPCC
                   fullName: UPCC
 
+    create_community_user:
+        description: Creates a user and contact for community
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/community_user_setup.cls
+            apex: createCommunityContactUser();
+
+    assign_community_permissions:
+        description: Assigns appropriate permissions to user for community
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/community_user_setup.cls
+            apex: assignCommunityPermissionSet();
+
+    add_permissions_to_nmg:
+        description: Assign appropriate permission to community's network member group
+        class_path: tasks.nmg_transform.NgmTransForm
+
+    reset_nmg_sql:
+        description: Reset network member group load file to prevent modified file for commit
+        class_path: tasks.nmg_sql_reset.NgmSqlReset
+
 flows:
     config_apextest:
         steps:
@@ -345,6 +367,12 @@ flows:
         steps:
             3:
                 flow: config_default
+            4:
+                task: create_community_user
+            # 5:
+            #     task: assign_community_permissions
+            6:
+                flow: add_nmg_permissions
 
     config_packaging:
         steps:
@@ -401,6 +429,24 @@ flows:
                 options:
                     directories: unpackaged/config/wave
                     really_change_files: True
+
+    add_nmg_permissions:
+        descriptions: Extracts newtwork and permissions then generates a new files to load permissions for network memeber group
+        steps:
+            1:
+                task: extract_dataset
+                options: 
+                    mapping: datasets/mapping-nmg-extract.yml
+                    sql_path: datasets/nmg-extract.sql
+            2:
+                task: add_permissions_to_nmg
+            3:
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping-nmg-load.yml
+                    sql_path: datasets/nmg-load.sql
+            4:
+                task: reset_nmg_sql
 
 plans:
     install:
