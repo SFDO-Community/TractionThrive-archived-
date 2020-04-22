@@ -34,4 +34,6 @@
         <searchResultsAdditionalFields>Parent_Facility_Name__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Health_Authority__c</searchResultsAdditionalFields>
     </searchLayouts>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
