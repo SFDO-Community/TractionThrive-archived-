@@ -243,6 +243,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         self.selenium.get_webelement(locator).click()   
         
 
+
     @selenium_retry
     @capture_screenshot_on_error
     def navigate_to_and_validate_field_value(self, field,status,value,section=None):
@@ -392,7 +393,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
                 break
 
         assert fv_found, "{} with {} not found".format(title,value)
-            
+
     
     def set_checkbutton_to(self,title,status):
         """If status is 'checked' then checks the box if its not already checked. Prints a warning msg if already checked
@@ -413,7 +414,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
                 break
 
         assert cb_found, "Checkbox not found"
-           
+
         
     def populate_modal_field(self, title, value):
         locator=npsp_lex_locators['modal_field'].format(title,value)
@@ -558,7 +559,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         loc = self.selenium.get_webelement(locator)
         #loc.send_keys(Keys.TAB+ Keys.RETURN)
         time.sleep(1)  
-
 
     def enter_payment_schedule(self, *args):
         """Enter values into corresponding fields in Levels page"""
@@ -840,6 +840,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         locator=self.get_npsp_locator(path, *args, **kwargs)
         values=self.selenium.get_webelements(locator)
         return [i.text for i in values]
+
 
     def click_link_with_text(self, text):
         self.builtin.log("This test is using the 'Click link with text' workaround", "WARN")

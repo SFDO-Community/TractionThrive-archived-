@@ -67,10 +67,24 @@ public with sharing class AccountPickerTest {
         testContact.AccountId = hospital.Id;
         insert testContact;
 
-        User communityUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
+        User communityHospitalUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
+
+        testContact = TestUtils.createCommunityContact('Test Contact', FALSE);
+        testContact.AccountId = division.Id;
+        insert testContact;
+
+        User communityDivisionUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
+
+        testContact = TestUtils.createCommunityContact('Test Contact', FALSE);
+        testContact.AccountId = healthAuth.Id;
+        insert testContact;
+
+        User communityHealthAuthUser = TestUtils.createCommunityUser(Constants.getCommunityProfileName(), testContact.Id);
 
         System.runAs(new User(Id = UserInfo.getUserId())) {
-            insert communityUser;
+            insert communityHospitalUser;
+            insert communityDivisionUser;
+            insert communityHealthAuthUser;
         }
     }
 
@@ -111,7 +125,8 @@ public with sharing class AccountPickerTest {
 
     @IsTest
     static void getAccountSelectionHospitalUser() {
-        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() ORDER BY CreatedDate DESC LIMIT 1];
+        Account hospitalAccount = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: HOSP_ACCOUNT_NAME AND RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID LIMIT 1];
+        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() AND Contact.AccountId = :hospitalAccount.Id  ORDER BY CreatedDate DESC LIMIT 1];
         Account account = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
         Account hosp2 = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME + '2' AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
 
@@ -130,5 +145,64 @@ public with sharing class AccountPickerTest {
         System.assertEquals(1, accountData.healthAuthorities.size(), 'Expected one HA');
         System.assertEquals(1, accountData.authorityHospitalMap.get(accountData.currentHealthAuthority).size(), 'Expected 1 hospital');
         System.assertEquals(2, accountData.hospitalDivisionMap.get(accountData.currentHospital.Id).size(), 'Expected 2 divisions');
+    }
+
+    @IsTest
+    static void getAccountSelectionDIVUser() {
+        Account account = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
+        Account hosp = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
+        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() AND Contact.AccountId = :hosp.Id ORDER BY CreatedDate DESC LIMIT 1];
+        Account hosp2 = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME + '2' AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
+
+        Staff_Access__c staffAccess = TestUtils.createStaffAccess(communityUser.ContactId, hosp2.Id, TRUE);
+
+        AccountPickerCtrl.AccountData accountData;
+        Test.startTest();
+        System.runAs(communityUser) {
+            accountData = AccountPickerCtrl.getAccountSelections();
+        }
+        Test.stopTest();
+
+        System.assertEquals(HA_ACCOUNT_NAME, accountData.currentHealthAuthority, 'Expected this HA name');
+        System.assertEquals(HOSP_ACCOUNT_NAME, accountData.currentHospital.Name, 'Expected this Hospital name');
+        System.assertEquals(DIV_ACCOUNT_NAME, accountData.currentDivision.Name, 'Expected no division to be selected');
+        System.assertEquals(1, accountData.healthAuthorities.size(), 'Expected one HA');
+        System.assertEquals(1, accountData.authorityHospitalMap.get(accountData.currentHealthAuthority).size(), 'Expected 1 hospital');
+        System.assertEquals(2, accountData.hospitalDivisionMap.get(accountData.currentHospital.Id).size(), 'Expected 2 divisions');
+    }
+
+    @IsTest
+    static void getAccountSelectionHealthAuthUser() {
+        Account account = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: HA_ACCOUNT_NAME AND RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID LIMIT 1];
+        User communityUser = [SELECT Id, ContactId FROM User WHERE Profile.Name = :Constants.getCommunityProfileName() AND Contact.AccountId = :account.Id ORDER BY CreatedDate DESC LIMIT 1];
+        Account hosp2 = [SELECT Id, ParentId, Parent.ParentId FROM Account WHERE Name =: DIV_ACCOUNT_NAME + '2' AND RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID LIMIT 1];
+
+        Staff_Access__c staffAccess = TestUtils.createStaffAccess(communityUser.ContactId, hosp2.Id, TRUE);
+
+        AccountPickerCtrl.AccountData accountData;
+        Test.startTest();
+        System.runAs(communityUser) {
+            accountData = AccountPickerCtrl.getAccountSelections();
+        }
+        Test.stopTest();
+
+        System.assertEquals(HA_ACCOUNT_NAME, accountData.currentHealthAuthority, 'Expected this HA name');
+        System.assertEquals(null, accountData.currentHospital, 'Expected no this Hospital name');
+        System.assertEquals(null, accountData.currentDivision, 'Expected no division to be selected');
+        System.assertEquals(1, accountData.healthAuthorities.size(), 'Expected one HA');
+        System.assertEquals(1, accountData.authorityHospitalMap.get(accountData.currentHealthAuthority).size(), 'Expected 1 hospital');
+    }
+
+    @IsTest
+    static void getAccountSelectionUserWithAdmin() {
+        AccountPickerCtrl.AccountData accountData;
+        Test.startTest();
+            accountData = AccountPickerCtrl.getAccountSelections();
+        Test.stopTest();
+
+        System.assertEquals(null, accountData.currentHealthAuthority, 'Expected no HA name');
+        System.assertEquals(null, accountData.currentHospital, 'Expected no this Hospital name');
+        System.assertEquals(null, accountData.currentDivision, 'Expected no division to be selected');
+        System.assertEquals(2, accountData.healthAuthorities.size(), 'Expected two HA');
     }
 }

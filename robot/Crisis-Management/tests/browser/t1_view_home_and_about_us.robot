@@ -14,6 +14,10 @@ Suite Setup     Run keywords
 Verify Traction Thrive Image Link Visible
     Wait Until Page Contains Element    link=Traction Thrive
 
+Verify User Details Are Visible
+    Page Should Contain  Julian Joseph
+    Page Should Contain  Resident
+    Page Should Contain  Julian Account
 
 Verify Origina Store Is On About Us
     Click Link  link=About Us
@@ -26,6 +30,8 @@ Setup Staff
       &{division} =      API Create Account  Division                    Name=COVID19 Division      ParentId=&{hospital}[Id]
       &{staff} =         API Create Contact  &{division}[Id]             Resident 
       Go To Page         Detail              Contact                     object_id=&{staff}[Id]
+      Page Should Contain  Thrive Health is a Vancouver
+
 
 *** Test Cases ***
 

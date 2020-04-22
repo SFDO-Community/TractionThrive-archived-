@@ -65,7 +65,4 @@ class ContactListingPage(BaseCMPage, ListingPage):
         """Clicks on Delete Account button inside the iframe"""
         self.selenium.wait_until_location_contains("/delete", message="Account delete page did not load in 30 seconds")
         self.npsp.select_frame_and_click_element("vfFrameId","button","Delete Account")    
-
-    
-
-
+        self.selenium.click_element(locator_login_link)

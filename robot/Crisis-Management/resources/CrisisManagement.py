@@ -23,14 +23,15 @@ from cumulusci.robotframework.utils import capture_screenshot_on_error
 from email.mime import text
 from cumulusci.tasks.apex.anon import AnonymousApexTask
 from cumulusci.core.config import TaskConfig
+from robot.libraries.BuiltIn import BuiltIn
 from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
 from BaseObjects import BaseCMPage
 
 from locators_48 import cm_lex_locators as locators_48
 
-
-
+# from locators_49 import cm_lex_locators as locators_49
 locators_by_api_version = {
+    # 49.0: locators_49,   # summer '20
     48.0: locators_48,   # spring '20
 }
 # will get populated in _init_locators
@@ -42,6 +43,17 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = 1.0
 
+    def login_to_community_as_user(self):
+        """ Click on 'Show more actions' drop down and select the option to log in to community as user """
+        locator_actions = contact_locators["show_more_actions"]
+        locator_login_link = contact_locators["login_to_community"]
+        locator_login_error = contact_locators["community_login_error"]
+
+        self.selenium.wait_until_page_contains_element(
+            locator_login_link,
+            error="'Log in to community as user' option is not available in the list of actions"
+        )
+        self.selenium.click_element(locator_login_link)
     def __init__(self, debug=False):
         self.debug = debug
         self.current_page = None
