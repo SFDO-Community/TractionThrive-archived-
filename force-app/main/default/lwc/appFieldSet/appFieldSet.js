@@ -6,12 +6,13 @@
 import {LightningElement, track, wire, api} from 'lwc';
 import {ShowToastEvent} from "lightning/platformShowToastEvent";
 //Utils
-import {getOrgNamespace} from 'c/appUtils';
+import {getFieldValue, getOrgNamespace} from 'c/appUtils';
 //Apex methods
 import getFieldSetFields from '@salesforce/apex/AppFieldSetController.getFieldSetFields';
 import insertSObject from '@salesforce/apex/AppFieldSetController.insertSObject';
 import updateSObject from '@salesforce/apex/AppFieldSetController.updateSObject';
 import getRecordToEdit from '@salesforce/apex/AppFieldSetController.getRecordToEdit';
+import searchGenericLookup from '@salesforce/apex/AppFieldSetController.searchGenericLookup';
 
 export default class AppFieldSet extends LightningElement {
 	isFirstRender = false;
@@ -78,19 +79,23 @@ export default class AppFieldSet extends LightningElement {
 		this.handleToastMessage('Error', this.errorMessage, 'error');
 	}
 
-	//Callback methods
+	/* CALLBACK METHODS  */
 	loadFieldSetFields() {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
-		getFieldSetFields({fieldSetName: this.namespace+this.fieldSetApiName, ObjectName: this.namespace+this.fieldSetObject}).then(result => {
+		getFieldSetFields({
+			fieldSetName: this.namespace + this.fieldSetApiName,
+			ObjectName: this.namespace + this.fieldSetObject
+		}).then(result => {
 			this.fieldSetData = result;
+			this.handleLookupField();
 			if (this.recordId) {
 				this.getRecordToEdit();
 			}
 		}).catch(error => {
-				this.error = error;
-				console.error('ERROR', error);
-				this.handleToastMessage(error.statusText, error.body.message, 'error');
-			}).finally(() => {
+			this.error = error;
+			console.error('ERROR', error);
+			this.handleToastMessage(error.statusText, error.body.message, 'error');
+		}).finally(() => {
 			this.template.querySelector("c-app-spinner").displaySpinner(false);
 		});
 	}
@@ -104,7 +109,7 @@ export default class AppFieldSet extends LightningElement {
 		});
 
 		getRecordToEdit({recordId: this.recordId, fieldNames: fieldNames}).then(result => {
-			this.recordToEdit = result;
+			this.recordToEdit = result.editedObject;
 			this.setupEditRecord(result);
 		}).catch(error => {
 			this.error = error;
@@ -138,25 +143,38 @@ export default class AppFieldSet extends LightningElement {
 
 	insertObject() {
 		return insertSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(result => {
-			this.setupEditRecord(result);
 			this.handleToastMessage('Success', 'Successfully Inserted', 'success');
 		})
 	}
 
 	updateSObject() {
 		return updateSObject({jSONSObject: JSON.stringify(this.buildRecord()), sObjectApiName: this.fieldSetObject}).then(result => {
-			this.setupEditRecord(result);
 			this.handleToastMessage('Success', 'Successfully Inserted', 'success');
 		})
 	}
 
-	//Support methods
+	/* SUPPORT METHODS  */
 	setupEditRecord(result) {
 		let allInputs = this.template.querySelectorAll('lightning-input');
+		let lookupFields = JSON.parse(result.lookupFields);
 		this.fieldSetData.forEach(function (field) {
-			var value = result[field.fieldPath];
+			let value = result.editedObject[field.fieldPath];
 			if (field.isMultiPicklistField && value) {
 				field.value = value.split(';');
+			} else if (field.isLookupField) {
+				let lookupName = lookupFields[field.fieldPath];
+				if (lookupName) {
+					let lookupFieldName = lookupName.split('.');
+					let initialSelection = {
+						id: value,
+						sObjectType: field.lookupObject,
+						icon: 'standard:account',
+						title: result.editedObject[lookupFieldName[0]][lookupFieldName[1]],
+						subtitle: result.editedObject[lookupFieldName[0]][lookupFieldName[1]]
+					};
+					field.lookupConfig.initialSelection = [initialSelection];
+					field.value = value;
+				}
 			} else {
 				field.value = value;
 			}
@@ -166,7 +184,6 @@ export default class AppFieldSet extends LightningElement {
 				}
 			});
 		});
-
 		this.fieldSetData = [...this.fieldSetData];
 	}
 
@@ -195,6 +212,27 @@ export default class AppFieldSet extends LightningElement {
 				newObjectToInsert[listbox.name] = listbox.value.join(";");
 			}
 		});
+
+		let allData = this.fieldSetData;
+		this.template.querySelectorAll('c-lookup').forEach(function (lookup) {
+			allData.forEach(function (data) {
+				if (data.fieldPath === lookup.customKey) {
+					if (lookup.getSelection().length > 0 && data.fieldPath) {
+						let initialSelection = {
+							id: lookup.getSelection()[0].id,
+							sObjectType: lookup.getSelection()[0].sObjectType,
+							icon: 'standard:account',
+							title: lookup.getSelection()[0].title,
+							subtitle: lookup.getSelection()[0].subtitle
+						};
+						data.lookupConfig.initialSelection = [initialSelection];
+						newObjectToInsert[data.fieldPath] = lookup.getSelection()[0].id;
+					}
+				}
+			});
+		});
+
+		this.fieldSetData = [...allData];
 
 		return newObjectToInsert;
 	}
@@ -226,5 +264,73 @@ export default class AppFieldSet extends LightningElement {
 		});
 
 		this.fieldSetData = [...this.fieldSetData];
+	}
+
+	/* CUSTOM LOOKUP METHOD START  */
+	handleLookupField() {
+		this.fieldSetData.forEach(function (item) {
+			if (item.isLookupField) {
+				item.lookupConfig = {
+					isMultiEntry: false,
+					initialSelection: [],
+					lookupErrors: [],
+					notifyViaAlerts: false // Use alerts instead of toast to notify user
+				};
+			}
+		});
+	}
+
+	handleLookupSearch(event) {
+		let selectedLookupKey = event.currentTarget.customKey;
+		let lookupObject;
+
+		this.fieldSetData.forEach(function (data) {
+			if (data.fieldPath == selectedLookupKey) {
+				lookupObject = data.lookupObject;
+			}
+		});
+
+		let parameters = event.detail;
+		parameters.lookupObject = lookupObject;
+ 		searchGenericLookup(parameters).then((results) => {
+				this.template.querySelectorAll('c-lookup').forEach(function (lookup) {
+					if (selectedLookupKey === lookup.customKey) {
+						lookup.setSearchResults(results);
+					}
+				})
+			}).catch((error) => {
+				this.notifyLookupUser('Lookup Error', 'An error occured while searching with the lookup field.', 'error');
+				// eslint-disable-next-line no-console
+				console.error('Lookup error', JSON.stringify(error));
+				this.lookupConfig.lookupErrors = [error];
+			});
+	}
+
+	handleLookupChange() {
+		this.lookupConfig.lookupErrors = [];
+	}
+
+	validateLookup() {
+		const selection = this.template.querySelector('c-lookup').getSelection();
+		if (selection.length === 0) {
+			this.lookupConfig.lookupErrors = [
+				{ message: 'Please choose your care facility to continue...' }
+			];
+		} else {
+			this.lookupConfig.lookupErrors = [];
+		}
+	}
+
+	notifyLookupUser(title, message, variant) {
+		return;
+		if (this.lookupConfig.notifyViaAlerts) {
+			// Notify via alert
+			// eslint-disable-next-line no-alert
+			alert(`${title}\n${message}`);
+		} else {
+			// Notify via toast
+			const toastEvent = new ShowToastEvent({ title, message, variant });
+			this.dispatchEvent(toastEvent);
+		}
 	}
 }

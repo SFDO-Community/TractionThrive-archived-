@@ -65,17 +65,44 @@ public without sharing class AppFieldSetController {
 		return fieldSetMembersWrapper;
 	}
 
+	/**
+	 * Get given generic record to edit
+	 *
+	 * @param recordId the record to edit
+	 * @param fieldNames the fields to be queried
+	 *
+	 * @return the queried object and its lookup fields
+	 */
 	@AuraEnabled
-	public static SObject getRecordToEdit(Id recordId, List<String> fieldNames) {
+	public static EditObjectData getRecordToEdit(Id recordId, List<String> fieldNames) {
 		String fields = 'Id ';
+		Map<String, String> lookupFieldsMapTemp = new Map<String, String>();
+		SObjectType sObjectType = recordId.getSObjectType();
 		for (String fieldName : fieldNames) {
+			DescribeFieldResult field = sObjectType.getDescribe().fields.getMap().get(fieldName).getDescribe();
+			if (field.getType() == Schema.DisplayType.REFERENCE) {
+				fields += ', '+field.getRelationshipName()+'.Name';
+				lookupFieldsMapTemp.put(fieldName, field.getRelationshipName()+'.Name');
+			}
 			fields += ', '+fieldName;
 		}
 
-		String qryString = 'SELECT ' + fields + ' FROM ' + recordId.getSObjectType() + ' WHERE Id =: recordId';
+		String qryString = 'SELECT ' + fields + ' FROM ' + sObjectType + ' WHERE Id =: recordId';
 		SObject recordToEdit = Database.query(qryString);
 
-		return recordToEdit;
+		Map<String, String> lookupFields = new Map<String, String>();
+
+		if (lookupFieldsMapTemp.size() > 0) {
+			for (String lookupField : lookupFieldsMapTemp.keySet()) {
+				if ((String) recordToEdit.get(lookupField) != null) {
+					lookupFields.put(lookupField, lookupFieldsMapTemp.get(lookupField));
+				}
+			}
+		}
+
+		EditObjectData dataToReturn = new EditObjectData(recordToEdit, JSON.serialize(lookupFields));
+
+		return dataToReturn;
 	}
 
 	/**
@@ -104,6 +131,44 @@ public without sharing class AppFieldSetController {
 		SecureDml updateObject = new SecureDml();
 		updateObject.dmlUpdate(new List<SObject>{objectToUpdate});
 		return objectToUpdate;
+	}
+
+	// custom lookup for sfdc-ui-lookup-lwc - https://github.com/pozil/sfdc-ui-lookup-lwc/tree/master/src-sample
+	@AuraEnabled(Cacheable=true)
+	public static List<LookupSearchResult> searchGenericLookup(String searchTerm, List<String> selectedIds, String lookupObject) {
+		// Prepare query parameters
+		searchTerm += '*';
+
+		// Execute search query
+		String query = 'FIND \'' + String.escapeSingleQuotes(searchTerm) + '\' IN ALL FIELDS RETURNING ' + lookupObject + '(Id, Name WHERE Id NOT IN :selectedIds) LIMIT :MAX_RESULTS';
+		system.debug('query => '+query);
+		List<List<SObject>> searchResults = Search.query(query);
+
+
+		// Prepare results
+		List<LookupSearchResult> results = new List<LookupSearchResult>();
+
+		// Extract SObject & convert them into LookupSearchResult
+		String icon = 'standard:account';
+		SObject[] filteredResults = (List<SObject>) searchResults[0];
+		for (SObject obj : filteredResults) {
+			String name = (String) obj.get('Name');
+			results.add(
+					new LookupSearchResult(
+							obj.Id,
+							lookupObject,
+							icon,
+							name,
+							lookupObject+' • ' + name
+					)
+			);
+		}
+
+
+		// Optionally sort all results on title
+		results.sort();
+
+		return results;
 	}
 
 
@@ -161,6 +226,7 @@ public without sharing class AppFieldSetController {
 		@AuraEnabled public Boolean required;
 		@AuraEnabled public String type;
 		@AuraEnabled public String value;
+		@AuraEnabled public String lookupObject;
 		@AuraEnabled public Boolean isLookupField;
 		@AuraEnabled public Boolean isPicklistField;
 		@AuraEnabled public Boolean isCheckboxField;
@@ -175,6 +241,7 @@ public without sharing class AppFieldSetController {
 			this.required = f.required;
 			this.type = String.valueOf(f.getType());
 			this.value = '';
+			this.lookupObject = fieldMap.get(fieldPath).getDescribe().getRelationshipName();
 			this.isLookupField = f.type == Schema.DisplayType.REFERENCE;
 			this.isPicklistField = f.type == Schema.DisplayType.PICKLIST;
 			this.isCheckboxField = f.type == Schema.DisplayType.BOOLEAN;
@@ -200,6 +267,16 @@ public without sharing class AppFieldSetController {
 			this.value = ple.getValue();
 			this.isActive = ple.isActive();
 			this.isDefaultValue = ple.isDefaultValue();
+		}
+	}
+
+	public with sharing class EditObjectData {
+		@AuraEnabled public SObject editedObject;
+		@AuraEnabled public String lookupFields;
+
+		public EditObjectData(SObject editedObject, String lookupFields) {
+			this.editedObject = editedObject;
+			this.lookupFields = lookupFields;
 		}
 	}
 }

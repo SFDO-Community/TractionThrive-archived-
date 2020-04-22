@@ -35,12 +35,13 @@
 @IsTest
 public with sharing class AppFieldSetControllerTest {
 	static User communityUser;
+	static Contact testContact;
 
 	@TestSetup
 	static void setup() {
 		Account account = TestUtils.createAccountByRecordType('Test RSTT Account', Constants.DIVISION_RECORDTYPE_ID, null, TRUE);
 
-		Contact testContact = TestUtils.createCommunityContact('Test RSTT Contact', FALSE);
+		testContact = TestUtils.createCommunityContact('Test RSTT Contact', FALSE);
 		testContact.AccountId = account.Id;
 		insert testContact;
 
@@ -60,6 +61,43 @@ public with sharing class AppFieldSetControllerTest {
 			AppFieldSetController.insertSObject(contactToInsert, 'Contact');
 			List<Contact> contacts = [SELECT Id, LastName FROM Contact WHERE LastName = 'TheLastName'];
 			System.assert(contacts.size() == 1);
+		}
+	}
+
+	@IsTest
+	static void updateSObject() {
+		setup();
+		System.runAs(communityUser) {
+			String statusField = UTIL_Namespace.StrTokenNSPrefix('Status__c');
+			String contactToUpdate = '{"Id": "'+testContact.Id+'", "LastName": "TheLastName", "'+statusField+'": "On staff" }';
+			SObject updatedContact = AppFieldSetController.updateSObject(contactToUpdate, 'Contact');
+			List<Contact> contacts = [SELECT Id, LastName FROM Contact WHERE LastName = 'TheLastName'];
+			System.assert(contacts.size() == 1);
+			System.assertEquals(testContact.Id, contacts[0].Id);
+			System.assertNotEquals(testContact.LastName, contacts[0].LastName);
+		}
+	}
+
+	@IsTest
+	static void getRecordToEdit() {
+		setup();
+		System.runAs(communityUser) {
+			AppFieldSetController.EditObjectData objectToEdit = AppFieldSetController.getRecordToEdit(testContact.Id, new List<String>{'FirstName', 'LastName'});
+			System.assert(objectToEdit.editedObject != null);
+		}
+	}
+
+	@IsTest
+	static void searchGenericLookup() {
+		setup();
+		Account acc = TestUtils.createCommunityAccount('Test', true);
+		System.runAs(communityUser) {
+			List<Id> fixedSearchResults = new List<Id>();
+			fixedSearchResults.add(acc.Id);
+			Test.setFixedSearchResults(fixedSearchResults);
+			List<LookupSearchResult> lookupResults = AppFieldSetController.searchGenericLookup('Test', new List<String>(), 'Account' );
+			System.assertNotEquals(0, lookupResults.size());
+
 		}
 	}
 }
