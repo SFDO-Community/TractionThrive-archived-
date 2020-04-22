@@ -1167,7 +1167,7 @@
         <name>Child_Account</name>
     </quickActions>
     <recordTypes>
-        <label>विभाग</label>
+        <label>विभाजन</label>
         <name>Division</name>
     </recordTypes>
     <recordTypes>

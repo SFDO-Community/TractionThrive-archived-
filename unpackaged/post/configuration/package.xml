@@ -23,6 +23,6 @@
     <types>
         <members>ExperienceBundle</members>
         <name>Settings</name>
-    </types>    
+    </types>
     <version>48.0</version>
 </Package>
