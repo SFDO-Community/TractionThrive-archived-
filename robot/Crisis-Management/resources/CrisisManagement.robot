@@ -1,8 +1,10 @@
 *** Settings ***
 
 Resource       robot/Crisis-Management/resources/NPSP/NPSP.robot
+...            cumulusci/robotframework/Salesforce.robot
 Library        DateTime
 Library        CrisisManagement.py
+...            robot/Crisis-Management/resources/ContactPageObject.py
 
 *** Variables ***
 
@@ -11,7 +13,7 @@ Library        CrisisManagement.py
 Login To Community As Julian Joseph
     @{community_contact}=   Salesforce Query  Contact   select=Id,Name   email=jjoseph@salesforce.com
     Go To Page              Details           Contact   object_id=${community_contact}[0][Id]
-    CrisisManagement.Login To Community As User
+    Login To Community As User
 
 Go To Julian Joseph
     @{community_contact}=   Salesforce Query  Contact   select=Id,Name   email=jjoseph@salesforce.com

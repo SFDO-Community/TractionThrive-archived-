@@ -53,3 +53,4 @@ public static void createCommunityContactUser() {
     
     newUser.setOptions(dmo);
     insert newUser;
+}
