@@ -35,21 +35,21 @@ Verify There Is 1 Unavailibility
     Should Be Equal As Integers	          ${num_of_assiangment_not_available}	   1
 
 Verify There Are 14 Availibilities
-    Wait Until Element Is Visible   //*[@class="cmp-availability-date-wrap"]  #Availibility Buttons
-    ${count} =                      SeleniumLibrary.Get Element Count   //*[@class="cmp-availability-date-wrap"]  #Count Buttons
-    Should Be Equal As Strings      ${count}                            14
+    Wait Until Element Is Visible         //*[@class="cmp-availability-date-wrap"]  #Availibility Buttons
+    ${count} =                            Get Element Count   //*[@class="cmp-availability-date-wrap"]  #Count Buttons
+    Should Be Equal As Strings            ${count}                            14
 
 Set 1st Availibility to Not Available
-    Click Element                           //*/li[1]/c-staff-availability-item/div/div/div[2]/div/div[@data-available="Available"]  #1st Availibility Button
-    Click Element                           //*/span[1]/label/span[@class="slds-radio_faux"]  #Not Available Option
-    Click Element                           //*//div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
-    SeleniumLibrary.Element Text Should Be  //*/li[1]/c-staff-availability-item/div/div/div[2]/div/div[1][@class="cmp-availability"]  Not Available  #1st Availibility Button
+    Click Element                         //*/li[1]/c-staff-availability-item/div/div/div[2]/div/div[@data-available="Available"]  #1st Availibility Button
+    Click Element                         //*/span[1]/label/span[@class="slds-radio_faux"]  #Not Available Option
+    Click Element                         //*//div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
+    Element Text Should Be                //*/li[1]/c-staff-availability-item/div/div/div[2]/div/div[1][@class="cmp-availability"]  Not Available  #1st Availibility Button
 
 Set 4th Availibility to Availible at Julian Account
-    Click Element                           //*/li[4]/c-staff-availability-item/div/div/div[2]/div/div[@data-available="Available"]  #4th Availibility Button
-    Click Element                           //*/li[4]/c-staff-availability-item/div/div[2]/div[1]/div/lightning-radio-group/fieldset/div/div/span[3]/label/span[@class="slds-radio_faux"]  #Assigned Option
-    Click Element                           //*/li[4]/c-staff-availability-item/div/div[2]/div[2]/div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
-    SeleniumLibrary.Element Text Should Be  //*/li[4]/c-staff-availability-item/div/div/div[1]/div[3]/span[@class="cmp-facility-name"]  Julian Account  #Account
+    Click Element                         //*/li[4]/c-staff-availability-item/div/div/div[2]/div/div[@data-available="Available"]  #4th Availibility Button
+    Click Element                         //*/li[4]/c-staff-availability-item/div/div[2]/div[1]/div/lightning-radio-group/fieldset/div/div/span[3]/label/span[@class="slds-radio_faux"]  #Assigned Option
+    Click Element                         //*/li[4]/c-staff-availability-item/div/div[2]/div[2]/div/a[2]/span[@class="slds-m-left_x-small"]  #OK Button
+    Element Text Should Be                //*/li[4]/c-staff-availability-item/div/div/div[1]/div[3]/span[@class="cmp-facility-name"]  Julian Account  #Account
 
 
 *** Test Cases ***

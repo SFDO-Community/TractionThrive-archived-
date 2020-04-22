@@ -1,14 +1,11 @@
-
 from robot.libraries.BuiltIn import BuiltIn
 
 
 class BaseCMPage:
-    
     @property
     def cm(self):
         return self.builtin.get_library_instance('CrisisManagement')
-    
-    @property
+        @property
     def pageobjects(self):
         return self.builtin.get_library_instance("cumulusci.robotframework.PageObjects")
 

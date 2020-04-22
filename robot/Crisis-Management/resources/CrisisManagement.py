@@ -21,7 +21,6 @@ from selenium.webdriver import ActionChains
 from cumulusci.robotframework.utils import selenium_retry
 from cumulusci.robotframework.utils import capture_screenshot_on_error
 from email.mime import text
-
 from cumulusci.tasks.apex.anon import AnonymousApexTask
 from cumulusci.core.config import TaskConfig
 from robot.libraries.BuiltIn import BuiltIn
@@ -29,6 +28,7 @@ from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
 from BaseObjects import BaseCMPage
 
 from locators_48 import cm_lex_locators as locators_48
+
 # from locators_49 import cm_lex_locators as locators_49
 locators_by_api_version = {
     # 49.0: locators_49,   # summer '20
@@ -102,4 +102,9 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
             self.cumulusci._describe_result = self.cumulusci.sf.describe()
         objects = self.cumulusci._describe_result['sobjects']
         level_object = [o for o in objects if o['label'] == 'Staff'][0]
-        return self._get_namespace_prefix(level_object['name'])
+        return self._get_namespace_prefix(level_object['name'])    
+
+    def verify_user_details_on_home_tab(self,*args):
+        """Verifies that details specified on list is visible on home tab of community page"""
+        for value in args:
+            self.selenium.page_should_contain(value)
