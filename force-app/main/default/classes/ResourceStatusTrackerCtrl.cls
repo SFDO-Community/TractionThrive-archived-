@@ -40,11 +40,10 @@ public with sharing class ResourceStatusTrackerCtrl {
      * @param status    The status of the count - e.g. available, in use, totoal
      */
     @AuraEnabled
-    public static Status_Report__c getStatusReport(String resourceType, String status, Id divisionId) {
+    public static StatusReport getStatusReport(String resourceType, String status, Id divisionId) {
         try {
             Status_Report__c statusReport = StatusReportSelector.getLatestStatusReport(resourceType, status, divisionId);
-
-            return statusReport;
+            return new StatusReport(statusReport);
         } catch (Exception e) {
             throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
         }
@@ -74,6 +73,19 @@ public with sharing class ResourceStatusTrackerCtrl {
             insertObject.dmlInsert(statusReport);
         } catch (Exception e) {
             throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
+        }
+    }
+
+    public class StatusReport {
+        @AuraEnabled
+        public String namespace {get;set;}
+        @AuraEnabled
+        public Status_Report__c  record {get; set;}
+
+        public StatusReport(Status_Report__c statusReport) {
+            String namespace = UTIL_Namespace.getNamespace();
+            this.namespace = String.isBlank(namespace)? namespace:namespace + '__';
+            this.record = statusReport;
         }
     }
 }
