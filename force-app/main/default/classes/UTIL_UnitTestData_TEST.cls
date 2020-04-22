@@ -83,4 +83,48 @@ public class UTIL_UnitTestData_TEST {
         }
         return u;
     }
+
+    @isTest
+    private static void getContactTest() {
+        Contact testContact = UTIL_UnitTestData_API.getContact();
+        system.assert(testContact != null);
+    }
+
+    @isTest
+    private static void getMultipleTestContactsTest() {
+        Integer contactCount = 5;
+        List<Contact> testContacts = UTIL_UnitTestData_API.getMultipleTestContacts(contactCount);
+        system.assert(testContacts != null);
+        system.assert(!testContacts.isEmpty());
+        system.assertEquals(contactCount, testContacts.size());
+    }
+
+    @isTest
+    private static void getMultipleTestAccountsTest() {
+        Integer accountCount = 5;
+        Id recordTypeId = Constants.HOSPITAL_RECORDTYPE_ID;
+        List<Account> testAccounts = UTIL_UnitTestData_API.getMultipleTestAccounts(accountCount, recordTypeId);
+        system.assert(testAccounts != null);
+        system.assert(!testAccounts.isEmpty());
+        system.assertEquals(accountCount, testAccounts.size());
+    }
+
+    @isTest
+    private static void createNewUserForTesting() {
+        String orgId = UserInfo.getOrganizationId();
+        String dateString = String.valueof(Datetime.now()).replace(' ','').replace(':','').replace('-','');
+        Integer randomInt = Integer.valueOf(math.rint(math.random()*1000000));
+        String uniqueName = orgId + dateString + randomInt + '@test' + orgId + '.org';
+        User testUser = UTIL_UnitTestData_API.createNewUserForTests(uniqueName);
+        system.assert(testUser != null);
+        system.assert(testUser.Id != null);
+        system.assertEquals(uniqueName, testUser.Username);
+    }
+
+    @isTest
+    private static void testSandboxEmailToRealEmail() {
+        UTIL_UnitTestData_API.isSandbox();
+        String fixedEmail = UTIL_UnitTestData_API.sandboxEmailToRealEmail('awheeler=universalcontainers.com@example.com');
+        System.assertEquals('awheeler@universalcontainers.com', fixedEmail);
+    }
 }
