@@ -18,7 +18,7 @@
         "showAvatar" : "Desktop and Mobile",
         "showContactInfo" : "Desktop and Mobile"
       },
-      "componentName" : "c:contactCard",
+      "componentName" : "%%%NAMESPACE_OR_C%%%:contactCard",
       "id" : "ca6a89ec-9b5f-4d81-a2f4-e579181bcfb8",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
