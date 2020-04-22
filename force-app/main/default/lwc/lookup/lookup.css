@@ -28,3 +28,8 @@
 	color: rgb(194, 57, 52);
 	display: block;
 }
+
+.slds-listbox {
+	max-height: 300px;
+	overflow-y: auto;
+}

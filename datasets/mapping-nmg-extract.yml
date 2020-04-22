@@ -1,0 +1,26 @@
+Insert PermissionSet:
+  sf_object: PermissionSet
+  table: PermissionSet
+  fields:
+    Id: id
+    Name: name
+
+Insert Profile:
+  sf_object: Profile
+  table: Profile
+  fields:
+    Id: id
+    Name: name
+
+Insert Network:
+  sf_object: Network
+  table: Network
+  fields:
+    Id: id
+
+Insert NetworkMemberGroup:
+  sf_object: NetworkMemberGroup
+  table: NetworkMemberGroup
+  fields:
+    Parentid: Parentid
+    Networkid: Networkid
