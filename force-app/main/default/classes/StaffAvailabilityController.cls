@@ -34,7 +34,7 @@
 
 public with sharing class StaffAvailabilityController {
 
-	static final Integer MAX_RESULTS = 5;
+	static final Integer MAX_RESULTS = 1000;
 	static final Integer DEFAULT_DAYS_AHEAD = 14;
 	static final String DEFAULT_AVAILABILITY = 'Available';
 
@@ -156,7 +156,7 @@ public with sharing class StaffAvailabilityController {
 							'Account',
 							accountIcon,
 							account.Name,
-							'Account • ' + account.BillingCity
+							'Account '  + (String.isBlank(account.BillingCity)? '':+ '• ' + account.BillingCity)
 					)
 			);
 		}
