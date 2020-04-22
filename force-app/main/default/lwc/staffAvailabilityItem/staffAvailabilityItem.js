@@ -35,7 +35,7 @@ export default class StaffAvailabilityItem extends LightningElement {
 		notifyViaAlerts: false // Use alerts instead of toast to notify user
 	};
 
-	@track selectedRecord;
+	@track selectedRecord = {};
 
 	@api
 	get assignmentRecord() {
@@ -152,7 +152,6 @@ export default class StaffAvailabilityItem extends LightningElement {
 	handleLookupChange(event) {
 		this.lookupConfig.lookupErrors = [];
 		this.selectedRecord = event.detail.record;
-		this.lookupConfig.initialSelection = [this.selectedRecord];
 	}
 
 	validateLookup() {
