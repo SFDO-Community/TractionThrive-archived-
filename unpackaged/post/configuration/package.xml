@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>Account-en_US</members>
+        <members>Contact-en_US</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
         <members>*</members>
         <name>DataCategoryGroup</name>
     </types>
     <types>
-        <members>Contact-en_US</members>
-        <members>Account-en_US</members>
-        <name>CustomObjectTranslation</name>
-    </types>
-    <types>
         <members>Analytics</members>
+        <members>Communities</members>
         <members>ExperienceBundle</members>
         <name>Settings</name>
-    </types>    
+    </types>
     <version>48.0</version>
 </Package>
