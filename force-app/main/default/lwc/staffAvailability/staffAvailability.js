@@ -35,7 +35,6 @@ export default class StaffAvailability extends LightningElement {
 
 	renderedCallback() {
 		console.log('RECORD ID: ', this.recordId);
-
 		if (!this.isFirstRender) {
 			this.isFirstRender = true;
 			getOrgNamespace().then(result => {
@@ -109,13 +108,11 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	cancelStatusModal() {
-		if(this.isStaffAvailable) {
-			this.isStaffAvailable = false;
-		} else {
-			this.isStaffAvailable = true;
+		this.isStaffAvailable = !this.isStaffAvailable;
+		this.template.querySelector("c-app-modal").displayModal(false);
+		if (this.isStaffAvailable) {
 			this.loadAssignmentData();
 		}
-		this.template.querySelector("c-app-modal").displayModal(false);
 	}
 
 	get hasRecordId() {
