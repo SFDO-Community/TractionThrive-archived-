@@ -10,6 +10,7 @@
         <name>CustomObjectTranslation</name>
     </types>
     <types>
+        <members>Analytics</members>
         <members>ExperienceBundle</members>
         <name>Settings</name>
     </types>    
