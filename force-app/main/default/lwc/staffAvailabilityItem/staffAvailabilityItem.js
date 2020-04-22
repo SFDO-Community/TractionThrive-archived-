@@ -93,8 +93,9 @@ export default class StaffAvailabilityItem extends LightningElement {
 		}
 
 		this.lookupConfig.initialSelection = [defaultLocation];
+		this.selectedRecord = defaultLocation;
 
-		this.handleLookupChange();
+		this.handleLookupChange(new CustomEvent());
 	}
 
 	handleCancel(event) {
@@ -114,7 +115,6 @@ export default class StaffAvailabilityItem extends LightningElement {
 
 			console.log('LOOKUP SELECTION: ', JSON.parse(JSON.stringify(this.selectedRecord)));
 			recordPayload[this.namespace+'Care_Facility__c'] = this.selectedRecord.Id;
-			recordPayload[this.namespace+'Care_Facility__r'] = this.selectedRecord;
 		}
 		else {
 			recordPayload[this.namespace+'Care_Facility__c'] = null;
@@ -151,7 +151,9 @@ export default class StaffAvailabilityItem extends LightningElement {
 
 	handleLookupChange(event) {
 		this.lookupConfig.lookupErrors = [];
-		this.selectedRecord = event.detail.record;
+		if (event != null && event.detail != null) {
+			this.selectedRecord = event.detail.record;
+		}
 	}
 
 	validateLookup() {
