@@ -113,6 +113,7 @@ export default class StaffAvailability extends LightningElement {
 			this.isStaffAvailable = false;
 		} else {
 			this.isStaffAvailable = true;
+			this.loadAssignmentData();
 		}
 		this.template.querySelector("c-app-modal").displayModal(false);
 	}

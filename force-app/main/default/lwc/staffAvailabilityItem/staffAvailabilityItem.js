@@ -35,6 +35,8 @@ export default class StaffAvailabilityItem extends LightningElement {
 		notifyViaAlerts: false // Use alerts instead of toast to notify user
 	};
 
+	@track selectedRecord;
+
 	@api
 	get assignmentRecord() {
 		return '';
@@ -110,9 +112,9 @@ export default class StaffAvailabilityItem extends LightningElement {
 			this.validateLookup();
 			if (this.lookupConfig.lookupErrors.length > 0) return;
 
-			const selection = this.template.querySelector('c-lookup').getSelection();
-			console.log('LOOKUP SELECTION: ', JSON.parse(JSON.stringify(selection)));
-			recordPayload[this.namespace+'Care_Facility__c'] = selection[0].id;
+			console.log('LOOKUP SELECTION: ', JSON.parse(JSON.stringify(this.selectedRecord)));
+			recordPayload[this.namespace+'Care_Facility__c'] = this.selectedRecord.Id;
+			recordPayload[this.namespace+'Care_Facility__r'] = this.selectedRecord;
 		}
 		else {
 			recordPayload[this.namespace+'Care_Facility__c'] = null;
@@ -147,8 +149,10 @@ export default class StaffAvailabilityItem extends LightningElement {
 			});
 	}
 
-	handleLookupChange() {
+	handleLookupChange(event) {
 		this.lookupConfig.lookupErrors = [];
+		this.selectedRecord = event.detail.record;
+		this.lookupConfig.initialSelection = [this.selectedRecord];
 	}
 
 	validateLookup() {
