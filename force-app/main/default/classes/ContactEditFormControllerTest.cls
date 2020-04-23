@@ -86,6 +86,18 @@ public with sharing class ContactEditFormControllerTest {
 	}
 
 	@IsTest
+	static void updateContactWithRemoveField() {
+		prepareData();
+		contact.Phone = '3333333333';
+		String contactRecordStr = '{"attributes":{"type":"Contact"},"Id":"'+contact.Id+'","LastName":"'+contact.LastName+'","Role_Global__c":"'+contact.Role_Global__c+'","Status__c":"'+contact.Status__c+'","AccountId":"'+contact.AccountId+'","Phone":"'+contact.Phone+'","Release_Date__c":"2020-04-21"}';
+		Contact contactUpdate = (Contact) JSON.deserialize(contactRecordStr, Contact.class);
+		System.runAs(communityUser) {
+			ContactEditFormController.InitData initData = ContactEditFormController.updateContact(contactUpdate);
+			System.assertEquals(contact.Phone, initData.contactData.contact.Phone, 'Should return the changed field');
+		}
+	}
+
+	@IsTest
 	static void updateCredential() {
 		prepareData();
 		Credential__c credentialToUpdate = credentials[0];

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label>ट्रैक्शन थ्राइव संकट प्रबंधन</label>
+        <name>Crisis_Management</name>
+    </customApplications>
+    <customApplications>
+        <label>ट्रैक्शन थ्राइव सर्विस कंसोल</label>
+        <name>Traction_Thrive_Service_Console</name>
+    </customApplications>
+    <customLabels>
+        <label>जोड़ना</label>
+        <name>Add_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>नया क्रेडेंशियल जोड़ें</label>
+        <name>Add_credential</name>
+    </customLabels>
+    <customLabels>
+        <label>संज्ञाहरण मशीनें - उपलब्ध</label>
+        <name>Anaesthesia_Machines_Available</name>
+    </customLabels>
+    <customLabels>
+        <label>संज्ञाहरण मशीनें - उपयोग में</label>
+        <name>Anaesthesia_Machines_In_Use</name>
+    </customLabels>
+    <customLabels>
+        <label>संज्ञाहरण मशीनें - निष्क्रिय</label>
+        <name>Anaesthesia_Machines_Inactive</name>
+    </customLabels>
+    <customLabels>
+        <label>निरुपित</label>
+        <name>Assigned_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>कार्य</label>
+        <name>Assignments</name>
+    </customLabels>
+    <customLabels>
+        <label>उपलब्धता</label>
+        <name>Availability_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available --></label>
+        <name>Available</name>
+    </customLabels>
+    <customLabels>
+        <label>उपलब्ध</label>
+        <name>Available_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>COVID पॉजिटिव (विवाद)</label>
+        <name>COVID_Positive_Disposition</name>
+    </customLabels>
+    <customLabels>
+        <label>रद्द करना</label>
+        <name>Cancel_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>देखभाल की सुविधा</label>
+        <name>Care_Facility</name>
+    </customLabels>
+    <customLabels>
+        <label>खोज देखभाल सुविधा</label>
+        <name>Care_Facility_Placeholder_Search</name>
+    </customLabels>
+    <customLabels>
+        <label>कृपया जारी रखने के लिए अपनी देखभाल सुविधा चुनें ...</label>
+        <name>Care_Facility_Selection_Error</name>
+    </customLabels>
+    <customLabels>
+        <label>सफाई उत्पाद की स्थिति</label>
+        <name>Cleaning_Products_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>एक बीमारी या स्थिति की</label>
+        <name>Comorbidity_Patient_Tracking</name>
+    </customLabels>
+    <customLabels>
+        <label>सक्षमता का चयन करें</label>
+        <name>Competence_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>दक्षताओं</label>
+        <name>Competencies</name>
+    </customLabels>
+    <customLabels>
+        <label>सभी को कवर</label>
+        <name>Coveralls_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>एक नया क्रेडेंशियल बनाएँ</label>
+        <name>Create_Credential</name>
+    </customLabels>
+    <customLabels>
+        <label>क्रेडेंशियल</label>
+        <name>Credentials</name>
+    </customLabels>
+    <customLabels>
+        <label>वर्तमान रोगी की स्थिति</label>
+        <name>Current_Patient_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>क्रेडेंशियल हटाएँ</label>
+        <name>Delete_Credential</name>
+    </customLabels>
+    <customLabels>
+        <label>निस्संक्रामक</label>
+        <name>Disinfectant_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>विभाजन</label>
+        <name>Division</name>
+    </customLabels>
+    <customLabels>
+        <label>एक प्रभाग का चयन करें</label>
+        <name>Division_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>क्रेडेंशियल संपादित करें</label>
+        <name>Edit_Credential</name>
+    </customLabels>
+    <customLabels>
+        <label>ईमेल</label>
+        <name>Email</name>
+    </customLabels>
+    <customLabels>
+        <label>त्रुटि</label>
+        <name>Error_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>परीक्षा के मास्क</label>
+        <name>Exam_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label>चेहरा ढाल</label>
+        <name>Face_Shields</name>
+    </customLabels>
+    <customLabels>
+        <label>फिट परीक्षण</label>
+        <name>Fit_Tests</name>
+    </customLabels>
+    <customLabels>
+        <label>कृपया अलग-अलग इकाइयों की संख्या दर्ज करें, न कि बक्से या पैकेज की संख्या।</label>
+        <name>Generic_HelpText_resource</name>
+    </customLabels>
+    <customLabels>
+        <label>दस्ताने (नाइट्राइल)</label>
+        <name>Gloves_Nitrile</name>
+    </customLabels>
+    <customLabels>
+        <label>दस्ताने (बाँझ)</label>
+        <name>Gloves_Sterile</name>
+    </customLabels>
+    <customLabels>
+        <label>हैंड सैनिटाइज़र</label>
+        <name>Hand_Sanitizer</name>
+    </customLabels>
+    <customLabels>
+        <label>स्वास्थ्य प्राधिकारी</label>
+        <name>Health_Authority_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>एक स्वास्थ्य प्राधिकरण का चयन करें</label>
+        <name>Health_Authority_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>फन</label>
+        <name>Hoods_Resource</name>
+    </customLabels>
+    <customLabels>
+        <label>अस्पताल</label>
+        <name>Hospital</name>
+    </customLabels>
+    <customLabels>
+        <label>एक अस्पताल का चयन करें</label>
+        <name>Hospital_Placeholder</name>
+    </customLabels>
+    <customLabels>
+        <label>आईसीयू सुविधा की स्थिति</label>
+        <name>ICU_Facility_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- In Use Status --></label>
+        <name>In_Use_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactive Status --></label>
+        <name>Inactive_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>उस डिवीजन का चयन करें जिसके लिए आप संसाधनों पर नज़र रख रहे हैं:</label>
+        <name>Label_for_Division_Selection</name>
+    </customLabels>
+    <customLabels>
+        <label>स्तर 3 गाउन</label>
+        <name>Level_3_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>स्तर 4 गाउन</label>
+        <name>Level_4_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>लुकअप त्रुटि</label>
+        <name>Lookup_Error_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>क्रेडेंशियल सफलतापूर्वक हटा दिया गया</label>
+        <name>Message_Credential_Deletion</name>
+    </customLabels>
+    <customLabels>
+        <label>क्रेडेंशियल सफलतापूर्वक अपडेट किया गया</label>
+        <name>Message_Credential_Update</name>
+    </customLabels>
+    <customLabels>
+        <label>मोबाइल</label>
+        <name>Mobile</name>
+    </customLabels>
+    <customLabels>
+        <label>मेरी उपलब्धता</label>
+        <name>My_Availability</name>
+    </customLabels>
+    <customLabels>
+        <label>N95 मास्क</label>
+        <name>N95_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label>नया स्टाफ एक्सेस</label>
+        <name>New_Staff_Access</name>
+    </customLabels>
+    <customLabels>
+        <label>दिखाने के लिए कोई उपलब्धता नहीं।</label>
+        <name>No_Availability_Message</name>
+    </customLabels>
+    <customLabels>
+        <label>उपलब्ध नहीं है</label>
+        <name>Not_Available_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>ठीक है</label>
+        <name>Ok_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>पीपीई (तन) संसाधन की स्थिति</label>
+        <name>PPE_Body_Resourcing_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>पीपीई (हेडगियर) रिसोर्सिंग स्टेटस</label>
+        <name>PPE_Resourcing_Status</name>
+    </customLabels>
+    <customLabels>
+        <label>फ़ोन</label>
+        <name>Phone</name>
+    </customLabels>
+    <customLabels>
+        <label>प्रस्तुत है &amp;apos;COVID लाइक&amp;apos;</label>
+        <name>Presenting_COVID_Like</name>
+    </customLabels>
+    <customLabels>
+        <label>प्रकल्पित COVID</label>
+        <name>Presumptive_COVID</name>
+    </customLabels>
+    <customLabels>
+        <label>कुलसचिव प्रकार</label>
+        <name>Registrant_Type</name>
+    </customLabels>
+    <customLabels>
+        <label>शेष</label>
+        <name>Remaining</name>
+    </customLabels>
+    <customLabels>
+        <label>सुरक्षा कांच</label>
+        <name>Safety_Glasses</name>
+    </customLabels>
+    <customLabels>
+        <label>सुरक्षा चश्मे</label>
+        <name>Safety_Goggles</name>
+    </customLabels>
+    <customLabels>
+        <label>सहेजें</label>
+        <name>Save_Action</name>
+    </customLabels>
+    <customLabels>
+        <label>लुकअप फ़ील्ड के साथ खोज करते समय एक त्रुटि हुई।</label>
+        <name>Searching_Lookup_field_Error</name>
+    </customLabels>
+    <customLabels>
+        <label>जूता कवर</label>
+        <name>Shoe_Covers</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ जानकारी</label>
+        <name>Staff_Information</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ का नाम</label>
+        <name>Staff_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ की स्थिति आज की तारीख से उपलब्ध है। सभी भविष्य की उपलब्धता रिकॉर्ड उपलब्ध पर सेट की जाएगी।</label>
+        <name>Staff_Status_Available_from_today_future</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ की स्थिति आज की तारीख से उपलब्ध नहीं है। भविष्य की उपलब्धता के सभी रिकॉर्ड उपलब्ध नहीं होंगे।</label>
+        <name>Staff_Status_Not_Available_from_today_future</name>
+    </customLabels>
+    <customLabels>
+        <label>सफलता</label>
+        <name>Success_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>नई क्रेडेंशियल सफलतापूर्वक सम्मिलित की गई</label>
+        <name>Success_Message_Credential_Insertion</name>
+    </customLabels>
+    <customLabels>
+        <label>स्टाफ की जानकारी सफलतापूर्वक अपडेट की गई</label>
+        <name>Success_Message_Staff_Info_Update</name>
+    </customLabels>
+    <customLabels>
+        <label>सर्जिकल गाउन</label>
+        <name>Surgical_Gowns</name>
+    </customLabels>
+    <customLabels>
+        <label>शल्यक्रिया हेतु मास्क</label>
+        <name>Surgical_Masks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total --></label>
+        <name>Total</name>
+    </customLabels>
+    <customLabels>
+        <label>अपडेट किया गया</label>
+        <name>Updated_label</name>
+    </customLabels>
+    <customLabels>
+        <label>वेंटीलेटर बेड - उपलब्ध</label>
+        <name>Ventilator_Beds_Available</name>
+    </customLabels>
+    <customLabels>
+        <label>वेंटीलेटर बेड - उपयोग में</label>
+        <name>Ventilator_Beds_In_Use</name>
+    </customLabels>
+    <customLabels>
+        <label>वेंटीलेटर बेड - निष्क्रिय</label>
+        <name>Ventilator_Beds_Inactive</name>
+    </customLabels>
+    <customLabels>
+        <label>चेतावनी</label>
+        <name>Warning_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>कोई परिवर्तन नहीं मिला</label>
+        <name>Warning_message_for_no_changes_found</name>
+    </customLabels>
+    <customTabs>
+        <label>हमारे बारे में</label>
+        <name>About_Us</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_to_Isolation-1</fullName>
+            <label>अपडेट कर्मचारी उपलब्ध नहीं है</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी की स्थिति आज की तारीख से उपलब्ध नहीं है। भविष्य की उपलब्धता के सभी रिकॉर्ड उपलब्ध नहीं होंगे।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(234, 9, 9); background-color: rgb(255, 255, 255);&quot;&gt;कर्मचारी &lt;/span&gt;&lt;span style=&quot;color: rgb(234, 9, 9); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,&amp;quot;Salesforce Sans&amp;quot;, Arial, sans-serif);&quot;&gt;पहले से उपलब्ध नहीं है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_to_Isolation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Staff_COVID_Positive-1</fullName>
+            <label>अपडेट कर्मचारी कोरोना (COVID) पॉजिटिव</label>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://thrivehealth--c.documentforce.com/sfc/servlet.shepherd/version/download/0683h000001Mg0w?asPdf=false&amp;amp;operationContext=CHATTER&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(41, 208, 3);&quot;&gt;कर्मचारी की स्थिति कोरोना (COVID) के लिए आज की तारीख के साथ सकारात्मक है। आज नहीं तो कोरोना (COVID) निदान तिथि अपडेट करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Success</name>
+                </fields>
+                <name>Staff_Updated</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(240, 3, 3);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt;कर्मचारी पहले से ही उस स्थिति में है। यदि आप बदलना चाहते हैं तो कृपया उनकी स्थिति की समीक्षा करें।&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>StatusNotChanged</name>
+                </fields>
+                <name>Status_Not_Changed</name>
+            </screens>
+        </flows>
+        <fullName>Update_Staff_COVID_Positive</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label>सहायता करना</label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- GuestCommunityCase --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label>कॉल लॉग करें</label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label>नया अस्पताल</label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label>नया केस</label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label>अपना मामला प्रस्तुत करने के लिए धन्यवाद!</label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label>नए कर्मचारी</label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label>नयी घटना</label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label>नया समूह</label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label>नया मौका</label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description>स्वास्थ्य प्राधिकरण, अभिभावक, बाल सहित सभी चिकित्सा सेवा पर रिपोर्ट करने के लिए कस्टम रिपोर्ट प्रकार</description>
+        <label>सभी चिकित्सा सेवा</label>
+        <name>Care_Facility_All</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>कर्मचारी पर रिपोर्ट और उनके पास किस विभाग की पहुंच है।</description>
+        <label>कर्मचारी पहुंच</label>
+        <name>Staff_Access</name>
+        <sections>
+            <label>चिकित्सा सेवा</label>
+            <name>Care Facility</name>
+        </sections>
+        <sections>
+            <label>कर्मचारी अभिगम</label>
+            <name>Staff Access</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>संपर्क और खाता</description>
+        <label>अस्पताल में कर्मचारी</label>
+        <name>Staff_at_Hospitals</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label>कर्मचारी</label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>स्थति रिपोर्ट पर रिपोर्ट बनाएं</description>
+        <label>स्थिति रिपोर्ट</label>
+        <name>Status_Reports</name>
+        <sections>
+            <label>स्थिति रिपोर्ट</label>
+            <name>Status Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>संबंधित डिपार्टमेंट से अधिक जानकारी के साथ स्थिति रिपोर्ट बनाएं</description>
+        <label>डिपार्टमेंट के साथ स्थिति रिपोर्ट</label>
+        <name>Status_Reports_with_Departments</name>
+        <sections>
+            <label>अस्पताल</label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>अस्पताल में संपर्क कर्मचारी को संभोदित करता है</description>
+        <label>संपर्कों के साथ उपयोगकर्ता</label>
+        <name>Users_with_Contacts</name>
+        <sections>
+            <label>उपयोगकर्ता</label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+</Translations>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Electrical</masterLabel>
+        <translation>विद्युतीय</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Electronic</masterLabel>
+        <translation>इलेक्ट्रोनिक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mechanical</masterLabel>
+        <translation>मैकेनिकल</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>अन्य</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Structural</masterLabel>
+        <translation>स्ट्रक्चरल</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

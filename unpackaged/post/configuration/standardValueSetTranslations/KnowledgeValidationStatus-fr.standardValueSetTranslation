@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Not Validated</masterLabel>
+        <translation>Pas validé</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Validated</masterLabel>
+        <translation>Validée</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

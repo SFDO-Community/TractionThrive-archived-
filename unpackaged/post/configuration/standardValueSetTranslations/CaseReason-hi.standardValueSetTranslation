@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Breakdown</masterLabel>
+        <translation>टूट - फूट</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Complexity</masterLabel>
+        <translation>उपकरण जटिलता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Design</masterLabel>
+        <translation>उपकरण डिजाइन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Feedback</masterLabel>
+        <translation>प्रतिपुष्टि</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Installation</masterLabel>
+        <translation>स्थापना</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>अन्य</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Performance</masterLabel>
+        <translation>प्रदर्शन</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

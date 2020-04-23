@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Business Contact</masterLabel>
+        <translation>Contacto de negocio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Decision Maker</masterLabel>
+        <translation>Tomador de decisiones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technical Contact</masterLabel>
+        <translation>contacto técnico</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

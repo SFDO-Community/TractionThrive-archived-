@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Emergency Registrant</masterLabel>
+        <translation>Titulaire d&apos;urgence</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MD - Medical Doctor</masterLabel>
+        <translation>Médecin</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>NP - Nurse Practitioner</masterLabel>
+        <translation>Infirmière praticienne</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>RN - Registered Nurse</masterLabel>
+        <translation>Résident</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>RT - Respiratory Therapist</masterLabel>
+        <translation>Thérapeute de la respiration</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Resident</masterLabel>
+        <translation>Résident</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>
