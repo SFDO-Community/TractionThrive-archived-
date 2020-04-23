@@ -3,7 +3,7 @@ from cumulusci.robotframework.pageobjects import DetailPage
 from cumulusci.robotframework.pageobjects import ListingPage
 from cumulusci.robotframework.pageobjects import pageobject
 from selenium.webdriver.common.alert import Alert
-from selenium.common.exceptions import NoAlertPresentException
+from selenium.common.exceptions import UnexpectedAlertPresentException
 from BaseObjects import BaseCMPage
 from CrisisManagement import cm_lex_locators
 from locators_48 import npsp_lex_locators
@@ -44,12 +44,21 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         profile = cm_lex_locators["users"]["id"].format("Profile")
         self.selenium.select_from_list_by_label(profile,"Customer Community - Medical Staff")
         time.sleep(1)
-        self.selenium.click_element("//input[contains(@value,'Save')]")
-        self.selenium.alert_should_be_present()
-        # try:
-        #     self.selenium.click_element("//input[contains(@value,'Save')]")
-        #     alert=Alert(self.selenium.driver.switch_to.alert())
-        #     alert.accept()
+        locator = npsp_lex_locators["button"].format("Save")
+        element = self.selenium.driver.find_element_by_xpath(locator)
+        print("before save")
+        # self.selenium.driver.execute_script('arguments[0].click()', element)
+        # print("after save")
+        time.sleep(1)
+        try:
+            self.selenium.driver.execute_script('arguments[0].click()', element)
+        # alert=self.selenium.driver.switch_to.alert.accept()
+        except UnexpectedAlertPresentException:
+            self.selenium.press_keys(None,"RETURN")
+            # print("before accept")
+            # self.selenium.handle_alert()
+            # # alert=self.selenium.driver.switch_to.alert.accept()
+            # Alert(self.selenium.driver).accept()
         # except NoAlertPresentException:
         #     print("inside except")
         #     self.selenium.click_element("//input[contains(@value,'Save')]")
