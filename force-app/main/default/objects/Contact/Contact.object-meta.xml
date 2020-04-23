@@ -16,7 +16,7 @@
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
     </actionOverrides>
-    <compactLayoutAssignment>%%%NAMESPACE%%%Traction_Thrive_Staff_Layout</compactLayoutAssignment>
+    <compactLayoutAssignment>Traction_Thrive_Staff_Layout</compactLayoutAssignment>
     <searchLayouts>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
