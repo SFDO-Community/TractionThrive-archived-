@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Designación de asignación</label>
+        <name>Assignment_Designation__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation>Primario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation>Secundario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation>Terciario</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Asignación - Fecha de finalización</label>
+        <name>Assignment_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>Ingrese la fecha de diagnóstico positivo para COVID-19</help>
+        <label>Fecha de diagnóstico de COVID</label>
+        <name>COVID_Diagnosis_Date__c</name>
+    </fields>
+    <fields>
+        <label>División</label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Medicine</masterLabel>
+            <translation>Medicina de emergencia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Medicine</masterLabel>
+            <translation>Medicina Interna</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Exposición / Síntomas Fecha</label>
+        <name>Exposure_Symptoms_Date__c</name>
+    </fields>
+    <fields>
+        <label>Categoría de personal médico</label>
+        <name>Medical_Staff_Category__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation>Activo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate</masterLabel>
+            <translation>Asociar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clinical Associate</masterLabel>
+            <translation>Asociado Clínico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation>Consultante</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honorary</masterLabel>
+            <translation>Honorario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locum Tenens</masterLabel>
+            <translation>Locum Tenens</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation>Provisional</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific and Research</masterLabel>
+            <translation>Científica y de investigación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary</masterLabel>
+            <translation>Temporal</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Posición</label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label>Tipo de práctica</label>
+        <name>Practice_Type__c</name>
+        <picklistValues>
+            <masterLabel>Clinical Scientist</masterLabel>
+            <translation>Científico clinal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation>Dentista</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maxillofacial Surgeon</masterLabel>
+            <translation>Cirujano Maxilofacial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwife</masterLabel>
+            <translation>Partera</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation>Médico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychologist</masterLabel>
+            <translation>Psicólogo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific &amp; Research</masterLabel>
+            <translation>Científica y de investigación</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>ID del proveedor</label>
+        <name>Provider_ID__c</name>
+    </fields>
+    <fields>
+        <label>Fecha de lanzamiento</label>
+        <name>Release_Date__c</name>
+    </fields>
+    <fields>
+        <label>Papel</label>
+        <name>Role_Global__c</name>
+    </fields>
+    <fields>
+        <help>Seleccione las competencias válidas</help>
+        <label>Competencias</label>
+        <name>Skills__c</name>
+        <picklistValues>
+            <masterLabel>CARE</masterLabel>
+            <translation>CUIDADO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Critical Care</masterLabel>
+            <translation>Cuidado crítico</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPAC</masterLabel>
+            <translation>EPAC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation>ER</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General GYN</masterLabel>
+            <translation>Ginecólogo general</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV Therapy</masterLabel>
+            <translation>Terapia IV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neonatal</masterLabel>
+            <translation>Neonatal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nephrology/Dialysis</masterLabel>
+            <translation>Nefrología / Diálisis</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Obstetrics</masterLabel>
+            <translation>Obstetricia</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perinatal</masterLabel>
+            <translation>Perinatal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perioperative</masterLabel>
+            <translation>Perioperatorio</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>En Personal = disponible para trabajar, No disponible = todos los registros de disponibilidad futura se establecerán automáticamente en No disponible</help>
+        <label>Estado</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation>No disponible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On staff</masterLabel>
+            <translation>En el personal</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Contact - Traction Thrive Community Layout</layout>
+        <sections>
+            <label>Estado de personal</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact - Traction Thrive Layout</layout>
+        <sections>
+            <label>Estado de personal</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- COVID+ --></label>
+        <name>COVID_Positive</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Not Available --></label>
+        <name>Isolation</name>
+    </quickActions>
+    <webLinks>
+        <label>mapas de Google</label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label>Búsqueda de Google</label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>

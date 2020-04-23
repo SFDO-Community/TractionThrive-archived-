@@ -1,5 +1,5 @@
 {
-  "activeBrandingSetId" : "4754dbdc-5337-47f5-992a-63dd41facac7",
+  "activeBrandingSetId" : "6e458278-d428-4246-8c92-e7342d440e08",
   "customCSS" : "",
   "developerName" : "Traction_Thrive",
   "id" : "524629a6-9819-483b-9328-a41bf758bd79",
@@ -117,7 +117,36 @@
             },
             "componentName" : "forceCommunity:themeSearch",
             "id" : "64a1a8ec-3c49-40d6-a01a-7ff19699ab00",
-            "renditionMap" : { },
+            "renditionMap" : {
+              "es" : "0d74805c-badc-43e0-a124-f347cb675aed",
+              "fr" : "c7966e5c-fa49-408c-817e-7af0dff0b8f3",
+              "hi" : "ad8c7b54-a548-4bfc-ba57-9bd29b18b2fd"
+            },
+            "renditions" : [ {
+              "id" : "ad8c7b54-a548-4bfc-ba57-9bd29b18b2fd",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "placeholderText" : "सुविधाएं, स्टाफ, लेख और अधिक जानकारी प्राप्त करें ..."
+                }
+              },
+              "type" : "renditionComponent"
+            }, {
+              "id" : "0d74805c-badc-43e0-a124-f347cb675aed",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "placeholderText" : "Encuentra instalaciones, personal, artículos y más ..."
+                }
+              },
+              "type" : "renditionComponent"
+            }, {
+              "id" : "c7966e5c-fa49-408c-817e-7af0dff0b8f3",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "placeholderText" : "Trouvez des installations, du personnel, des articles et plus encore ..."
+                }
+              },
+              "type" : "renditionComponent"
+            } ],
             "type" : "component"
           } ],
           "id" : "e702ddac-49f1-499d-b7a8-fef6c162d7ac",
@@ -152,7 +181,57 @@
             },
             "componentName" : "forceCommunity:themeProfileMenu",
             "id" : "e56b4572-df2d-44ad-bc52-06acd29092f9",
-            "renditionMap" : { },
+            "renditionMap" : {
+              "es" : "25542092-d070-4db0-a3e1-bafed0d6eb97",
+              "fr" : "02cc61e9-87c4-4fdb-8f8f-ebbb4f504f37",
+              "hi" : "5a551e4c-7f39-4a5c-b208-808a8c99dcbf"
+            },
+            "renditions" : [ {
+              "id" : "5a551e4c-7f39-4a5c-b208-808a8c99dcbf",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "buttonText" : "लॉग इन करें",
+                  "myAccountLabel" : "मेरा अस्पताल",
+                  "homeLabel" : "निवास",
+                  "communitySetupLabel" : "सेल्सफोर्स सेटअप",
+                  "communityBuilderLabel" : "बिल्डर का अनुभव लें",
+                  "contactSupportLabel" : "सहयोग टीम से संपर्क करें",
+                  "logoutLabel" : "लॉग आउट",
+                  "viewProfileLabel" : "मेरी प्रोफाइल"
+                }
+              },
+              "type" : "renditionComponent"
+            }, {
+              "id" : "25542092-d070-4db0-a3e1-bafed0d6eb97",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "buttonText" : "Iniciar sesión",
+                  "myAccountLabel" : "Mi cuenta",
+                  "homeLabel" : "Casa",
+                  "communitySetupLabel" : "Configuración de Salesforce",
+                  "communityBuilderLabel" : "Constructor de experiencia",
+                  "contactSupportLabel" : "Soporte de contacto",
+                  "logoutLabel" : "Cerrar sesión",
+                  "viewProfileLabel" : "Mi perfil"
+                }
+              },
+              "type" : "renditionComponent"
+            }, {
+              "id" : "02cc61e9-87c4-4fdb-8f8f-ebbb4f504f37",
+              "renditionValue" : {
+                "componentAttributes" : {
+                  "buttonText" : "s'identifier",
+                  "myAccountLabel" : "Mon hôpital",
+                  "homeLabel" : "Accueil",
+                  "communitySetupLabel" : "Configuration de Salesforce",
+                  "communityBuilderLabel" : "Constructeur d'expérience",
+                  "contactSupportLabel" : "Contactez le support",
+                  "logoutLabel" : "Se déconnecter",
+                  "viewProfileLabel" : "Mon profil"
+                }
+              },
+              "type" : "renditionComponent"
+            } ],
             "type" : "component"
           } ],
           "id" : "b23e9041-695a-4696-bde0-3af59b9a6388",

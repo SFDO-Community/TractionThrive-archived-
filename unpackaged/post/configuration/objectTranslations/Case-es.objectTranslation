@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Subtipo</label>
+        <name>Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>Add New User</masterLabel>
+            <translation>Añadir nuevo usuario</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Can&apos;t Log On</masterLabel>
+            <translation>No puedo iniciar sesión</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Department</masterLabel>
+            <translation>Departamento de cambio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Division</masterLabel>
+            <translation>División de cambio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Heath Auth</masterLabel>
+            <translation>Cambiar autoridad de salud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Hospital</masterLabel>
+            <translation>Cambiar de hospital</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Permissions/Profie</masterLabel>
+            <translation>Cambiar permiso / perfil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dashboard Questions</masterLabel>
+            <translation>Preguntas del tablero</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edit my Contact Info</masterLabel>
+            <translation>Editar mi información de contacto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forgot Password</masterLabel>
+            <translation>Se te olvidó tu contraseña</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Support Case Layout</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>Change_Priority</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Close the Case --></label>
+        <name>Close_the_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+</CustomObjectTranslation>

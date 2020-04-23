@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Staff Access --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Staff Access --></value>
+    </caseValues>
+    <fields>
+        <help>Agregar este miembro del personal a este departamento o instalación compartirá el acceso a ese departamento.</help>
+        <label>Instalación de cuidado</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>Acceso del personal</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Si una división tiene muchos registros de departamento, el campo de grupo de división es una etiqueta que se puede usar para agruparlos.</help>
+        <label>División</label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help>El miembro del personal para agregar al departamento o instalación.</help>
+        <label>Personal</label>
+        <name>Staff__c</name>
+        <relationshipLabel>Acceso del personal</relationshipLabel>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Staff Access Layout</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Staff Access --></nameFieldLabel>
+</CustomObjectTranslation>
