@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label>Activo</label>
+        <name>Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>No</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Si</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Camas disponibles</label>
+        <name>Beds_Available__c</name>
+    </fields>
+    <fields>
+        <help>Por ejemplo, una sala cerrada que no cuenta con personal.</help>
+        <label>Camas inactivas</label>
+        <name>Beds_Inactive__c</name>
+    </fields>
+    <fields>
+        <label>Camas totales</label>
+        <name>Beds_Total__c</name>
+    </fields>
+    <fields>
+        <label>Camas en uso</label>
+        <name>Beds_in_Use__c</name>
+    </fields>
+    <fields>
+        <label>Plan de contingencia</label>
+        <name>Contingency_Plan__c</name>
+    </fields>
+    <fields>
+        <label>Prioridad del cliente</label>
+        <name>CustomerPriority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation>Alto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation>Bajo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation>Medio</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Si se agregan varios departamentos y son parte de la misma división, ese nombre de división se puede ingresar aquí.</help>
+        <label>Grupo</label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <help>Versión de texto de la autoridad sanitaria de nivel superior, campo del sistema para compartir reglas. Una regla de flujo de trabajo llena este campo en función de la jerarquía de la instalación.</help>
+        <label>Autoridad sanitaria</label>
+        <name>Health_Authority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Staff Compensation Model --></label>
+        <name>Medical_Staff_Compensation_Model__c</name>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation>Contrato</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fee for Service</masterLabel>
+            <translation>Cobro por servicio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Dollars</masterLabel>
+            <translation>Programa de dólares</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salaried</masterLabel>
+            <translation>Programa de dólares</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Capture cualquier nota sobre el potencial de redistribución del personal, limitaciones, habilidades</help>
+        <label><!-- Medical Staff Redeployment Comments --></label>
+        <name>Medical_Staff_Redeployment_Comments__c</name>
+    </fields>
+    <fields>
+        <label>Numero de ubicaciones</label>
+        <name>NumberofLocations__c</name>
+    </fields>
+    <fields>
+        <label>Centro para padres</label>
+        <name>Parent_Facility_Name__c</name>
+    </fields>
+    <fields>
+        <label>Nombre de la autoridad regional de salud</label>
+        <name>Regional_Health_Authority_Name__c</name>
+    </fields>
+    <fields>
+        <label>Fecha de vencimiento de SLA</label>
+        <name>SLAExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label>Número de serie de SLA</label>
+        <name>SLASerialNumber__c</name>
+    </fields>
+    <fields>
+        <label>SLA</label>
+        <name>SLA__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>Bronce</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Oro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation>Platino</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>Plata</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Oportunidad de venta</label>
+        <name>UpsellOpportunity__c</name>
+        <picklistValues>
+            <masterLabel>Maybe</masterLabel>
+            <translation>tal vez</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation>NO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation>Si</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Division</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Division - Community</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital - Community</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Regional Health Authority - Community</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Planificación de instalaciones</label>
+            <section>Facility Planning</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <label>División</label>
+        <name>Division</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Hospital</label>
+        <name>Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Autoridad regional de salud</label>
+        <name>Regional_Health_Authority</name>
+    </recordTypes>
+    <webLinks>
+        <label>Compartir cuenta</label>
+        <name>Account_Sharing</name>
+    </webLinks>
+    <webLinks>
+        <label>Facturación</label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label>mapas de Google</label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label>noticias de Google</label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label>Búsqueda de Google</label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label>Administrar el acceso del personal</label>
+        <name>Manage_Staff_Access</name>
+    </webLinks>
+</CustomObjectTranslation>

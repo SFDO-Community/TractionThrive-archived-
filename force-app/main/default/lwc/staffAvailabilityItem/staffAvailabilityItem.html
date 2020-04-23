@@ -34,10 +34,10 @@
 			</div>
 			<div class="slds-col cmp-availability-col">
 				<div class="cmp-availability-date-wrap">
-					<div class="cmp-availability" data-available={statusValue}>{statusValue}</div>
+					<div class="cmp-availability" data-available={statusValue}>{statusLabelFromValue}</div>
 
 					<div class="cmp-modify-date" if:true={record.LastModifiedDate}>
-						<span>UPDATED: </span>
+						<span>{label.UPDATED}: </span>
 						<lightning-formatted-date-time
 							value={record.LastModifiedDate}
 							year="numeric"
@@ -55,7 +55,7 @@
 			<div class="slds-form_stacked slds-m-horizontal_small">
 				<div class="slds-form-element">
 					<lightning-input-field field-name={availableFieldName} value={available}></lightning-input-field>
-					<lightning-radio-group label="Availability"
+					<lightning-radio-group label={label.AVAILABILITY}
 					                       class="cmp-availability-buttons"
 					                       variant="label-hidden"
 					                       options={statusOptions}
@@ -72,8 +72,8 @@
 						is-multi-entry={lookupConfig.isMultiEntry}
 						onsearch={handleLookupSearch}
 						onselectionchange={handleLookupChange}
-						label="Care Facility"
-						placeholder="Search Care Facility"
+						label={label.CARE_FACILITY}
+						placeholder={label.CARE_FACILITY_PLACEHOLDER_SEARCH}
 						class="cmp-facility-lookup"
 					>
 					</c-lookup>
@@ -85,11 +85,11 @@
 				<div class="slds-col slds-text-align_right">
 					<a class="cmp-cancel-button cmp-button" onclick={handleCancel}>
 						<lightning-icon icon-name="utility:close" variant="error" size="x-small"></lightning-icon>
-						<span class="slds-m-left_small">Cancel</span>
+						<span class="slds-m-left_small">{label.CANCEL}</span>
 					</a>
 					<a class="cmp-ok-button cmp-button slds-m-left_large" onclick={handleOK} >
 						<lightning-icon icon-name="utility:check" variant="success" size="x-small"></lightning-icon>
-						<span class="slds-m-left_x-small">OK</span>
+						<span class="slds-m-left_x-small">{label.OK_ACTION}</span>
 					</a>
 				</div>
 			</div>

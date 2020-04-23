@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Private</masterLabel>
+        <translation>Privado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Public</masterLabel>
+        <translation>Público</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Subsidiary</masterLabel>
+        <translation>Subsidiario</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

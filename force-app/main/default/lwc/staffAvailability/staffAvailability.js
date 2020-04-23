@@ -6,6 +6,16 @@
 import {LightningElement, track, wire, api} from 'lwc';
 
 import getAssignmentData from '@salesforce/apex/StaffAvailabilityController.getAssignmentData';
+import ASSIGNMENTS from '@salesforce/label/c.Assignments';
+import ERROR from '@salesforce/label/c.Error_Label';
+import MY_AVAILABILITY from '@salesforce/label/c.My_Availability'
+import AVAILABILITY from '@salesforce/label/c.Availability_Label';
+import CREATE_CREDENTIAL from '@salesforce/label/c.Create_Credential';
+import SAVE from '@salesforce/label/c.Save_Action';
+import CANCEL from '@salesforce/label/c.Cancel_Action';
+import NO_AVAILABILITY_MESSAGE from '@salesforce/label/c.No_Availability_Message';
+import STAFF_STATUS_AVAILABLE_TODAY_FUTURE from '@salesforce/label/c.Staff_Status_Available_from_today_future';
+import STAFF_STATUS_NOT_AVAILABLE_TODAY_FUTURE from '@salesforce/label/c.Staff_Status_Not_Available_from_today_future';
 import updateStaffStatus from '@salesforce/apex/StaffAvailabilityController.updateStaffStatus';
 import {getFieldValue, getOrgNamespace} from 'c/appUtils';
 
@@ -32,6 +42,22 @@ export default class StaffAvailability extends LightningElement {
 	errorMessage;
 	stackTrace;
 	isFirstRender = false;
+	label = {
+		ASSIGNMENTS,
+		ERROR,
+		MY_AVAILABILITY,
+		CREATE_CREDENTIAL,
+		SAVE,
+		CANCEL,
+		NO_AVAILABILITY_MESSAGE,
+		STAFF_STATUS_AVAILABLE_TODAY_FUTURE,
+		STAFF_STATUS_NOT_AVAILABLE_TODAY_FUTURE
+	};
+
+	connectedCallback() {
+		this.titleText = this.titleText ? this.titleText : MY_AVAILABILITY;
+		this.titleTextForContactRecord = this.titleTextForContactRecord ? this.titleTextForContactRecord : AVAILABILITY;
+	}
 
 	renderedCallback() {
 		console.log('RECORD ID: ', this.recordId);

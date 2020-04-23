@@ -5,7 +5,7 @@
 <!-- Staff Assignment -->
 <template >
     <c-app-spinner></c-app-spinner>
-    <lightning-card title="New Staff Access" icon-name="action:new_account">
+    <lightning-card title={label.NEW_STAFF_ACCESS} icon-name="action:new_account">
         <div class="slds-m-around_medium slds-box">
             <lightning-record-view-form record-id={recordId} object-api-name="Contact">
                 <div class="slds-grid">
@@ -30,7 +30,7 @@
                         is-multi-entry={lookupConfig.isMultiEntry}
                         onsearch={handleLookupSearch}
                         onselectionchange={handleLookupChange}
-                        placeholder="Search Care Facility"
+                        placeholder={label.CARE_FACILITY_PLACEHOLDER_SEARCH}
                         class="cmp-facility-lookup"
                 >
                 </c-lookup>
@@ -39,7 +39,7 @@
 
             <div class="slds-grid slds-p-top_x-small ">
                 <div class="slds-col slds-text-align_right">
-                    <lightning-button variant="brand" label="Save" disabled={disableSave} onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={label.SAVE} disabled={disableSave} onclick={handleSave} class="slds-m-left_x-small"></lightning-button>
                 </div>
             </div>
 

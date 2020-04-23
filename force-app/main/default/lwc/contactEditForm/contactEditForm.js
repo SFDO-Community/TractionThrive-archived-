@@ -12,6 +12,35 @@ import deleteCredential from '@salesforce/apex/ContactEditFormController.deleteC
 import updateCredential from '@salesforce/apex/ContactEditFormController.updateCredential';
 import searchAccountLookup from '@salesforce/apex/StaffAvailabilityController.searchAccountLookup';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import STAFF_INFORMATION from '@salesforce/label/c.Staff_Information';
+import SAVE from '@salesforce/label/c.Save_Action';
+import CANCEL from '@salesforce/label/c.Cancel_Action';
+import STAFF_EMAIL from '@salesforce/label/c.Email';
+import STAFF_NAME from '@salesforce/label/c.Staff_Name';
+import CARE_FACILITY from '@salesforce/label/c.Care_Facility';
+import MOBILE from '@salesforce/label/c.Mobile';
+import PHONE from '@salesforce/label/c.Phone';
+import COMPETENCIES from '@salesforce/label/c.Competencies';
+import CREDENTIALS from '@salesforce/label/c.Credentials';
+import COMPETENCE_PLACEHOLDER from '@salesforce/label/c.Competence_Placeholder';
+import ADD_CREDENTIAL from '@salesforce/label/c.Add_credential';
+import ADD from '@salesforce/label/c.Add_Action';
+import CREATE_CREDENTIAL from '@salesforce/label/c.Create_Credential';
+import CARE_FACILITY_PLACEHOLDER_SEARCH from '@salesforce/label/c.Care_Facility_Placeholder_Search';
+import REGISTRANT_TYPE from '@salesforce/label/c.Registrant_Type';
+import SEARCHING_LOOKUP_FIELD_ERROR from '@salesforce/label/c.Searching_Lookup_field_Error';
+import LOOKUP_ERROR_LABEL from '@salesforce/label/c.Lookup_Error_Label';
+import CARE_FACILITY_SELECTION_ERROR from '@salesforce/label/c.Care_Facility_Selection_Error';
+import SUCCESS from '@salesforce/label/c.Success_Label';
+import WARNING from '@salesforce/label/c.Warning_Label';
+import STAFF_INFO_UPDATE_SUCCESS from '@salesforce/label/c.Success_Message_Staff_Info_Update';
+import NO_CHANGES_FOUND from '@salesforce/label/c.Warning_message_for_no_changes_found';
+import ERROR_LABEL from '@salesforce/label/c.Error_Label';
+import CREDENTIAL_DELETION_MSG from '@salesforce/label/c.Message_Credential_Deletion';
+import CREDENTIAL_UPDATE_MSG from '@salesforce/label/c.Message_Credential_Update';
+import CREDENTIAL_INSERT_SUCCESS from '@salesforce/label/c.Success_Message_Credential_Insertion';
+import EDIT_CREDENTIAL from '@salesforce/label/c.Edit_Credential';
+import DELETE_CREDENTIAL from '@salesforce/label/c.Delete_Credential';
 import { getOrgNamespace, getFieldValue } from 'c/appUtils';
 
 export default class ContactEditForm extends LightningElement {
@@ -37,6 +66,37 @@ export default class ContactEditForm extends LightningElement {
 		initialSelection: [],
 		lookupErrors: [],
 		notifyViaAlerts: false // Use alerts instead of toast to notify user
+	};
+	labels = {
+		STAFF_INFORMATION,
+		SAVE,
+		CARE_FACILITY,
+		STAFF_EMAIL,
+		STAFF_NAME,
+		MOBILE,
+		PHONE,
+		COMPETENCIES,
+		COMPETENCE_PLACEHOLDER,
+		CANCEL,
+		CREDENTIALS,
+		ADD_CREDENTIAL,
+		ADD,
+		CREATE_CREDENTIAL,
+		CARE_FACILITY_PLACEHOLDER_SEARCH,
+		REGISTRANT_TYPE,
+		SEARCHING_LOOKUP_FIELD_ERROR,
+		LOOKUP_ERROR_LABEL,
+		CARE_FACILITY_SELECTION_ERROR,
+		SUCCESS,
+		WARNING,
+		STAFF_INFO_UPDATE_SUCCESS,
+		NO_CHANGES_FOUND,
+		ERROR_LABEL,
+		CREDENTIAL_DELETION_MSG,
+		CREDENTIAL_UPDATE_MSG,
+		CREDENTIAL_INSERT_SUCCESS,
+		EDIT_CREDENTIAL,
+		DELETE_CREDENTIAL
 	};
 
 	/* CALLBACK METHODS START  */
@@ -71,7 +131,7 @@ export default class ContactEditForm extends LightningElement {
 			this.errorMessage = JSON.stringify(error);
 		}
 
-		this.handleToastMessage('Error', this.errorMessage, 'error');
+		this.handleToastMessage(this.labels.ERROR_LABEL, this.errorMessage, 'error');
 	}
 
 	loadContactData() {
@@ -96,7 +156,7 @@ export default class ContactEditForm extends LightningElement {
 			updateContact({contactToUpdate: this.contactToUpdate}).then(result => {
 				this.handleCallbackData(result);
 				this.buildCredentialsData(result.credentials);
-				this.handleToastMessage('Success', 'Staff Information Updated Successfully', 'success');
+				this.handleToastMessage(this.labels.SUCCESS, this.labels.STAFF_INFO_UPDATE_SUCCESS, 'success');
 			}).catch(error => {
 				this.error = error;
 				console.error('ERROR', error);
@@ -105,7 +165,7 @@ export default class ContactEditForm extends LightningElement {
 				this.template.querySelector("c-app-spinner").displaySpinner(false);
 			});
 		} else {
-			this.handleToastMessage('Warning', 'No Changes Found', 'warning');
+			this.handleToastMessage(this.labels.WARNING, this.labels.NO_CHANGES_FOUND, 'warning');
 		}
 	}
 
@@ -114,12 +174,12 @@ export default class ContactEditForm extends LightningElement {
 		deleteCredential({credentialId: row.Id}).then(result => {
 			let tempCredentialsData = this.credentialsData;
 			tempCredentialsData.forEach(function (item, idx, object) {
-				if (item.Id == row.Id) {
+				if (item.Id === row.Id) {
 					object.splice(idx, 1);
 				}
 			} );
 			this.credentialsData = [...tempCredentialsData];
-			this.handleToastMessage('Success', 'Credential successfully deleted', 'success');
+			this.handleToastMessage(this.labels.SUCCESS, this.labels.CREDENTIAL_DELETION_MSG, 'success');
 		}).catch(error => {
 			this.error = error;
 			console.error('ERROR', error);
@@ -138,13 +198,13 @@ export default class ContactEditForm extends LightningElement {
 			let tempCredentialsData = this.credentialsData;
 			let filteredResult = this.filterCredentialsData([result])[0];
 			tempCredentialsData.forEach(function (item, idx, object) {
-				if (item.Id == result.Id) {
+				if (item.Id === result.Id) {
 					object.splice(idx, 1);
 					tempCredentialsData.push(filteredResult);
 				}
 			} );
 			this.credentialsData = [...tempCredentialsData];
-			this.handleToastMessage('Success', 'Credential Successfully Updated', 'success');
+			this.handleToastMessage(this.labels.SUCCESS, this.labels.CREDENTIAL_UPDATE_MSG, 'success');
 		}).catch(error => {
 			console.error('SAVE ERROR: ', error);
 			this.handleToastMessage(error.statusText, error.body.message, 'error');
@@ -172,7 +232,7 @@ export default class ContactEditForm extends LightningElement {
 		insertCredential({credentialToInsert: newCredentialToInsert}).then(result => {
 			let newFilteredCredential = this.filterCredentialsData([result])[0];
 			this.credentialsData = [...this.credentialsData, newFilteredCredential];
-			this.handleToastMessage('Success', 'New Credential Successfully Inserted', 'success');
+			this.handleToastMessage(this.labels.SUCCESS, this.labels.CREDENTIAL_INSERT_SUCCESS, 'success');
 		}).catch(error => {
 			console.error('SAVE ERROR: ', error);
 			this.handleToastMessage(error.statusText, error.body.message, 'error');
@@ -203,7 +263,7 @@ export default class ContactEditForm extends LightningElement {
 				this.template.querySelector('c-lookup').setSearchResults(results);
 			})
 			.catch((error) => {
-				this.notifyLookupUser('Lookup Error', 'An error occured while searching with the lookup field.', 'error');
+				this.notifyLookupUser(this.labels.LOOKUP_ERROR_LABEL, this.labels.SEARCHING_LOOKUP_FIELD_ERROR, 'error');
 				// eslint-disable-next-line no-console
 				console.error('Lookup error', JSON.stringify(error));
 				this.lookupConfig.lookupErrors = [error];
@@ -218,7 +278,7 @@ export default class ContactEditForm extends LightningElement {
 		const selection = this.template.querySelector('c-lookup').getSelection();
 		if (selection.length === 0) {
 			this.lookupConfig.lookupErrors = [
-				{ message: 'Please choose your care facility to continue...' }
+				{ message: this.labels.CARE_FACILITY_SELECTION_ERROR }
 			];
 		} else {
 			this.lookupConfig.lookupErrors = [];
@@ -245,7 +305,7 @@ export default class ContactEditForm extends LightningElement {
 			sObjectType: 'Account',
 			icon: 'standard:account',
 			title: this.contact.Account.Name,
-			subtitle: 'Care Facility'
+			subtitle: this.labels.CARE_FACILITY
 		};
 
 		if (this.contact.Account.Id) {
@@ -304,15 +364,15 @@ export default class ContactEditForm extends LightningElement {
 				Id: originalContactData.Id
 			};
 
-			if (originalContactData.MobilePhone != mobilePhone) {
+			if (originalContactData.MobilePhone !== mobilePhone) {
 				contactToUpdate.MobilePhone = mobilePhone;
 				hasChanges = true;
 			}
-			if (originalContactData.Phone != Phone) {
+			if (originalContactData.Phone !== Phone) {
 				contactToUpdate.Phone = Phone;
 				hasChanges = true;
 			}
-			if (getFieldValue(originalContactData, 'Skills__c', this.namespace) != selectedCompetencies) {
+			if (getFieldValue(originalContactData, 'Skills__c', this.namespace) !== selectedCompetencies) {
 				contactToUpdate[this.namespace+"Skills__c"] = selectedCompetencies;
 				hasChanges = true;
 			}
@@ -341,18 +401,18 @@ export default class ContactEditForm extends LightningElement {
 
 	buildCredentialsData(credentials) {
 		this.credentialsColumns = [
-			{label: 'Staff', fieldName: 'StaffName'},
-			{label: 'Care Facility', fieldName: 'CareFacilityName'},
-			{label: 'Registrant Type', fieldName: 'TypeName'},
+			{label: this.labels.STAFF_NAME, fieldName: 'StaffName'},
+			{label: this.labels.CARE_FACILITY, fieldName: 'CareFacilityName'},
+			{label: this.labels.REGISTRANT_TYPE, fieldName: 'TypeName'},
 			{
 				type: 'button-icon',
 				fixedWidth: 40,
 				typeAttributes:
 					{
-						alternativeText: 'Edit Credential',
+						alternativeText: this.labels.EDIT_CREDENTIAL,
 						iconName: 'utility:edit',
 						name: 'editCredentialBtn',
-						title: 'Edit Credential',
+						title: this.labels.EDIT_CREDENTIAL,
 						class: 'cmp-edit-credential'
 					}
 			},
@@ -361,10 +421,10 @@ export default class ContactEditForm extends LightningElement {
 				fixedWidth: 40,
 				typeAttributes:
 					{
-						alternativeText: 'Delete Credential',
+						alternativeText: this.labels.DELETE_CREDENTIAL,
 						iconName: 'utility:delete',
 						name: 'deleteCredentialBtn',
-						title: 'Delete Credential',
+						title: this.labels.DELETE_CREDENTIAL,
 						class: 'cmp-delete-credential'
 					}
 			}

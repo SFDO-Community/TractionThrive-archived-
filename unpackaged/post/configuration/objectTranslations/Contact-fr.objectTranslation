@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Personnel</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Personnel</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Accès au personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_access</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Niveau d&apos;accès au personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_access_level</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Compte du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Devise du personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_currency</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Description du personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_description</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Service du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_division</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Modification du personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_edit</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Adresse e-mail du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_email</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Télécopie du personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_fax</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Champ de personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Champs de personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_field</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Historique du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_history</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Rapport sur l&apos;historique du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_history_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>ID du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Informations sur le personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_information</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Téléphone mobile du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_mobile</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Nom du personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Noms du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_name</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Note sur le personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_note</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Numéro du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_number</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Propriétaire du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_owner</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Alias du propriétaire du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_owner_alias</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>N° de téléphone du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_phone</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Enregistrement de personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Enregistrements de personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_record</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Type d&apos;enregistrement du personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Types d&apos;enregistrement du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_record_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Personnel du responsable hiérarchique</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_reports_to</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Rôle du personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Rôles du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_role</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>ID du rôle des personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_role_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Rapport sur les rôles du personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Rapports sur le rôle du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_role_report</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>ID d&apos;étape du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_stage_id</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>État du personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_status</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Type de personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Types de personnel</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>contact_type</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Vue des personnel</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Vues des personnel</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_view</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label>Désignation d&apos;affectation</label>
+        <name>Assignment_Designation__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation>Primaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation>Secondaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation>Tertiaire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Affectation - Date de fin</label>
+        <name>Assignment_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>Entrez la date du diagnostic positif pour COVID-19</help>
+        <label>Date de diagnostic COVID</label>
+        <name>COVID_Diagnosis_Date__c</name>
+    </fields>
+    <fields>
+        <label>Division</label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Medicine</masterLabel>
+            <translation>Médecine d&apos;urgence</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Medicine</masterLabel>
+            <translation>Médecine interne</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Exposition / Symptômes Date</label>
+        <name>Exposure_Symptoms_Date__c</name>
+    </fields>
+    <fields>
+        <label>Catégorie du personnel médical</label>
+        <name>Medical_Staff_Category__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation>actif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate</masterLabel>
+            <translation>Associer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clinical Associate</masterLabel>
+            <translation>Associé clinique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation>Consultant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honorary</masterLabel>
+            <translation>Honoraire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locum Tenens</masterLabel>
+            <translation>Suppléant de médecin</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation>Provisoire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific and Research</masterLabel>
+            <translation>Scientifique et Recherche</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary</masterLabel>
+            <translation>Temporaire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Position</label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label>Type de pratique</label>
+        <name>Practice_Type__c</name>
+        <picklistValues>
+            <masterLabel>Clinical Scientist</masterLabel>
+            <translation>Scientifique Clinal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation>Dentiste</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maxillofacial Surgeon</masterLabel>
+            <translation>Chirurgien maxillo-facial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwife</masterLabel>
+            <translation>Sage-femme</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation>Médecin</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychologist</masterLabel>
+            <translation>Psychologue</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific &amp; Research</masterLabel>
+            <translation>Scientifique et Recherche</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Identifiant du fournisseur</label>
+        <name>Provider_ID__c</name>
+    </fields>
+    <fields>
+        <label>Date de sortie</label>
+        <name>Release_Date__c</name>
+    </fields>
+    <fields>
+        <label>Rôle</label>
+        <name>Role_Global__c</name>
+    </fields>
+    <fields>
+        <help>Sélectionnez les compétences valides</help>
+        <label>Compétences</label>
+        <name>Skills__c</name>
+        <picklistValues>
+            <masterLabel>CARE</masterLabel>
+            <translation>SE SOUCIER</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Critical Care</masterLabel>
+            <translation>Soin critique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPAC</masterLabel>
+            <translation>EPAC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation>ER</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General GYN</masterLabel>
+            <translation>Gynécologue général</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV Therapy</masterLabel>
+            <translation>Thérapie IV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neonatal</masterLabel>
+            <translation>Néonatal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nephrology/Dialysis</masterLabel>
+            <translation>Néphrologie / Dialyse</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Obstetrics</masterLabel>
+            <translation>Obstétrique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perinatal</masterLabel>
+            <translation>Périnatal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perioperative</masterLabel>
+            <translation>Périopératoire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Sur le personnel = disponible pour travailler, non disponible = tous les enregistrements de disponibilité futurs seront automatiquement définis sur non disponible</help>
+        <label>Statut</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation>Indisponible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On staff</masterLabel>
+            <translation>Sur le personnel</translation>
+        </picklistValues>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Contact - Traction Thrive Community Layout</layout>
+        <sections>
+            <label>Statut de dotation</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact - Traction Thrive Layout</layout>
+        <sections>
+            <label>Statut de dotation</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- COVID+ --></label>
+        <name>COVID_Positive</name>
+    </quickActions>
+    <quickActions>
+        <label>Indisponible</label>
+        <name>Isolation</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label>Google Maps</label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label>Recherche Google</label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>
