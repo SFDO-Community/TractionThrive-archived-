@@ -1,9 +1,8 @@
 *** Settings ***
 
-Resource       robot/Crisis-Management/resources/NPSP/NPSP.robot
-...            cumulusci/robotframework/Salesforce.robot
 Library        DateTime
 Library        CrisisManagement.py
+Library        cumulusci.robotframework.PageObjects
 ...            robot/Crisis-Management/resources/ContactPageObject.py
 
 *** Variables ***

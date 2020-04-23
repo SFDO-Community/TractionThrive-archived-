@@ -31,9 +31,6 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         )
         self.selenium.click_element(enable_link)
         self.selenium.wait_until_location_contains("/setup/ManageUsers/",timeout=60, message="User setup page did not load in 1 min")
-
-
-
         
     def _is_current_page(self):
         """ Verify we are on the Contact detail page
