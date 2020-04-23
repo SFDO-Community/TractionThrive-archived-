@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Niveau du personnel</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Niveaux de personnel</value>
+    </caseValues>
+    <fields>
+        <label>Établissement de soins</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>Niveaux de personnel</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Personnel actuel</label>
+        <name>Current_Staff__c</name>
+    </fields>
+    <fields>
+        <label>Personnel des besoins essentiels</label>
+        <name>Essential_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label>Besoins essentiels</label>
+        <name>Essential_Staff__c</name>
+    </fields>
+    <fields>
+        <label>Personnel supplémentaire</label>
+        <name>Extra_Staff__c</name>
+    </fields>
+    <fields>
+        <label>Lacune complète du personnel</label>
+        <name>Full_Staff_Gap__c</name>
+    </fields>
+    <fields>
+        <label>Complément complet</label>
+        <name>Full_Staff__c</name>
+    </fields>
+    <fields>
+        <label>Rôle</label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label>Total COVID +</label>
+        <name>Total_COVID__c</name>
+    </fields>
+    <fields>
+        <label>Isolement total  </label>
+        <name>Total_Isolation__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Staff Levels Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du niveau du personnel</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

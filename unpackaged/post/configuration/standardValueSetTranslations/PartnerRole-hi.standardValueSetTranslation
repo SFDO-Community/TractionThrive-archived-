@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Advertiser</masterLabel>
+        <translation>विज्ञापनदाता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Agency</masterLabel>
+        <translation>एजेंसी</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Broker</masterLabel>
+        <translation>दलाल</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Consultant</masterLabel>
+        <translation>सलाहकार</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contractor</masterLabel>
+        <translation>ठेकेदार</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dealer</masterLabel>
+        <translation>विक्रेता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Developer</masterLabel>
+        <translation>डेवलपर</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Distributor</masterLabel>
+        <translation>वितरक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Institution</masterLabel>
+        <translation>संस्थान</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lender</masterLabel>
+        <translation>ऋणदाता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Supplier</masterLabel>
+        <translation>प्रदायक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>System Integrator</masterLabel>
+        <translation>सिस्टम इंटेग्रेटर</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VAR/Reseller</masterLabel>
+        <translation>वीएआर / पुनर्विक्रेता</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

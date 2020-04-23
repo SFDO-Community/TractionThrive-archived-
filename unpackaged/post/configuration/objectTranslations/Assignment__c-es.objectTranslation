@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Availability --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Availability --></value>
+    </caseValues>
+    <fields>
+        <label>Estado</label>
+        <name>Available__c</name>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation>Asignado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation>Disponible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation>No disponible</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Instalaciones</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>Disponibilidades</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Fecha</label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label>Razón</label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Immunocompromised</masterLabel>
+            <translation>Inmunocomprometido</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maternity/Paternity Leave</masterLabel>
+            <translation>Permiso de maternidad / paternidad</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Otro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacation</masterLabel>
+            <translation>Vacaciones</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Personal</label>
+        <name>Staff__c</name>
+        <relationshipLabel>Disponibilidades</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Usuario actualizado  </label>
+        <name>User_Updated__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <layouts>
+        <layout>Assignment Layout</layout>
+        <sections>
+            <label>Enlaces personalizados</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Availability Name --></nameFieldLabel>
+</CustomObjectTranslation>

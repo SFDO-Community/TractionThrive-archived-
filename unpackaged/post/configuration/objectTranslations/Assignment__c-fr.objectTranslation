@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Disponibilité</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Disponibilités</value>
+    </caseValues>
+    <fields>
+        <label>Statut</label>
+        <name>Available__c</name>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation>Attribué</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation>Disponible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation>Indisponible</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Établissement</label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel>Disponibilités</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Date</label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label>Raison</label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Immunocompromised</masterLabel>
+            <translation>Immunodéprimé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maternity/Paternity Leave</masterLabel>
+            <translation>Congé de maternité / paternité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacation</masterLabel>
+            <translation>Vacances</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Personnel</label>
+        <name>Staff__c</name>
+        <relationshipLabel>Disponibilités</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Utilisateur mis à jour</label>
+        <name>User_Updated__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Assignment Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom de disponibilité</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

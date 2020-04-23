@@ -2,17 +2,29 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>DataCategoryGroup</name>
     </types>
     <types>
-        <members>Contact-en_US</members>
-        <members>Account-en_US</members>
-        <name>CustomObjectTranslation</name>
+        <members>Analytics</members>
+        <members>Communities</members>
+        <name>GlobalValueSetTranslation</name>
     </types>
     <types>
         <members>Analytics</members>
         <members>ExperienceBundle</members>
         <name>Settings</name>
-    </types>    
+    </types>
+    <types>
+        <members>*</members>
+        <name>StandardValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Translations</name>
+    </types>
     <version>48.0</version>
 </Package>
