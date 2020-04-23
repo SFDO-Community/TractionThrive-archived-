@@ -8,5 +8,5 @@
         <operation>equals</operation>
         <value>Account.Regional_Health_Authority</value>
     </filters>
-    <label>Regional Health Authorities</label>
+    <label>Detailed Regional Health Authority List</label>
 </ListView>
