@@ -14,6 +14,7 @@
     </types>
     <types>
         <members>Analytics</members>
+        <members>Communities</members>
         <members>ExperienceBundle</members>
         <name>Settings</name>
     </types>
