@@ -1,6 +1,5 @@
 from robot.libraries.BuiltIn import BuiltIn
 
-
 class BaseCMPage:
     @property
     def cm(self):

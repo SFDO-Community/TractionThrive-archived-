@@ -7,6 +7,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from cumulusci.tasks.apex.anon import AnonymousApexTask
 
 from cumulusci.tasks.apex.batch import BatchApexWait
+import cumulusci.robotframework.CumulusCI
 
 
 class SalesforceRobotLibraryBase(object):

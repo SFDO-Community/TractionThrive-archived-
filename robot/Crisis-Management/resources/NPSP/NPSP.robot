@@ -17,16 +17,16 @@ Capture Screenshot and Delete Records and Close Browser
     Close Browser
     Delete Session Records
     
-API Create Contact
-    [Arguments]      &{fields}
-    ${first_name} =  Generate Random String
-    ${last_name} =   Generate Random String
-    ${contact_id} =  Salesforce Insert  Contact
-    ...                  FirstName=${first_name}
-    ...                  LastName=${last_name}
-    ...                  &{fields}  
-    &{contact} =     Salesforce Get  Contact  ${contact_id}
-    [return]         &{contact}
+# API Create Contact
+#     [Arguments]      &{fields}
+#     ${first_name} =  Generate Random String
+#     ${last_name} =   Generate Random String
+#     ${contact_id} =  Salesforce Insert  Contact
+#     ...                  FirstName=${first_name}
+#     ...                  LastName=${last_name}
+#     ...                  &{fields}  
+#     &{contact} =     Salesforce Get  Contact  ${contact_id}
+#     [return]         &{contact}
 
 API Modify Contact
     [Arguments]      ${contact_id}      &{fields}
