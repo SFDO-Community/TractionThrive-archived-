@@ -8,9 +8,6 @@
     "regionName" : "header",
     "type" : "region"
   }, {
-    "components" : [
-
-  ],
     "id" : "2003dad8-66ee-4e80-a79f-bab036c70a1a",
     "regionName" : "content",
     "type" : "region"
