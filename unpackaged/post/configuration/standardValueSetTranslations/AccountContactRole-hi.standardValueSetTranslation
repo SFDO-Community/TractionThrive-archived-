@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Business User</masterLabel>
+        <translation>व्यापार उपयोगकर्ता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Decision Maker</masterLabel>
+        <translation>निर्णयकर्ता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Economic Buyer</masterLabel>
+        <translation>आर्थिक खरीदार</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Economic Decision Maker</masterLabel>
+        <translation>आर्थिक निर्णय निर्माता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Evaluator</masterLabel>
+        <translation>मूल्यांकनकर्ता</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Executive Sponsor</masterLabel>
+        <translation>कार्यकारी प्रायोजक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Influencer</masterLabel>
+        <translation>प्रभावशाली व्यक्ति</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>अन्य</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technical Buyer</masterLabel>
+        <translation>तकनीकी खरीदार</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

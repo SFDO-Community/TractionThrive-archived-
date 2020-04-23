@@ -54,7 +54,7 @@
                                       onclick="{!c.increaseCount}" disabled="{! v.isReadOnly }"/>
             </lightning:layoutItem>
             <lightning:layoutItem class="slds-p-around--x-small">
-                <lightning:button aura:id="save" variant="brand" label="Save" onclick="{!c.handleUpdate}"
+                <lightning:button aura:id="save" variant="brand" label="{!$Label.c.Save_Action}" onclick="{!c.handleUpdate}"
                                   disabled="true"/>
             </lightning:layoutItem>
             <lightning:layoutItem size="12" class="slds-p-vertical--xx-small">

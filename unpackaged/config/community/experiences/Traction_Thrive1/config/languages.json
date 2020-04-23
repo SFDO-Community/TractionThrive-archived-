@@ -2,5 +2,30 @@
   "defaultCode" : "en_US",
   "defaultLabel" : "English (US)",
   "id" : "245ab92c-1e72-4f7c-900f-2ffbf1ad917b",
+  "languages" : [ {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "9f1bc963-72fd-45ea-ae11-721f99c0523e",
+    "isActive" : true,
+    "label" : "Hindi",
+    "languageCode" : "hi",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "718ad669-7c85-4f6f-b68a-246edd15837a",
+    "isActive" : true,
+    "label" : "French",
+    "languageCode" : "fr",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "be157085-a338-4126-8877-25b55eda5aca",
+    "isActive" : true,
+    "label" : "Spanish",
+    "languageCode" : "es",
+    "type" : "language"
+  } ],
   "type" : "languageContainer"
 }

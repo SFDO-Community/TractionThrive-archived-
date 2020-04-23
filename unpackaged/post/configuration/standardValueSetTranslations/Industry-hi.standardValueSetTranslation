@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Agriculture</masterLabel>
+        <translation>कृषि</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Apparel</masterLabel>
+        <translation>परिधान</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Banking</masterLabel>
+        <translation>बैंकिंग</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Biotechnology</masterLabel>
+        <translation>जैव प्रौद्योगिकी</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Chemicals</masterLabel>
+        <translation>रासायनिक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Communications</masterLabel>
+        <translation>संचार</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Construction</masterLabel>
+        <translation>निर्माण</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Consulting</masterLabel>
+        <translation>परामर्श</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Education</masterLabel>
+        <translation>शिक्षा</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Electronics</masterLabel>
+        <translation>इलेक्ट्रोनिक</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Energy</masterLabel>
+        <translation>ऊर्जा</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Engineering</masterLabel>
+        <translation>अभियांत्रिकी</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Entertainment</masterLabel>
+        <translation>मनोरंजन</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Environmental</masterLabel>
+        <translation>पर्यावरण</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Finance</masterLabel>
+        <translation>वित्त</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food &amp; Beverage</masterLabel>
+        <translation>खाद्य और पेय पदार्थ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Government</masterLabel>
+        <translation>सरकार</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Healthcare</masterLabel>
+        <translation>स्वास्थ्य देखभाल</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hospitality</masterLabel>
+        <translation>आतिथ्य सत्कार से संबंधित व्यवसाय</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Insurance</masterLabel>
+        <translation>बीमा</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Machinery</masterLabel>
+        <translation>मशीनरी</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Manufacturing</masterLabel>
+        <translation>विनिर्माण</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Media</masterLabel>
+        <translation>मीडिया</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Not For Profit</masterLabel>
+        <translation>लाभ के लिए नहीं</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>अन्य</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Recreation</masterLabel>
+        <translation><!-- Recreation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Retail</masterLabel>
+        <translation><!-- Retail --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shipping</masterLabel>
+        <translation><!-- Shipping --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technology</masterLabel>
+        <translation><!-- Technology --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Telecommunications</masterLabel>
+        <translation><!-- Telecommunications --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Transportation</masterLabel>
+        <translation><!-- Transportation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Utilities</masterLabel>
+        <translation><!-- Utilities --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>
