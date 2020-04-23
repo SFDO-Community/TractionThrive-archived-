@@ -21,38 +21,38 @@
         <div class="c-container">
             <div class="slds-modal__header title slds-m-vertical--small">
                 <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
-                                         value="Current Patient Status"/>
+                                         value="{!$Label.c.Current_Patient_Status}"/>
             </div>
         </div>
         <div class="slds-grid slds-wrap slds-gutters">
             <div class="slds-col slds-m-vertical--small">
-                <c:resourceStatusTracker title="Presenting 'COVID Like'"
+                <c:resourceStatusTracker title="{!$Label.c.Presenting_COVID_Like}"
                                          divisionId="{!v.selectedDivisionId}"
                                          iconURL="{!$Resource.resource_icons + '/icon-patient-covidlike.svg'}"
                                          resource="COVID Like"
-                                         status="Total"/>
+                                         status="{!$Label.c.Total}"/>
             </div>
 <!--            <img src="{!$Resource.yourGraphics + '/images/logo.jpg'}"/>-->
             <div class="slds-col slds-m-vertical--small">
-                <c:resourceStatusTracker title="Presumptive COVID"
+                <c:resourceStatusTracker title="{!$Label.c.Presumptive_COVID}"
                                          divisionId="{!v.selectedDivisionId}"
                                          iconURL="{!$Resource.resource_icons + '/icon-patient-presumptive.svg'}"
                                          resource="Presumptive COVID"
-                                         status="Total"/>
+                                         status="{!$Label.c.Total}"/>
             </div>
             <div class="slds-col slds-m-vertical--small">
-                <c:resourceStatusTracker title="COVID Positive (Disposition)"
+                <c:resourceStatusTracker title="{!$Label.c.COVID_Positive_Disposition}"
                                          divisionId="{!v.selectedDivisionId}"
                                          iconURL="{!$Resource.resource_icons + '/icon-patient-positive.svg'}"
                                          resource="COVID Positive"
-                                         status="Total"/>
+                                         status="{!$Label.c.Total}"/>
             </div>
             <div class="slds-col slds-m-vertical--small">
-                <c:resourceStatusTracker title="Comorbidity"
+                <c:resourceStatusTracker title="{!$Label.c.Comorbidity_Patient_Tracking}"
                                          divisionId="{!v.selectedDivisionId}"
                                          iconURL="{!$Resource.resource_icons + '/icon-patient-cormobidity.svg'}"
                                          resource="Comorbidity"
-                                         status="Total"/>
+                                         status="{!$Label.c.Total}"/>
             </div>
         </div>
     </aura:if>

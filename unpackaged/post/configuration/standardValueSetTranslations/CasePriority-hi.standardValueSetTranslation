@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>High</masterLabel>
+        <translation>उच्च</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Low</masterLabel>
+        <translation>कम</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medium</masterLabel>
+        <translation>मध्यम</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

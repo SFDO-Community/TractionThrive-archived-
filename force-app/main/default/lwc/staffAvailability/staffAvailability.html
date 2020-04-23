@@ -9,7 +9,7 @@
 		<template if:true={error}>
 			<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-m-bottom_small" role="alert">
 				<span class="slds-assistive-text">error</span>
-				<h2 class="slds-m-right_small">ERROR: </h2>
+				<h2 class="slds-m-right_small">{label.ERROR}: </h2>
 				<p>
 					<template if:true={errorMessage}>
 						{errorMessage} :: {stackTrace}
@@ -19,14 +19,14 @@
 		</template>
 
 		<div class="slds-grid slds-m-bottom_x-small cmp-availability-title" if:true={showTitleBar}>
-			<div class="slds-shrink cmp-icon" if:true={showIcon}><lightning-icon class="cmp-assignments-icon" icon-name={iconName} alternative-text="Assignments" title="Assignments"></lightning-icon></div>
+			<div class="slds-shrink cmp-icon" if:true={showIcon}><lightning-icon class="cmp-assignments-icon" icon-name={iconName} alternative-text={label.ASSIGNMENTS} title={label.ASSIGNMENTS}></lightning-icon></div>
 			<div class="slds-col slds-align-middle">
 				<span class="cmp-title slds-section-title slds-m-left_x-small">
 					<template if:true={hasRecordId}>
-						{titleTextForContactRecord}
+						<span class="slds-text-title_caps">{titleTextForContactRecord}</span>
 					</template>
 					<template if:false={hasRecordId}>
-						{titleText}
+						<span class="slds-text-title_caps">{titleText}</span>
 					</template>
 				</span>
 			</div>
@@ -58,26 +58,26 @@
 			<template if:false={isStaffAvailable}>
 				<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
 					<span class="slds-assistive-text">warning</span>
-					<h2>No Availability To Show.</h2>
+					<h2>{label.NO_AVAILABILITY_MESSAGE}</h2>
 				</div>
 			</template>
 		</div>
 	</div>
 
 	<!-- Modal-->
-	<c-app-modal header-name="Create a new credential" modal-size="small" is-close-button-hidden="true">
+	<c-app-modal header-name={label.CREATE_CREDENTIAL} modal-size="small" is-close-button-hidden="true">
 		<span slot="content">
 			<template if:true={isStaffAvailable}>
-				<p>Staff Status set to Available from today’s date. All future availability records will be set to Available.</p>
+				<p class="slds-text-align_center">{label.STAFF_STATUS_AVAILABLE_TODAY_FUTURE}</p>
 			</template>
 			<template if:false={isStaffAvailable}>
-				<p>Staff Status set to Not Available from today’s date. All future availability records will be set to Not Available.</p>
+				<p class="slds-text-align_center">{label.STAFF_STATUS_NOT_AVAILABLE_TODAY_FUTURE}</p>
 			</template>
 		</span>
 		<!-- Footer and Add new Credential Button -->
 		<span slot="footer">
-			<button class="slds-button slds-button_brand" onclick={cancelStatusModal}>Cancel</button>
-			<button class="slds-button slds-button_brand" onclick={updateStaffStatus}>Save</button>
+			<button class="slds-button slds-button_brand" onclick={cancelStatusModal}>{label.CANCEL}</button>
+			<button class="slds-button slds-button_brand" onclick={updateStaffStatus}>{label.SAVE}</button>
 		</span>
 	</c-app-modal>
 </template>

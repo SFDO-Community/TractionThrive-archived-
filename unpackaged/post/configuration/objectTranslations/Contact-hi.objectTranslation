@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>कर्मचारी</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>कर्मचारी</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>address_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सहायक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>assistant_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सहायक फोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>asst_phone_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>बिलिंग पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>billing_address_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>जन्म दिन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>birthdate_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शहर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>city_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>साफ स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>cleanstatus_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अभिगम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_access</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अभिगम स्तर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_access_level</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अस्पताल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी मुद्रा</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_currency</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी विभाजन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी संपादित करें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_email</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी फैक्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_fax</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी फ़ील्ड</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी फ़ील्ड्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी इतिहास</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_history</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी इतिहास रिपोर्ट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_history_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी जानकारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी मोबाइल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_mobile</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी नाम</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी नोट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_note</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी नंबर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_number</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी मालिक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी मालिक उपनाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_owner_alias</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_phone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अभिलेख</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी अभिलेख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अभिलेख प्रकार</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी अभिलेख प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_record_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>Reports To कर्मचारी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_reports_to</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी भूमिका</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी भूमिका</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी भूमिका आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_role_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी भूमिका अभिलेख</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी भूमिका अभिलेख</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_role_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी चरण आईडी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_stage_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी स्थिति</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_status</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी प्रकार</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी प्रकार</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कर्मचारी अवलोकन</value>
+        </caseValues>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>true</plural>
+            <value>कर्मचारी अवलोकन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>contact_view</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>country_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डेटा डॉट कॉम कुंजी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>datadotcom_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>विभाग</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>department_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>विवरण</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>description_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>कॉल न करें</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>do_not_call_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ईमेल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>email_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ईमेल पाबंदी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>email_opt_out_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फैक्स</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>fax_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फैक्स पाबंदी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>fax_opt_out_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>पहला नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>first_name_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>पहला नाम (स्थानीय)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>first_name_local_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ग्लोबल पार्टी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>global_party_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>घर का फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>home_phone_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अनौपचारिक नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>informal_name_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अनौपचारिक नाम (स्थानीय)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>informal_name_local_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सरनेम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>last_name_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>सरनेम (स्थानीय)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>last_name_local_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मेलिंग जियोकोड सटीकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_accuracy_geocode_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_address_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक सिटी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_city_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक देश कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_country_code_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_country_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक अक्षांश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_latitude_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक देशांतर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_longitude_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक राज्य / प्रांत कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_state_code_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक राज्य / प्रांत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_state_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक स्ट्रीट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_street_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>डाक ज़िप / पोस्टल कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mailing_zip_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मध्य नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>middle_name_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मध्य नाम (स्थानीय)</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>middle_name_local_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>मोबाइल</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>mobile_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>नाम</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>name_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>प्रत्यय</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>name_suffix_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य जियोकोड सटीकता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_accuracy_geocode_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य पता</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_address_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य सिटी</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_city_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य देश कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_country_code_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य देश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_country_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य अक्षांश</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_latitude_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य देशांतर</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_longitude_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_phone_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य राज्य / प्रांत कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_state_code_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य राज्य / प्रांत</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_state_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य स्ट्रीट</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_street_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अन्य ज़िप / पोस्टल कोड</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>other_zip_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>फ़ोन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>phone_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>को रिपोर्ट करो</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>reports_to_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>अभिवादन</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>salutation_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>राज्य</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>state_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>समय क्षेत्र</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>time_zone_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>शीर्षक</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>title_contact</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <caseType>Nominative</caseType>
+            <plural>false</plural>
+            <value>ज़िप</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>zip_contact</name>
+    </fields>
+    <fields>
+        <label>असाइनमेंट - पदनाम</label>
+        <name>Assignment_Designation__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>अन्य</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation>मुख्य</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary</masterLabel>
+            <translation>माध्यमिक</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tertiary</masterLabel>
+            <translation>तृतीयक</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>असाइनमेंट - अंतिम तिथि</label>
+        <name>Assignment_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>कोरोना से सकारात्मक निदान की तारीख दर्ज करें</help>
+        <label>कोरोना निदान तिथि</label>
+        <name>COVID_Diagnosis_Date__c</name>
+    </fields>
+    <fields>
+        <label>विभाग</label>
+        <name>Division__c</name>
+        <picklistValues>
+            <masterLabel>Emergency Medicine</masterLabel>
+            <translation>आपातकालीन दवा</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Medicine</masterLabel>
+            <translation>आंतरिक दवा</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>संसर्ग / लक्षण दिनांक</label>
+        <name>Exposure_Symptoms_Date__c</name>
+    </fields>
+    <fields>
+        <label>चिकित्सा कर्मचारी श्रेणी</label>
+        <name>Medical_Staff_Category__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation>सक्रिय</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associate</masterLabel>
+            <translation>सहयोगी</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clinical Associate</masterLabel>
+            <translation>क्लिनिकल एसोसिएट(सहयोगी)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation>परामर्श चिकित्सक</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honorary</masterLabel>
+            <translation>माननीय</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locum Tenens</masterLabel>
+            <translation>लोकोम टेनेंस</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provisional</masterLabel>
+            <translation>अनंतिम</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific and Research</masterLabel>
+            <translation>वैज्ञानिक और अनुसंधान</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporary</masterLabel>
+            <translation>अस्थायी</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>पद</label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label>अभ्यास प्रकार</label>
+        <name>Practice_Type__c</name>
+        <picklistValues>
+            <masterLabel>Clinical Scientist</masterLabel>
+            <translation>नैदानिक वैज्ञानिक</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation>दंत चिकित्सक</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maxillofacial Surgeon</masterLabel>
+            <translation>मैक्सिलोफेशियल सर्जन</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Midwife</masterLabel>
+            <translation>दाई</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation>चिकित्सक (फिजीशियन)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Psychologist</masterLabel>
+            <translation>मनोविज्ञानी</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scientific &amp; Research</masterLabel>
+            <translation>वैज्ञानिक और अनुसंधान</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>प्रदाता आईडी</label>
+        <name>Provider_ID__c</name>
+    </fields>
+    <fields>
+        <label>रिलीज़ की तारीख</label>
+        <name>Release_Date__c</name>
+    </fields>
+    <fields>
+        <label>भूमिका</label>
+        <name>Role_Global__c</name>
+    </fields>
+    <fields>
+        <help>मान्य दक्षताओं का चयन करें</help>
+        <label>क्षमताए</label>
+        <name>Skills__c</name>
+        <picklistValues>
+            <masterLabel>CARE</masterLabel>
+            <translation>देखभाल</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Critical Care</masterLabel>
+            <translation>नाजुक देख - रेख</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPAC</masterLabel>
+            <translation>EPAC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation>ईआर</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General GYN</masterLabel>
+            <translation>सामान्य स्त्री रोग</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV Therapy</masterLabel>
+            <translation>IV थेरेपी</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neonatal</masterLabel>
+            <translation>नवजात</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nephrology/Dialysis</masterLabel>
+            <translation>नेफ्रोलॉजी / डायलिसिस</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Obstetrics</masterLabel>
+            <translation>जनाई का काम</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perinatal</masterLabel>
+            <translation>प्रसवकालीन</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perioperative</masterLabel>
+            <translation>पेरी को-ऑपरेटिव</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>ऑन स्टाफ = काम करने के लिए उपलब्ध, उपलब्ध नहीं = सभी भविष्य की उपलब्धता के रिकॉर्ड स्वचालित रूप से उपलब्ध नहीं होंगे</help>
+        <label>स्थिति</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation>अनुपलब्ध कर्मचारी</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On staff</masterLabel>
+            <translation>उपलब्ध कर्मचारी</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Contact - Traction Thrive Community Layout</layout>
+        <sections>
+            <label>कर्मचारी की स्थिति</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact - Traction Thrive Layout</layout>
+        <sections>
+            <label>कर्मचारी की स्थिति</label>
+            <section>Staffing Status</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label>कोरोना सकारात्मक</label>
+        <name>COVID_Positive</name>
+    </quickActions>
+    <quickActions>
+        <label>उपलब्ध नहीं है (एकांत)</label>
+        <name>Isolation</name>
+    </quickActions>
+    <webLinks>
+        <label>गूगल मैप्स</label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label>गूगल खोज</label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>

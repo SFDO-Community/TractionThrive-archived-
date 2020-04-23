@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Task Layout</layout>
+        <sections>
+            <label>Relacionada con</label>
+            <section>Related To</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Defer --></label>
+        <name>Defer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_0 --></label>
+        <name>Defer_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_1 --></label>
+        <name>Defer_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_10</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_11</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_12</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_13</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_14</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_15</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_16</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_17</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_18</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_19</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_2 --></label>
+        <name>Defer_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_20</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_21</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_22</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_23</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_24</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_25</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_3 --></label>
+        <name>Defer_3</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_4 --></label>
+        <name>Defer_4</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_5</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_6</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_7</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_8</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Date --></label>
+        <name>Defer_9</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription --></label>
+        <name>EditDescription</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_0 --></label>
+        <name>EditDescription_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_1 --></label>
+        <name>EditDescription_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_10</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_11</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_12</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_13</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_14</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_15</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_16</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_17</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_18</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_19</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_2 --></label>
+        <name>EditDescription_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_20</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_21</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_22</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_23</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_24</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_25</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_3 --></label>
+        <name>EditDescription_3</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_4 --></label>
+        <name>EditDescription_4</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_5</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_6</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_7</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_8</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>EditDescription_9</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority --></label>
+        <name>UpdatePriority</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_0 --></label>
+        <name>UpdatePriority_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_1 --></label>
+        <name>UpdatePriority_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_10</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_11</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_12</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_13</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_14</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_15</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_16</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_17</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_18</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_19</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_2 --></label>
+        <name>UpdatePriority_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_20</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_21</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_22</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_23</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_24</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_25</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_3 --></label>
+        <name>UpdatePriority_3</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_4 --></label>
+        <name>UpdatePriority_4</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_5</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_6</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_7</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_8</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Priority --></label>
+        <name>UpdatePriority_9</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus --></label>
+        <name>UpdateStatus</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_0 --></label>
+        <name>UpdateStatus_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_1 --></label>
+        <name>UpdateStatus_1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_10</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_11</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_12</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_13</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_14</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_15</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_16</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_17</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_18</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_19</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_2 --></label>
+        <name>UpdateStatus_2</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_20</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_21</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_22</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_23</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_24</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_25</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_3 --></label>
+        <name>UpdateStatus_3</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_4 --></label>
+        <name>UpdateStatus_4</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_5</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_6</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_7</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_8</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Change Status --></label>
+        <name>UpdateStatus_9</name>
+    </quickActions>
+</CustomObjectTranslation>

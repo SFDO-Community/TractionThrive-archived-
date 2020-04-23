@@ -1,13 +1,13 @@
 {
   "definitionName" : "ember:branding-ember",
-  "id" : "4754dbdc-5337-47f5-992a-63dd41facac7",
+  "id" : "6e458278-d428-4246-8c92-e7342d440e08",
   "label" : "Traction Thrive",
   "type" : "brandingSet",
   "values" : {
     "ActionColor" : "rgb(19, 144, 198)",
     "BorderColor" : "rgb(228, 228, 228)",
     "CardBackgroundColor" : "rgba(255, 255, 255, 0)",
-    "CompanyLogo" : "/file-asset/TractionThriveLogo?v=1",
+    "CompanyLogo" : "/file-asset/OfficalNameGlobalSmall1?v=1",
     "DetailTextColor" : "rgb(4, 29, 62)",
     "ErrorFontColor" : "#ff9e9e",
     "HeaderFonts" : "Helvetica",

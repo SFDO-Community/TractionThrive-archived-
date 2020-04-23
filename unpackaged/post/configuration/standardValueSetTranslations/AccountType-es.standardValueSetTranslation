@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>COVID Clinic</masterLabel>
+        <translation>Clínica COVID</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Channel Partner / Reseller</masterLabel>
+        <translation>Socio de canal / Revendedor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Clinic</masterLabel>
+        <translation>Clínica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer - Channel</masterLabel>
+        <translation>Cliente - Canal</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer - Direct</masterLabel>
+        <translation>Cliente - Directo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hospital</masterLabel>
+        <translation>Hospital</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Installation Partner</masterLabel>
+        <translation>Socio de instalación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prospect</masterLabel>
+        <translation>Perspectiva</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technology Partner</masterLabel>
+        <translation>Socio tecnológico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>UPCC</masterLabel>
+        <translation>UPCC</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>
