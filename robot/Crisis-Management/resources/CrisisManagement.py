@@ -26,7 +26,6 @@ from cumulusci.core.config import TaskConfig
 from robot.libraries.BuiltIn import BuiltIn
 from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
 from BaseObjects import BaseCMPage
-
 from locators_48 import cm_lex_locators as locators_48
 
 # from locators_49 import cm_lex_locators as locators_49
@@ -43,17 +42,6 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = 1.0
 
-    def login_to_community_as_user(self):
-        """ Click on 'Show more actions' drop down and select the option to log in to community as user """
-        locator_actions = contact_locators["show_more_actions"]
-        locator_login_link = contact_locators["login_to_community"]
-        locator_login_error = contact_locators["community_login_error"]
-
-        self.selenium.wait_until_page_contains_element(
-            locator_login_link,
-            error="'Log in to community as user' option is not available in the list of actions"
-        )
-        self.selenium.click_element(locator_login_link)
     def __init__(self, debug=False):
         self.debug = debug
         self.current_page = None
@@ -108,3 +96,44 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
         """Verifies that details specified on list is visible on home tab of community page"""
         for value in args:
             self.selenium.page_should_contain(value)
+
+    def get_locator(self, path, *args, **kwargs):
+        """ Returns a rendered locator string from the npsp_lex_locators
+            dictionary.  This can be useful if you want to use an element in
+            a different way than the built in keywords allow.
+        """ 
+        locator = cm_lex_locators
+        for key in path.split('.'):
+            locator = locator[key]
+        main_loc = locator.format(*args, **kwargs)
+        return main_loc
+
+    def wait_for_locator(self, path, *args, **kwargs):
+        """Waits for 60 sec for the specified locator"""
+        main_loc = self.get_locator(path,*args, **kwargs)    
+        self.selenium.wait_until_element_is_visible(main_loc, timeout=60)    
+
+    def click_element_with_locator(self, path, *args, **kwargs):
+        """Pass the locator and its values for the element you want to click """
+        locator=self.get_locator(path, *args, **kwargs)  
+        self.selenium.click_element(locator)         
+
+    def format_all(self, loc, value):
+        """ Formats the given locator with the value for all {} occurrences """
+        count = loc.count('{')
+
+        if count == 1:
+            return loc.format(value)
+        elif count == 2:
+            return loc.format(value, value)
+        elif count == 3:
+            return loc.format(value, value, value)
+
+    def select_frame_with_value(self, value):
+        """ Selects frame identified by the given value
+        value should be the 'id', 'title' or 'name' attribute value of the webelement used to identify the frame
+        """
+        locator = cm_lex_locators["frame"]
+        locator = self.format_all(locator, value)
+        self.selenium.wait_until_element_is_visible(locator, timeout=60)
+        self.selenium.select_frame(locator)

@@ -1,6 +1,9 @@
+import time
 from cumulusci.robotframework.pageobjects import DetailPage
 from cumulusci.robotframework.pageobjects import ListingPage
 from cumulusci.robotframework.pageobjects import pageobject
+from selenium.webdriver.common.alert import Alert
+from selenium.common.exceptions import NoAlertPresentException
 from BaseObjects import BaseCMPage
 from CrisisManagement import cm_lex_locators
 from locators_48 import npsp_lex_locators
@@ -31,6 +34,36 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         )
         self.selenium.click_element(enable_link)
         self.selenium.wait_until_location_contains("/setup/ManageUsers/",timeout=60, message="User setup page did not load in 1 min")
+        self.cm.select_frame_with_value("New User ~ Salesforce - Developer Edition")
+        email=cm_lex_locators["users"]["id"].format("Email")
+        self.selenium.wait_until_page_contains_element(email)
+        self.salesforce._populate_field(email,"test@example.com")
+        license = cm_lex_locators["users"]["id"].format("user_license_id")
+        self.selenium.select_from_list_by_label(license,"Customer Community Login")
+        time.sleep(1)
+        profile = cm_lex_locators["users"]["id"].format("Profile")
+        self.selenium.select_from_list_by_label(profile,"Customer Community - Medical Staff")
+        time.sleep(1)
+        self.selenium.click_element("//input[contains(@value,'Save')]")
+        self.selenium.alert_should_be_present()
+        # try:
+        #     self.selenium.click_element("//input[contains(@value,'Save')]")
+        #     alert=Alert(self.selenium.driver.switch_to.alert())
+        #     alert.accept()
+        # except NoAlertPresentException:
+        #     print("inside except")
+        #     self.selenium.click_element("//input[contains(@value,'Save')]")
+        #     alert=self.selenium.driver.switch_to.alert()
+        #     print("after switch")
+        #     alert.accept()
+
+        # self.cm.click_element_with_locator("button","Save")
+        # time.sleep(3)
+        # self.selenium.capture_page_screenshot()
+        # print("before switch")
+        # alert=self.selenium.driver.switch_to_alert()
+        # print("after switch")
+        # alert.accept()
         
     def _is_current_page(self):
         """ Verify we are on the Contact detail page
@@ -62,4 +95,3 @@ class ContactListingPage(BaseCMPage, ListingPage):
         """Clicks on Delete Account button inside the iframe"""
         self.selenium.wait_until_location_contains("/delete", message="Account delete page did not load in 30 seconds")
         self.npsp.select_frame_and_click_element("vfFrameId","button","Delete Account")    
-        self.selenium.click_element(locator_login_link)

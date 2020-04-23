@@ -1,6 +1,5 @@
 *** Settings ***
 
-Resource        robot/Crisis-Management/resources/NPSP/NPSP.robot
 Resource        robot/Crisis-Management/resources/CrisisManagement.robot
 Library         cumulusci.robotframework.PageObjects
 ...             robot/Crisis-Management/resources/ContactPageObject.py
@@ -27,11 +26,12 @@ Verify Origin Store Is On About Us
     Page Should Contain  Thrive Health is a Vancouver
 
 Setup Staff
-      &{main_account} =  API Create Account  Regional_Health_Authority   Name=Automtion Health Services
-      &{hospital} =      API Create Account  Hospital                    Name=Robot Hospital        ParentId=&{main_account}[Id]
-      &{division} =      API Create Account  Division                    Name=COVID19 Division      ParentId=&{hospital}[Id]
-      &{staff} =         API Create Contact  &{division}[Id]             Resident 
-      Go To Page         Detail              Contact                     object_id=&{staff}[Id]
+    &{main_account} =     API Create Account  Regional_Health_Authority   Name=Automtion Health Services
+    &{hospital} =         API Create Account  Hospital                    Name=Robot Hospital        ParentId=&{main_account}[Id]
+    &{division} =         API Create Account  Division                    Name=COVID19 Division      ParentId=&{hospital}[Id]
+    &{staff} =            API Create Contact  &{division}[Id]             Resident 
+    Go To Page            Detail              Contact                     object_id=&{staff}[Id]
+    Enable Community Login
 
 
 *** Test Cases ***

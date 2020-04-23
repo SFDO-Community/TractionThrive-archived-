@@ -1,5 +1,5 @@
 *** Settings ***
-
+Resource       cumulusci/robotframework/Salesforce.robot
 Library        DateTime
 Library        CrisisManagement.py
 Library        cumulusci.robotframework.PageObjects

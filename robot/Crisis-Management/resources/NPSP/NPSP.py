@@ -21,18 +21,13 @@ from selenium.webdriver import ActionChains
 from cumulusci.robotframework.utils import selenium_retry
 from cumulusci.robotframework.utils import capture_screenshot_on_error
 from email.mime import text
-
 from cumulusci.tasks.apex.anon import AnonymousApexTask
 from cumulusci.core.config import TaskConfig
-
 from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
-from BaseObjects import BaseNPSPPage
-
 from locators_48 import npsp_lex_locators as locators_48
-from locators_47 import npsp_lex_locators as locators_47
+
 locators_by_api_version = {
     48.0: locators_48,   # spring '20
-    47.0: locators_47,   # winter '20
 }
 # will get populated in _init_locators
 npsp_lex_locators = {}
@@ -185,20 +180,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         locator = npsp_lex_locators['record']['month_pick'].format(value)
         self.selenium.set_focus_to_element(locator)
         self.selenium.get_webelement(locator).click()
-        
-#     def select_row(self,value):
-#         """To select a row on object page based on name and open the dropdown"""    
-#         drop_down = npsp_lex_locators['locating_delete_dropdown'].format(value)
-#         self.selenium.get_webelement(drop_down).click()
-#         #self.selenium.get_webelement(drop_down).click()
-
-#     def select_row(self,value):
-#         """To select a row on object page based on name and open the dropdown"""    
-#         locator = npsp_lex_locators['select_name'].format(value)
-#         self.selenium.set_focus_to_element(locator)
-#         drop_down = npsp_lex_locators['locating_delete_dropdown'].format(value)
-#         time.sleep(1)
-#         return drop_down
 
     def select_row(self, value):
         """To select a row on object page based on name and open the dropdown"""
@@ -329,19 +310,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
             else:
                 locator = locator+"input"
                 self.selenium.get_webelement(locator).send_keys(value)
-                
-    def fill_bge_form(self, **kwargs):
-        for label, value in kwargs.items():
-            if label=="Batch Description" or label == "custom_textarea":
-                locator= npsp_lex_locators['bge']['field-text'].format(label,value)
-                self.selenium.click_element(locator)  
-                self.salesforce._populate_field(locator, value)              
-
-            else:
-                locator= npsp_lex_locators['bge']['field-input'].format(label,value)
-                self.selenium.click_element(locator)
-                self.salesforce._populate_field(locator, value)
-     
          
     def verify_address_details(self,field,value,**kwargs):
         """Validates if the details page address field has specified value
@@ -484,11 +452,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
                 return header
 
         assert header_found, "Header with the provided locator not found"
-    
-    def verify_contact_role(self,name,role):
-        """verifies the contact role on opportunity page"""
-        locator=npsp_lex_locators['opportunity']['contact_role'].format(name,role)
-        self.selenium.page_should_contain_element(locator)  
         
     def select_relatedlist(self,title):
         """click on the related list to open it"""
@@ -644,8 +607,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
        for key, value in kwargs.items():
            locator = npsp_lex_locators['record']['related']['allocations'].format(header,key,value)
            self.selenium.wait_until_page_contains_element(locator,error="Expected {} allocation of {} was not found".format(key,value))
-#            ele = self.selenium.get_webelement(locator).text
-#            assert ele == value, "Expected {} allocation to be {} but found {}".format(key,value,ele)                      
+                    
                 
     def verify_occurrence_payments(self,title,value=None):
         """"""
@@ -791,8 +753,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         locator2 = "//tbody/tr/td[3]/span/span"
         locs2 = self.selenium.get_webelements(locator2)
         for i, j in list(zip(locs1, locs2)):
-            #loc1_vaue = self.selenium.get_webelemt(i).text
-            #loc2_vaue = self.selenium.get_webelemt(j).text
             if i.text == "Pledged" and j.text == "$100.00":
                 pass
             else:
@@ -1012,8 +972,7 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         
     def save_current_record_id_for_deletion(self,object_name): 
         """Gets the current page record id and stores it for specified object 
-           in order to delete record during suite teardown """  
-#         self.pageobjects.current_page_should_be("Details",object_name)    
+           in order to delete record during suite teardown """      
         id=self.salesforce.get_current_record_id()
         self.salesforce.store_session_record(object_name,id)   
         return id
@@ -1060,116 +1019,6 @@ class NPSP(BaseNPSPPage,SalesforceRobotLibraryBase):
         time.sleep(2)
         self.npsp.click_button_with_value(value)
         time.sleep(1)
-
-    def setupdata(self, name, contact_data=None, opportunity_data=None, account_data=None, payment_data=None, engagement_data=None,
-                  recurringdonation_data=None, gau_data=None):
-        """ Creates an Account if account setup data is passed
-            Creates a contact if contact_data is passed
-            Creates an opportunity for the contact if opportunit_data is provided
-            Creates a contact and sets an opportunity simultaneously if both the
-            contact_data and opportunity_data is specified
-            Creates a contact and sets up an engagement plan with both contact and engagement plan information is provided
-         """
-
-        # get the data variable, or an empty dictionary if not set
-
-        data = self.builtin.get_variable_value("${data}", {})
-        ns=self.get_npsp_namespace_prefix()
-
-        if account_data is not None:
-            # create the account based on the user input specified account type
-            acctname = self.randomString(10);
-            rt_id = self.salesforce.get_record_type_id("Account",account_data["Type"])
-            account_data.update( {'Name' : acctname,'RecordTypeId' : rt_id})
-            account_id = self.salesforce.salesforce_insert("Account", **account_data)
-            account = self.salesforce.salesforce_get("Account",account_id)
-            # save the account object to data dictionary
-            data[name] = account
-
-        if contact_data is not None:
-            # create the contact
-            firstname = self.randomString(10);
-            lastname = self.randomString(10);
-            contact_data.update( {'Firstname' : firstname,'Lastname' : lastname})
-            contact_id = self.salesforce.salesforce_insert("Contact", **contact_data)
-            contact = self.salesforce.salesforce_get("Contact",contact_id)
-            # save the contact object to data dictionary
-            data[name] = contact
-
-        if engagement_data is not None:
-            # set up enegagement template based on the user input specified and link the contact to the engagement template
-            engobjname = "Engagement_Plan_Template__c"
-            contactobjname = "Contact__c"
-            # Fromatting the objects names with namespace prefix
-            formattedengobjname = "{}{}".format(self.cumulusci.get_namespace_prefix(), engobjname)
-            formattedcontactobjname = "{}{}".format(self.cumulusci.get_namespace_prefix(), contactobjname)
-            engagement_id = self.salesforce.salesforce_insert(formattedengobjname, **engagement_data)
-            engagement = self.salesforce.salesforce_get(formattedengobjname,engagement_id)
-
-          # If the keyword is contact, link the contact to the engagement plan created
-            if name.lower() == 'contact':
-                testdata={}
-                testdata.update( {formattedcontactobjname : data[name]["Id"], formattedengobjname: engagement_id } )
-                self.salesforce.salesforce_insert(formattedengobjname, **testdata)
-
-            # save the engagement object to data dictionary
-
-            if name.lower() == 'contact':
-                data[f"{name}_engagement"] = engagement
-            else:
-                data[name] = engagement
-        # set a recurring donation for a contact
-        if recurringdonation_data is not None:
-            recurringdonation_data.update( {'npe03__Contact__c' : data[name]["Id"] } )
-            rd_id = self.salesforce.salesforce_insert("npe03__Recurring_Donation__c", **recurringdonation_data)
-            recurringdonation = self.salesforce.salesforce_get("npe03__Recurring_Donation__c",rd_id)
-            data[f"{name}_rd"] = recurringdonation
-        #set gau data
-        if gau_data is not None:
-            object_key =  f"{ns}General_Accounting_Unit__c"
-            gauname = gau_data['Name']
-            random = self.randomString(10);
-            gau_data.update( {'name' : f"{random}{gauname}"} )
-            gau_id = self.salesforce.salesforce_insert(object_key, **gau_data)
-            gau = self.salesforce.salesforce_get(object_key,gau_id)
-            data[name] = gau
-        # set opportunity association with a contact or account
-        if opportunity_data is not None:
-            # create opportunity
-            rt_id = self.salesforce.get_record_type_id("Opportunity",opportunity_data["Type"])
-            # if user did not specify any date value add the default value
-            if 'CloseDate' not in opportunity_data:
-                date = datetime.now().strftime('%Y-%m-%d')
-                opportunity_data.update({'CloseDate' : date})
-            if 'npe01__Do_Not_Automatically_Create_Payment__c' not in opportunity_data:
-                Automatically_create_key = 'npe01__Do_Not_Automatically_Create_Payment__c'
-                Automatically_create_value = 'true'
-                opportunity_data.update({Automatically_create_key : Automatically_create_value})
-            if 'StageName' not in opportunity_data:
-                opportunity_data.update( {'StageName' : 'Closed Won'} )
-            if 'AccountId' not in opportunity_data:
-                opportunity_data.update( {'AccountId' : data[name]["AccountId"] } )
-
-            opportunity_data.update( {'RecordTypeId': rt_id } )
-            opportunity_id = self.salesforce.salesforce_insert("Opportunity", **opportunity_data)
-            opportunity = self.salesforce.salesforce_get("Opportunity",opportunity_id)
-            # save the opportunity
-            data[f"{name}_opportunity"] = opportunity
-
-            if payment_data is not None:
-                numdays = 30
-                i = 1
-                while i <= int(payment_data['NumPayments']):
-                    payment_schedule_data = {}
-                    numdays = numdays*2
-                    scheduled_date =  (datetime.now() + timedelta(days = numdays)).strftime('%Y-%m-%d')
-                    payment_schedule_data.update( {'npe01__Opportunity__c' : data[f"{name}_opportunity"]["Id"] , 'npe01__Scheduled_Date__c' : scheduled_date, 'npe01__Payment_Amount__c' : payment_data['Amount'] } )
-                    payment_id = self.salesforce.salesforce_insert("npe01__OppPayment__c", **payment_schedule_data)
-                    i = i+1
-
-        self.builtin.set_suite_variable('${data}', data)
-
-        return data
 
     def delete_record(self,value):
         """Select the row to be deleted on the listing page, click delete

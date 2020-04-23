@@ -18,6 +18,7 @@ cm_lex_locators = {
         "lookup2": "//mark[text() = '{}']/ancestor::a",
         "lookup3": "//div[contains(@class,'slds-listbox__option-text') and text()='{}']"
     },
+    'button':'//input[contains(@value,"{}")]',
     'link-text':'//a[text()="{}"]',
     "close_tab": "//div[contains(@class, 'oneGlobalNav')]/descendant::*[@data-key='close']/ancestor::button",
     "frame": "//iframe[contains(@id, '{}') or contains(@title, '{}') or contains(@name, '{}')]",
@@ -39,6 +40,7 @@ cm_lex_locators = {
         "login_user_detail": "//div[@data-message-id='loginAsSystemMessage']/descendant::span[contains(text(),'{}')]",
         "logout": "//a[@class='action-link']",
         "logout_user_detail": "//div[@data-message-id='loginAsSystemMessage']/descendant::a[contains(text(),'{}')]",
+        "id":"//*[@id='{}']",
 
     },
     "contact_locators":{
