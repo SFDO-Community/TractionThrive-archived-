@@ -32,7 +32,7 @@
  * @author  Pedro Serquiz, Traction on Demand
  * @date    2020-04-19
  */
-@IsTest
+@IsTest(isParallel=true)
 public with sharing class AppFieldSetControllerTest {
 	static User communityUser;
 	static Contact testContact;

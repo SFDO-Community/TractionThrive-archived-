@@ -24,16 +24,9 @@ const getFieldValue = (obj, fieldName, namespace) => {
 	return obj[namespace + fieldName];
 }
 
-const setNamespaceToList = (list, namespace) => {
-	let newList = [];
-	if (namespace) {
-		list.forEach(function (item) {
-			newList.push(namespace+item);
-		});
-		return newList;
-	} else {
-		return list;
-	}
+// applies the namespace to an object properties
+const applyNamespace = (obj, namespace) => {
+	return JSON.parse(JSON.stringify(obj).replace(/[a-z]*__[cr]/ig, namespace + '$&'));
 }
 
-export {handleToastMessage, getOrgNamespace, getFieldValue, setNamespaceToList}
+export {handleToastMessage, getOrgNamespace, getFieldValue, applyNamespace}

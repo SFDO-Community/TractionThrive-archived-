@@ -6,7 +6,7 @@
 import {LightningElement, track, wire, api} from 'lwc';
 import {ShowToastEvent} from "lightning/platformShowToastEvent";
 //Utils
-import {getFieldValue, getOrgNamespace, setNamespaceToList} from 'c/appUtils';
+import {getFieldValue, getOrgNamespace, applyNamespace} from 'c/appUtils';
 //Apex methods
 import getFieldSetFields from '@salesforce/apex/AppFieldSetController.getFieldSetFields';
 import getFieldsFromList  from '@salesforce/apex/AppFieldSetController.getFieldsFromList';
@@ -89,7 +89,7 @@ export default class AppFieldSet extends LightningElement {
 	loadFields() {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
 		getFieldsFromList({
-			fields: setNamespaceToList(this.fields, this.namespace),
+			fields: applyNamespace(this.fields, this.namespace),
 			objectName: this.namespace + this.fieldSetObject
 		}).then(result => {
 			console.log('loadFields: ', result);
@@ -341,7 +341,7 @@ export default class AppFieldSet extends LightningElement {
 		const selection = this.template.querySelector('c-lookup').getSelection();
 		if (selection.length === 0) {
 			this.lookupConfig.lookupErrors = [
-				{ message: 'Please choose your care facility to continue...' }
+				{ message: 'Please choose your '+ this.fieldSetObject +' to continue...' }
 			];
 		} else {
 			this.lookupConfig.lookupErrors = [];
