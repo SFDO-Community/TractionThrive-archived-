@@ -26,7 +26,7 @@ const getFieldValue = (obj, fieldName, namespace) => {
 
 // applies the namespace to an object properties
 const applyNamespace = (obj, namespace) => {
-	return JSON.parse(JSON.stringify(obj).replace(/[a-z]*__[cr]/ig, namespace+'$&'));
+	return JSON.parse(JSON.stringify(obj).replace(/[a-z]*__[cr]/ig, namespace + '$&'));
 }
 
 export {handleToastMessage, getOrgNamespace, getFieldValue, applyNamespace}
