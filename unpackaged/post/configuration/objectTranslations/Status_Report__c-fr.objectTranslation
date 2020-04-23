@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rapport de situation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rapports de situation</value>
+    </caseValues>
+    <fields>
+        <help>Le type de données suivies</help>
+        <label>Catégorie</label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <help>Le montant</help>
+        <label>Compter</label>
+        <name>Count__c</name>
+    </fields>
+    <fields>
+        <help>Le moment où cela a été enregistré</help>
+        <label>Date / heure</label>
+        <name>Date_Time__c</name>
+    </fields>
+    <fields>
+        <help>L&apos;emplacement de ce rapport d&apos;état</help>
+        <label>département</label>
+        <name>Department__c</name>
+        <relationshipLabel>rapports de situation</relationshipLabel>
+    </fields>
+    <fields>
+        <help>Inactif peut désigner un lit qui se trouve dans un service sans personnel et qui n&apos;est pas encore disponible.</help>
+        <label>Statut</label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation>Disponible</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In use</masterLabel>
+            <translation>Utilisé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation>Inactif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total</masterLabel>
+            <translation>Total</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Il s&apos;agit des enregistrements de rapport d&apos;état individuels par le point de données de base suivi.</help>
+        <label>Type</label>
+        <name>Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Status Report Layout</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du rapport d&apos;état</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>vous devez entrer un nombre positif</errorMessage>
+        <name>Count_must_be_non_negative</name>
+    </validationRules>
+</CustomObjectTranslation>

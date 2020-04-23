@@ -3,4 +3,4 @@
     <div class="cmp-dashboard">
         <wave:waveDashboard dashboardId="Overview" height="1300" showHeader="false" showTitle="false"/>
     </div>
-</aura:component>	
+</aura:component>

@@ -29,17 +29,17 @@
         <lightning:layout multipleRows="true" class="slds-box">
             <lightning:layoutItem size="12" class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
-                    <lightning:formattedText class="slds-text-title_bold" value="Select the Division for which you are tracking resources:"/>
+                    <lightning:formattedText class="slds-text-title_bold" value="{!$Label.c.Label_for_Division_Selection}"/>
                 </div>
             </lightning:layoutItem>
             <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="3" largeDeviceSize="3"
                                                          class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
                     <lightning:combobox name="authority"
-                                        label="Health Authority"
+                                        label="{!$Label.c.Health_Authority_Label}"
                                         class="slds-text-heading--small"
                                         value="{!v.selectedAuthority}"
-                                        placeholder="Select a Health Authority"
+                                        placeholder="{!$Label.c.Health_Authority_Placeholder}"
                                         options="{! v.healthAuthorities }"
                                         onchange="{! c.handleAuthorityChange }"
                                         required="true"/>
@@ -49,10 +49,10 @@
                                   class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
                     <lightning:combobox name="hospital"
-                                        label="Hospital"
+                                        label="{!$Label.c.Hospital}"
                                         class="slds-text-heading--small"
                                         value="{! v.selectedHospital }"
-                                        placeholder="Select a Hospital"
+                                        placeholder="{!$Label.c.Hospital_Placeholder}"
                                         options="{! v.hospitals }"
                                         onchange="{! c.handleHospitalChange }"
                                         required="true"/>
@@ -62,10 +62,10 @@
                                   class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
                     <lightning:combobox name="division"
-                                        label="Division"
+                                        label="{!$Label.c.Division}"
                                         class="slds-text-heading--small"
                                         value="{! v.selectedDivision }"
-                                        placeholder="Select a Division"
+                                        placeholder="{!$Label.c.Division_Placeholder}"
                                         options="{! v.divisions }"
                                         onchange="{! c.handleDivisionChange }"
                                         required="true"/>

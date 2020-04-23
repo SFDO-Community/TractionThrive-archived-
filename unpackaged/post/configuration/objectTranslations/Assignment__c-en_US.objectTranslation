@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Availability</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Availabilities</value>
+    </caseValues>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Available__c</name>
+        <picklistValues>
+            <masterLabel>Assigned</masterLabel>
+            <translation><!-- Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation><!-- Not Available --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Facility --></label>
+        <name>Care_Facility__c</name>
+        <relationshipLabel><!-- Availabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason --></label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Immunocompromised</masterLabel>
+            <translation><!-- Immunocompromised --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maternity/Paternity Leave</masterLabel>
+            <translation><!-- Maternity/Paternity Leave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacation</masterLabel>
+            <translation><!-- Vacation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Staff --></label>
+        <name>Staff__c</name>
+        <relationshipLabel><!-- Availabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User Updated --></label>
+        <name>User_Updated__c</name>
+    </fields>
+    <layouts>
+        <layout>Assignment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

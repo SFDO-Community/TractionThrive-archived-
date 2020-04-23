@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Breakdown</masterLabel>
+        <translation>Panne</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Complexity</masterLabel>
+        <translation>Complexité de l&apos;équipement</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Equipment Design</masterLabel>
+        <translation>Conception d&apos;équipement</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Feedback</masterLabel>
+        <translation>Retour d&apos;information</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Installation</masterLabel>
+        <translation>Installation</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Autre</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Performance</masterLabel>
+        <translation>Performance</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

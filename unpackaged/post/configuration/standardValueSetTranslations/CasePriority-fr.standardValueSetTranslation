@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>High</masterLabel>
+        <translation>Haute</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Low</masterLabel>
+        <translation>Faible</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medium</masterLabel>
+        <translation>Moyen</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>
