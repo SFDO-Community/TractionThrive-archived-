@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Dr.</masterLabel>
+        <translation>डॉ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mr.</masterLabel>
+        <translation>श्री</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mrs.</masterLabel>
+        <translation>श्रीमती</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ms.</masterLabel>
+        <translation>सुश्री</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prof.</masterLabel>
+        <translation>प्रोफेसर</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

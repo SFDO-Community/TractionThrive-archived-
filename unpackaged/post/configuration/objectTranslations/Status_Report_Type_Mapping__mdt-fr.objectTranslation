@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Status Report Type Mapping --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Status Report Type Mapping --></value>
+    </caseValues>
+    <fields>
+        <label>Catégorie</label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Equipment</masterLabel>
+            <translation>Équipement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patient</masterLabel>
+            <translation>Patient</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplies</masterLabel>
+            <translation>Provisions</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Type</label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Age Range</masterLabel>
+            <translation>Tranche d&apos;âge</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anaesthesia Machines</masterLabel>
+            <translation>Appareil d&apos;anesthésie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COVID Like</masterLabel>
+            <translation>COVID Like</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COVID Positive</masterLabel>
+            <translation>COVID Positif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comorbidity</masterLabel>
+            <translation>Comorbidité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coveralls</masterLabel>
+            <translation>Combinaisons</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disinfectant</masterLabel>
+            <translation>Désinfectant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exam Masks</masterLabel>
+            <translation>Masques d&apos;examen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Face Shields</masterLabel>
+            <translation>Boucliers faciaux</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fit Tests</masterLabel>
+            <translation>Tests d&apos;ajustement</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gloves (Nitrile)</masterLabel>
+            <translation>Gants (nitrile)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gloves (Sterile)</masterLabel>
+            <translation>Gants (stériles)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hand Sanitizer</masterLabel>
+            <translation>Gel hydroalcoolique</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Care Staff COVID Positive</masterLabel>
+            <translation>Personnel soignant COVID Positif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hoods</masterLabel>
+            <translation>Hottes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level 3 Gowns</masterLabel>
+            <translation>Robes de niveau 4</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level 4 Gowns</masterLabel>
+            <translation>Robes de niveau 4</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N95 Masks</masterLabel>
+            <translation>Masques N95</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presumptive COVID</masterLabel>
+            <translation>COVID présomptif</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety Glasses</masterLabel>
+            <translation>Lunettes de protection</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety Goggles</masterLabel>
+            <translation>Lunettes de sécurité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoe Covers</masterLabel>
+            <translation>Couvre-chaussures</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgical Gowns</masterLabel>
+            <translation>Blouses chirurgicales</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgical Masks</masterLabel>
+            <translation>Masques chirurgicaux</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ventilator Beds</masterLabel>
+            <translation>Lits de ventilateur</translation>
+        </picklistValues>
+    </fields>
+    <gender><!-- Masculine --></gender>
+    <startsWith><!-- Consonant --></startsWith>
+</CustomObjectTranslation>

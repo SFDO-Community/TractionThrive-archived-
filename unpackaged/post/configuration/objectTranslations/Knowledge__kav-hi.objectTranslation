@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>ज्ञानधार</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>ज्ञानधार</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>false</plural>
+        <value>ज्ञानधार</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Objective</caseType>
+        <plural>true</plural>
+        <value>ज्ञानधार</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel><!-- Knowledge Name --></nameFieldLabel>
+</CustomObjectTranslation>
