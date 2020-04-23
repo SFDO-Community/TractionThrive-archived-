@@ -6,9 +6,10 @@
 import {LightningElement, track, wire, api} from 'lwc';
 import {ShowToastEvent} from "lightning/platformShowToastEvent";
 //Utils
-import {getFieldValue, getOrgNamespace} from 'c/appUtils';
+import {getFieldValue, getOrgNamespace, setNamespaceToList} from 'c/appUtils';
 //Apex methods
 import getFieldSetFields from '@salesforce/apex/AppFieldSetController.getFieldSetFields';
+import getFieldsFromList  from '@salesforce/apex/AppFieldSetController.getFieldsFromList';
 import insertSObject from '@salesforce/apex/AppFieldSetController.insertSObject';
 import updateSObject from '@salesforce/apex/AppFieldSetController.updateSObject';
 import getRecordToEdit from '@salesforce/apex/AppFieldSetController.getRecordToEdit';
@@ -29,6 +30,7 @@ export default class AppFieldSet extends LightningElement {
 
 	@api hasParent = false;
 	@api recordId;
+	@api fields = [];
 
 	@track picklistFields;
 	@track multiPicklistFields;
@@ -55,7 +57,11 @@ export default class AppFieldSet extends LightningElement {
 					this.namespace = '';
 				}
 			}).finally(() => {
-				this.loadFieldSetFields();
+				if (this.fields.length > 0) {
+					this.loadFields();
+				} else {
+					this.loadFieldSetFields();
+				}
 			});
 		}
 	}
@@ -80,6 +86,27 @@ export default class AppFieldSet extends LightningElement {
 	}
 
 	/* CALLBACK METHODS  */
+	loadFields() {
+		this.template.querySelector("c-app-spinner").displaySpinner(true);
+		getFieldsFromList({
+			fields: setNamespaceToList(this.fields, this.namespace),
+			objectName: this.namespace + this.fieldSetObject
+		}).then(result => {
+			console.log('loadFields: ', result);
+			this.fieldSetData = result;
+			this.handleLookupField();
+			if (this.recordId) {
+				this.getRecordToEdit();
+			}
+		}).catch(error => {
+			this.error = error;
+			console.error('ERROR', error);
+			this.handleToastMessage(error.statusText, error.body.message, 'error');
+		}).finally(() => {
+			this.template.querySelector("c-app-spinner").displaySpinner(false);
+		});
+	}
+
 	loadFieldSetFields() {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
 		getFieldSetFields({

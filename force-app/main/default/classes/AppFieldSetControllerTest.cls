@@ -88,6 +88,15 @@ public with sharing class AppFieldSetControllerTest {
 	}
 
 	@IsTest
+	static void getFieldsFromList() {
+		setup();
+		System.runAs(communityUser) {
+			List<AppFieldSetController.FieldSetMember> result = AppFieldSetController.getFieldsFromList(new List<String>{'FirstName', 'LastName'}, 'Contact');
+			System.assert(result.size() == 2);
+		}
+	}
+
+	@IsTest
 	static void searchGenericLookup() {
 		setup();
 		Account acc = TestUtils.createCommunityAccount('Test', true);

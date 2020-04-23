@@ -48,8 +48,7 @@ public without sharing class AppFieldSetController {
 	 * @return Field set fields
 	 */
 	@AuraEnabled
-	public static List<FieldSetMember> getFieldSetFields(String fieldSetName, String ObjectName)
-	{
+	public static List<FieldSetMember> getFieldSetFields(String fieldSetName, String ObjectName) {
 		Map<String, Schema.SObjectType> GlobalDescribeMap = Schema.getGlobalDescribe();
 		Schema.SObjectType SObjectTypeObj = GlobalDescribeMap.get(ObjectName);
 		Schema.DescribeSObjectResult DescribeSObjectResultObj = SObjectTypeObj.getDescribe();
@@ -63,6 +62,16 @@ public without sharing class AppFieldSetController {
 		}
 
 		return fieldSetMembersWrapper;
+	}
+
+	@AuraEnabled
+	public static List<FieldSetMember> getFieldsFromList(List<String> fields, String objectName) {
+		List<FieldSetMember> resultFields = new List<FieldSetMember>();
+		for (String field : fields) {
+			DescribeFieldResult theField = Schema.getGlobalDescribe().get(objectName).getDescribe().fields.getMap().get(field).getDescribe();
+			resultFields.add(new FieldSetMember(theField));
+		}
+		return resultFields;
 	}
 
 	/**
@@ -250,6 +259,30 @@ public without sharing class AppFieldSetController {
 
 			if (this.type == 'Picklist' || this.type == 'Multipicklist') {
 				for (Schema.PicklistEntry ple : fieldMap.get(fieldPath).getDescribe().getPicklistValues()) {
+					picklistEntries.add(new PicklistEntry(ple));
+				}
+			}
+		}
+
+		public FieldSetMember(DescribeFieldResult f) {
+			this.DBRequired = false;
+			this.fieldPath = f.getName();
+			this.label = f.getLabel();
+			this.required = false;
+			this.type = String.valueOf(f.getType());
+			this.value = '';
+			this.lookupObject = f.getRelationshipName();
+			this.isLookupField = f.getType() == Schema.DisplayType.REFERENCE;
+			this.isPicklistField = f.getType() == Schema.DisplayType.PICKLIST;
+			this.isCheckboxField = f.getType() == Schema.DisplayType.BOOLEAN;
+			this.isMultiPicklistField = f.getType() == Schema.DisplayType.MULTIPICKLIST;
+			this.isRegularField = f.getType() != Schema.DisplayType.PICKLIST &&
+					f.getType() != Schema.DisplayType.BOOLEAN &&
+					f.getType() != Schema.DisplayType.MULTIPICKLIST &&
+					f.getType() != Schema.DisplayType.REFERENCE;
+
+			if (this.type == 'Picklist' || this.type == 'Multipicklist') {
+				for (Schema.PicklistEntry ple : f.getPicklistValues()) {
 					picklistEntries.add(new PicklistEntry(ple));
 				}
 			}
