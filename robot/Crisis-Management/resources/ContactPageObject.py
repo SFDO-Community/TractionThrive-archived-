@@ -37,7 +37,7 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         self.cm.select_frame_with_value("New User ~ Salesforce - Developer Edition")
         email=cm_lex_locators["users"]["id"].format("Email")
         self.selenium.wait_until_page_contains_element(email)
-        self.salesforce._populate_field(email,"test@example.com")
+        self.salesforce._populate_field(email,"test2julian@example.com")
         license = cm_lex_locators["users"]["id"].format("user_license_id")
         self.selenium.select_from_list_by_label(license,"Customer Community Login")
         time.sleep(1)
@@ -50,11 +50,11 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         # self.selenium.driver.execute_script('arguments[0].click()', element)
         # print("after save")
         time.sleep(1)
-        try:
-            self.selenium.driver.execute_script('arguments[0].click()', element)
-        # alert=self.selenium.driver.switch_to.alert.accept()
-        except UnexpectedAlertPresentException:
-            self.selenium.press_keys(None,"RETURN")
+        # try:
+        #     self.selenium.driver.execute_script('arguments[0].click()', element)
+        # # alert=self.selenium.driver.switch_to.alert.accept()
+        # except UnexpectedAlertPresentException:
+        #     self.selenium.press_keys(None,"RETURN")
             # print("before accept")
             # self.selenium.handle_alert()
             # # alert=self.selenium.driver.switch_to.alert.accept()

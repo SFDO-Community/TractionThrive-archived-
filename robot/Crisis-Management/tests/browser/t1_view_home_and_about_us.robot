@@ -6,7 +6,7 @@ Library         cumulusci.robotframework.PageObjects
 Suite Setup     Run keywords
 ...             Open Test Browser
 ...             Setup Staff
-Suite Teardown  Delete Records and Close Browser
+# Suite Teardown  Delete Records and Close Browser
 
 
 
@@ -26,18 +26,24 @@ Verify Origin Store Is On About Us
     Page Should Contain  Thrive Health is a Vancouver
 
 Setup Staff
-    &{main_account} =     API Create Account  Regional_Health_Authority   Name=Automtion Health Services
-    &{hospital} =         API Create Account  Hospital                    Name=Robot Hospital        ParentId=&{main_account}[Id]
-    &{division} =         API Create Account  Division                    Name=COVID19 Division      ParentId=&{hospital}[Id]
-    &{staff} =            API Create Contact  &{division}[Id]             Resident 
-    Go To Page            Detail              Contact                     object_id=&{staff}[Id]
-    Enable Community Login
-
+    &{main_account} =                  API Create Account  Regional_Health_Authority   Name=Automtion Health Services
+    &{hospital} =                      API Create Account  Hospital                    Name=Robot Hospital        ParentId=&{main_account}[Id]
+    Set Suite Variable                 &{hospital} 
+    &{division} =                      API Create Account  Division                    Name=COVID19 Division      ParentId=&{hospital}[Id]
+    Set Suite Variable                 &{division} 
+    &{staff} =                         API Create Contact  &{division}[Id]             Resident 
+    API Create Community User          &{staff}
+    Set Suite Variable                 &{staff} 
+    Go To Page                         Detail              Contact                     object_id=&{staff}[Id]
+    # Enable Community Login
+    # Click Element    //*/input[1][@name="save"]
+    # Handle Alert        action=ACCEPT
 
 *** Test Cases ***
 
 Navigate To Community Home
-    Login To Community As Julian Joseph
+    # Login To Community As Julian Joseph
+    Login To Community As User
     Verify Traction Thrive Image Link Visible
-    Verify User Details On Home Tab     Julian Joseph       Julian Account      Traction Children's Hospital   
+    Verify User Details On Home Tab     &{staff}[Name]   &{staff}[Role_Global__c]    &{division}[Name]      &{hospital}[Name]   
     Verify Origin Store Is On About Us
