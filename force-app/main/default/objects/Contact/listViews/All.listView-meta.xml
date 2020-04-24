@@ -9,5 +9,5 @@
     <columns>Status__c</columns>
     <columns>CONTACT.EMAIL</columns>
     <filterScope>Everything</filterScope>
-    <label>All Staff</label>
+    <label>Detailed Staff List</label>
 </ListView>

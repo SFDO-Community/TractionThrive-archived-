@@ -9,5 +9,5 @@
         <operation>equals</operation>
         <value>Account.Hospital</value>
     </filters>
-    <label>Hospitals</label>
+    <label>Detailed Hospital List</label>
 </ListView>

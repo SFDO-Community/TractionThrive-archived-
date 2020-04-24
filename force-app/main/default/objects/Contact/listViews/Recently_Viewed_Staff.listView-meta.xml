@@ -8,5 +8,5 @@
     <columns>CONTACT.EMAIL</columns>
     <columns>CORE.USERS.ALIAS</columns>
     <filterScope>Mine</filterScope>
-    <label>Recently Viewed Staff</label>
+    <label>Detailed Staff List - Recent</label>
 </ListView>
