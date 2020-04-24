@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>Account-en_US</members>
+        <members>Account-es</members>
+        <members>Account-fr</members>
+        <members>Account-hi</members>
+        <members>Activity-hi</members>
+        <members>Campaign-es</members>
+        <members>Campaign-fr</members>
+        <members>Campaign-hi</members>
+        <members>Case-es</members>
+        <members>Case-fr</members>
+        <members>Case-hi</members>
+        <members>Contact-en_US</members>
+        <members>Contact-es</members>
+        <members>Contact-fr</members>
+        <members>Contact-hi</members>
+        <members>Knowledge__kav-hi</members>
+        <members>Metric-es</members>
+        <members>Metric-fr</members>
+        <members>Metric-hi</members>
+        <members>Opportunity-hi</members>
+        <members>Task-es</members>
+        <members>Task-fr</members>
+        <members>Task-hi</members>
+        <members>WorkCoaching-es</members>
+        <members>WorkCoaching-fr</members>
+        <members>WorkCoaching-hi</members>
         <name>CustomObjectTranslation</name>
-    </types>
+    </types>    
     <types>
         <members>*</members>
         <name>DataCategoryGroup</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>GlobalValueSetTranslation</name>
     </types>
     <types>
         <members>Analytics</members>
         <members>Communities</members>
         <members>ExperienceBundle</members>
         <name>Settings</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>StandardValueSetTranslation</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Translations</name>
     </types>
     <version>48.0</version>
 </Package>
