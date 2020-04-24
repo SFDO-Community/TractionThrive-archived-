@@ -33,7 +33,7 @@ Setup Staff
     Set Suite Variable                 &{division} 
     &{staff} =                         API Create Contact  &{division}[Id]             Resident 
     API Create Community User          &{staff}
-    Set Suite Variable                 &{staff} 
+    Set Global Variable                &{staff} 
     Go To Page                         Detail              Contact                     object_id=&{staff}[Id]
     # Enable Community Login
     # Click Element    //*/input[1][@name="save"]
