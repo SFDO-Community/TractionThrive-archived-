@@ -17,7 +17,8 @@ public static void createCommunityContactUser() {
         LastName = 'Joseph',
         AccountId = newAccount.Id,
         Email = 'jjoseph@salesforce.com',
-        Status__c = 'On Staff'
+        Status__c = 'On Staff',
+        Role_Global__c = 'Resident'
     );
     
     insert newContact;
@@ -52,13 +53,4 @@ public static void createCommunityContactUser() {
     
     newUser.setOptions(dmo);
     insert newUser;
-}
-
-public static void assignCommunityPermissionSet() {
-    PermissionSet ps = [SELECT id FROM PermissionSet WHERE Label = 'Einstein Analytics Community User'];
-    User user = [SELECT id FROM User WHERE email = 'jjoseph@salesforce.com'];
-
-    PermissionSetAssignment psa = new PermissionSetAssignment
-    (PermissionSetId = ps.id, AssigneeId = user.id);
-    insert psa;
 }

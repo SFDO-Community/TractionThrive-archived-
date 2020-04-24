@@ -26,6 +26,9 @@
             ],
             "c/staffAvailabilityItem": [
                 "staffAvailabilityItem/staffAvailabilityItem.js"
+            ],
+            "c/appFieldSet": [
+                "appFieldSet/appFieldSet.js"
             ]
         }
     },
