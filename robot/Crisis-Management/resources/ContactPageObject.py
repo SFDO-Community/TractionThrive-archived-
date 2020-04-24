@@ -25,54 +25,6 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         landing_tab=cm_lex_locators["link-text"].format("Home")
         status=self.selenium.get_webelement(landing_tab).get_attribute("class")
         assert "active" in status, "Community landing tab is not Home"
-
-    def enable_community_login(self):
-        enable_link = cm_lex_locators["contact_locators"]["link"].format("Enable Customer User")
-        self.selenium.wait_until_page_contains_element(
-            enable_link,
-            error="'Enable Customer User' option is not available in the list of actions"
-        )
-        self.selenium.click_element(enable_link)
-        self.selenium.wait_until_location_contains("/setup/ManageUsers/",timeout=60, message="User setup page did not load in 1 min")
-        self.cm.select_frame_with_value("New User ~ Salesforce - Developer Edition")
-        email=cm_lex_locators["users"]["id"].format("Email")
-        self.selenium.wait_until_page_contains_element(email)
-        self.salesforce._populate_field(email,"test2julian@example.com")
-        license = cm_lex_locators["users"]["id"].format("user_license_id")
-        self.selenium.select_from_list_by_label(license,"Customer Community Login")
-        time.sleep(1)
-        profile = cm_lex_locators["users"]["id"].format("Profile")
-        self.selenium.select_from_list_by_label(profile,"Customer Community - Medical Staff")
-        time.sleep(1)
-        locator = npsp_lex_locators["button"].format("Save")
-        element = self.selenium.driver.find_element_by_xpath(locator)
-        print("before save")
-        # self.selenium.driver.execute_script('arguments[0].click()', element)
-        # print("after save")
-        time.sleep(1)
-        # try:
-        #     self.selenium.driver.execute_script('arguments[0].click()', element)
-        # # alert=self.selenium.driver.switch_to.alert.accept()
-        # except UnexpectedAlertPresentException:
-        #     self.selenium.press_keys(None,"RETURN")
-            # print("before accept")
-            # self.selenium.handle_alert()
-            # # alert=self.selenium.driver.switch_to.alert.accept()
-            # Alert(self.selenium.driver).accept()
-        # except NoAlertPresentException:
-        #     print("inside except")
-        #     self.selenium.click_element("//input[contains(@value,'Save')]")
-        #     alert=self.selenium.driver.switch_to.alert()
-        #     print("after switch")
-        #     alert.accept()
-
-        # self.cm.click_element_with_locator("button","Save")
-        # time.sleep(3)
-        # self.selenium.capture_page_screenshot()
-        # print("before switch")
-        # alert=self.selenium.driver.switch_to_alert()
-        # print("after switch")
-        # alert.accept()
         
     def _is_current_page(self):
         """ Verify we are on the Contact detail page
