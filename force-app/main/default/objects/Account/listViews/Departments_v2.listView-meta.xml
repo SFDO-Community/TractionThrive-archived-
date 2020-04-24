@@ -10,5 +10,5 @@
         <operation>equals</operation>
         <value>Account.Division</value>
     </filters>
-    <label>Departments</label>
+    <label>Detailed Department List</label>
 </ListView>

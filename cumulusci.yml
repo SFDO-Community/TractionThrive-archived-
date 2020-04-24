@@ -219,6 +219,36 @@ tasks:
                     - Opportunity.New_Awesome_Companct_Layout
                 CustomObject:
                     - Knowledge__kav
+                CustomObjectTranslation:
+                    - Account-es
+                    - Account-fr
+                    - Account-hi
+                    - Assignment__c-en_US
+                    - Campaign-es
+                    - Campaign-fr
+                    - Campaign-hi
+                    - Case-es
+                    - Case-fr
+                    - Case-hi
+                    - Contact-es
+                    - Contact-fr
+                    - Contact-hi
+                    - Credential__c-en_US
+                    - Division_Role__c-en_US
+                    - Division_Role__c-es
+                    - Division_Role__c-fr
+                    - Division_Role__c-hi
+                    - Staff_Access__c-en_US
+                    - Staff_Levels__c-en_US
+                    - Status_Report__c-en_US
+                    - Status_Report_Type_Mapping__mdt-en_US
+                    - Task-es
+                    - Task-fr
+                    - Task-hi
+                    - Update_Contact__c-en_US
+                    - Update_Contact__c-es
+                    - Update_Contact__c-fr
+                    - Update_Contact__c-hi
                 Layout:
                     - Knowledge__kav-Knowledge Layout
                     - Staff_Access__c-Staff Access Layout
@@ -268,13 +298,6 @@ tasks:
         options:
             path: scripts/community_user_setup.cls
             apex: createCommunityContactUser();
-
-    assign_community_permissions:
-        description: Assigns appropriate permissions to user for community
-        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-        options:
-            path: scripts/community_user_setup.cls
-            apex: assignCommunityPermissionSet();
 
     add_permissions_to_nmg:
         description: Assign appropriate permission to community's network member group
@@ -370,9 +393,7 @@ flows:
                 flow: config_default
             4:
                 task: create_community_user
-            # 5:
-            #     task: assign_community_permissions
-            6:
+            5:
                 flow: add_nmg_permissions
 
     config_packaging:

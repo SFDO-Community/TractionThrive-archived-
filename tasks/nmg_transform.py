@@ -25,9 +25,9 @@ class NgmTransForm(BaseSalesforceApiTask):
 
         for line in extractFile:
 
-            # To add additional names to look for: 
+            # To add additional names to look for:
             # Copy & paste each if statement below
-            # Replace 'Customer Community - Medical Staff' with the permission set or 
+            # Replace 'Customer Community - Medical Staff' with the permission set or
             # profile you'd like to add a network member group for
             if 'Customer Community - Medical Staff' in line:
                 ids.append(getId(line=line))

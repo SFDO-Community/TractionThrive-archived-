@@ -6,5 +6,5 @@
     <columns>Parent_Facility_Name__c</columns>
     <columns>Health_Authority__c</columns>
     <filterScope>Everything</filterScope>
-    <label>All Facilities</label>
+    <label>Detailed Facility List</label>
 </ListView>
