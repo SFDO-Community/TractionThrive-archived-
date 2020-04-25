@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <label>actif</label>
-        <name>Active__c</name>
+        <name>%%%NAMESPACE%%%Active__c</name>
         <picklistValues>
             <masterLabel>No</masterLabel>
             <translation>Non</translation>
@@ -14,28 +14,28 @@
     </fields>
     <fields>
         <label>Lits disponibles</label>
-        <name>Beds_Available__c</name>
+        <name>%%%NAMESPACE%%%Beds_Available__c</name>
     </fields>
     <fields>
         <help>Par exemple, une salle fermée qui n&apos;est pas dotée de personnel.</help>
         <label>Lits inactifs</label>
-        <name>Beds_Inactive__c</name>
+        <name>%%%NAMESPACE%%%Beds_Inactive__c</name>
     </fields>
     <fields>
         <label>Nombre total de lits</label>
-        <name>Beds_Total__c</name>
+        <name>%%%NAMESPACE%%%Beds_Total__c</name>
     </fields>
     <fields>
         <label>Lits utilisés</label>
-        <name>Beds_in_Use__c</name>
+        <name>%%%NAMESPACE%%%Beds_in_Use__c</name>
     </fields>
     <fields>
         <label>Plan d&apos;urgence</label>
-        <name>Contingency_Plan__c</name>
+        <name>%%%NAMESPACE%%%Contingency_Plan__c</name>
     </fields>
     <fields>
         <label>Priorité client</label>
-        <name>CustomerPriority__c</name>
+        <name>%%%NAMESPACE%%%CustomerPriority__c</name>
         <picklistValues>
             <masterLabel>High</masterLabel>
             <translation>Haute</translation>
@@ -52,16 +52,16 @@
     <fields>
         <help>Si plusieurs départements sont ajoutés et font partie de la même division, ce nom de division peut être saisi ici.</help>
         <label>Groupe</label>
-        <name>Division__c</name>
+        <name>%%%NAMESPACE%%%Division__c</name>
     </fields>
     <fields>
         <help>Version texte de l&apos;autorité de santé de niveau supérieur, champ système pour le partage des règles. Une règle de workflow remplit ce champ en fonction de la hiérarchie des installations.</help>
         <label>Autorité sanitaire</label>
-        <name>Health_Authority__c</name>
+        <name>%%%NAMESPACE%%%Health_Authority__c</name>
     </fields>
     <fields>
         <label>Modèle de rémunération du personnel</label>
-        <name>Medical_Staff_Compensation_Model__c</name>
+        <name>%%%NAMESPACE%%%Medical_Staff_Compensation_Model__c</name>
         <picklistValues>
             <masterLabel>Contract</masterLabel>
             <translation>Contrat</translation>
@@ -82,31 +82,31 @@
     <fields>
         <help>Capturez toutes les notes sur le potentiel de redéploiement du personnel, les limitations, les compétences</help>
         <label>Le personnel Redéploiement Commentaires</label>
-        <name>Medical_Staff_Redeployment_Comments__c</name>
+        <name>%%%NAMESPACE%%%Medical_Staff_Redeployment_Comments__c</name>
     </fields>
     <fields>
         <label>Nombre d&apos;emplacements</label>
-        <name>NumberofLocations__c</name>
+        <name>%%%NAMESPACE%%%NumberofLocations__c</name>
     </fields>
     <fields>
         <label>Établissement parent</label>
-        <name>Parent_Facility_Name__c</name>
+        <name>%%%NAMESPACE%%%Parent_Facility_Name__c</name>
     </fields>
     <fields>
         <label>Nom de la régie régionale de la santé</label>
-        <name>Regional_Health_Authority_Name__c</name>
+        <name>%%%NAMESPACE%%%Regional_Health_Authority_Name__c</name>
     </fields>
     <fields>
         <label>Date d&apos;expiration du SLA</label>
-        <name>SLAExpirationDate__c</name>
+        <name>%%%NAMESPACE%%%SLAExpirationDate__c</name>
     </fields>
     <fields>
         <label>Numéro de série SLA</label>
-        <name>SLASerialNumber__c</name>
+        <name>%%%NAMESPACE%%%SLASerialNumber__c</name>
     </fields>
     <fields>
         <label>SLA</label>
-        <name>SLA__c</name>
+        <name>%%%NAMESPACE%%%SLA__c</name>
         <picklistValues>
             <masterLabel>Bronze</masterLabel>
             <translation>Bronze</translation>
@@ -126,7 +126,7 @@
     </fields>
     <fields>
         <label>Opportunité de vente incitative</label>
-        <name>UpsellOpportunity__c</name>
+        <name>%%%NAMESPACE%%UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
             <translation>peut être</translation>

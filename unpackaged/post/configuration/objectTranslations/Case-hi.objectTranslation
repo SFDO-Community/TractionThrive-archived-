@@ -1125,7 +1125,7 @@
     </fields>
     <fields>
         <label>उप-प्रकार</label>
-        <name>Sub_Type__c</name>
+        <name>%%%NAMESPACE%%%Sub_Type__c</name>
         <picklistValues>
             <masterLabel>Add New User</masterLabel>
             <translation>नई उपयोगकर्ता को जोड़ना</translation>
