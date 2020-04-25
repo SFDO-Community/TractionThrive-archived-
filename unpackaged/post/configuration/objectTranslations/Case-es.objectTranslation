@@ -2,7 +2,7 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
         <label>Subtipo</label>
-        <name>Sub_Type__c</name>
+        <name>%%%NAMESPACE%%%Sub_Type__c</name>
         <picklistValues>
             <masterLabel>Add New User</masterLabel>
             <translation>Añadir nuevo usuario</translation>

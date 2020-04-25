@@ -872,7 +872,7 @@
     </fields>
     <fields>
         <label>असाइनमेंट - पदनाम</label>
-        <name>Assignment_Designation__c</name>
+        <name>%%%NAMESPACE%%%Assignment_Designation__c</name>
         <picklistValues>
             <masterLabel>Other</masterLabel>
             <translation>अन्य</translation>
@@ -892,16 +892,16 @@
     </fields>
     <fields>
         <label>असाइनमेंट - अंतिम तिथि</label>
-        <name>Assignment_End_Date__c</name>
+        <name>%%%NAMESPACE%%%Assignment_End_Date__c</name>
     </fields>
     <fields>
         <help>कोरोना से सकारात्मक निदान की तारीख दर्ज करें</help>
         <label>कोरोना निदान तिथि</label>
-        <name>COVID_Diagnosis_Date__c</name>
+        <name>%%%NAMESPACE%%%COVID_Diagnosis_Date__c</name>
     </fields>
     <fields>
         <label>विभाग</label>
-        <name>Division__c</name>
+        <name>%%%NAMESPACE%%%Division__c</name>
         <picklistValues>
             <masterLabel>Emergency Medicine</masterLabel>
             <translation>आपातकालीन दवा</translation>
@@ -913,11 +913,11 @@
     </fields>
     <fields>
         <label>संसर्ग / लक्षण दिनांक</label>
-        <name>Exposure_Symptoms_Date__c</name>
+        <name>%%%NAMESPACE%%%Exposure_Symptoms_Date__c</name>
     </fields>
     <fields>
         <label>चिकित्सा कर्मचारी श्रेणी</label>
-        <name>Medical_Staff_Category__c</name>
+        <name>%%%NAMESPACE%%%Medical_Staff_Category__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
             <translation>सक्रिय</translation>
@@ -957,11 +957,11 @@
     </fields>
     <fields>
         <label>पद</label>
-        <name>Position__c</name>
+        <name>%%%NAMESPACE%%%Position__c</name>
     </fields>
     <fields>
         <label>अभ्यास प्रकार</label>
-        <name>Practice_Type__c</name>
+        <name>%%%NAMESPACE%%%Practice_Type__c</name>
         <picklistValues>
             <masterLabel>Clinical Scientist</masterLabel>
             <translation>नैदानिक वैज्ञानिक</translation>
@@ -993,20 +993,20 @@
     </fields>
     <fields>
         <label>प्रदाता आईडी</label>
-        <name>Provider_ID__c</name>
+        <name>%%%NAMESPACE%%%Provider_ID__c</name>
     </fields>
     <fields>
         <label>रिलीज़ की तारीख</label>
-        <name>Release_Date__c</name>
+        <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
         <label>भूमिका</label>
-        <name>Role_Global__c</name>
+        <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>
     <fields>
         <help>मान्य दक्षताओं का चयन करें</help>
         <label>क्षमताए</label>
-        <name>Skills__c</name>
+        <name>%%%NAMESPACE%%%Skills__c</name>
         <picklistValues>
             <masterLabel>CARE</masterLabel>
             <translation>देखभाल</translation>
@@ -1055,7 +1055,7 @@
     <fields>
         <help>ऑन स्टाफ = काम करने के लिए उपलब्ध, उपलब्ध नहीं = सभी भविष्य की उपलब्धता के रिकॉर्ड स्वचालित रूप से उपलब्ध नहीं होंगे</help>
         <label>स्थिति</label>
-        <name>Status__c</name>
+        <name>%%%NAMESPACE%%%Status__c</name>
         <picklistValues>
             <masterLabel>Not Available</masterLabel>
             <translation>अनुपलब्ध कर्मचारी</translation>
