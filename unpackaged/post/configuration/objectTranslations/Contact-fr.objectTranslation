@@ -321,7 +321,7 @@
     </fields>
     <fields>
         <label>Désignation d&apos;affectation</label>
-        <name>Assignment_Designation__c</name>
+        <name>%%%NAMESPACE%%%Assignment_Designation__c</name>
         <picklistValues>
             <masterLabel>Other</masterLabel>
             <translation>Autre</translation>
@@ -341,16 +341,16 @@
     </fields>
     <fields>
         <label>Affectation - Date de fin</label>
-        <name>Assignment_End_Date__c</name>
+        <name>%%%NAMESPACE%%%Assignment_End_Date__c</name>
     </fields>
     <fields>
         <help>Entrez la date du diagnostic positif pour COVID-19</help>
         <label>Date de diagnostic COVID</label>
-        <name>COVID_Diagnosis_Date__c</name>
+        <name>%%%NAMESPACE%%%COVID_Diagnosis_Date__c</name>
     </fields>
     <fields>
         <label>Division</label>
-        <name>Division__c</name>
+        <name>%%%NAMESPACE%%%Division__c</name>
         <picklistValues>
             <masterLabel>Emergency Medicine</masterLabel>
             <translation>Médecine d&apos;urgence</translation>
@@ -362,11 +362,11 @@
     </fields>
     <fields>
         <label>Exposition / Symptômes Date</label>
-        <name>Exposure_Symptoms_Date__c</name>
+        <name>%%%NAMESPACE%%%Exposure_Symptoms_Date__c</name>
     </fields>
     <fields>
         <label>Catégorie du personnel médical</label>
-        <name>Medical_Staff_Category__c</name>
+        <name>%%%NAMESPACE%%%Medical_Staff_Category__c</name>
         <picklistValues>
             <masterLabel>Active</masterLabel>
             <translation>actif</translation>
@@ -406,11 +406,11 @@
     </fields>
     <fields>
         <label>Position</label>
-        <name>Position__c</name>
+        <name>%%%NAMESPACE%%%Position__c</name>
     </fields>
     <fields>
         <label>Type de pratique</label>
-        <name>Practice_Type__c</name>
+        <name>%%%NAMESPACE%%%Practice_Type__c</name>
         <picklistValues>
             <masterLabel>Clinical Scientist</masterLabel>
             <translation>Scientifique Clinal</translation>
@@ -442,20 +442,20 @@
     </fields>
     <fields>
         <label>Identifiant du fournisseur</label>
-        <name>Provider_ID__c</name>
+        <name>%%%NAMESPACE%%%Provider_ID__c</name>
     </fields>
     <fields>
         <label>Date de sortie</label>
-        <name>Release_Date__c</name>
+        <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
         <label>Rôle</label>
-        <name>Role_Global__c</name>
+        <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>
     <fields>
         <help>Sélectionnez les compétences valides</help>
         <label>Compétences</label>
-        <name>Skills__c</name>
+        <name>%%%NAMESPACE%%%Skills__c</name>
         <picklistValues>
             <masterLabel>CARE</masterLabel>
             <translation>SE SOUCIER</translation>
@@ -504,7 +504,7 @@
     <fields>
         <help>Sur le personnel = disponible pour travailler, non disponible = tous les enregistrements de disponibilité futurs seront automatiquement définis sur non disponible</help>
         <label>Statut</label>
-        <name>Status__c</name>
+        <name>%%%NAMESPACE%%%Status__c</name>
         <picklistValues>
             <masterLabel>Not Available</masterLabel>
             <translation>Indisponible</translation>
