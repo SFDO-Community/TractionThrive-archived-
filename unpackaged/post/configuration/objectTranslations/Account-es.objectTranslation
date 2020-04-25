@@ -126,7 +126,7 @@
     </fields>
     <fields>
         <label>Oportunidad de venta</label>
-        <name>%%%NAMESPACE%%UpsellOpportunity__c</name>
+        <name>%%%NAMESPACE%%%UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
             <translation>tal vez</translation>

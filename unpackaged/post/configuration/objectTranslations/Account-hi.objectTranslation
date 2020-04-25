@@ -1081,7 +1081,7 @@
     </fields>
     <fields>
         <label>अपसेल अवसर</label>
-        <name>%%%NAMESPACE%%UpsellOpportunity__c</name>
+        <name>%%%NAMESPACE%%%UpsellOpportunity__c</name>
         <picklistValues>
             <masterLabel>Maybe</masterLabel>
             <translation>शायद</translation>
