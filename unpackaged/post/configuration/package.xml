@@ -5,10 +5,6 @@
         <members>Account-es</members>
         <members>Account-fr</members>
         <members>Account-hi</members>
-        <members>Activity-hi</members>
-        <members>Campaign-es</members>
-        <members>Campaign-fr</members>
-        <members>Campaign-hi</members>
         <members>Case-es</members>
         <members>Case-fr</members>
         <members>Case-hi</members>
@@ -16,17 +12,9 @@
         <members>Contact-es</members>
         <members>Contact-fr</members>
         <members>Contact-hi</members>
-        <members>Knowledge__kav-hi</members>
-        <members>Metric-es</members>
-        <members>Metric-fr</members>
-        <members>Metric-hi</members>
-        <members>Opportunity-hi</members>
         <members>Task-es</members>
         <members>Task-fr</members>
         <members>Task-hi</members>
-        <members>WorkCoaching-es</members>
-        <members>WorkCoaching-fr</members>
-        <members>WorkCoaching-hi</members>
         <name>CustomObjectTranslation</name>
     </types>    
     <types>
