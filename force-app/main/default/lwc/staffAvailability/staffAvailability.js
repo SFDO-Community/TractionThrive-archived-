@@ -89,7 +89,7 @@ export default class StaffAvailability extends LightningElement {
 			console.log('ASSIGNMENT DATA', result);
 			this.data = result;
 			this.staffStatus = getFieldValue(result.contact, 'Status__c', this.namespace);
-			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) == 'On staff' ? true : false;
+			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) === 'On staff';
 		}).catch(error => {
 			this.error = error;
 			this.formatError(error);

@@ -117,15 +117,12 @@ public with sharing class StaffAvailabilityController {
 	@AuraEnabled
 	public static Assignment__c save(Assignment__c assignment) {
 
-		SecureDml upsertObject = new SecureDml();
-		try {
-			upsertObject.dmlUpsert(Assignment__c.SObjectType, new List<Assignment__c> {assignment}, Assignment__c.Id);
-		}
-		catch(Exception e) {
-			throw new AuraHandledException(e.getMessage() + ' : RECORD -> ' + JSON.serializePretty(assignment));
+		Database.UpsertResult saveResult = Database.upsert(assignment, false);
+		if (!saveResult.isSuccess()) {
+			throw new AuraHandledException(saveResult.getErrors()[0].getMessage());
 		}
 
-		return [SELECT Date__c, Available__c, Care_Facility__r.Name, Staff__c, LastModifiedDate FROM Assignment__c WHERE Id =:assignment.Id LIMIT 1];
+		return [SELECT Date__c, Available__c, Care_Facility__c, Care_Facility__r.Name, Staff__c, LastModifiedDate FROM Assignment__c WHERE Id =:assignment.Id LIMIT 1];
 	}
 
 	// custom lookup for sfdc-ui-lookup-lwc - https://github.com/pozil/sfdc-ui-lookup-lwc/tree/master/src-sample

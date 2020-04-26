@@ -148,7 +148,7 @@ export default class StaffAvailabilityItem extends LightningElement {
 			if (this.lookupConfig.lookupErrors.length > 0) return;
 
 			console.log('LOOKUP SELECTION: ', JSON.parse(JSON.stringify(this.selectedRecord)));
-			recordPayload[this.namespace+'Care_Facility__c'] = this.selectedRecord.Id;
+			recordPayload[this.namespace+'Care_Facility__c'] = this.selectedRecord.id;
 		}
 		else {
 			recordPayload[this.namespace+'Care_Facility__c'] = null;
