@@ -61,7 +61,6 @@ export default class StaffAvailability extends LightningElement {
 
 	renderedCallback() {
 		console.log('RECORD ID: ', this.recordId);
-
 		if (!this.isFirstRender) {
 			this.isFirstRender = true;
 			getOrgNamespace().then(result => {
@@ -90,7 +89,7 @@ export default class StaffAvailability extends LightningElement {
 			console.log('ASSIGNMENT DATA', result);
 			this.data = result;
 			this.staffStatus = getFieldValue(result.contact, 'Status__c', this.namespace);
-			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) == 'On staff' ? true : false;
+			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) === 'On staff';
 		}).catch(error => {
 			this.error = error;
 			this.formatError(error);
@@ -135,12 +134,11 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	cancelStatusModal() {
-		if(this.isStaffAvailable) {
-			this.isStaffAvailable = false;
-		} else {
-			this.isStaffAvailable = true;
-		}
+		this.isStaffAvailable = !this.isStaffAvailable;
 		this.template.querySelector("c-app-modal").displayModal(false);
+		if (this.isStaffAvailable) {
+			this.loadAssignmentData();
+		}
 	}
 
 	get hasRecordId() {

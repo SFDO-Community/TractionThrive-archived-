@@ -147,7 +147,7 @@ export default class Lookup extends LightningElement {
 		this.searchResults = [];
 
 		// Notify parent components that selection has changed
-		this.dispatchEvent(new CustomEvent('selectionchange'));
+		this.dispatchEvent(new CustomEvent('selectionchange', { detail: { record : selectedItem, selectedItemId: recordId } }));
 	}
 
 	handleComboboxClick() {
