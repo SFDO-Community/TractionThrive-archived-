@@ -147,7 +147,6 @@ export default class StaffAvailabilityItem extends LightningElement {
 			this.validateLookup();
 			if (this.lookupConfig.lookupErrors.length > 0) return;
 
-			console.log('LOOKUP SELECTION: ', JSON.parse(JSON.stringify(this.selectedRecord)));
 			recordPayload[this.namespace+'Care_Facility__c'] = this.selectedRecord.id;
 		}
 		else {
@@ -156,13 +155,10 @@ export default class StaffAvailabilityItem extends LightningElement {
 
 		this.isExpanded = false;
 
-		console.log('RECORD PAYLOAD: ', recordPayload);
-
 		save({assignment: recordPayload}).then(result => {
 			this.record = {...result};
-			console.log('SAVE RESULT: ', result);
 		}).catch(err => {
-			console.log('SAVE ERROR: ', err);
+			console.error('SAVE ERROR: ', err);
 		});
 
 	}

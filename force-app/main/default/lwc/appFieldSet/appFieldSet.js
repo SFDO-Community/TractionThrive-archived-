@@ -92,7 +92,6 @@ export default class AppFieldSet extends LightningElement {
 			fields: applyNamespace(this.fields, this.namespace),
 			objectName: this.namespace + this.fieldSetObject
 		}).then(result => {
-			console.log('loadFields: ', result);
 			this.fieldSetData = result;
 			this.handleLookupField();
 			if (this.recordId) {

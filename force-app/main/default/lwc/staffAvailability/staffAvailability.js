@@ -60,7 +60,6 @@ export default class StaffAvailability extends LightningElement {
 	}
 
 	renderedCallback() {
-		console.log('RECORD ID: ', this.recordId);
 		if (!this.isFirstRender) {
 			this.isFirstRender = true;
 			getOrgNamespace().then(result => {
@@ -79,21 +78,20 @@ export default class StaffAvailability extends LightningElement {
 	errorCallback(error, stack) {
 		this.error = error;
 		this.stack = stack;
-		console.log('CMP ERROR', error);
-		console.log('CMP STACK', stack);
+		console.error('CMP ERROR', error);
+		console.error('CMP STACK', stack);
 	}
 
 	loadAssignmentData() {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
 		getAssignmentData({contactId: this.recordId? this.recordId:null}).then(result => {
-			console.log('ASSIGNMENT DATA', result);
 			this.data = result;
 			this.staffStatus = getFieldValue(result.contact, 'Status__c', this.namespace);
 			this.isStaffAvailable = getFieldValue(result.contact, 'Status__c', this.namespace) === 'On staff';
 		}).catch(error => {
 			this.error = error;
 			this.formatError(error);
-			console.log('LOAD ASSIGNMENT ERROR', error);
+			console.error('LOAD ASSIGNMENT ERROR', error);
 		}).finally(() => {
 			this.template.querySelector("c-app-spinner").displaySpinner(false);
 		});
@@ -127,7 +125,7 @@ export default class StaffAvailability extends LightningElement {
 		}).catch(error => {
 			this.error = error;
 			this.formatError(error);
-			console.log('UPDATE STAFF STATUS ERROR', error);
+			console.error('UPDATE STAFF STATUS ERROR', error);
 		}).finally(() => {
 			this.template.querySelector("c-app-spinner").displaySpinner(false);
 		});
