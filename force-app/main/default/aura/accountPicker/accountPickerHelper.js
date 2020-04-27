@@ -24,7 +24,7 @@
                     "error",
                     errors[0].message);
                 for (let i = 0; i < errors.length; i++){
-                    console.log(errors[i].message);
+                    console.error(errors[i].message);
                 }
             }
         });
