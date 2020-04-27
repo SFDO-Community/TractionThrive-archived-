@@ -150,7 +150,6 @@ public without sharing class AppFieldSetController {
 
 		// Execute search query
 		String query = 'FIND \'' + String.escapeSingleQuotes(searchTerm) + '\' IN ALL FIELDS RETURNING ' + lookupObject + '(Id, Name WHERE Id NOT IN :selectedIds) LIMIT :MAX_RESULTS';
-		system.debug('query => '+query);
 		List<SObject> searchResults = Search.query(query)[0];
 
 

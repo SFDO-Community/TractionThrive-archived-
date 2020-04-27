@@ -74,14 +74,12 @@ export default class StaffAssignment extends LightningElement {
     this.validateLookup();
     if (this.lookupConfig.lookupErrors.length > 0) return;
     const selection = this.template.querySelector("c-lookup").getSelection();
-    console.log("LOOKUP SELECTION: ", JSON.parse(JSON.stringify(selection)));
     save({ accountRecord: selection[0].id, contactId: this.recordId })
       .then(result => {
         this.record = { ...result };
-        console.log("SAVE RESULT: ", result);
       })
       .catch(err => {
-        console.log("SAVE ERROR: ", err);
+        console.error("SAVE ERROR: ", err);
         this.handleToastMessage(
           "Error",
           "There is an error while saving this access record",

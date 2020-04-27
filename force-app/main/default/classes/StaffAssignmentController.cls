@@ -146,7 +146,6 @@ public with sharing class StaffAssignmentController {
             insertObject.dmlInsert(thisAssignment);
         }
         catch(Exception e) {
-            System.debug('HERE ' + e);
             throw new AuraHandledException(e.getMessage() + ' : RECORD -> ' + JSON.serializePretty(thisAssignment));
         }
         return thisAssignment;
