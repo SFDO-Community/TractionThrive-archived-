@@ -6,7 +6,7 @@ class ProfileGrantAllAccess(BaseProfileGrantAllAccess):
         # Add these entities to the package.xml
 
         results = self.tooling.query_all(
-            "SELECT DeveloperName, NamespacePrefix FROM CustomObject WHERE NamespacePrefix = '{}'".format(self.project_config.project__package__namespace)
+            "SELECT DeveloperName, NamespacePrefix FROM CustomObject WHERE NamespacePrefix = '{}' AND DeveloperName != 'Knowledge'".format(self.project_config.project__package__namespace)
         )
 
         custom_objects = package_xml.find("types", name="CustomObject")
