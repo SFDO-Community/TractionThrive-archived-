@@ -9,7 +9,7 @@ project:
     test:
         name_match: "%TEST%"
     git:
-        repo_url: https://github.com/SalesforceFoundation/Thrive
+        repo_url: https://github.com/SFDO-Community/TractionThrive
         prefix_beta: beta/
         prefix_release: release/
 
@@ -526,9 +526,9 @@ plans:
                     deploy_navigation_config:
                         name: "Deploy Navigation"
                         is_required: False
-                    #deploy_community_config:
-                    #    name: "Configure Community"
-                    #    is_required: False
+                    deploy_community_config:
+                        name: "Configure Community"
+                        is_required: False
                     publish_community:
                         name: "Publish Community"
                         is_required: False
