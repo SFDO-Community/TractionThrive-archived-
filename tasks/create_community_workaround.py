@@ -6,7 +6,7 @@ from cumulusci.core.exceptions import SalesforceException
 
 
 class CreateCommunity(BaseSalesforceApiTask):
-    api_version = "46.0"
+    api_version = "48.0"
     task_docs = """
     Create a Salesforce Community via the Connect API.
     Specify the `template` "VF Template" for Visualforce Tabs community,
