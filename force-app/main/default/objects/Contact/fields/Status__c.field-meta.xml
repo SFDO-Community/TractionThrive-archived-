@@ -32,7 +32,7 @@
                 <fullName>Isolation - COVID symptoms/exposure</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
-                <label>Not Available</label>
+                <label>Isolation - COVID symptoms/exposure</label>
             </value>
         </valueSetDefinition>
     </valueSet>
