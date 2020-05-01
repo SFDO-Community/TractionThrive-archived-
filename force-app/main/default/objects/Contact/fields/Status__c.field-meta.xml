@@ -6,6 +6,7 @@
     <inlineHelpText>On Staff = available to work, Not Available = all future availability records will automatically be set to Not Available</inlineHelpText>
     <label>Status</label>
     <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
@@ -17,7 +18,7 @@
                 <label>On staff</label>
             </value>
             <value>
-                <fullName>Isolation - COVID symptoms/exposure</fullName>
+                <fullName>Not Available</fullName>
                 <default>false</default>
                 <label>Not Available</label>
             </value>
@@ -26,6 +27,12 @@
                 <default>false</default>
                 <isActive>false</isActive>
                 <label>COVID positive</label>
+            </value>
+            <value>
+                <fullName>Isolation - COVID symptoms/exposure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Isolation - COVID symptoms/exposure</label>
             </value>
         </valueSetDefinition>
     </valueSet>
