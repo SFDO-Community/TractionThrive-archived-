@@ -10,7 +10,7 @@
                 <sortIndex>0</sortIndex>
             </formattingBins>
             <formattingBins>
-                <bin>Isolation - COVID symptoms/exposure</bin>
+                <bin>Not Available</bin>
                 <formatValue>#FF9897</formatValue>
                 <label xsi:nil="true"/>
                 <sortIndex>1</sortIndex>
@@ -36,7 +36,7 @@
         <isDerived>false</isDerived>
         <members>
             <label>Unavailable</label>
-            <member>Isolation - COVID symptoms/exposure</member>
+            <member>Not Available</member>
             <sortIndex>0</sortIndex>
         </members>
         <sortIndex>0</sortIndex>
