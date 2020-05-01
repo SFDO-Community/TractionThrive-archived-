@@ -75,7 +75,7 @@ public with sharing class Constants {
     public final static String NP_Role = 'NP - Nurse Practitioner';
     public final static String RN_Role = 'RN - Registered Nurse';
     public final static String MD_Role = 'MD - Medical Doctor';
-    public final static String NOT_AVAILABLE_STATUS = 'Isolation - COVID symptoms/exposure';
+    public final static String NOT_AVAILABLE_STATUS = 'Not Available';
     public final static String AVAILABLE_STATUS = 'On staff';
 
     //Access level
