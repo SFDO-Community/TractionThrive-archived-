@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_Staff__c</fullName>
+    <description>Automatically calculated based on Staff Availability</description>
     <externalId>false</externalId>
     <label>Current Staff</label>
     <precision>5</precision>

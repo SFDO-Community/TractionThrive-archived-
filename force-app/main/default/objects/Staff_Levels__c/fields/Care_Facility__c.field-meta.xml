@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Care_Facility__c</fullName>
+    <description>Facility related to the Essential Needs and Full Complement thresholds</description>
     <externalId>false</externalId>
-    <label>Care Facility</label>
+    <inlineHelpText>Facility related to the Essential Needs and Full Complement thresholds</inlineHelpText>
+    <label>Facility</label>
     <referenceTo>Account</referenceTo>
+    <relationshipLabel>Staff Levels</relationshipLabel>
     <relationshipName>Staff_Level</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>

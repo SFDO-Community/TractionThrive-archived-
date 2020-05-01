@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Medical_Staff_Compensation_Model__c</fullName>
+    <description>Deprecated field for Traction Thrive</description>
     <externalId>false</externalId>
-    <label>Medical Staff Compensation Model</label>
+    <label>DEPRECATED Medical Staff Compensation</label>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <type>MultiselectPicklist</type>
     <valueSet>
         <restricted>true</restricted>
