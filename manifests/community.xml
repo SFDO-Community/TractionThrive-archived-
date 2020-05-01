@@ -13,10 +13,6 @@
         <name>CustomSite</name>
     </types>
     <types>
-        <members>Home_Page_Default</members>
-        <name>FlexiPage</name>
-    </types>
-    <types>
         <members>*</members>
         <name>EmailTemplate</name>
     </types>
@@ -25,8 +21,20 @@
         <name>ExperienceBundle</name>
     </types>
     <types>
+        <members>Home_Page_Default</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Letterhead</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>NetworkBranding</name>
+    </types>      
     <version>48.0</version>
 </Package>
