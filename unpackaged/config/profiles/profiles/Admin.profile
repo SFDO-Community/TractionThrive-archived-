@@ -436,11 +436,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACE%%%Staff_Levels__c.%%%NAMESPACE%%%Role__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>%%%NAMESPACE%%%Staff_Levels__c.%%%NAMESPACE%%%Total_COVID__c</field>
         <readable>true</readable>
     </fieldPermissions>
