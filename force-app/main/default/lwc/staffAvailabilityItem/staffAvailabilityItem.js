@@ -153,6 +153,11 @@ export default class StaffAvailabilityItem extends LightningElement {
 			recordPayload[this.namespace+'Care_Facility__c'] = null;
 		}
 
+		//We need to make sure this is not being passed to the backend
+		if (recordPayload["LastModifiedDate"]) {
+			delete recordPayload["LastModifiedDate"];
+		}
+
 		this.isExpanded = false;
 
 		save({assignment: recordPayload}).then(result => {
