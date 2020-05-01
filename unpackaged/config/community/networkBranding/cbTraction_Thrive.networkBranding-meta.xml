@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NetworkBranding xmlns="http://soap.sforce.com/2006/04/metadata">
     <loginFooterText>Powered by Thrive Health and Traction on Demand</loginFooterText>
-    <loginLogo>Communities_Shared_Document_Folder/Traction_Thrive_Global_Small_Login_png.png</loginLogo>
-    <loginLogoName>Traction_Thrive_Global_Small_Login.png</loginLogoName>
+    <loginLogo>TractionThriveGlobalLoginLogoSmall.png</loginLogo>
+    <loginLogoName>TractionThriveGlobalLoginLogoSmall.png</loginLogoName>
     <loginPrimaryColor>#1390C6</loginPrimaryColor>
     <loginQuaternaryColor>#041D3E</loginQuaternaryColor>
     <network>Traction Thrive</network>

@@ -13,10 +13,6 @@
         <name>CustomSite</name>
     </types>
     <types>
-        <members>Communities_Shared_Document_Folder/Traction_Thrive_Global_Small_Login_png.png</members>
-        <name>Document</name>
-    </types>  
-    <types>
         <members>*</members>
         <name>EmailTemplate</name>
     </types>
