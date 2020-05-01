@@ -39,7 +39,7 @@
     <newSenderAddress>noreply@email.email</newSenderAddress>
     <picassoSite>Traction_Thrive1</picassoSite>
     <selfRegistration>false</selfRegistration>
-    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
     <site>Traction_Thrive</site>
     <status>UnderConstruction</status>
     <tabs>
