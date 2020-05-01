@@ -18,7 +18,7 @@
                 <leftValueReference>Get_Status.Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Isolation - COVID symptoms/exposure</stringValue>
+                    <stringValue>Not Available</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -111,7 +111,7 @@
         <inputAssignments>
             <field>Status__c</field>
             <value>
-                <stringValue>Isolation - COVID symptoms/exposure</stringValue>
+                <stringValue>Not Available</stringValue>
             </value>
         </inputAssignments>
         <object>Contact</object>
