@@ -18059,7 +18059,7 @@ INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlZEAS','','10.0','14.0','MD -
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlaEAC','','4.0','5.0','RT - Respiratory Therapist','','','0011f000007HY8hAAG');
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlbEAC','','32.0','25.0','MD - Medical Doctor','','','0011f000007HY8gAAG');
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlcEAC','','6.0','24.0','MD - Medical Doctor','','','0011f000007HYAfAAO');
-INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzldEAC','','','','','','','0011f000007HYAiAAO');
+INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzldEAC','','','','RN - Registered Nurse','','','0011f000007HYAiAAO');
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzleEAC','','6.0','10.0','MD - Medical Doctor','','','0011f000007HYAoAAO');
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlpEAC','','','','RT - Respiratory Therapist','','','0011f000007HY8pAAG');
 INSERT INTO "Staff_Levels__c" VALUES('a0M1f000000NzlqEAC','','2.0','3.0','MD - Medical Doctor','','','0011f000007HY8qAAG');
