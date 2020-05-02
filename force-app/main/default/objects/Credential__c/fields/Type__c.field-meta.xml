@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Type__c</fullName>
+    <description>What Registrant Type this Staff member has for the Facility</description>
     <externalId>false</externalId>
     <label>Registrant Type</label>
     <required>false</required>

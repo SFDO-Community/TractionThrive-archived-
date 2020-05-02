@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Title</fullName>
+    <description>Title for the Staff member. May be different from their role</description>
+    <inlineHelpText>The title associated with the Staff, may be different than role</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+</CustomField>

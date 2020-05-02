@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Care_Facility__c</fullName>
+    <description>Facility for which the credential is valid</description>
     <externalId>false</externalId>
-    <label>Care Facility</label>
+    <inlineHelpText>Facility for which the credential is valid</inlineHelpText>
+    <label>Facility</label>
     <referenceTo>Account</referenceTo>
     <relationshipLabel>Credentials</relationshipLabel>
     <relationshipName>Credentials</relationshipName>

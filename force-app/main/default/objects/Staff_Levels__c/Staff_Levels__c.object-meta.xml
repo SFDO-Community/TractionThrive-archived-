@@ -149,7 +149,7 @@
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>Division_Role</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Staff Levels are use to set the staff levels required to meet Essential services needs and Full services needs. The Essential and Full levels are used to define the thresholds in the dashboards to determine staffing needs.</description>
+    <description>Staff Levels are used to set the staff levels required to meet Essential services needs and Full services needs. The Essential and Full levels are used to define the thresholds in the dashboards to determine staffing needs</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
