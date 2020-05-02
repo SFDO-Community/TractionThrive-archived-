@@ -3,6 +3,7 @@
     <fullName>Essential_Staff__c</fullName>
     <description>Number of staff required to provide essential services</description>
     <externalId>false</externalId>
+    <inlineHelpText>Number of staff required to provide essential services</inlineHelpText>
     <label>Essential Needs</label>
     <precision>5</precision>
     <required>false</required>

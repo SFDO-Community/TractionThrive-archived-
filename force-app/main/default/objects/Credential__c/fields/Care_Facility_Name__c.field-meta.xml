@@ -4,7 +4,7 @@
     <description>This field exists only for Einstein Analytics to build a list of Account names in the dataflow without referencing the Account object to bypass the restriction on security inheritance with multi-value lookups.</description>
     <externalId>false</externalId>
     <formula>Care_Facility__r.Name</formula>
-    <label>Care Facility Name</label>
+    <label>Facility Name</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>
