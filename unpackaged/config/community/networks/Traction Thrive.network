@@ -5,6 +5,8 @@
     <changePasswordTemplate>Traction_Thrive/TractionThrive_Change_Password_Email</changePasswordTemplate>
     <communityRoles/>
     <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailFooterLogo>%%%NAMESPACE%%%Traction_Thrive/%%%NAMESPACE%%%Traction_and_Thrive_Small_Logo.png</emailFooterLogo>
+    <emailFooterText>Powered by Thrive Health and Traction on Demand.</emailFooterText>
     <emailSenderAddress>noreply@email.email</emailSenderAddress>
     <emailSenderName>Traction Thrive</emailSenderName>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
@@ -28,6 +30,12 @@
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
         <profile>admin</profile>
+        <profile>customer community - hospital administrator</profile>
+        <profile>customer community - medical staff</profile>
+        <profile>customer community plus - hospital administrator</profile>
+        <profile>customer community plus - medical staff</profile>
+        <profile>customer community - health authority</profile>
+        <profile>customer community plus - health authority</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
