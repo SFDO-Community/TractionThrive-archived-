@@ -30,12 +30,12 @@
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
         <profile>Admin</profile>
+        <profile>Customer Community - Health Authority</profile>
         <profile>Customer Community - Hospital Administrator</profile>
         <profile>Customer Community - Medical Staff</profile>
+        <profile>Customer Community Plus - Health Authority</profile>
         <profile>Customer Community Plus - Hospital Administrator</profile>
         <profile>Customer Community Plus - Medical Staff</profile>
-        <profile>Customer Community - Health Authority</profile>
-        <profile>Customer Community Plus - Health Authority</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
