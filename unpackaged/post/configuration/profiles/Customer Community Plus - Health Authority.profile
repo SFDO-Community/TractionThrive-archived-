@@ -10,4 +10,6 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
+    <custom>true</custom>
+    <userLicense>Customer Community Plus Login</userLicense>
 </Profile>
