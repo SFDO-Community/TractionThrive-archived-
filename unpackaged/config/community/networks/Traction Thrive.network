@@ -29,13 +29,13 @@
     <forgotPasswordTemplate>Traction_Thrive/TractionThrive_Community_Forgot_Password_Email</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <profile>Admin</profile>
-        <profile>Customer Community - Health Authority</profile>
-        <profile>Customer Community - Hospital Administrator</profile>
-        <profile>Customer Community - Medical Staff</profile>
-        <profile>Customer Community Plus - Health Authority</profile>
-        <profile>Customer Community Plus - Hospital Administrator</profile>
-        <profile>Customer Community Plus - Medical Staff</profile>
+        <profile>admin</profile>
+        <profile>customer community - health authority</profile>
+        <profile>customer community - hospital administrator</profile>
+        <profile>customer community - medical staff</profile>
+        <profile>customer community plus - health authority</profile>
+        <profile>customer community plus - hospital administrator</profile>
+        <profile>customer community plus - medical staff</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
