@@ -22,6 +22,10 @@
         <name>DataCategoryGroup</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>    
+    <types>
         <members>Analytics</members>
         <members>Communities</members>
         <members>ExperienceBundle</members>
