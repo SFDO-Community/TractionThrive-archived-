@@ -306,6 +306,18 @@ tasks:
     reset_nmg_sql:
         description: Reset network member group load file to prevent modified file for commit
         class_path: tasks.nmg_sql_reset.NgmSqlReset
+    
+    # load custom settings
+    load_custom_settings:
+        options:
+            settings_path: unpackaged/config/custom-settings/customsettings.yml
+    
+    # load namespaced custom settings
+    load_ns_custom_settings:
+        class_path: cumulusci.tasks.salesforce.LoadCustomSettings
+        options:
+            settings_path: unpackaged/config/custom-settings/ns_customsettings.yml        
+
 
 flows:
     config_apextest:
@@ -339,27 +351,29 @@ flows:
     config_managed:
         steps:
             3:
+                task: load_ns_custom_settings
+            4:
                 task: deploy_wave_config
                 options:
                     unmanaged: False
-            4:
+            5:
                 flow: config_community
                 options:
                     deploy_community_config:
                         unmanaged: False
-            5:
-                task: deploy_kav_config
             6:
+                task: deploy_kav_config
+            7:
                 task: deploy_profile_config
                 options:
                     unmanaged: False
-            7:
+            8:
                 task: load_dataset
                 options:
                     mapping: datasets/mapping-managed.yml
-            8:
-                task: set_organization_wide_defaults
             9:
+                task: set_organization_wide_defaults
+            10:
                 task: set_user_role_scratch_org
                 when: org_config.scratch
 
@@ -367,18 +381,20 @@ flows:
         description: Deploys the default configuration for all environments
         steps:
             1:
-                task: deploy_wave_config
+                task: load_custom_settings
             2:
-                flow: config_community
+                task: deploy_wave_config
             3:
-                task: deploy_kav_config
+                flow: config_community
             4:
-                task: deploy_profile_config
+                task: deploy_kav_config
             5:
-                task: load_dataset
+                task: deploy_profile_config
             6:
-                task: set_organization_wide_defaults
+                task: load_dataset
             7:
+                task: set_organization_wide_defaults
+            8:
                 task: set_user_role_scratch_org
                 when: org_config.scratch
 
@@ -506,13 +522,18 @@ plans:
                         name: "Add Data Category Groups and Relabel Accounts"
                     is_required: False
             4:
+                task: load_ns_custom_settings
+                ui_options:
+                    name: "Load custom settings defaults"
+                    is_required: False                
+            5:
                 task: deploy_wave_config
                 ui_options:
                     name: Install Analytics
                     is_required: False
                 options:
                     unmanaged: False
-            5:
+            6:
                 flow: config_community
                 options:
                     deploy_community_config:
@@ -532,12 +553,12 @@ plans:
                     publish_community:
                         name: "Publish Community"
                         is_required: False
-            6:
+            7:
                 task: deploy_kav_config
                 ui_options:
                     name: "Configure Knowledge"
                     is_required: False
-            7:
+            8:
                 task: deploy_profile_config
                 ui_options:
                     name: "Install Profiles"
