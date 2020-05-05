@@ -6,7 +6,6 @@ from selenium.webdriver.common.alert import Alert
 from selenium.common.exceptions import UnexpectedAlertPresentException
 from BaseObjects import BaseCMPage
 from CrisisManagement import cm_lex_locators
-from locators_48 import npsp_lex_locators
 
 
 @pageobject("Detail", "Contact")
@@ -33,20 +32,7 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         self.selenium.wait_until_location_contains("/view", timeout=60, message="Detail page did not load in 1 min")
         self.selenium.location_should_contain("/lightning/r/Contact/",message="Current page is not a Contact record detail view")
         
-    def update_field_value(self,field_name,old_value,new_value):
-        """Delete the old value in specified field by clicking on delete icon and update with new value"""
-        locator=npsp_lex_locators['delete_icon'].format(field_name,old_value)
-        self.selenium.get_webelement(locator).click() 
-        self.salesforce.populate_lookup_field(field_name,new_value)
 
-
-    def waitfor_actions_dropdown_and_click_option(self,option):
-        """Wait for the Action dropdown menu to load from the contact details page
-           Click on the desired option passed as a parameter
-        """
-        loc=npsp_lex_locators['contacts_actions_dropdown_menu']
-        self.selenium.wait_until_element_is_visible(loc)
-        self.selenium.click_link(option)
 
 @pageobject("Listing", "Contact")
 class ContactListingPage(BaseCMPage, ListingPage):

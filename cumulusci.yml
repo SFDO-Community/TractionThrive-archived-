@@ -140,11 +140,11 @@ tasks:
             path: unpackaged/config/wave
             package_xml: manifests/wave.xml
 
-    create_users:
-        description: Creates Users with various profiles for automation
+    create_community_users:
+        description: Creates Community Users with various profiles for robot test automation
         class_path: cumulusci.tasks.robotframework.Robot
         options:
-            suites: tasks/create_users.robot
+            suites: tasks/create_community_users.robot
             vars: BROWSER:headlesschrome
             options: {'outputdir': 'robot/Crisis-Management/results'}        
 
@@ -300,12 +300,6 @@ tasks:
                 - label: UPCC
                   fullName: UPCC
 
-    create_community_user:
-        description: Creates a user and contact for community
-        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
-        options:
-            path: scripts/community_user_setup.cls
-            apex: createCommunityContactUser();
 
     add_permissions_to_nmg:
         description: Assign appropriate permission to community's network member group
@@ -400,7 +394,7 @@ flows:
             3:
                 flow: config_default
             4:
-                task: create_community_user
+                task: create_community_users
             5:
                 flow: add_nmg_permissions
 
