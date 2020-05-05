@@ -140,6 +140,14 @@ tasks:
             path: unpackaged/config/wave
             package_xml: manifests/wave.xml
 
+    create_users:
+        description: Creates Users with various profiles for automation
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: tasks/create_users.robot
+            vars: BROWSER:headlesschrome
+            options: {'outputdir': 'robot/Crisis-Management/results'}        
+
     robot:
         options:
             suites: robot/Crisis-Management/tests

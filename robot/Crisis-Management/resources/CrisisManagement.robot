@@ -25,8 +25,8 @@ API Create Contact
     [return]         &{contact}
 
 API Create Community User
-    [Arguments]      &{staff}
-    @{profile}=   Salesforce Query  Profile   select=Id   name=Customer Community - Medical Staff
+    [Arguments]   ${profile_name}   &{staff}
+    @{profile}=   Salesforce Query  Profile   select=Id   name=${profile_name}
     ${user_id} =  Salesforce Insert  User
     ...                  FirstName=&{staff}[FirstName]
     ...                  LastName=&{staff}[LastName]
