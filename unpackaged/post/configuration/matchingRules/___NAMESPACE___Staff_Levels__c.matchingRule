@@ -6,12 +6,12 @@
         <label>Staff Level Matching Rule</label>
         <matchingRuleItems>
             <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>Care_Facility__c</fieldName>
+            <fieldName>%%%NAMESPACE%%%Care_Facility__c</fieldName>
             <matchingMethod>Exact</matchingMethod>
         </matchingRuleItems>
         <matchingRuleItems>
             <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>Role__c</fieldName>
+            <fieldName>%%%NAMESPACE%%%Role__c</fieldName>
             <matchingMethod>Exact</matchingMethod>
         </matchingRuleItems>
         <ruleStatus>Active</ruleStatus>
