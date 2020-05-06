@@ -6,7 +6,7 @@
     <description>Flags duplicates among Staff Level records.</description>
     <duplicateRuleFilter xsi:nil="true"/>
     <duplicateRuleMatchRules>
-        <matchRuleSObjectType>Staff_Levels__c</matchRuleSObjectType>
+        <matchRuleSObjectType>%%%NAMESPACE%%%Staff_Levels__c</matchRuleSObjectType>
         <matchingRule>Staff_Level_Matching_Rule</matchingRule>
         <objectMapping xsi:nil="true"/>
     </duplicateRuleMatchRules>
