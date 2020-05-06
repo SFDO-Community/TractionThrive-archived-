@@ -23,6 +23,14 @@
     </types>
     <types>
         <members>*</members>
+        <name>DuplicateRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>MatchingRule</name>
+    </types>  
+    <types>
+        <members>*</members>
         <name>Profile</name>
     </types>    
     <types>
