@@ -35,6 +35,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>showHeader</name>
+                <name>decorate</name>
                 <value>true</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
@@ -44,9 +45,16 @@
             <componentInstanceProperties>
                 <name>showTitle</name>
                 <value>true</value>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Post-Installation Guide&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Congratulations! You have successfully installed the Traction Thrive Critical Care Resource Management app! There are some extra setup steps that you need to go through to fully utilize the application. Please refer to the Post-Installation Setup section of the most recent &lt;/span&gt;&lt;a href=&quot;https://partners.salesforce.com/servlet/servlet.FileDownload?file=00P3A00000nhE5bUAE&quot; target=&quot;_blank&quot; style=&quot;font-size: 16px;&quot;&gt;Package Installation Guide&lt;/a&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;</value>
             </componentInstanceProperties>
             <componentName>wave:waveDashboard</componentName>
         </componentInstances-->
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>overviewDashboard</componentName>
+        </componentInstances>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
