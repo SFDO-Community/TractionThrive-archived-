@@ -18,6 +18,7 @@ cm_lex_locators = {
         "lookup2": "//mark[text() = '{}']/ancestor::a",
         "lookup3": "//div[contains(@class,'slds-listbox__option-text') and text()='{}']"
     },
+    'availability':'//table/tbody/tr/td/span/span[@class = "slds-truncate" and contains(text(), "{}")]',
     'button':'//input[contains(@value,"{}")]',
     'link-text':'//a[text()="{}"]',
     "close_tab": "//div[contains(@class, 'oneGlobalNav')]/descendant::*[@data-key='close']/ancestor::button",
