@@ -13,12 +13,13 @@ Suite Teardown  Delete Records and Close Browser
 
 *** Variables ***
 ${Last_name}   tractionuser
-${status}    Not Available
+${status1}    On staff
+${status2}    Not Available
 
 
 *** Test Cases ***
 
-Navigate To Community Home
+1. Create a new staff with status equals on staff
    # Login as admin and create a new staff wit status Not Available
     Go To Page                                           Listing                                 Contact
     Click Object Button                                  New
@@ -27,8 +28,22 @@ Navigate To Community Home
     ...                                                  Last Name=${Last_name}
 
     Populate Lookup Field                                Account Name                            Robot Hospital
-    Select Value From Dropdown                           Status                                  ${status}
+    Select Value From Dropdown                           Status                                  ${status1}
     Click Modal Button                                   Save
     Wait Until Modal Is Closed
     Current Page Should Be                               Detail                                  Contact
-    Navigate And Verify Availability Related List        ${status}                               14
+    Navigate And Verify Availability Related List        Available                               14
+
+2 Create a new staff with status equals Not Available
+    Go To Page                                           Listing                                 Contact
+    Click Object Button                                  New
+    Wait For Modal                                       New                                     Staff
+    Populate Modal Form
+    ...                                                  Last Name=${Last_name}
+
+    Populate Lookup Field                                Account Name                            Robot Hospital
+    Select Value From Dropdown                           Status                                  ${status2}
+    Click Modal Button                                   Save
+    Wait Until Modal Is Closed
+    Current Page Should Be                               Detail                                  Contact
+    Navigate And Verify Availability Related List        ${status2}                               14
