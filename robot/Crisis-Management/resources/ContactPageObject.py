@@ -33,7 +33,7 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         self.selenium.location_should_contain("/lightning/r/Contact/",message="Current page is not a Contact record detail view")
         
     def navigate_and_verify_availability_related_list(self, name, expected_count):
-        """Delete the old value in specified field by clicking on delete icon and update with new value"""
+        """Navigates to the availability record related list and validates the count of available records"""
         base_url = self.cumulusci.org.lightning_base_url
         contact_id = self.salesforce.get_current_record_id()
         url = "{}/lightning/r/{}/related/Assignments__r/view".format(base_url,contact_id)
