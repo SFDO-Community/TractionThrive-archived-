@@ -387,6 +387,17 @@ flows:
                 task: deploy_community_config
             3:
                 task: publish_community
+            4:
+                task: deploy_kav_config
+            5:
+                task: deploy_profile_config
+            6:
+                task: load_dataset
+            7:
+                task: set_organization_wide_defaults
+            8:
+                task: set_user_role_scratch_org
+                when: org_config.scratch                
 
     config_managed:
         steps:
