@@ -19,7 +19,7 @@ ${status}    Not Available
 *** Test Cases ***
 
 Navigate To Community Home
-
+   # Login as admin and create a new staff wit status Not Available
     Go To Page                                           Listing                                 Contact
     Click Object Button                                  New
     Wait For Modal                                       New                                     Staff
