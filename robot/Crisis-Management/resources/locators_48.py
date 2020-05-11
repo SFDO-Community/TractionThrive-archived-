@@ -9,6 +9,10 @@ cm_lex_locators = {
         "title": "//label[contains(text(), '{}')]/following::input[contains(@class, 'slds-input slds-combobox__input') and @role='textbox']",
         "value": "//*[contains(@class, 'slds-listbox__option') and @data-value='{}']",
     },
+    "modal":{
+        "ele": "//div[./*/*[text()='{}']]"
+        
+    },
     "package": {
         "name": "//table[@class='list']/tbody/tr[{}]/th/a",
         "version": "//table[@class='list']/tbody/tr[{}]/td[4]",
