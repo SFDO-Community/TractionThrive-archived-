@@ -83,7 +83,7 @@ class CreateCommunity(BaseSalesforceApiTask):
         # Wait for the community to be created
         self.time_start = datetime.now()
         self._poll()
-
+    
     def _poll_action(self):
         elapsed = datetime.now() - self.time_start
         if elapsed.total_seconds() > self.options["timeout"]:
@@ -100,4 +100,97 @@ class CreateCommunity(BaseSalesforceApiTask):
             self.poll_complete = True
             self.logger.info(
                 "Community {} created".format(communities[self.options["name"]]["id"])
+            )
+
+
+
+class UpdateCommunityTemplate(BaseSalesforceApiTask):
+    api_version = "48.0"
+    task_docs = """
+    Update a Salesforce Community via the Connect API.
+    Specify the `template` "VF Template" for Visualforce Tabs community,
+    or the name for a specific desired template
+    """
+    task_options = {
+        "template": {
+            "description": "Name of the template for the community.",
+            "required": True,
+        },
+        "name": {"description": "Name of the community.", "required": True},
+        "description": {
+            "description": "Description of the community.",
+            "required": False,
+        },
+        "retries": {
+            "description": "Number of times to retry community creation request",
+            "default": 6,
+        },
+        "timeout": {
+            "description": "Time to wait, in seconds, for the community to be created",
+            "default": 300,
+        },
+    }
+
+    def _init_options(self, kwargs):
+        super(UpdateCommunityTemplate, self)._init_options(kwargs)
+        self.options["retries"] = int(self.options.get("retries", 6))
+        self.options["timeout"] = int(self.options.get("timeout", 300))
+
+    def _run_task(self):
+        self.logger.info('Updating community "{}"'.format(self.options["name"]))
+        self._try_update_community_template(0)
+
+    def _try_update_community_template(self, tries):
+        try:
+            tries += 1
+            self._update_community_template()
+        except Exception as e:
+            if tries > self.options["retries"]:
+                raise
+            else:
+                self.logger.info("Retrying community creation request")
+                self.poll_interval_s = 1
+                self._try_update_community_template(tries)
+
+    def _update_community_template(self):
+        payload = {
+            "name": self.options["name"],
+            "templateName": self.options["template"]
+        }
+
+        self.logger.info("Sending request to update Community")
+        try:
+            self.sf.restful("connect/communities", method="POST", data=json.dumps(payload))
+        except SalesforceMalformedRequest as e:
+            if "Error: A Community with this name already exists" in str(e):
+                community_list = self.sf.restful("connect/communities")["communities"]
+                communities = {c["name"]: c for c in community_list}
+                self.poll_complete = True
+                self.logger.info(
+                    "Community {} updated".format(communities[self.options["name"]]["id"])
+                )
+                return
+            else:
+                raise
+
+        # Wait for the community to be created
+        self.time_start = datetime.now()
+        self._poll()        
+
+    def _poll_action(self):
+        elapsed = datetime.now() - self.time_start
+        if elapsed.total_seconds() > self.options["timeout"]:
+            raise SalesforceException(
+                "Community update not finished after {timeout} seconds".format(
+                    **self.options
+                )
+            )
+
+        community_list = self.sf.restful("connect/communities")["communities"]
+        communities = {c["name"]: c for c in community_list}
+        # self.logger.info("name: " + self.options["name"] + " - communities: " + str(communities))
+        if self.options["name"] in communities:
+            self.poll_complete = True
+            self.logger.info(
+                "Community {} updated".format(communities[self.options["name"]]["id"])
             )
