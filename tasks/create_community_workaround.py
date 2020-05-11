@@ -83,7 +83,7 @@ class CreateCommunity(BaseSalesforceApiTask):
         # Wait for the community to be created
         self.time_start = datetime.now()
         self._poll()
-    
+
     def _poll_action(self):
         elapsed = datetime.now() - self.time_start
         if elapsed.total_seconds() > self.options["timeout"]:
