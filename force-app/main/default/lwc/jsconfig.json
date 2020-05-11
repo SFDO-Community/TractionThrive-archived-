@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/appFieldSet": [
+                "appFieldSet/appFieldSet.js"
+            ],
             "c/appModal": [
                 "appModal/appModal.js"
             ],
@@ -26,9 +29,6 @@
             ],
             "c/staffAvailabilityItem": [
                 "staffAvailabilityItem/staffAvailabilityItem.js"
-            ],
-            "c/appFieldSet": [
-                "appFieldSet/appFieldSet.js"
             ]
         }
     },
