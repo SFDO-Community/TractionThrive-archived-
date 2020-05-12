@@ -5,14 +5,18 @@
 	<description>App Field Set</description>
 	<isExposed>true</isExposed>
 	<targets>
-		<target>lightningCommunity__Default</target>
-		<target>lightningCommunity__Page</target>
+		<target>lightning__AppPage</target>
 		<target>lightning__RecordPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightningCommunity__Page</target>
+		<target>lightningCommunity__Default</target>
 	</targets>
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default, lightning__RecordPage">
 			<property name="fieldSetObject" type="String" label="The Object Api Name" description="Which object has the fieldset"/>
 			<property name="fieldSetApiName" type="String" label="The FieldSet Api Name" description="The api name of the fieldset that will be used"/>
+			<property name="columns" type="Integer" label="The quantity of columns" description="The number of columns that should be created" default="2"/>
+			<property name="recordId" type="String" label="Record ID" description="Automatically bind the page's record id to the component variable" default="{!recordId}"/>
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>
