@@ -1010,6 +1010,11 @@
         <name>%%%NAMESPACE%%%Division__c</name>
     </fields>
     <fields>
+        <help>एक अद्वितीय बाहरी आईडी जैसे अस्पताल आईडी</help>
+        <label>बाहरी आईडी</label>
+        <name>%%%NAMESPACE%%%External_ID__c</name>
+    </fields>
+    <fields>
         <help>शीर्ष स्तरीय स्वास्थ्य प्राधिकरण का पाठ संस्करण, नियमों को साझा करने के लिए सिस्टम फ़ील्ड। वर्कफ़्लो नियम अस्पताल पदानुक्रम के आधार पर इस फ़ील्ड को पॉप्युलेट करता है।</help>
         <label>स्वास्थ्य प्राधिकारी</label>
         <name>%%%NAMESPACE%%%Health_Authority__c</name>
@@ -1044,6 +1049,7 @@
         <name>%%%NAMESPACE%%%NumberofLocations__c</name>
     </fields>
     <fields>
+        <help>पैरेंट अकाउंट (अस्पताल) नाम के लिए सादा पाठ</help>
         <label>जनक की सुविधा</label>
         <name>%%%NAMESPACE%%%Parent_Facility_Name__c</name>
     </fields>

@@ -9,6 +9,7 @@
         <value><!-- Staff Levels --></value>
     </caseValues>
     <fields>
+        <help>Instalación relacionada con las necesidades esenciales y los umbrales de Complemento Completo</help>
         <label>Instalación de cuidado</label>
         <name>Care_Facility__c</name>
         <relationshipLabel>Niveles de personal</relationshipLabel>
@@ -22,6 +23,7 @@
         <name>Essential_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>Cantidad de personal requerido para proporcionar servicios esenciales</help>
         <label>Necesidades Esenciales</label>
         <name>Essential_Staff__c</name>
     </fields>
@@ -34,10 +36,12 @@
         <name>Full_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>Cantidad de personal requerido para proporcionar servicios completos</help>
         <label>Complemento completo</label>
         <name>Full_Staff__c</name>
     </fields>
     <fields>
+        <help>El tipo de rol requerido para los servicios esenciales y completos</help>
         <label>Papel</label>
         <name>Role__c</name>
     </fields>

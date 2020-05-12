@@ -55,6 +55,11 @@
         <name>%%%NAMESPACE%%%Division__c</name>
     </fields>
     <fields>
+        <help>Una identificación externa única, como una identificación de hospital</help>
+        <label>ID externo</label>
+        <name>%%%NAMESPACE%%%External_ID__c</name>
+    </fields>
+    <fields>
         <help>Versión de texto de la autoridad sanitaria de nivel superior, campo del sistema para compartir reglas. Una regla de flujo de trabajo llena este campo en función de la jerarquía de la instalación.</help>
         <label>Autoridad sanitaria</label>
         <name>%%%NAMESPACE%%%Health_Authority__c</name>
@@ -81,7 +86,7 @@
     </fields>
     <fields>
         <help>Capture cualquier nota sobre el potencial de redistribución del personal, limitaciones, habilidades</help>
-        <label><!-- Medical Staff Redeployment Comments --></label>
+        <label>Comentarios redistribución del personal</label>
         <name>%%%NAMESPACE%%%Medical_Staff_Redeployment_Comments__c</name>
     </fields>
     <fields>
@@ -89,6 +94,7 @@
         <name>%%%NAMESPACE%%%NumberofLocations__c</name>
     </fields>
     <fields>
+        <help>Texto sin formato para el nombre de la cuenta principal</help>
         <label>Centro para padres</label>
         <name>%%%NAMESPACE%%%Parent_Facility_Name__c</name>
     </fields>

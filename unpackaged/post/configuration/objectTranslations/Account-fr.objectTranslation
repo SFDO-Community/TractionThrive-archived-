@@ -55,6 +55,11 @@
         <name>%%%NAMESPACE%%%Division__c</name>
     </fields>
     <fields>
+        <help>Un ID externe unique tel qu&apos;un ID d&apos;hôpital</help>
+        <label>Identifiant externe</label>
+        <name>%%%NAMESPACE%%%External_ID__c</name>
+    </fields>
+    <fields>
         <help>Version texte de l&apos;autorité de santé de niveau supérieur, champ système pour le partage des règles. Une règle de workflow remplit ce champ en fonction de la hiérarchie des installations.</help>
         <label>Autorité sanitaire</label>
         <name>%%%NAMESPACE%%%Health_Authority__c</name>
@@ -89,6 +94,7 @@
         <name>%%%NAMESPACE%%%NumberofLocations__c</name>
     </fields>
     <fields>
+        <help>Texte brut pour le nom du compte parent</help>
         <label>Établissement parent</label>
         <name>%%%NAMESPACE%%%Parent_Facility_Name__c</name>
     </fields>

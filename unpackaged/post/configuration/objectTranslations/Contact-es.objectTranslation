@@ -130,6 +130,7 @@
         <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
+        <help>El papel de un miembro del personal para su instalación</help>
         <label>Papel</label>
         <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>

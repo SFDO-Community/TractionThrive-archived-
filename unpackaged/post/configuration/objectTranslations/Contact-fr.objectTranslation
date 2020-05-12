@@ -449,6 +449,7 @@
         <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
+        <help>Rôle d&apos;un membre du personnel pour son installation</help>
         <label>Rôle</label>
         <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>
