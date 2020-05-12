@@ -53,6 +53,27 @@ public with sharing class Constants {
         ].Name;
     }
 
+    //Contact
+    public final static String NP_Role = 'NP - Nurse Practitioner';
+    public final static String RN_Role = 'RN - Registered Nurse';
+    public final static String MD_Role = 'MD - Medical Doctor';
+    public final static String NOT_AVAILABLE_STATUS = 'Not Available';
+    public final static String AVAILABLE_STATUS = 'On staff';
+
+    //Access level
+    public final static String READ_ACCESS = 'Read';
+    public final static String EDIT_ACCESS = 'Edit';
+
+    //Sharing Reason
+    public final static String SHARING_REASON_MANUAL = 'Manual';
+
+    //Group Types
+    public final static String GROUP_TYPE_REGULAR = 'Regular';
+    public final static String GROUP_NAME_DELIMITER = '_';
+
+    //Traction Thrive Settings
+    public final static String COMMUNITY_SETTINGS = 'Community_Settings';
+
     //Status Report Categories
     public static Map<String, String> getStatusReportTypeMapping() {
         Status_Report_Type_Mapping__mdt[] mappings = [
@@ -71,15 +92,22 @@ public with sharing class Constants {
         return typeMap;
     }
 
-    //Contact
-    public final static String NP_Role = 'NP - Nurse Practitioner';
-    public final static String RN_Role = 'RN - Registered Nurse';
-    public final static String MD_Role = 'MD - Medical Doctor';
-    public final static String NOT_AVAILABLE_STATUS = 'Not Available';
-    public final static String AVAILABLE_STATUS = 'On staff';
+    //Traction Thrive Community Settings
+    public static Traction_Thrive_Setting__mdt getTractionThriveSettingByName(String settingName) {
+        Traction_Thrive_Setting__mdt result;
 
-    //Access level
-    public final static String READ_ACCESS = 'Read';
-    public final static String EDIT_ACCESS = 'Edit';
+        Traction_Thrive_Setting__mdt[] settings = [
+                SELECT  Id,
+                        DeveloperName,
+                        Private_Security_Enabled__c
+                FROM Traction_Thrive_Setting__mdt
+                WHERE DeveloperName = :settingName
+        ];
 
+        if(!settings.isEmpty()) {
+            result = settings[0];
+        }
+
+        return result;
+    }
 }

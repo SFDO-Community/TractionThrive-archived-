@@ -28,41 +28,21 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 /**
+ * @description Selector class for group records
  * @author  Heather Purvis, Traction on Demand
  * @date    2020-05-12
  */
-public with sharing class AccountService {
-
-    private final static Traction_Thrive_Setting__mdt setting = Constants.getTractionThriveSettingByName(Constants.COMMUNITY_SETTINGS);
+public with sharing class GroupsSelector {
 
     /**
-     * @description Before insert trigger logic
-     * @param       newAccountList newly inserted accounts
+     * @description Finds Account groups from their developer name (Groups are created with regular type)
+     * @param       names - set of developer names
+     * @return      List of groups
      */
-    public static void onBeforeInsertUpdate(List<Account> newAccountList) {
-        AccountHandler accountHandler = new AccountHandler();
-        accountHandler.handleStampingHealthAuthorityOnFacility(newAccountList);
-    }
-
-    /**
-     * @description After insert trigger logic
-     * @param       newAccountMap newly inserted accounts
-     */
-    public static void onAfterInsert(Map<Id, Account> newAccountMap) {
-        AccountHandler accountHandler = new AccountHandler();
-        if(setting.Private_Security_Enabled__c) {
-            accountHandler.handleAccountSharing(newAccountMap);
-        }
-    }
-
-    /**
-     * @description After delete trigger logic
-     * @param       oldAccountMap newly deleted accounts
-     */
-    public static void onAfterDelete(Map<Id, Account> oldAccountMap) {
-        AccountHandler accountHandler = new AccountHandler();
-        if(setting.Private_Security_Enabled__c) {
-            accountHandler.handleAccountDeletion(oldAccountMap);
-        }
+    public static List<Group> getAccountGroupsByDeveloperName(Set<String> names) {
+        return [SELECT Id, Name, DeveloperName FROM Group
+        WHERE DeveloperName IN :names
+        AND Type = :Constants.GROUP_TYPE_REGULAR
+        ];
     }
 }

@@ -36,4 +36,11 @@ trigger AccountTrigger on Account (before insert, before update, before delete, 
     if (Trigger.isBefore && (Trigger.isInsert || Trigger.isUpdate)) {
         AccountService.onBeforeInsertUpdate(Trigger.new);
     }
+    if (Trigger.isAfter) {
+        if (Trigger.isInsert) {
+            AccountService.onAfterInsert(Trigger.newMap);
+        } else if (Trigger.isDelete){
+            AccountService.onAfterDelete(Trigger.oldMap);
+        }
+    }
 }
