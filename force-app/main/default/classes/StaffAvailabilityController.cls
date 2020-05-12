@@ -106,8 +106,12 @@ public with sharing class StaffAvailabilityController {
 			} else {
 				contact[0].Status__c = Constants.NOT_AVAILABLE_STATUS;
 			}
-			SecureDml updateObject = new SecureDml();
-			updateObject.dmlUpdate(contact);
+			/*SecureDml updateObject = new SecureDml();
+			updateObject.dmlUpdate(contact);*/
+			Database.SaveResult saveResult = Database.update(contact[0], false);
+			if (!saveResult.isSuccess()) {
+				throw new AuraHandledException(saveResult.getErrors()[0].getMessage());
+			}
 			return contact[0];
 		} else {
 			throw new AuraHandledException('No Staff Found');

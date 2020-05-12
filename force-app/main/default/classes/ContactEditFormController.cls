@@ -63,7 +63,11 @@ public with sharing class ContactEditFormController {
 		}
 
 		SecureDml updateObject = new SecureDml();
-		updateObject.dmlUpdate(new List<Contact>{contactToUpdate});
+		try{
+			updateObject.dmlUpdate(new List<Contact>{contactToUpdate});
+		}catch (Exception e){
+			throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
+		}
 
 		return getInitData();
 	}
@@ -78,10 +82,12 @@ public with sharing class ContactEditFormController {
 		if (credentialToUpdate == null) {
 			throw new AuraHandledException('Wrong object was passed');
 		}
-
 		SecureDml updateObject = new SecureDml();
-		updateObject.dmlUpdate(new List<Credential__c>{credentialToUpdate});
-
+		try{
+			updateObject.dmlUpdate(new List<Credential__c>{credentialToUpdate});
+		}catch (Exception e){
+			throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
+		}
 		return CredentialsSelector.selectCredentialsById(credentialToUpdate.Id);
 	}
 
@@ -96,13 +102,16 @@ public with sharing class ContactEditFormController {
 		if (credentialToInsert == null) {
 			throw new AuraHandledException('Wrong credential');
 		}
-
 		SecureDml insertObject = new SecureDml();
 		try{
 			insertObject.dmlInsert(credentialToInsert);
 		}catch (Exception e){
 			throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
 		}
+		/*Database.SaveResult saveResult = Database.insert(credentialToInsert, false);
+		if (!saveResult.isSuccess()) {
+			throw new AuraHandledException(saveResult.getErrors()[0].getMessage());
+		}*/
 
 		return CredentialsSelector.selectCredentialsById(credentialToInsert.Id);
 	}
@@ -112,7 +121,7 @@ public with sharing class ContactEditFormController {
 	 * @return a list with all the picklist values
 	 */
 	@AuraEnabled
-	public static List<String> getCredentialsTypePicklistValues() {
+	public static Map<String, String> getCredentialsTypePicklistValues() {
 		return getPicklistValuesFromObjectAndField(UTIL_Namespace.StrTokenNSPrefix('Credential__c'), UTIL_Namespace.StrTokenNSPrefix('Type__c'));
 	}
 
@@ -127,7 +136,12 @@ public with sharing class ContactEditFormController {
 		}
 
 		SecureDml deleteObject = new SecureDml();
-		deleteObject.dmlDelete(new List<Credential__c>{CredentialsSelector.selectCredentialsById(credentialId)});
+		try{
+			deleteObject.dmlDelete(new List<Credential__c>{CredentialsSelector.selectCredentialsById(credentialId)});
+		}catch (Exception e){
+			throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
+		}
+
 	}
 
 	// =========================================================
@@ -145,8 +159,8 @@ public with sharing class ContactEditFormController {
 	 * @example
 	 * getPicklistValuesFromObjectAndField(UTIL_Namespace.StrTokenNSPrefix('Credential__c'), UTIL_Namespace.StrTokenNSPrefix('Type__c'))
 	 */
-	private static List<String> getPicklistValuesFromObjectAndField(String objectName, String fieldName) {
-		List<String> picklistValues = new List<String>();
+	private static Map<String,String> getPicklistValuesFromObjectAndField(String objectName, String fieldName) {
+		Map<String,String> picklistValues = new Map<String,String>();
 		Schema.SObjectType s = Schema.getGlobalDescribe().get(objectName) ;
 		Schema.DescribeSObjectResult r = s.getDescribe() ;
 		Map<String,Schema.SObjectField> fields = r.fields.getMap() ;
@@ -154,7 +168,7 @@ public with sharing class ContactEditFormController {
 		List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
 
 		for( Schema.PicklistEntry pickListVal : ple){
-			picklistValues.add(pickListVal.getLabel());
+			picklistValues.put(pickListVal.getLabel(),pickListVal.getValue());
 		}
 
 		return picklistValues;
@@ -166,10 +180,10 @@ public with sharing class ContactEditFormController {
 
 	public class InitData {
 		@AuraEnabled public ContactCardCtrl.ContactData contactData;
-		@AuraEnabled public List<String> skillsPicklistValues;
+		@AuraEnabled public Map<String, String> skillsPicklistValues;
 		@AuraEnabled public List<Credential__c> credentials;
 
-		public InitData(ContactCardCtrl.ContactData contactData, List<String> skillsPicklistValues, List<Credential__c> credentials) {
+		public InitData(ContactCardCtrl.ContactData contactData, Map<String, String> skillsPicklistValues, List<Credential__c> credentials) {
 			this.contactData = contactData;
 			this.skillsPicklistValues = skillsPicklistValues;
 			this.credentials = credentials;
