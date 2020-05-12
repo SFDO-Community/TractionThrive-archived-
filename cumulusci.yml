@@ -26,6 +26,15 @@ tasks:
             name: "Traction Thrive"
             url_path_prefix: TractionThrive
 
+    create_community_scratch_org:
+        group: Traction Thrive Config
+        description: Creates the community
+        class_path: tasks.create_community_workaround.CreateCommunity
+        options:
+            template: "Build Your Own"
+            name: "Traction Thrive"
+            url_path_prefix: TractionThrive
+
     add_namespace_tokens:
         class_path: tasks.add_namespace_tokens.AddNamespaceTokens
 
@@ -349,6 +358,46 @@ flows:
                 task: deploy_community_config
             4:
                 task: publish_community
+    
+    config_scratch_start:
+        description: SCRATCH org start build
+        steps:
+            1: 
+                flow: dependencies
+            2: 
+                flow: deploy_unmanaged
+            3:
+                task: deploy_post
+            4: 
+                task: update_admin_profile
+            5:
+                task: load_custom_settings
+            6:
+                task: deploy_wave_config
+            7:
+                task: create_community_scratch_org
+            
+                
+    config_scratch_finish:
+        description: SCRATCH org finish build
+        steps:
+            1:
+                task: deploy_navigation_config
+            2:
+                task: deploy_community_config
+            3:
+                task: publish_community
+            4:
+                task: deploy_kav_config
+            5:
+                task: deploy_profile_config
+            6:
+                task: load_dataset
+            7:
+                task: set_organization_wide_defaults
+            8:
+                task: set_user_role_scratch_org
+                when: org_config.scratch                
 
     config_managed:
         steps:

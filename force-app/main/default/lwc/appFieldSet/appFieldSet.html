@@ -5,9 +5,15 @@
 <!-- App Field Set -->
 <template>
 	<c-app-spinner></c-app-spinner>
-	<div class="slds-grid slds-wrap slds-gutters">
+	<div class="slds-grid slds-wrap slds-gutters" if:true={fieldSetData}>
 		<template for:each={fieldSetData} for:item="field">
-			<div key={field.fieldPath} class="slds-col slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+			<div key={field.fieldPath} class={columnsClass}>
+				<template if:false={field.isCheckboxField}>
+					<label class="slds-form-element__label">{field.label}</label>
+					<template if:true={field.helpText}>
+						<lightning-helptext content={field.helpText}></lightning-helptext>
+					</template>
+				</template>
 				<template if:true={field.isLookupField}>
 					<c-lookup
 							custom-key={field.fieldPath}
@@ -16,12 +22,16 @@
 							is-multi-entry={field.lookupConfig.isMultiEntry}
 							onsearch={handleLookupSearch}
 							onselectionchange={handleLookupChange}
-							label={field.label}
 							placeholder="Start Typing">
 					</c-lookup>
 				</template>
 				<template if:true={field.isCheckboxField}>
-					<lightning-input class="slds-m-top_x-large slds-form-element" name={field.fieldPath} type="Checkbox" value={field.value} label={field.label}></lightning-input>
+					<span class="cmp-checkbox">
+						<lightning-input class="slds-form-element" checked={field.value} name={field.fieldPath} data-value={field.value} type="Checkbox" label={field.label}></lightning-input>
+						<template if:true={field.helpText}>
+							<lightning-helptext class="cmp-checkbox-helptext" content={field.helpText}></lightning-helptext>
+						</template>
+					</span>
 				</template>
 				<template if:true={field.isPicklistField}>
 					<lightning-combobox
@@ -29,27 +39,31 @@
 							label={field.label}
 							value={field.value}
 							placeholder={field.label}
-							options={field.picklistEntries}
-							class="slds-m-top_medium"></lightning-combobox>
+							variant="label-hidden"
+							options={field.picklistEntries}></lightning-combobox>
 				</template>
 				<template if:true={field.isMultiPicklistField}>
 					<lightning-dual-listbox name={field.fieldPath}
-											class="slds-m-top_medium"
 											label={field.label}
 											value={field.value}
 											source-label="Available"
 											selected-label="Selected"
+											variant="label-hidden"
 											options={field.picklistEntries}></lightning-dual-listbox>
 				</template>
 				<template if:true={field.isRegularField}>
-					<lightning-input class="slds-m-top_medium" name={field.fieldPath} type={field.type} value={field.value} label={field.label} required={field.required}></lightning-input>
+					<lightning-input name={field.fieldPath} type={field.type} value={field.value} label={field.value} required={field.required} variant="label-hidden" autocomplete="0"></lightning-input>
 				</template>
+				<template if:true={field.isTextarea}>
+					<lightning-textarea name={field.fieldPath} label={field.label} value={field.value} required={field.required} variant="label-hidden"></lightning-textarea>
+				</template>
+
 			</div>
 		</template>
 	</div>
 	<template if:false={hasParent}>
 		<div class="slds-grid">
-			<div class="slds-size_1-of-1 slds-p-horizontal_medium slds-text-align_right slds-p-top_medium">
+			<div class="slds-size_1-of-1 slds-p-left_medium slds-text-align_right slds-p-top_medium">
 				<lightning-button label="Cancel" title="Cancel" class="slds-m-left_x-small" onclick={cancel}></lightning-button>
 				<lightning-button label="Save" title="Save" variant="brand" class="slds-m-left_x-small" onclick={saveAndValidate}></lightning-button>
 			</div>
