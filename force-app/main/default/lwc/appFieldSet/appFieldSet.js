@@ -21,17 +21,19 @@ export default class AppFieldSet extends LightningElement {
 	errorMessage;
 	stack;
 	namespace;
-	fieldSetData;
-	recordToEdit;
+	columnsClass = "slds-col slds-m-top_medium slds-small-size_1-of-1";
 
 	// Design time attribute
 	@api fieldSetObject;
 	@api fieldSetApiName;
+	@api recordToEdit;
 
 	@api hasParent = false;
 	@api recordId;
 	@api fields = [];
+	@api columns = 2;
 
+	@track fieldSetData;
 	@track picklistFields;
 	@track multiPicklistFields;
 	@track checkboxFields;
@@ -47,9 +49,20 @@ export default class AppFieldSet extends LightningElement {
 		return this.buildRecord();
 	}
 
+	@api
+	get fieldNames() {
+		return this.getFieldNames();
+	}
+
+	@api
+	get objectApiName() {
+		return this.fieldSetObject;
+	}
+
 	renderedCallback() {
-		if (!this.isFirstRender) {
+		if (!this.isFirstRender && this.fieldSetObject && this.fieldSetApiName) {
 			this.isFirstRender = true;
+			this.columnsClass += " slds-medium-size_1-of-"+this.columns+" slds-large-size_1-of-"+this.columns;
 			getOrgNamespace().then(result => {
 				if (result) {
 					this.namespace = result+'__';
@@ -113,10 +126,12 @@ export default class AppFieldSet extends LightningElement {
 			ObjectName: this.namespace + this.fieldSetObject
 		}).then(result => {
 			this.fieldSetData = result;
-			this.handleLookupField();
-			if (this.recordId) {
+			if (this.recordToEdit) {
+				this.handleRecordToEdit();
+			} else if (this.recordId) {
 				this.getRecordToEdit();
 			}
+			this.handleLookupField();
 		}).catch(error => {
 			this.error = error;
 			console.error('ERROR', error);
@@ -126,16 +141,25 @@ export default class AppFieldSet extends LightningElement {
 		});
 	}
 
+	handleRecordToEdit() {
+		if (this.recordToEdit.editedObject) {
+			this.recordId = this.recordToEdit.editedObject.Id;
+			this.setupEditRecord(this.recordToEdit);
+		} else {
+			let recordToEdit = {'editedObject': this.recordToEdit};
+			this.recordId = this.recordToEdit.Id;
+			this.setupEditRecord(recordToEdit);
+		}
+	}
+
 	getRecordToEdit() {
 		this.template.querySelector("c-app-spinner").displaySpinner(true);
 
-		let fieldNames = [];
-		this.fieldSetData.forEach(function (field) {
-			fieldNames.push(field.fieldPath);
-		});
+		let fieldNames = this.getFieldNames();
 
 		getRecordToEdit({recordId: this.recordId, fieldNames: fieldNames}).then(result => {
 			this.recordToEdit = result.editedObject;
+			this.recordId = result.editedObject.Id;
 			this.setupEditRecord(result);
 		}).catch(error => {
 			this.error = error;
@@ -144,6 +168,14 @@ export default class AppFieldSet extends LightningElement {
 		}).finally(() => {
 			this.template.querySelector("c-app-spinner").displaySpinner(false);
 		});
+	}
+
+	getFieldNames() {
+		let fieldNames = [];
+		this.fieldSetData.forEach(function (field) {
+			fieldNames.push(field.fieldPath);
+		});
+		return fieldNames;
 	}
 
 	saveAndValidate() {
@@ -181,9 +213,11 @@ export default class AppFieldSet extends LightningElement {
 
 	/* SUPPORT METHODS  */
 	setupEditRecord(result) {
+		let allFieldSetData = [...this.fieldSetData];
 		let allInputs = this.template.querySelectorAll('lightning-input');
-		let lookupFields = JSON.parse(result.lookupFields);
-		this.fieldSetData.forEach(function (field) {
+		let allTextAreas = this.template.querySelectorAll('lightning-textarea');
+		let lookupFields = result.lookupFields ? JSON.parse(result.lookupFields) : [];
+		allFieldSetData.forEach(function (field) {
 			let value = result.editedObject[field.fieldPath];
 			if (field.isMultiPicklistField && value) {
 				field.value = value.split(';');
@@ -209,8 +243,13 @@ export default class AppFieldSet extends LightningElement {
 					input.checked = value;
 				}
 			});
+			allTextAreas.forEach(function (textArea) {
+				if (textArea.name == field.fieldPath) {
+					textArea.value = value;
+				}
+			});
 		});
-		this.fieldSetData = [...this.fieldSetData];
+		this.fieldSetData = [...allFieldSetData];
 	}
 
 	buildRecord() {
@@ -222,21 +261,21 @@ export default class AppFieldSet extends LightningElement {
 		this.template.querySelectorAll('lightning-input').forEach(function (input) {
 			if (input.type == 'checkbox') {
 				newObjectToInsert[input.name] = input.checked;
-			} else if (input.value) {
+			} else {
 				newObjectToInsert[input.name] = input.value;
 			}
 		});
 
+		this.template.querySelectorAll('lightning-textarea').forEach(function (textArea) {
+			newObjectToInsert[textArea.name] = textArea.value;
+		});
+
 		this.template.querySelectorAll('lightning-combobox').forEach(function (combobox) {
-			if (combobox.value) {
-				newObjectToInsert[combobox.name] = combobox.value;
-			}
+			newObjectToInsert[combobox.name] = combobox.value;
 		});
 
 		this.template.querySelectorAll('lightning-dual-listbox').forEach(function (listbox) {
-			if (listbox.value) {
-				newObjectToInsert[listbox.name] = listbox.value.join(";");
-			}
+			newObjectToInsert[listbox.name] = listbox.value.join(";");
 		});
 
 		let allData = this.fieldSetData;
@@ -253,6 +292,8 @@ export default class AppFieldSet extends LightningElement {
 						};
 						data.lookupConfig.initialSelection = [initialSelection];
 						newObjectToInsert[data.fieldPath] = lookup.getSelection()[0].id;
+					} else {
+						newObjectToInsert[data.fieldPath] = '';
 					}
 				}
 			});
@@ -318,22 +359,26 @@ export default class AppFieldSet extends LightningElement {
 
 		let parameters = event.detail;
 		parameters.lookupObject = lookupObject;
- 		searchGenericLookup(parameters).then((results) => {
-				this.template.querySelectorAll('c-lookup').forEach(function (lookup) {
-					if (selectedLookupKey === lookup.customKey) {
-						lookup.setSearchResults(results);
-					}
-				})
-			}).catch((error) => {
-				this.notifyLookupUser('Lookup Error', 'An error occured while searching with the lookup field.', 'error');
-				// eslint-disable-next-line no-console
-				console.error('Lookup error', JSON.stringify(error));
-				this.lookupConfig.lookupErrors = [error];
-			});
+		searchGenericLookup(parameters).then((results) => {
+			this.template.querySelectorAll('c-lookup').forEach(function (lookup) {
+				if (selectedLookupKey === lookup.customKey) {
+					lookup.setSearchResults(results);
+				}
+			})
+		}).catch((error) => {
+			this.notifyLookupUser('Lookup Error', 'An error occured while searching with the lookup field.', 'error');
+			// eslint-disable-next-line no-console
+			console.error('Lookup error', JSON.stringify(error));
+			this.lookupConfig.lookupErrors = [error];
+		});
 	}
 
 	handleLookupChange() {
-		this.lookupConfig.lookupErrors = [];
+		this.fieldSetData.forEach(function (item) {
+			if (item.isLookupField) {
+				item.lookupConfig.lookupErrors = [];
+			}
+		});
 	}
 
 	validateLookup() {

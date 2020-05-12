@@ -124,7 +124,7 @@ public without sharing class AppFieldSetController {
 	public static SObject insertSObject(String jSONSObject, String sObjectApiName) {
 		SObject objectToInsert = convertGenericSObject(jSONSObject, sObjectApiName);
 		SecureDml insertObject = new SecureDml();
-		insertObject.dmlInsert(new List<SObject>{convertGenericSObject(jSONSObject, sObjectApiName)});
+		insertObject.dmlInsert(new List<SObject>{objectToInsert});
 		return objectToInsert;
 	}
 
@@ -179,6 +179,15 @@ public without sharing class AppFieldSetController {
 		return results;
 	}
 
+	public static List<String> getFieldsList(String objectApiName, String fieldSetName) {
+		List<AppFieldSetController.FieldSetMember> fieldSetFields = getFieldSetFields(fieldSetName, objectApiName);
+		List<String> allFields = new List<String>();
+		for (AppFieldSetController.FieldSetMember field : fieldSetFields) {
+			allFields.add(field.fieldPath);
+		}
+
+		return allFields;
+	}
 
 	// =========================================================
 	//  Private METHODS
@@ -233,27 +242,45 @@ public without sharing class AppFieldSetController {
 		@AuraEnabled public Boolean required;
 		@AuraEnabled public String type;
 		@AuraEnabled public String value;
+		@AuraEnabled public String helpText;
 		@AuraEnabled public String lookupObject;
 		@AuraEnabled public Boolean isLookupField;
 		@AuraEnabled public Boolean isPicklistField;
 		@AuraEnabled public Boolean isCheckboxField;
 		@AuraEnabled public Boolean isMultiPicklistField;
 		@AuraEnabled public Boolean isRegularField;
+		@AuraEnabled public Boolean isTextarea;
 		@AuraEnabled public List<PicklistEntry> picklistEntries = new List<PicklistEntry>();
 
 		public FieldSetMember(Schema.FieldSetMember f, Map<String, SObjectField> fieldMap) {
+			String fieldType = String.valueOf(f.getType());
+			if (fieldType == String.valueOf(Schema.DisplayType.PERCENT) || fieldType == String.valueOf(Schema.DisplayType.DOUBLE)) {
+				fieldType = 'number';
+			}
+			this.type = fieldType;
 			this.DBRequired = f.dbRequired;
 			this.fieldPath = f.fieldPath;
 			this.label = f.label;
 			this.required = f.required;
-			this.type = String.valueOf(f.getType());
 			this.value = '';
-			this.lookupObject = fieldMap.get(fieldPath).getDescribe().getRelationshipName();
+			this.helpText = fieldMap.get(fieldPath).getDescribe().getInlineHelpText();
+			if (fieldMap != null) {
+				if (fieldMap.get(fieldPath).getDescribe().getReferenceTo().size() > 0) {
+					this.lookupObject = fieldMap.get(fieldPath).getDescribe().getReferenceTo().get(0)+'';
+				}
+			} else {
+				this.lookupObject = fieldMap.get(fieldPath).getDescribe().getRelationshipName();
+			}
 			this.isLookupField = f.type == Schema.DisplayType.REFERENCE;
 			this.isPicklistField = f.type == Schema.DisplayType.PICKLIST;
 			this.isCheckboxField = f.type == Schema.DisplayType.BOOLEAN;
 			this.isMultiPicklistField = f.type == Schema.DisplayType.MULTIPICKLIST;
-			this.isRegularField = f.type != Schema.DisplayType.PICKLIST && f.type != Schema.DisplayType.BOOLEAN && f.type != Schema.DisplayType.MULTIPICKLIST && f.type != Schema.DisplayType.REFERENCE;
+			this.isTextarea = f.type == Schema.DisplayType.TEXTAREA;
+			this.isRegularField = f.type != Schema.DisplayType.PICKLIST &&
+					f.type != Schema.DisplayType.BOOLEAN &&
+					f.type != Schema.DisplayType.MULTIPICKLIST &&
+					f.type != Schema.DisplayType.REFERENCE &&
+					f.type != Schema.DisplayType.TEXTAREA;
 
 			if (this.type == 'Picklist' || this.type == 'Multipicklist') {
 				for (Schema.PicklistEntry ple : fieldMap.get(fieldPath).getDescribe().getPicklistValues()) {
@@ -269,15 +296,18 @@ public without sharing class AppFieldSetController {
 			this.required = false;
 			this.type = String.valueOf(f.getType());
 			this.value = '';
+			this.helpText = f.getInlineHelpText();
 			this.lookupObject = f.getRelationshipName();
 			this.isLookupField = f.getType() == Schema.DisplayType.REFERENCE;
 			this.isPicklistField = f.getType() == Schema.DisplayType.PICKLIST;
 			this.isCheckboxField = f.getType() == Schema.DisplayType.BOOLEAN;
 			this.isMultiPicklistField = f.getType() == Schema.DisplayType.MULTIPICKLIST;
+			this.isTextarea = f.type == Schema.DisplayType.TEXTAREA;
 			this.isRegularField = f.getType() != Schema.DisplayType.PICKLIST &&
 					f.getType() != Schema.DisplayType.BOOLEAN &&
 					f.getType() != Schema.DisplayType.MULTIPICKLIST &&
-					f.getType() != Schema.DisplayType.REFERENCE;
+					f.getType() != Schema.DisplayType.REFERENCE &&
+					f.getType() != Schema.DisplayType.TEXTAREA;
 
 			if (this.type == 'Picklist' || this.type == 'Multipicklist') {
 				for (Schema.PicklistEntry ple : f.getPicklistValues()) {
@@ -301,6 +331,7 @@ public without sharing class AppFieldSetController {
 		}
 	}
 
+	@TestVisible
 	public with sharing class EditObjectData {
 		@AuraEnabled public SObject editedObject;
 		@AuraEnabled public String lookupFields;
