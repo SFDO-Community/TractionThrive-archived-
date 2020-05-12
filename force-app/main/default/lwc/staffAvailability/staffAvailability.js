@@ -55,8 +55,8 @@ export default class StaffAvailability extends LightningElement {
 	};
 
 	connectedCallback() {
-		this.titleText = MY_AVAILABILITY;
-		this.titleTextForContactRecord =  AVAILABILITY;
+		this.titleText = this.titleText ? this.titleText : MY_AVAILABILITY;
+		this.titleTextForContactRecord = this.titleTextForContactRecord ? this.titleTextForContactRecord : AVAILABILITY;
 	}
 
 	renderedCallback() {
