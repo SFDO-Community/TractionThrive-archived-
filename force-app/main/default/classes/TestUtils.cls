@@ -91,8 +91,7 @@ public class TestUtils {
                 Name = name,
                 RecordTypeId = RecordTypeId,
                 ParentId = parentId,
-                BillingState = 'BC',
-                Health_Authority__c = name
+                BillingState = 'BC'
         );
 
         if(doInsert){
