@@ -156,9 +156,9 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Staff Access</label>
     <nameField>
-        <encryptionScheme>None</encryptionScheme>
+        <displayFormat>SA-{0000000}</displayFormat>
         <label>Staff Access</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Staff Access</pluralLabel>
     <searchLayouts/>
