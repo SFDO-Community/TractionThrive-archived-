@@ -60,7 +60,7 @@ public with sharing class StaffAssignmentServiceTest {
 		List<AccountShare> accShareBefore = [SELECT Id, AccountId FROM AccountShare WHERE AccountId = :account.Id];
 
 		Test.startTest();
-		Staff_Access__c staffAssignment = new Staff_Access__c(Staff__c = contact.Id, Care_Facility__c = account.Id);
+		Staff_Access__c staffAssignment = new Staff_Access__c(Staff__c = contact.Id, Care_Facility__c = account.Id, Name='N/A');
 		insert staffAssignment;
 		delete staffAssignment;
 		Test.stopTest();
