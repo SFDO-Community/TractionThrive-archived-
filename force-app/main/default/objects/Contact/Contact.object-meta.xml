@@ -41,4 +41,6 @@
         <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
     </searchLayouts>
+    <externalSharingModel>Private</externalSharingModel>
+    <sharingModel>Private</sharingModel>
 </CustomObject>
