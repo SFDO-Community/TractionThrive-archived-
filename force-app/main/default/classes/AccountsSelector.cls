@@ -120,4 +120,27 @@ public with sharing class AccountsSelector {
         ];
         return accounts;
     }
+
+    /**
+     * @description Given a set of account ids returns the info of the hierarchy
+     * @param       accountIds
+     * @return      List of accounts
+     */
+    public static List<Account> getAccountHierarchyAccounts(Set<Id> accountIds) {
+        List<Account> accounts = [
+                SELECT  Id,
+                        Name,
+                        Health_Authority__c,
+                        ParentId,
+                        Parent.Name,
+                        Parent.Health_Authority__c,
+                        Parent.ParentId,
+                        Parent.Parent.Name,
+                        Parent.Parent.Health_Authority__c,
+                        RecordTypeId
+                FROM    Account
+                WHERE   Id IN :accountIds
+        ];
+        return accounts;
+    }
 }
