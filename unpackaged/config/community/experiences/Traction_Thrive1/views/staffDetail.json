@@ -45,17 +45,6 @@
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "relatedListApiName" : "StaffAccess__r",
-        "relatedListComponentOverride" : "GRID",
-        "width" : "MEDIUM"
-      },
-      "componentName" : "forceCommunity:relatedListSingle",
-      "id" : "5db75014-a19e-487a-836c-dbe90f0df69a",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
     } ],
     "id" : "e6809804-0d3e-48d6-a7fc-6a3b9ed012c9",
     "regionName" : "content",
