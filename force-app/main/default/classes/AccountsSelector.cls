@@ -120,4 +120,55 @@ public with sharing class AccountsSelector {
         ];
         return accounts;
     }
+
+    /**
+     * @description Given a set of account ids returns the info of the hierarchy
+     * @param       accountIds
+     * @return      List of accounts
+     */
+    public static List<Account> getAccountHierarchyAccounts(Set<Id> accountIds) {
+        List<Account> accounts = [
+                SELECT  Id,
+                        Name,
+                        Health_Authority__c,
+                        ParentId,
+                        Parent.Name,
+                        Parent.Health_Authority__c,
+                        Parent.ParentId,
+                        Parent.Parent.Name,
+                        Parent.Parent.Health_Authority__c,
+                        RecordTypeId
+                FROM    Account
+                WHERE   Id IN :accountIds
+        ];
+        return accounts;
+    }
+
+  /**
+   * @description Given a set of accounts returns their parent accounts in the account hierarchy
+   * @param       accounts
+   * @return      List of accounts
+   */
+    public static List<Account> getParentAccounts(Set<Account> accounts) {
+        Set<Id> parentAccountIds = new Set<Id>();
+        Set<String> parentHealthAuthNames = new Set<String>();
+
+        for(Account account : accounts) {
+            parentAccountIds.add(account.ParentId);
+            parentHealthAuthNames.add(account.Health_Authority__c);
+        }
+
+        List<Account> result = [
+                SELECT  Id,
+                        Name,
+                        Health_Authority__c,
+                        RecordTypeId
+                FROM    Account
+                WHERE   ID IN :parentAccountIds
+                OR      (Name IN :parentHealthAuthNames
+                AND RecordTypeId = : Constants.HEALTH_AUTH_RECORDTYPE_ID)
+        ];
+
+        return result;
+    }
 }
