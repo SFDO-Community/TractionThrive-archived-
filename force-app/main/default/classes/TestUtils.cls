@@ -91,7 +91,8 @@ public class TestUtils {
                 Name = name,
                 RecordTypeId = RecordTypeId,
                 ParentId = parentId,
-                BillingState = 'BC'
+                BillingState = 'BC',
+                Health_Authority__c = name
         );
 
         if(doInsert){
@@ -192,7 +193,6 @@ public class TestUtils {
 
     public static Staff_Access__c createStaffAccess(Id contactId, Id careFacilityId, Boolean doInsert) {
         Staff_Access__c result = new Staff_Access__c(
-                Name = 'N/A',
                 Staff__c = contactId,
                 Care_Facility__c = careFacilityId
         );
