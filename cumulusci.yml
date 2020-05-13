@@ -172,11 +172,11 @@ tasks:
         options:
             org_wide_defaults:
                 - api_name: Account
-                  internal_sharing_model: ReadWrite
-                  external_sharing_model: ReadWrite
-                # - api_name: Contact
-                #   internal_sharing_model: ControlledByParent
-                #   external_sharing_model: ControlledByParent                  
+                  internal_sharing_model: Private
+                  external_sharing_model: Private
+                - api_name: Contact
+                  internal_sharing_model: Private
+                  external_sharing_model: Private                  
                 #- api_name: Assignment__c
                 #  internal_sharing_model: ReadWrite
                 #  external_sharing_model: ReadWrite
@@ -191,8 +191,8 @@ tasks:
         options:
             org_wide_defaults:
                 - api_name: Account
-                  internal_sharing_model: ReadWrite
-                  external_sharing_model: Read
+                  internal_sharing_model: Private
+                  external_sharing_model: Private
                 - api_name: Case
                   internal_sharing_model: Private
                   external_sharing_model: Private
