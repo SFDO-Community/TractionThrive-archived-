@@ -23,6 +23,3 @@ robot/Crisis-Management/results/
 
 # Misc
 .DS_Store
-IlluminatedCloud/TractionThrive__dev/OfflineSymbolTable.zip
-/node_modules/*
-package-lock.json
