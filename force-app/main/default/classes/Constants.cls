@@ -53,6 +53,9 @@ public with sharing class Constants {
         ].Name;
     }
 
+    //Access level
+    public final static String READ_ACCESS = 'Read';
+    public final static String EDIT_ACCESS = 'Edit';
     //Contact
     public final static String NP_Role = 'NP - Nurse Practitioner';
     public final static String RN_Role = 'RN - Registered Nurse';
