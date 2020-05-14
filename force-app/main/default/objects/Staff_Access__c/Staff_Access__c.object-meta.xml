@@ -156,7 +156,6 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Staff Access</label>
     <nameField>
-        <encryptionScheme>None</encryptionScheme>
         <label>Staff Access</label>
         <type>Text</type>
     </nameField>
