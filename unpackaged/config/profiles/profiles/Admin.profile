@@ -411,6 +411,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Staff_Record_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Staff_Record_Link__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>%%%NAMESPACE%%%Staff_Levels__c.%%%NAMESPACE%%%Current_Staff__c</field>
         <readable>true</readable>
     </fieldPermissions>
