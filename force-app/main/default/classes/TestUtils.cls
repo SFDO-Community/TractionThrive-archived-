@@ -191,11 +191,41 @@ public class TestUtils {
         insert setting;
     }
 
-    public static Staff_Access__c createStaffAccess(Id contactId, Id careFacilityId, Boolean doInsert) {
+    public static Staff_Access__c createStaffAccess(Id contactId, Id facilityId, Boolean doInsert) {
         Staff_Access__c result = new Staff_Access__c(
                 Name = 'N/A',
                 Staff__c = contactId,
-                Care_Facility__c = careFacilityId
+                Care_Facility__c = facilityId
+        );
+
+        if(doInsert){
+            insert result;
+        }
+
+        return result;
+    }
+
+    public static Staff_Access__c createReadStaffAccess(Id contactId, Id facilityId, Boolean doInsert) {
+        Staff_Access__c result = new Staff_Access__c(
+                Name = 'N/A',
+                Staff__c = contactId,
+                Care_Facility__c = facilityId,
+                Access_Level__c = Constants.READ_ACCESS
+        );
+
+        if(doInsert){
+            insert result;
+        }
+
+        return result;
+    }
+
+    public static Staff_Access__c createEditStaffAccess(Id contactId, Id facilityId, Boolean doInsert) {
+        Staff_Access__c result = new Staff_Access__c(
+                Name = 'N/A',
+                Staff__c = contactId,
+                Care_Facility__c = facilityId,
+                Access_Level__c = Constants.EDIT_ACCESS
         );
 
         if(doInsert){
