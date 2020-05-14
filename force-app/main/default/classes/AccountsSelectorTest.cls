@@ -77,6 +77,8 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getAccountByRecordType() {
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getAccountByRecordType(Constants.HOSPITAL_RECORDTYPE_ID);
 			System.assert(accounts.size() > 0);
@@ -85,6 +87,8 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getChildAccountsByParent() {
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 		healthAuth = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
 		hospital = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID];
 
@@ -98,6 +102,8 @@ public with sharing class AccountsSelectorTest {
 	@IsTest
 	static void getHospitalsByAuthorityName() {
 		healthAuth = [SELECT Id, Name FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getHospitalsByAuthorityName(healthAuth.Name);
@@ -107,6 +113,8 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getDivisionTree() {
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getDivisionTree();
 			System.assert(accounts.size() > 0);
@@ -118,6 +126,8 @@ public with sharing class AccountsSelectorTest {
 		healthAuth = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
 		hospital = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID];
 		divisionAccount = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID];
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getAccount(new Set<Id>{
