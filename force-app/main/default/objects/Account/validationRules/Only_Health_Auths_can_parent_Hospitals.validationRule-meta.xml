@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Health_Auths_can_parent_Hospitals</fullName>
+    <active>true</active>
+    <description>Ensures that only Regional Health Authority Facilities can be a parent of Hospital Facilities.</description>
+    <errorConditionFormula>CONTAINS( RecordType.DeveloperName, &quot;Hospital&quot; ) &amp;&amp;
+!( ISBLANK( ParentId ) || ISNULL( ParentId) ) &amp;&amp;
+!CONTAINS( Parent.RecordType.DeveloperName, &quot;Regional_Health_Authority&quot; )</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Invalid Parent Facility. Only Regional Health Authorities can be a parent of Hospitals.</errorMessage>
+</ValidationRule>

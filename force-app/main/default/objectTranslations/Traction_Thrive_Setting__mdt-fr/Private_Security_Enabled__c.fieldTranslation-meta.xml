@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When enabled, users can only see Facility records and the children records that they have direct access to. Use Staff Access records to provide indirect access to users. --></help>
+    <label>Sécurité privée activée</label>
+    <name>Private_Security_Enabled__c</name>
+</CustomFieldTranslation>
