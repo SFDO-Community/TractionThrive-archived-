@@ -1173,9 +1173,9 @@
     </fields>
     <gender>Feminine</gender>
     <layouts>
-        <layout>Support Case Layout</layout>
+        <layout>%%%NAMESPACE%%%Support Case Layout</layout>
         <sections>
-            <label><!-- Custom Links --></label>
+            <label>कस्टम लिंक</label>
             <section>Custom Links</section>
         </sections>
     </layouts>

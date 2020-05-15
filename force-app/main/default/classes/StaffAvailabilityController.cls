@@ -106,11 +106,11 @@ public with sharing class StaffAvailabilityController {
 			} else {
 				contact[0].Status__c = Constants.NOT_AVAILABLE_STATUS;
 			}
-			/*SecureDml updateObject = new SecureDml();
-			updateObject.dmlUpdate(contact);*/
-			Database.SaveResult saveResult = Database.update(contact[0], false);
-			if (!saveResult.isSuccess()) {
-				throw new AuraHandledException(saveResult.getErrors()[0].getMessage());
+			SecureDml updateObject = new SecureDml();
+			try{
+				updateObject.dmlUpdate(contact);
+			}catch (Exception e){
+				throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
 			}
 			return contact[0];
 		} else {

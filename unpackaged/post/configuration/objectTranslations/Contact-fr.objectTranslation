@@ -517,14 +517,14 @@
     </fields>
     <gender>Masculine</gender>
     <layouts>
-        <layout>Contact - Traction Thrive Community Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Community Layout</layout>
         <sections>
             <label>Statut de dotation</label>
             <section>Staffing Status</section>
         </sections>
     </layouts>
     <layouts>
-        <layout>Contact - Traction Thrive Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
         <sections>
             <label>Statut de dotation</label>
             <section>Staffing Status</section>

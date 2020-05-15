@@ -108,11 +108,6 @@ public with sharing class ContactEditFormController {
 		}catch (Exception e){
 			throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
 		}
-		/*Database.SaveResult saveResult = Database.insert(credentialToInsert, false);
-		if (!saveResult.isSuccess()) {
-			throw new AuraHandledException(saveResult.getErrors()[0].getMessage());
-		}*/
-
 		return CredentialsSelector.selectCredentialsById(credentialToInsert.Id);
 	}
 

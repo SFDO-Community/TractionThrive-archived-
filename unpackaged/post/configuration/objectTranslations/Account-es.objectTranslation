@@ -147,7 +147,7 @@
         </picklistValues>
     </fields>
     <layouts>
-        <layout>Division</layout>
+        <layout>%%%NAMESPACE%%%Division</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -158,7 +158,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Division - Community</layout>
+        <layout>%%%NAMESPACE%%%Division - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -169,7 +169,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Hospital</layout>
+        <layout>%%%NAMESPACE%%%Hospital</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -180,7 +180,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Hospital - Community</layout>
+        <layout>%%%NAMESPACE%%%Hospital - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -191,7 +191,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Regional Health Authority</layout>
+        <layout>%%%NAMESPACE%%%Regional Health Authority</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -202,7 +202,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Regional Health Authority - Community</layout>
+        <layout>%%%NAMESPACE%%%Regional Health Authority - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>

@@ -1068,14 +1068,14 @@
     </fields>
     <gender>Feminine</gender>
     <layouts>
-        <layout>Contact - Traction Thrive Community Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Community Layout</layout>
         <sections>
             <label>कर्मचारी की स्थिति</label>
             <section>Staffing Status</section>
         </sections>
     </layouts>
     <layouts>
-        <layout>Contact - Traction Thrive Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
         <sections>
             <label>कर्मचारी की स्थिति</label>
             <section>Staffing Status</section>

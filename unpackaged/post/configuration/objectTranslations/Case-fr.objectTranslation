@@ -49,7 +49,7 @@
         </picklistValues>
     </fields>
     <layouts>
-        <layout>Support Case Layout</layout>
+        <layout>%%%NAMESPACE%%%Support Case Layout</layout>
         <sections>
             <label>Liens personnalisés</label>
             <section>Custom Links</section>
