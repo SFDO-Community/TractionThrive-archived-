@@ -23,8 +23,8 @@ IF(RecordType.DeveloperName == &#39;Regional_Health_Authority&#39;, Name, &#39;&
             <name>Stamp_Health_Authority</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>true</active>
-        <description>To facilitate sharing from department to health authority level, stamp the Health Authority name on the department records.</description>
+        <active>false</active>
+        <description>(DEPRECATED - DO NOT USE) To facilitate sharing from department to health authority level, stamp the Health Authority name on the department records. This functionality has been replaced by a trigger.</description>
         <formula>ISBLANK (Health_Authority__c)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
