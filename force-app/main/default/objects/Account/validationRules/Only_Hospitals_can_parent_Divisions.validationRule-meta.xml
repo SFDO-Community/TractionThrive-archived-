@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Hospitals_can_parent_Divisions</fullName>
+    <active>true</active>
+    <description>Ensures that only Hospital Facilities can be a parent to a Division Facility.</description>
+    <errorConditionFormula>CONTAINS( RecordType.DeveloperName, &quot;Division&quot; ) &amp;&amp;
+!( ISBLANK( ParentId ) || ISNULL( ParentId ) ) &amp;&amp;
+!CONTAINS( Parent.RecordType.DeveloperName, &quot;Hospital&quot; )</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Invalid Parent Facility. Only Hospitals can be a parent of Divisions.</errorMessage>
+</ValidationRule>
