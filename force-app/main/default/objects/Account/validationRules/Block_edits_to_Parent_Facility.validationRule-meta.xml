@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_edits_to_Parent_Facility</fullName>
+    <active>true</active>
+    <description>Blocks users from editing the Parent Facility field.</description>
+    <errorConditionFormula>!ISBLANK( PRIORVALUE( ParentId ) ) &amp;&amp;
+ISCHANGED( ParentId )</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Unable to edit an existing Parent Facility. Please edit the values of the Parent Facility record itself.</errorMessage>
+</ValidationRule>

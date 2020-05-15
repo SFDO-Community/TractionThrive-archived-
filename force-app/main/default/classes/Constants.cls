@@ -53,6 +53,9 @@ public with sharing class Constants {
         ].Name;
     }
 
+    //Access level
+    public final static String READ_ACCESS = 'Read';
+    public final static String EDIT_ACCESS = 'Edit';
     //Status Report Categories
     public static Map<String, String> getStatusReportTypeMapping() {
         Status_Report_Type_Mapping__mdt[] mappings = [
@@ -78,8 +81,5 @@ public with sharing class Constants {
     public final static String NOT_AVAILABLE_STATUS = 'Not Available';
     public final static String AVAILABLE_STATUS = 'On staff';
 
-    //Access level
-    public final static String READ_ACCESS = 'Read';
-    public final static String EDIT_ACCESS = 'Edit';
 
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blocks_changes_to_Primary_Facility</fullName>
+    <active>true</active>
+    <description>Blocks users from changing an existing Staff record&#39;s Primary Facility.</description>
+    <errorConditionFormula>ISCHANGED( AccountId )</errorConditionFormula>
+    <errorMessage>Unable to change the Primary Facility. Please generate a new Contact record for this user with the new Facility, or use Staff Access to give this user access to other Facilities.</errorMessage>
+</ValidationRule>
