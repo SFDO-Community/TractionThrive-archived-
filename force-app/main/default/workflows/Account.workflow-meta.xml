@@ -18,13 +18,13 @@ IF(RecordType.DeveloperName == &#39;Regional_Health_Authority&#39;, Name, &#39;&
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <rules>
-        <fullName>%28DEPR%29 Stamp Health Authority</fullName>
+        <fullName>Stamp Health Authority</fullName>
         <actions>
             <name>Stamp_Health_Authority</name>
             <type>FieldUpdate</type>
         </actions>
         <active>false</active>
-        <description>(DEPR) To facilitate sharing from department to health authority level, stamp the Health Authority name on the department records. This functionality has been replaced by a trigger.</description>
+        <description>(DEPRECATED - DO NOT USE) To facilitate sharing from department to health authority level, stamp the Health Authority name on the department records. This functionality has been replaced by a trigger.</description>
         <formula>ISBLANK (Health_Authority__c)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
