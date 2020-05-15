@@ -34,33 +34,33 @@
  */
 @IsTest
 public with sharing class AccountsSelectorTest {
-	static Account account;
+	static Account healthAuth;
+	static Account hospital;
+	static Account divisionAccount;
 	static Contact contact;
 	static User communityUser;
-	static Account childAccount;
-	static Account divisionAccount;
 
 	@TestSetup
 	static void prepareData() {
 
-		account = TestUtils.createCommunityAccount('A BC Hospital for Testing Use Only', true);
+		healthAuth = TestUtils.createAccountByRecordType('A BC Health Auth for Testing Use Only', Constants.HEALTH_AUTH_RECORDTYPE_ID, null, true);
 		contact = TestUtils.createCommunityContact('Watson-Testing', false);
-		contact.AccountId = account.Id;
+		contact.AccountId = healthAuth.Id;
 		insert contact;
 
-		childAccount = new Account(
+		hospital = new Account(
 				Name = 'Child Account',
-				ParentId = account.Id,
+				ParentId = healthAuth.Id,
 				RecordTypeId = Constants.HOSPITAL_RECORDTYPE_ID,
 				BillingState = 'BC',
 				Health_Authority__c = 'Division Test'
 		);
 
-		insert childAccount;
+		insert hospital;
 
 		divisionAccount = new Account(
 				Name = 'Division Account',
-				ParentId = account.Id,
+				ParentId = hospital.Id,
 				RecordTypeId = Constants.DIVISION_RECORDTYPE_ID,
 				BillingState = 'BC',
 				Health_Authority__c = 'Division Test'
@@ -77,7 +77,8 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getAccountByRecordType() {
-		prepareData();
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getAccountByRecordType(Constants.HOSPITAL_RECORDTYPE_ID);
 			System.assert(accounts.size() > 0);
@@ -86,26 +87,34 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getChildAccountsByParent() {
-		prepareData();
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
+		healthAuth = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
+		hospital = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID];
+
 		System.runAs(communityUser) {
-			List<Account> accounts = AccountsSelector.getChildAccountsByParent(account.Id);
-			System.assert(accounts.size() == 2);
-			System.assertEquals(childAccount.Id, accounts[0].Id);
+			List<Account> accounts = AccountsSelector.getChildAccountsByParent(healthAuth.Id);
+			System.assertEquals(1, accounts.size());
+			System.assertEquals(hospital.Id, accounts[0].Id);
 		}
 	}
 
 	@IsTest
 	static void getHospitalsByAuthorityName() {
-		prepareData();
+		healthAuth = [SELECT Id, Name FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
+
 		System.runAs(communityUser) {
-			List<Account> accounts = AccountsSelector.getHospitalsByAuthorityName(account.Name);
+			List<Account> accounts = AccountsSelector.getHospitalsByAuthorityName(healthAuth.Name);
 			System.assert(accounts.size() > 0);
 		}
 	}
 
 	@IsTest
 	static void getDivisionTree() {
-		prepareData();
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
 		System.runAs(communityUser) {
 			List<Account> accounts = AccountsSelector.getDivisionTree();
 			System.assert(accounts.size() > 0);
@@ -114,9 +123,15 @@ public with sharing class AccountsSelectorTest {
 
 	@IsTest
 	static void getAccount() {
-		prepareData();
+		healthAuth = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HEALTH_AUTH_RECORDTYPE_ID];
+		hospital = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.HOSPITAL_RECORDTYPE_ID];
+		divisionAccount = [SELECT Id FROM Account WHERE RecordTypeId = :Constants.DIVISION_RECORDTYPE_ID];
+		contact = [SELECT Id FROM Contact];
+		communityUser = [SELECT Id FROM User WHERE ContactId =:contact.Id];
+
 		System.runAs(communityUser) {
-			List<Account> accounts = AccountsSelector.getAccount(new Set<Id>{account.Id, childAccount.Id, divisionAccount.Id});
+			List<Account> accounts = AccountsSelector.getAccount(new Set<Id>{
+					healthAuth.Id, hospital.Id, divisionAccount.Id});
 			System.assert(accounts.size() == 3);
 		}
 	}
