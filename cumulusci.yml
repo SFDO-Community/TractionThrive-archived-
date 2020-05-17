@@ -477,7 +477,7 @@ flows:
             1:
                 flow: config_scratch_start
             2:
-                task: create_community_robot
+                task: switch_community_template
             3:
                 flow: config_scratch_finish
             4:
