@@ -10,6 +10,10 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
-        <custom>true</custom>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>All</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>    
+    <custom>true</custom>
     <userLicense>Customer Community Plus Login</userLicense>
 </Profile>
