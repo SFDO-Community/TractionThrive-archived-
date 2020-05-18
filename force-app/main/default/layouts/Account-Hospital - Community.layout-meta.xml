@@ -205,7 +205,8 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Division__c</fields>
+        <fields>Staff_Record_Link__c</fields>
+        <fields>Access_Level__c</fields>
         <relatedList>Staff_Access__c.Care_Facility__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -218,7 +219,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1h000000rYuY</masterLabel>
+        <masterLabel>00h8A000001CeuF</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
