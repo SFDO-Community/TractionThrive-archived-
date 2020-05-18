@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Traction Thrive.Navigational:FAQ</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>FAQ</name>
+        <parentName/>
+        <position>0</position>
+        <topicDescription/>
+    </managedTopic>
+</ManagedTopics>
