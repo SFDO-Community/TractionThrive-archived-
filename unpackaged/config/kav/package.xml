@@ -13,11 +13,19 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>All</members>
+        <name>DataCategoryGroup</name>
+    </types>    
+    <types>
         <members>Knowledge__kav-FAQ - Author</members>
         <members>Knowledge__kav-FAQ - Reader</members>
         <members>Knowledge__kav-Procedure - Author</members>
         <members>Knowledge__kav-Procedure - Reader</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>Knowledge__kav</members>
+        <name>TopicsForObjects</name>
+    </types>    
     <version>48.0</version>
 </Package>
