@@ -10,6 +10,10 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>All</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>        
     <classAccesses>
         <apexClass>%%%NAMESPACE%%%AccountPickerCtrl</apexClass>
         <enabled>true</enabled>
