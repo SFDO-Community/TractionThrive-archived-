@@ -20,7 +20,7 @@ API Create Contact
     ...                  Email=${first_name}${last_name}@example.com
     ...                  Role_Global__c=${Role}
     ...                  Status__c=On staff
-    ...                  &{fields}  
+    ...                  &{fields}
     &{contact} =     Salesforce Get  Contact  ${contact_id}
     [return]         &{contact}
 
@@ -54,13 +54,9 @@ API Create Account
     ...                  &{fields}
     &{account} =     Salesforce Get  Account  ${account_id}
     [return]         &{account}
-   
 
-Login To Community As Julian Joseph
-    @{community_contact}=   Salesforce Query  Contact   select=Id,Name   email=jjoseph@salesforce.com
-    Go To Page              Details           Contact   object_id=${community_contact}[0][Id]
+Login To Community As Resident
+    @{staff} =                         Salesforce Query    Contact    select=Id,Name,Role_Global__c,Account.Name       email=johndoe@tt.com
+    Set Global Variable                @{RESIDENT}         @{staff}
+    Go To Page                         Detail              Contact    object_id=${RESIDENT}[0][Id]
     Login To Community As User
-
-Go To Julian Joseph
-    @{community_contact}=   Salesforce Query  Contact   select=Id,Name   email=jjoseph@salesforce.com
-    Go To Page              Detail           Contact   object_id=${community_contact}[0][Id]
