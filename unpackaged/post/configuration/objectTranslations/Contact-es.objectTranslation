@@ -130,6 +130,7 @@
         <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
+        <help>El papel de un miembro del personal para su instalación</help>
         <label>Papel</label>
         <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>
@@ -196,14 +197,14 @@
         </picklistValues>
     </fields>
     <layouts>
-        <layout>Contact - Traction Thrive Community Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Community Layout</layout>
         <sections>
             <label>Estado de personal</label>
             <section>Staffing Status</section>
         </sections>
     </layouts>
     <layouts>
-        <layout>Contact - Traction Thrive Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
         <sections>
             <label>Estado de personal</label>
             <section>Staffing Status</section>
@@ -214,7 +215,7 @@
         <name>COVID_Positive</name>
     </quickActions>
     <quickActions>
-        <label><!-- Not Available --></label>
+        <label>No disponible</label>
         <name>Isolation</name>
     </quickActions>
     <webLinks>

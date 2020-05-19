@@ -244,7 +244,10 @@ export default class ContactEditForm extends LightningElement {
 	getCredentialsData() {
 		getCredentialsTypePicklistValues().then(result => {
 			let filteredPicklistValues = [];
-			result.forEach(value => filteredPicklistValues.push({label : value, value : value}));
+			for (const key in result) {
+				filteredPicklistValues.push({label : key, value : result[key]});
+			}
+			//result.forEach(value => filteredPicklistValues.push({label : value, value : value}));
 			this.credentialPicklistValues = filteredPicklistValues;
 		}).catch(error => {
 			this.error = error;
@@ -385,7 +388,10 @@ export default class ContactEditForm extends LightningElement {
 
 	handleCallbackData(response) {
 		var filteredPicklistValues = [];
-		response.skillsPicklistValues.forEach(value => filteredPicklistValues.push({label : value, value : value}));
+		for (const key in response.skillsPicklistValues) {
+			filteredPicklistValues.push({label : key, value : response.skillsPicklistValues[key]})
+		}
+		//response.skillsPicklistValues.forEach(value => filteredPicklistValues.push({label : value, value : value}));
 
 		var savedPicklistValues = [];
 		var skills = getFieldValue(response.contactData.contact, 'Skills__c', this.namespace);
@@ -440,7 +446,7 @@ export default class ContactEditForm extends LightningElement {
 					Id: credential.Id,
 					StaffName: getFieldValue(credential, 'Staff__r', this.namespace).Name,
 					CareFacilityName: getFieldValue(credential, 'Care_Facility__r', this.namespace).Name,
-					TypeName: getFieldValue(credential, 'Type__c', this.namespace)
+					TypeName: getFieldValue(credential, 'typeLabel', '')
 				}
 			));
 		}
