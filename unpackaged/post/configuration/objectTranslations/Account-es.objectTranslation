@@ -55,6 +55,11 @@
         <name>%%%NAMESPACE%%%Division__c</name>
     </fields>
     <fields>
+        <help>Una identificación externa única, como una identificación de hospital</help>
+        <label>ID externo</label>
+        <name>%%%NAMESPACE%%%External_ID__c</name>
+    </fields>
+    <fields>
         <help>Versión de texto de la autoridad sanitaria de nivel superior, campo del sistema para compartir reglas. Una regla de flujo de trabajo llena este campo en función de la jerarquía de la instalación.</help>
         <label>Autoridad sanitaria</label>
         <name>%%%NAMESPACE%%%Health_Authority__c</name>
@@ -81,7 +86,7 @@
     </fields>
     <fields>
         <help>Capture cualquier nota sobre el potencial de redistribución del personal, limitaciones, habilidades</help>
-        <label><!-- Medical Staff Redeployment Comments --></label>
+        <label>Comentarios redistribución del personal</label>
         <name>%%%NAMESPACE%%%Medical_Staff_Redeployment_Comments__c</name>
     </fields>
     <fields>
@@ -89,6 +94,7 @@
         <name>%%%NAMESPACE%%%NumberofLocations__c</name>
     </fields>
     <fields>
+        <help>Texto sin formato para el nombre de la cuenta principal</help>
         <label>Centro para padres</label>
         <name>%%%NAMESPACE%%%Parent_Facility_Name__c</name>
     </fields>
@@ -141,7 +147,7 @@
         </picklistValues>
     </fields>
     <layouts>
-        <layout>Division</layout>
+        <layout>%%%NAMESPACE%%%Division</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -152,7 +158,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Division - Community</layout>
+        <layout>%%%NAMESPACE%%%Division - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -163,7 +169,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Hospital</layout>
+        <layout>%%%NAMESPACE%%%Hospital</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -174,7 +180,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Hospital - Community</layout>
+        <layout>%%%NAMESPACE%%%Hospital - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -185,7 +191,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Regional Health Authority</layout>
+        <layout>%%%NAMESPACE%%%Regional Health Authority</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>
@@ -196,7 +202,7 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Regional Health Authority - Community</layout>
+        <layout>%%%NAMESPACE%%%Regional Health Authority - Community</layout>
         <sections>
             <label>Enlaces personalizados</label>
             <section>Custom Links</section>

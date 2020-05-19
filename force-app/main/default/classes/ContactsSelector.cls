@@ -48,7 +48,9 @@ public with sharing class ContactsSelector {
                         MobilePhone,
                         Phone,
                         Skills__c,
+                        toLabel(Skills__c) SkillLabel,
                         Role_Global__c,
+                        toLabel(Role_Global__c) RoleGlobalLabel,
                         AccountId,
                         Account.Name,
                         Account.RecordTypeId,
@@ -97,7 +99,7 @@ public with sharing class ContactsSelector {
     }
 
     public static List<Contact> selectContactById(Id contactId) {
-        List<Contact> cont = [SELECT Id, FirstName, Status__c, LastName, AccountId, Account.Name  FROM Contact WHERE Id = :contactId];
+        List<Contact> cont = [SELECT Id, FirstName, Status__c,toLabel(Status__c) StatusLabel, LastName, AccountId, Account.Name  FROM Contact WHERE Id = :contactId];
         return cont;
     }
 }

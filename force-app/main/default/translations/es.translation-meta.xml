@@ -193,6 +193,10 @@
         <name>Label_for_Division_Selection</name>
     </customLabels>
     <customLabels>
+        <label>es-ES</label>
+        <name>Language_Code</name>
+    </customLabels>
+    <customLabels>
         <label>Vestidos de nivel 3</label>
         <name>Level_3_Gowns</name>
     </customLabels>
@@ -237,7 +241,7 @@
         <name>Not_Available_Label</name>
     </customLabels>
     <customLabels>
-        <label>Okay</label>
+        <label>Bueno</label>
         <name>Ok_Action</name>
     </customLabels>
     <customLabels>
