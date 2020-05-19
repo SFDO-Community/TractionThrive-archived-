@@ -10,21 +10,10 @@
 		<div class="slds-grid slds-p-around_small" onclick={handleExpand}>
 			<div class="slds-col cmp-date-col">
 				<div class="cmp-date slds-text-color_default">
-					<lightning-formatted-date-time
-						value={date}
-						year="numeric"
-						day="numeric"
-						month="long"
-						time-zone="UTC"
-					>
-					</lightning-formatted-date-time>
+					{date}
 				</div>
 				<div class="cmp-day-of-week slds-color__text_gray-8">
-					<lightning-formatted-date-time
-						value={date}
-						weekday="long"
-						time-zone="UTC">
-					</lightning-formatted-date-time>
+					{day}
 				</div>
 
 				<div class="cmp-location" if:true={hasLocation}>

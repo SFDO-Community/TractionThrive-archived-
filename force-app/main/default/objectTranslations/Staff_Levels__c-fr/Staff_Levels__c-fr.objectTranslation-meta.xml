@@ -9,6 +9,7 @@
         <value>Niveaux de personnel</value>
     </caseValues>
     <fields>
+        <help>Facilité liée aux seuils de besoins essentiels et de complément complet</help>
         <label>Établissement de soins</label>
         <name>Care_Facility__c</name>
         <relationshipLabel>Niveaux de personnel</relationshipLabel>
@@ -22,6 +23,7 @@
         <name>Essential_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>Nombre d&apos;employés requis pour fournir les services essentiels</help>
         <label>Besoins essentiels</label>
         <name>Essential_Staff__c</name>
     </fields>
@@ -34,10 +36,12 @@
         <name>Full_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>Nombre d&apos;employés requis pour fournir des services complets</help>
         <label>Complément complet</label>
         <name>Full_Staff__c</name>
     </fields>
     <fields>
+        <help>Le type de rôle requis pour les services essentiels et complets</help>
         <label>Rôle</label>
         <name>Role__c</name>
     </fields>
