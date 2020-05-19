@@ -193,6 +193,10 @@
         <name>Label_for_Division_Selection</name>
     </customLabels>
     <customLabels>
+        <label>hi-IN</label>
+        <name>Language_Code</name>
+    </customLabels>
+    <customLabels>
         <label>स्तर 3 गाउन</label>
         <name>Level_3_Gowns</name>
     </customLabels>

@@ -369,6 +369,14 @@
         <value>Select the Division for which you are tracking resources:</value>
     </labels>
     <labels>
+        <fullName>Language_Code</fullName>
+        <categories>Thrive, Multilingual</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Language Code</shortDescription>
+        <value>en-US</value>
+    </labels>
+    <labels>
         <fullName>Level_3_Gowns</fullName>
         <categories>Thrive, Multilingual</categories>
         <language>en_US</language>
