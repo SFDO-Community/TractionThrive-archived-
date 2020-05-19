@@ -193,6 +193,10 @@
         <name>Label_for_Division_Selection</name>
     </customLabels>
     <customLabels>
+        <label>fr-FR</label>
+        <name>Language_Code</name>
+    </customLabels>
+    <customLabels>
         <label>Robes de niveau 3</label>
         <name>Level_3_Gowns</name>
     </customLabels>
