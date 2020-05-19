@@ -25,7 +25,6 @@ from cumulusci.tasks.apex.anon import AnonymousApexTask
 from cumulusci.core.config import TaskConfig
 from robot.libraries.BuiltIn import BuiltIn
 from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
-from BaseObjects import BaseCMPage
 from locators_48 import cm_lex_locators as locators_48
 
 # from locators_49 import cm_lex_locators as locators_49
@@ -37,7 +36,7 @@ locators_by_api_version = {
 cm_lex_locators = {}
 
 @selenium_retry
-class CrisisManagement(SalesforceRobotLibraryBase,BaseCMPage):
+class CrisisManagement(SalesforceRobotLibraryBase):
     
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = 1.0
