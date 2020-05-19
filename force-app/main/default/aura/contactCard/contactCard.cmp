@@ -31,7 +31,7 @@
 				    <lightning:formattedText class="slds-text-heading_large" value="{!v.contactInfo.Name}"/>
 			    </div>
 			    <div class="slds-size_1-of-1">
-				    <lightning:formattedText class="slds-text-heading_small" value="{!v.contactInfo.Role_Global__c}"/>
+				    <lightning:formattedText class="slds-text-heading_small" value="{!v.contactInfo.RoleGlobalLabel}"/>
 			    </div>
 		    </div>
 		    <div class="slds-shrink cmp-account-info slds-is-relative">
