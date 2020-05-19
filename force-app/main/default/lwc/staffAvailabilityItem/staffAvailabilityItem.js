@@ -19,6 +19,7 @@ import AVAILABILITY from '@salesforce/label/c.Availability_Label';
 import CARE_FACILITY_SELECTION_ERROR from '@salesforce/label/c.Care_Facility_Selection_Error';
 import SEARCHING_LOOKUP_FIELD_ERROR from '@salesforce/label/c.Searching_Lookup_field_Error';
 import LOOKUP_ERROR_LABEL from '@salesforce/label/c.Lookup_Error_Label';
+import LANGUAGE_CODE from '@salesforce/label/c.Language_Code'
 import { getFieldValue } from 'c/appUtils';
 
 export default class StaffAvailabilityItem extends LightningElement {
@@ -60,7 +61,7 @@ export default class StaffAvailabilityItem extends LightningElement {
 		CARE_FACILITY_SELECTION_ERROR,
 		SEARCHING_LOOKUP_FIELD_ERROR,
 		LOOKUP_ERROR_LABEL
-	}
+	};
 
 	@track selectedRecord = {};
 
@@ -94,7 +95,18 @@ export default class StaffAvailabilityItem extends LightningElement {
 	}
 
 	get date() {
-		return getFieldValue(this.record, 'Date__c', this.namespace);
+
+		const options = { year: 'numeric', month: 'long', day: 'numeric',timeZone: 'UTC'};
+		const date = new Date(getFieldValue(this.record, 'Date__c', this.namespace));
+		const dateTimeFormat = new Intl.DateTimeFormat(LANGUAGE_CODE, options);
+		return dateTimeFormat.format(date);
+	}
+
+	get day(){
+		const options = { weekday: 'long',timeZone: 'UTC'};
+		const date = new Date(getFieldValue(this.record, 'Date__c', this.namespace));
+		const dateTimeFormat = new Intl.DateTimeFormat(LANGUAGE_CODE, options);
+		return dateTimeFormat.format(date);
 	}
 
 	get available() {
