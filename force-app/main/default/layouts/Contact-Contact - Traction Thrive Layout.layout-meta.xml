@@ -133,6 +133,16 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>Contact.Isolation</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
@@ -156,16 +166,6 @@
             <actionName>ViewCustomerPortal</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Contact.Isolation</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>1</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -230,8 +230,8 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Account.NAME</fields>
-        <fields>Account.ACC_PARENT_NAME</fields>
+        <fields>Division__c</fields>
+        <fields>Access_Level__c</fields>
         <relatedList>Staff_Access__c.Staff__c</relatedList>
         <sortField>NAME</sortField>
         <sortOrder>Asc</sortOrder>
@@ -243,7 +243,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0U000000sbL3</masterLabel>
+        <masterLabel>00h8A000001CeuP</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
