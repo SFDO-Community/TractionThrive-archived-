@@ -21,6 +21,7 @@
         <value>कर्मचारी दरजा</value>
     </caseValues>
     <fields>
+        <help>आवश्यक आवश्यकताओं और पूर्ण पूरक थ्रेसहोल्ड से संबंधित अस्पताल</help>
         <label>चिकित्सा सेवा</label>
         <name>Care_Facility__c</name>
         <relationshipLabel>कर्मचारी दरजा</relationshipLabel>
@@ -34,6 +35,7 @@
         <name>Essential_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>आवश्यक सेवाएं प्रदान करने के लिए आवश्यक कर्मचारियों की संख्या</help>
         <label>आवश्यक जरूरतें</label>
         <name>Essential_Staff__c</name>
     </fields>
@@ -46,10 +48,12 @@
         <name>Full_Staff_Gap__c</name>
     </fields>
     <fields>
+        <help>पूर्ण सेवाएं प्रदान करने के लिए आवश्यक कर्मचारियों की संख्या</help>
         <label>पूर्ण पूरक</label>
         <name>Full_Staff__c</name>
     </fields>
     <fields>
+        <help>आवश्यक और पूर्ण सेवाओं के लिए आवश्यक भूमिका का प्रकार</help>
         <label>भूमिका</label>
         <name>Role__c</name>
     </fields>

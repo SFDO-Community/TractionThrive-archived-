@@ -26,7 +26,45 @@
       "componentName" : "forceCommunity:contactSupportForm",
       "id" : "f8581c51-fc4d-41de-8279-136524343138",
       "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
+      "renditionMap" : {
+        "es" : "31bedbf0-770a-404b-92ae-ef06b441aff7",
+        "fr" : "5d6b1a74-0827-4800-b477-20db86f8a567",
+        "hi" : "73d76925-a78e-461f-a041-22bf3f5b0770"
+      },
+      "renditions" : [ {
+        "id" : "73d76925-a78e-461f-a041-22bf3f5b0770",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "headerTitle" : "ग्राहक समर्थन से संपर्क",
+            "headerSubtitle" : "हमें बताएं कि हम कैसे मदद कर सकते हैं।",
+            "confirmationSubtext" : "हम जल्द ही आपके पास वापस आएंगे।",
+            "confirmationText" : "आपका केस बनाया गया।"
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "5d6b1a74-0827-4800-b477-20db86f8a567",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "headerTitle" : "Contactez l'assistance clientèle",
+            "headerSubtitle" : "Dites-nous comment nous pouvons aider.",
+            "confirmationSubtext" : "Nous vous répondrons bientôt.",
+            "confirmationText" : "Votre dossier a été créé."
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "31bedbf0-770a-404b-92ae-ef06b441aff7",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "headerTitle" : "Póngase en contacto con atención al cliente",
+            "headerSubtitle" : "Dinos como podemos ayudar.",
+            "confirmationSubtext" : "Nos pondremos en contacto con usted pronto.",
+            "confirmationText" : "Su caso fue creado."
+          }
+        },
+        "type" : "renditionComponent"
+      } ],
       "type" : "component"
     } ],
     "id" : "82ad64bd-5d04-4341-8b3d-0f91c398fd91",
@@ -49,7 +87,48 @@
       "componentName" : "forceCommunity:caseDeflection",
       "id" : "4ed32e8d-6d6c-4c36-8c81-a223195e2115",
       "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
+      "renditionMap" : {
+        "es" : "32bedbf0-770a-404b-92ae-ef06b441aff7",
+        "fr" : "5d6b2a74-0827-4800-b477-20db86f8a567",
+        "hi" : "74d76925-a78e-461f-a041-22bf3f5b0770"
+      },
+      "renditions" : [ {
+        "id" : "74d76925-a78e-461f-a041-22bf3f5b0770",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "confirmationMessageLabel" : "मिल गया!",
+            "deflectionSubtitle" : "ज्ञान की खोज करने के लिए बाईं ओर विषय बॉक्स का उपयोग करें",
+            "deflectionTitle" : "जवाब चाहिए फास्ट?",
+            "firstQuestion" : "क्या इस सामग्री से आपकी समस्या हल हो गई?",
+            "secondQuestion" : "क्या आप अपना केस बनाना बंद कर रहे हैं?"
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "5d6b2a74-0827-4800-b477-20db86f8a567",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "confirmationMessageLabel" : "Je l'ai!",
+            "deflectionSubtitle" : "Utilisez la zone Objet à gauche pour rechercher des connaissances",
+            "deflectionTitle" : "Besoin de réponses rapidement?",
+            "firstQuestion" : "Ce contenu a-t-il résolu votre problème?",
+            "secondQuestion" : "Arrêtez de créer votre cas?"
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "32bedbf0-770a-404b-92ae-ef06b441aff7",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "confirmationMessageLabel" : "¡Entendido!",
+            "deflectionSubtitle" : "Use el cuadro Asunto a la izquierda para buscar conocimiento",
+            "deflectionTitle" : "¿Necesita respuestas rápidas?",
+            "firstQuestion" : "¿Este contenido resolvió tu problema?",
+            "secondQuestion" : "Deja de crear tu caso?"
+          }
+        },
+        "type" : "renditionComponent"
+      } ],
       "type" : "component"
     }, {
       "componentAttributes" : {
