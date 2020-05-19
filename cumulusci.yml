@@ -636,10 +636,3 @@ plans:
                     is_required: False
                 options:
                     unmanaged: False
-
-    install:
-        steps:
-            1:
-                flow: qa_org_robot_community
-            2:
-                flow: robot
