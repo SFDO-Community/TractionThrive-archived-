@@ -213,6 +213,7 @@ tasks:
         class_path: tasks.update_profile.ProfileGrantAllAccess
         options:
             record_types:
+                - record_type: "Account.Account"
                 - record_type: "Account.{managed}Division"
                   default: true
                 - record_type: "Account.{managed}Hospital"
