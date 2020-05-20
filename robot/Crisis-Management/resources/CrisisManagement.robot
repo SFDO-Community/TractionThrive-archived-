@@ -17,8 +17,8 @@ Capture Screenshot and Delete Records and Close Browser
 
 API Create Contact
     [Arguments]      ${account}     ${Role}     &{fields}
-    ${first_name} =  Get fake data  first_name
-    ${last_name} =   Get fake data  last_name
+    ${first_name} =  Get Fake Data  first_name
+    ${last_name} =   Get Fake Data  last_name
     ${contact_id} =  Salesforce Insert  Contact
     ...                  FirstName=${first_name}
     ...                  LastName=${last_name}
