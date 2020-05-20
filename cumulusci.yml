@@ -472,7 +472,7 @@ flows:
             5:
                 flow: add_nmg_permissions
 
-    qa_org_robot_community:
+    qa_org:
         steps:
             1:
                 flow: config_scratch_start
