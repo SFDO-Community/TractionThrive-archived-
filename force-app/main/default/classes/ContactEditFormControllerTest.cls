@@ -134,7 +134,7 @@ public with sharing class ContactEditFormControllerTest {
 	static void getCredentialsTypePicklistValues() {
 		prepareData();
 		System.runAs(communityUser) {
-			List<String> picklistValues = ContactEditFormController.getCredentialsTypePicklistValues();
+			Map<String, String> picklistValues = ContactEditFormController.getCredentialsTypePicklistValues();
 			System.assert(picklistValues.size() > 0);
 		}
 	}

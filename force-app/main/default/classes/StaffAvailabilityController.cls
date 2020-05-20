@@ -107,7 +107,11 @@ public with sharing class StaffAvailabilityController {
 				contact[0].Status__c = Constants.NOT_AVAILABLE_STATUS;
 			}
 			SecureDml updateObject = new SecureDml();
-			updateObject.dmlUpdate(contact);
+			try{
+				updateObject.dmlUpdate(contact);
+			}catch (Exception e){
+				throw new AuraHandledException(JSON.serialize(e.getTypeName() + ': ' + e.getMessage() + ' - ' + e.getStackTraceString()));
+			}
 			return contact[0];
 		} else {
 			throw new AuraHandledException('No Staff Found');
