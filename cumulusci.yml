@@ -165,6 +165,14 @@ tasks:
             vars: BROWSER:headlesschrome
             options: {'outputdir': 'robot/Crisis-Management/results'}
 
+    switch_community_template:
+        description: Switch community templates using Robot Framework
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: tasks/switch_community_template.robot
+            vars: BROWSER:headlesschrome
+            options: {'outputdir': 'robot/Crisis-Management/results'}
+
     robot:
         options:
             suites: robot/Crisis-Management/tests
@@ -473,6 +481,17 @@ flows:
                 flow: add_nmg_permissions
 
     qa_org:
+        steps:
+            1:
+                flow: config_scratch_start
+            2:
+                task: switch_community_template
+            3:
+                flow: config_scratch_finish
+            4:
+                task: create_community_users
+
+    qa_org_robot_community:
         steps:
             1:
                 flow: config_scratch_start
