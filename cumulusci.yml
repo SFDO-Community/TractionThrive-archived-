@@ -483,16 +483,13 @@ flows:
     qa_org:
         steps:
             1:
-                flow: do_nothing1
+                flow: None
             2:
-                flow: do_nothing2
+                flow: None
             3:
-                flow: do_nothing3
+                flow: None
             4:
-                task: log
-                options:
-                    level: info
-                    line: "log task to workaround https://github.com/SFDO-Tooling/CumulusCI/issues/1098"
+                task: None
             5:
                 flow: config_scratch_start
             6:
@@ -501,30 +498,6 @@ flows:
                 flow: config_scratch_finish
             8:
                 task: create_community_users
-    
-    do_nothing1:
-        steps:
-            1:
-                task: log
-                options:
-                    level: info
-                    line: "log task to workaround https://github.com/SFDO-Tooling/CumulusCI/issues/1098"
-
-    do_nothing2:
-        steps:
-            1:
-                task: log
-                options:
-                    level: info
-                    line: "log task to workaround https://github.com/SFDO-Tooling/CumulusCI/issues/1098"
-
-    do_nothing3:
-        steps:
-            1:
-                task: log
-                options:
-                    level: info
-                    line: "log task to workaround https://github.com/SFDO-Tooling/CumulusCI/issues/1098"
 
     qa_org_robot_community:
         steps:
