@@ -48,6 +48,20 @@ cm_lex_locators = {
         "link": "//a[@title='{}']",
         "login_to_community": "//a[@title='Log in to Community as User']",
         "show_more_actions": "//div[contains(@class, 'actionsContainer')]/descendant::li[contains(@class, 'oneActionsDropDown')]/descendant::a[contains(@title, 'more actions')]",
+    },
+
+    "community_home_locators":{
+        "contact_info_buttons": "//button[contains(@title,'{}')]",
+        "contact_info_fields": "//label[contains(@class,'slds-form-element__label') and text()='{}']",
+        "disabled_field": "//label[text()='{}']//following::input[@disabled]",
+        "dropdown": "//label[text()='{}']/following::lightning-base-combobox//input",
+        "dropdown_values": "//div[@lightning-basecombobox_basecombobox]/lightning-base-combobox-item[@data-value='{}']",
+        "credential_save_button": "//button[text='{}']",
+        "facility_info": "//label[text()='{}']//following::input[@title='{}']",
+        "home_tab": "//a[@href='/TractionThrive/s/']",
+        "staff_info": "//div/lightning-formatted-text[text()='{}']",
+        "staff_contact_info": "//lightning-input[@data-field='{}']//input",
+
     }
 
 }
