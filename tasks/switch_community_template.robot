@@ -2,13 +2,14 @@
 Resource              robot/Crisis-Management/resources/CrisisManagement.robot
 Library               DateTime
 Suite Setup           Open Test Browser
-Suite Teardown        Close Browser
+Suite Teardown        Capture Screenshot and Delete Records and Close Browser
 
 
 *** Keywords ***
 
 Get Instance URL
   ${orginfo}=             Get Org Info
+  Log to console          ${orginfo}
   ${INSTANCE_URL}=        Pop From Dictionary     ${orginfo}                 instance_url
   Set Global Variable     ${INSTANCE_URL}         ${INSTANCE_URL}
 
@@ -24,22 +25,18 @@ Get Community ID
   Set Global Variable     ${COMMUNITY_ID}         ${community_id_15}
 
 Switch Community Template To Traction Thrive
-  # Go to Traction Thrive Community Template selection in Builder
-  Go To                             https://${MYDOMAIN_NAME}.builder.salesforce-communities.com/sfsites/picasso/core/config/wizard.jsp?networkId=${COMMUNITY_ID}
-  Click Element                     xpath: //*/div[1]/div[1][@class="cb-StartWizard-TemplateTitle cb-TemplateTile-header slds-grid"]
+  # Go to Traction Thrive Community Template selection in Builder and click on the Traction Thrive Template
+  Go To Community Template               ${MYDOMAIN_NAME}    ${COMMUNITY_ID}
+
+  # Click Template header
+  Click Template Header                  Traction Thrive
 
   # Click Get Started
-  Wait Until Page Contains Element  //*/button[@title="Get Started"]
-  Click Element                     //*/button[@title="Get Started"]
+  Click Template Button                  Get Started 
+  Wait For Template Name Input Page      Enter a Name
 
-  # Name Community "Traction Thrive"
-  Press Keys                        //*/input[@id="cb-StartWizard-propertyInput-Name"]    Traction Thrive
-
-  # Click Create
-  Click Element                     //*/button[@title="Create"]
-
-  # Wait 10 Minutes for Template to Save
-  Wait Until Page Contains          Add Metrics  timeout=10 minutes
+  # Name Community "Traction Thrive" & click on create community 
+  Create Community Template              Traction Thrive    Create
 
 
 *** Test Cases ***
@@ -49,5 +46,3 @@ Create Traction Thrive Community With Traction Thrive Template
   Get MyDomain Name
   Get Community ID
   Switch Community Template To Traction Thrive
-  # Go To                        ${INSTANCE_URL}/servlet/networks/switch?networkId=${COMMUNITY_ID}&startURL=%2FcommunitySetup%2FcwApp.app%23%2Fc%2Fpage%2Fsettings&
-  # Wait Until Element Contains  //*/span[2][@class="zen-prs netx-fixedWidthText"]  Traction Thrive
