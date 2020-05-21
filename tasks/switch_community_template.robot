@@ -9,7 +9,6 @@ Suite Teardown        Capture Screenshot and Delete Records and Close Browser
 
 Get Instance URL
   ${orginfo}=             Get Org Info
-  Log to console          ${orginfo}
   ${INSTANCE_URL}=        Pop From Dictionary     ${orginfo}                 instance_url
   Set Global Variable     ${INSTANCE_URL}         ${INSTANCE_URL}
 
@@ -25,17 +24,10 @@ Get Community ID
   Set Global Variable     ${COMMUNITY_ID}         ${community_id_15}
 
 Switch Community Template To Traction Thrive
-  # Go to Traction Thrive Community Template selection in Builder and click on the Traction Thrive Template
   Go To Community Template               ${MYDOMAIN_NAME}    ${COMMUNITY_ID}
-
-  # Click Template header
   Click Template Header                  Traction Thrive
-
-  # Click Get Started
-  Click Template Button                  Get Started 
+  Click Template Button                  Get Started
   Wait For Template Name Input Page      Enter a Name
-
-  # Name Community "Traction Thrive" & click on create community 
   Create Community Template              Traction Thrive    Create
 
 
