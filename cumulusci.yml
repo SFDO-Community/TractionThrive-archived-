@@ -156,6 +156,16 @@ tasks:
             suites: tasks/create_community_users.robot
             vars: BROWSER:headlesschrome
             options: {'outputdir': 'robot/Crisis-Management/results'}
+    
+    switch_community_template:
+        description: Switches to the community template page and creates a community
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: tasks/switch_community_template.robot
+            vars: BROWSER:headlesschrome
+            options: {'outputdir': 'robot/Crisis-Management/results'}
+    
+    
 
     create_community_robot:
         description: Creates Community using Robot Framework
