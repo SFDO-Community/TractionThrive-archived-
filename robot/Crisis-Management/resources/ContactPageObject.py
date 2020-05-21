@@ -24,7 +24,7 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         landing_tab=cm_lex_locators["link-text"].format("Home")
         status=self.selenium.get_webelement(landing_tab).get_attribute("class")
         assert "active" in status, "Community landing tab is not Home"
-        
+		
     def _is_current_page(self):
         """ Verify we are on the Contact detail page
             by verifying that the url contains '/view'
@@ -32,6 +32,19 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         self.selenium.wait_until_location_contains("/view", timeout=60, message="Detail page did not load in 1 min")
         self.selenium.location_should_contain("/lightning/r/Contact/",message="Current page is not a Contact record detail view")
         
+    def navigate_and_verify_availability_related_list(self, name, expected_count):
+        """Navigates to the availability record related list and validates the count of available records"""
+        base_url = self.cumulusci.org.lightning_base_url
+        contact_id = self.salesforce.get_current_record_id()
+        url = "{}/lightning/r/{}/related/Assignments__r/view".format(base_url,contact_id)
+        self.selenium.go_to(url)
+        self.salesforce.wait_until_loading_is_complete()
+        self.selenium.wait_until_location_contains("/view",timeout=60, message="Page not loaded")
+        avilability_field = cm_lex_locators["availability"].format(name)
+        availabilities = self.selenium.get_webelements(avilability_field)
+        count = len(availabilities)
+        print(f"Number of Availability records created is {count}")
+        assert count == int(expected_count), "Expected Availabilty records to be {} but found {}".format(expected_count, count)
 
 
 @pageobject("Listing", "Contact")
