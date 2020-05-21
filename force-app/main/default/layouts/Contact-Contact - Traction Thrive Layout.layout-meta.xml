@@ -231,7 +231,6 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>Division__c</fields>
-        <fields>Access_Level__c</fields>
         <relatedList>Staff_Access__c.Staff__c</relatedList>
         <sortField>NAME</sortField>
         <sortOrder>Asc</sortOrder>
