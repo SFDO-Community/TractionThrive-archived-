@@ -209,8 +209,7 @@ public class TestUtils {
         Staff_Access__c result = new Staff_Access__c(
                 Name = 'N/A',
                 Staff__c = contactId,
-                Care_Facility__c = facilityId,
-                Access_Level__c = Constants.READ_ACCESS
+                Care_Facility__c = facilityId
         );
 
         if(doInsert){
@@ -224,8 +223,7 @@ public class TestUtils {
         Staff_Access__c result = new Staff_Access__c(
                 Name = 'N/A',
                 Staff__c = contactId,
-                Care_Facility__c = facilityId,
-                Access_Level__c = Constants.EDIT_ACCESS
+                Care_Facility__c = facilityId
         );
 
         if(doInsert){
