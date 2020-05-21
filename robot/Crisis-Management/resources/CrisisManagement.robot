@@ -20,8 +20,8 @@ API Create Contact
     ${first_name} =  Get Fake Data  first_name
     ${last_name} =   Get Fake Data  last_name
     ${contact_id} =  Salesforce Insert  Contact
-    ...                  FirstName=${faker.first_name()}
-    ...                  LastName=${faker.last_name()}
+    ...                  FirstName=${first_name}
+    ...                  LastName=${first_name}
     ...                  AccountId=${account}
     ...                  Email=${first_name}${last_name}@example.com
     ...                  Role_Global__c=${Role}
