@@ -220,7 +220,6 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>Staff_Record_Link__c</fields>
-        <fields>Access_Level__c</fields>
         <relatedList>Staff_Access__c.Care_Facility__c</relatedList>
     </relatedLists>
     <relatedLists>
