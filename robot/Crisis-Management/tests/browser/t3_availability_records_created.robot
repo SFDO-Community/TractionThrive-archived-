@@ -8,11 +8,19 @@ Library
 
 Suite Setup     Run keywords
 ...             Open Test Browser
+...             Setup Test Data
 
 Suite Teardown  Delete Records and Close Browser
 
+***Keywords***
+
+# Set up all the required data for the test based on the keyword requests
+Setup Test Data
+    &{main_account} =                  API Create Account  Regional_Health_Authority   Name=Automtion Health Services
+    &{hospital} =                      API Create Account  Hospital                    Name=Robot_test Hospital        ParentId=&{main_account}[Id]
+    Set Suite Variable                 &{hospital}
+
 *** Variables ***
-${Last_name}   tractionuser
 ${status1}    On staff
 ${status2}    Not Available
 
@@ -25,10 +33,11 @@ ${status2}    Not Available
     Click Object Button                                  New
     Wait For Modal                                       New                                     Staff
     Populate Modal Form
-    ...                                                  Last Name=${Last_name}
+    ...                                                  First Name=${faker.first_name()}
+    ...                                                  Last Name=${faker.last_name()}
+    ...                                                  Status=${status1}
+    Populate Lookup Field                                Account Name                            &{hospital}[Name]
 
-    Populate Lookup Field                                Account Name                            Robot Hospital
-    Select Value From Dropdown                           Status                                  ${status1}
     Click Modal Button                                   Save
     Wait Until Modal Is Closed
     Current Page Should Be                               Detail                                  Contact
@@ -39,9 +48,10 @@ ${status2}    Not Available
     Click Object Button                                  New
     Wait For Modal                                       New                                     Staff
     Populate Modal Form
-    ...                                                  Last Name=${Last_name}
-
-    Populate Lookup Field                                Account Name                            Robot Hospital
+    ...                                                  First Name=${faker.first_name()}
+    ...                                                  Last Name=${faker.last_name()}
+    ...                                                  Status=${status1}
+    Populate Lookup Field                                Account Name                            &{hospital}[Name]
     Select Value From Dropdown                           Status                                  ${status2}
     Click Modal Button                                   Save
     Wait Until Modal Is Closed

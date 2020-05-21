@@ -9,9 +9,14 @@ cm_lex_locators = {
         "title": "//label[contains(text(), '{}')]/following::input[contains(@class, 'slds-input slds-combobox__input') and @role='textbox']",
         "value": "//*[contains(@class, 'slds-listbox__option') and @data-value='{}']",
     },
-    "modal":{
-        "ele": "//div[./*/*[text()='{}']]"
-        
+    'modal-form':{
+        'label':'//div[./*/*[text()="{}"]]',
+    },
+    'checkbox':{
+        'model-checkbox':'//div[contains(@class,"uiInputCheckbox")]/label/span[text()="{}"]/../following-sibling::input[@type="checkbox"]',
+        'details-checkbox':'//label[@class="slds-checkbox__label"][./span[text()="{}"]]/following-sibling::div//input',
+        'table_checkbox':'//tbody/tr[./td[2]/a[text()="{}"]]/td/input[@type="checkbox"]',
+        'id':'//input[@type="checkbox" and contains(@id,"{}")]',
     },
     "package": {
         "name": "//table[@class='list']/tbody/tr[{}]/th/a",
