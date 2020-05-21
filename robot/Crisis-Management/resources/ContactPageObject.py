@@ -46,14 +46,6 @@ class ContactDetailPage(BaseCMPage,DetailPage):
         print(f"Number of Availability records created is {count}")
         assert count == int(expected_count), "Expected Availabilty records to be {} but found {}".format(expected_count, count)
 
-    # def waitfor_actions_dropdown_and_click_option(self,option):
-    #     """Wait for the Action dropdown menu to load from the contact details page
-    #        Click on the desired option passed as a parameter
-    #     """
-    #     loc=npsp_lex_locators['contacts_actions_dropdown_menu']
-    #     self.selenium.wait_until_element_is_visible(loc)
-    #     self.selenium.click_link(option)
-
 
 @pageobject("Listing", "Contact")
 class ContactListingPage(BaseCMPage, ListingPage):
