@@ -51,7 +51,7 @@ ${status2}    Not Available
     ...                                                  First Name=${faker.first_name()}
     ...                                                  Last Name=${faker.last_name()}
     ...                                                  Status=${status1}
-    Populate Lookup Field                                Account Name                            &{hospital}[Name]
+    Populate Lookup Field                                Facility Name                            &{hospital}[Name]
     Select Value From Dropdown                           Status                                  ${status2}
     Click Modal Button                                   Save
     Wait Until Modal Is Closed
