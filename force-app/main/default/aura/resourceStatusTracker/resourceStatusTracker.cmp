@@ -28,7 +28,7 @@
 
     <!-- MARKUP -->
     <div class="slds-card cmp-main">
-        <div aura:id="resourceTracker" class="container cmp-main">
+        <div aura:id="resourceTracker" class="container">
             <div class="slds-modal__header title slds-m-vertical--small">
         <span class="slds-m-right_small">
             <img class="cmp-icon" src="{!v.iconURL}"/>
