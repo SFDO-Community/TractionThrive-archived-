@@ -17,8 +17,8 @@ Capture Screenshot and Delete Records and Close Browser
 
 API Create Contact
     [Arguments]      ${account}     ${Role}     &{fields}
-    ${first_name} =  ${faker.first_name()}
-    ${last_name} =   ${faker.last_name()}
+    ${first_name} =  Get Fake Data  first_name
+    ${last_name} =   Get Fake Data  last_name
     ${contact_id} =  Salesforce Insert  Contact
     ...                  FirstName=${first_name}
     ...                  LastName=${last_name}
@@ -26,7 +26,7 @@ API Create Contact
     ...                  Email=${first_name}${last_name}@example.com
     ...                  Role_Global__c=${Role}
     ...                  Status__c=On staff
-    ...                  &{fields}  
+    ...                  &{fields}
     &{contact} =     Salesforce Get  Contact  ${contact_id}
     [return]         &{contact}
 
@@ -60,7 +60,7 @@ API Create Account
     ...                  &{fields}
     &{account} =     Salesforce Get  Account  ${account_id}
     [return]         &{account}
-   
+
 API Get Id
     [Documentation]         Returns the ID of a record identified by the given field_name and field_value input for a specific object
     [Arguments]             ${obj_name}    &{fields}
@@ -92,7 +92,7 @@ Go to community
     [Documentation]             Go to the given CONTACT_ID detail page and log in to community as that user
     [Arguments]                 ${contact_id}
 
-    Go to record home           ${contact_id}  
+    Go to record home           ${contact_id}
     Current page should be      Detail      Contact
     Login to community as user
     Current page should be      Home        Community
