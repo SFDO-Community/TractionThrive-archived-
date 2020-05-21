@@ -45,6 +45,17 @@
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "relatedListApiName" : "StaffAccess__r",
+        "relatedListComponentOverride" : "GRID",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:relatedListSingle",
+      "id" : "5db75014-a19e-487a-836c-dbe90f0df69a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
     } ],
     "id" : "e6809804-0d3e-48d6-a7fc-6a3b9ed012c9",
     "regionName" : "content",
@@ -86,7 +97,39 @@
       "componentName" : "%%%NAMESPACE_OR_C%%%:staffAvailability",
       "id" : "bf33ed85-688b-482c-b4fa-76fc1dad5102",
       "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
+      "renditionMap" : {
+        "es" : "35bedbf0-771a-404b-93ae-ef06b441aff7",
+        "fr" : "5d6b0a74-0817-4800-b577-20db86f8a567",
+        "hi" : "73d77925-a71e-461f-a341-22bf3f5b0770"
+      },
+      "renditions" : [ {
+        "id" : "73d77925-a71e-461f-a341-22bf3f5b0770",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "titleText" : "मेरी उपलब्धता",
+            "titleTextForContactRecord" : "उपलब्धता"
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "5d6b0a74-0817-4800-b577-20db86f8a567",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "titleText" : "Ma disponibilité",
+            "titleTextForContactRecord" : "Disponibilité"
+          }
+        },
+        "type" : "renditionComponent"
+      }, {
+        "id" : "35bedbf0-771a-404b-93ae-ef06b441aff7",
+        "renditionValue" : {
+          "componentAttributes" : {
+            "titleText" : "Mi disponibilidad",
+            "titleTextForContactRecord" : "Disponibilidad"
+          }
+        },
+        "type" : "renditionComponent"
+      } ],
       "type" : "component"
     } ],
     "id" : "56e30524-1224-4935-8ff3-40b0b1c7e04e",

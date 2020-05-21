@@ -1000,6 +1000,7 @@
         <name>%%%NAMESPACE%%%Release_Date__c</name>
     </fields>
     <fields>
+        <help>उनके अस्पताल के लिए एक कर्मचारी सदस्य की भूमिका</help>
         <label>भूमिका</label>
         <name>%%%NAMESPACE%%%Role_Global__c</name>
     </fields>
@@ -1067,14 +1068,14 @@
     </fields>
     <gender>Feminine</gender>
     <layouts>
-        <layout>Contact - Traction Thrive Community Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Community Layout</layout>
         <sections>
             <label>कर्मचारी की स्थिति</label>
             <section>Staffing Status</section>
         </sections>
     </layouts>
     <layouts>
-        <layout>Contact - Traction Thrive Layout</layout>
+        <layout>%%%NAMESPACE%%%Contact - Traction Thrive Layout</layout>
         <sections>
             <label>कर्मचारी की स्थिति</label>
             <section>Staffing Status</section>

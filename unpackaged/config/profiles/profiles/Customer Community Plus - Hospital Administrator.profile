@@ -10,6 +10,10 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
+    <categoryGroupVisibilities>
+        <dataCategoryGroup>All</dataCategoryGroup>
+        <visibility>ALL</visibility>
+    </categoryGroupVisibilities>        
     <classAccesses>
         <apexClass>%%%NAMESPACE%%%AccountPickerCtrl</apexClass>
         <enabled>true</enabled>
@@ -419,8 +423,23 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Access_Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Division__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Staff_Record_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Staff_Record_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

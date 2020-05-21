@@ -25,7 +25,6 @@ from cumulusci.tasks.apex.anon import AnonymousApexTask
 from cumulusci.core.config import TaskConfig
 from robot.libraries.BuiltIn import BuiltIn
 from tasks.salesforce_robot_library_base import SalesforceRobotLibraryBase
-from BaseObjects import BaseCMPage
 from locators_48 import cm_lex_locators as locators_48
 
 # from locators_49 import cm_lex_locators as locators_49
@@ -37,7 +36,7 @@ locators_by_api_version = {
 cm_lex_locators = {}
 
 @selenium_retry
-class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
+class CrisisManagement(SalesforceRobotLibraryBase):
     
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     ROBOT_LIBRARY_VERSION = 1.0
@@ -69,6 +68,26 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
         locators = locators_by_api_version[self.latest_api_version]
         cm_lex_locators.update(locators)
 
+    @property
+    def builtin(self):
+        return BuiltIn()
+
+    @property
+    def cumulusci(self):
+        return self.builtin.get_library_instance("cumulusci.robotframework.CumulusCI")
+
+    @property
+    def pageobjects(self):
+        return self.builtin.get_library_instance("cumulusci.robotframework.PageObjects")
+
+    @property
+    def salesforce(self):
+        return self.builtin.get_library_instance('cumulusci.robotframework.Salesforce')
+
+    @property
+    def selenium(self):
+        return self.builtin.get_library_instance("SeleniumLibrary")
+
     def _check_if_element_exists(self, xpath):
         """ Checks if the given xpath exists
             this is only a helper function being called from other keywords
@@ -91,6 +110,13 @@ class CrisisManagement(BaseCMPage,SalesforceRobotLibraryBase):
         objects = self.cumulusci._describe_result['sobjects']
         level_object = [o for o in objects if o['label'] == 'Staff'][0]
         return self._get_namespace_prefix(level_object['name'])    
+
+    def go_to_thrive_home(self):
+        """ Navigates to the Home view of the SAL app """
+        url = self.cumulusci.org.lightning_base_url
+        url = "{}/lightning/page/home".format(url)
+        self.selenium.go_to(url)
+        self.salesforce.wait_until_loading_is_complete()
 
     def verify_user_details_on_home_tab(self,*args):
         """Verifies that details specified on list is visible on home tab of community page"""
