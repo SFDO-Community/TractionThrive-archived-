@@ -406,11 +406,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Access_Level__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>%%%NAMESPACE%%%Staff_Access__c.%%%NAMESPACE%%%Division__c</field>
         <readable>true</readable>
     </fieldPermissions>
