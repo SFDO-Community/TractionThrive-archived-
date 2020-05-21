@@ -9,6 +9,15 @@ cm_lex_locators = {
         "title": "//label[contains(text(), '{}')]/following::input[contains(@class, 'slds-input slds-combobox__input') and @role='textbox']",
         "value": "//*[contains(@class, 'slds-listbox__option') and @data-value='{}']",
     },
+    'modal-form':{
+        'label':'//div[./*/*[text()="{}"]]',
+    },
+    'checkbox':{
+        'model-checkbox':'//div[contains(@class,"uiInputCheckbox")]/label/span[text()="{}"]/../following-sibling::input[@type="checkbox"]',
+        'details-checkbox':'//label[@class="slds-checkbox__label"][./span[text()="{}"]]/following-sibling::div//input',
+        'table_checkbox':'//tbody/tr[./td[2]/a[text()="{}"]]/td/input[@type="checkbox"]',
+        'id':'//input[@type="checkbox" and contains(@id,"{}")]',
+    },
     "package": {
         "name": "//table[@class='list']/tbody/tr[{}]/th/a",
         "version": "//table[@class='list']/tbody/tr[{}]/td[4]",
@@ -18,6 +27,7 @@ cm_lex_locators = {
         "lookup2": "//mark[text() = '{}']/ancestor::a",
         "lookup3": "//div[contains(@class,'slds-listbox__option-text') and text()='{}']"
     },
+    'availability':'//table/tbody/tr/td/span/span[@class = "slds-truncate" and contains(text(), "{}")]',
     'button':'//input[contains(@value,"{}")]',
     'link-text':'//a[text()="{}"]',
     "close_tab": "//div[contains(@class, 'oneGlobalNav')]/descendant::*[@data-key='close']/ancestor::button",
