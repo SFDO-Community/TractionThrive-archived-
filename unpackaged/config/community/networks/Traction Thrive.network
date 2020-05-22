@@ -46,16 +46,6 @@
     </networkPageOverrides>
     <newSenderAddress>noreply@email.email</newSenderAddress>
     <picassoSite>Traction_Thrive1</picassoSite>
-    <recommendationAudience>
-        <recommendationAudienceDetails>
-            <audienceCriteriaType>CustomList</audienceCriteriaType>
-            <setupName>tractionthrive_Full Menu</setupName>
-        </recommendationAudienceDetails>
-        <recommendationAudienceDetails>
-            <audienceCriteriaType>CustomList</audienceCriteriaType>
-            <setupName>tractionthrive_Staff Only</setupName>
-        </recommendationAudienceDetails>
-    </recommendationAudience>
     <selfRegistration>false</selfRegistration>
     <sendWelcomeEmail>false</sendWelcomeEmail>
     <site>Traction_Thrive</site>
