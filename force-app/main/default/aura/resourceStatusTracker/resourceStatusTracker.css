@@ -18,13 +18,13 @@
 }
 .THIS .slds-box{
     border: none;
-    background-color: #e7ecf2;
+    background-color: white;
 }
 .THIS .slds-card{
     border: none;
 }
 .THIS .slds-modal__header {
-    background-color: #AEC7E5;
+    background-color: #e7ecf2;
     border: none;
     padding: 1em;
     margin: 0;

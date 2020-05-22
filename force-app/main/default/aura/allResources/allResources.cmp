@@ -3,7 +3,7 @@
  -->
 
 <aura:component description="allResources"
-                implements="forceCommunity:availableForAllPageTypes"
+                implements="forceCommunity:availableForAllPageTypes, flexipage:availableForAllPageTypes"
                 controller="AllResourceCtrl"
                 access="global">
 
@@ -19,6 +19,8 @@
     <c:accountPicker/>
 
     <aura:if isTrue="{!v.selectedDivisionId != null}"><!-- PPE (Headgear) Resource Tracking -->
+        <br/>
+        <br/>
         <div class="c-container">
             <div class="slds-modal__header title slds-m-vertical--small">
                 <lightning:formattedText class="slds-text-heading--large slds-p-left--x-small "
@@ -102,6 +104,8 @@
             </div>
         </div>
 
+        <br/>
+        <br/>
         <!-- PPE (Body) Resource Tracking -->
         <div class="c-container">
             <div class="slds-modal__header title slds-m-vertical--small">
@@ -177,6 +181,8 @@
             </div>
         </div>
 
+        <br/>
+        <br/>
         <!--    Cleaning Products -->
         <div class="c-container">
             <div class="slds-modal__header title slds-m-vertical--small">
@@ -206,6 +212,8 @@
             </div>
         </div>
 
+        <br/>
+        <br/>
         <!--    ICU Facility Tracking-->
         <div class="c-container">
             <div class="slds-modal__header title slds-m-vertical--small">
