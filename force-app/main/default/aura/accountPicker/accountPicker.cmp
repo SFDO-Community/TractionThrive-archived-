@@ -8,7 +8,7 @@
 
     <!-- ATTRIBUTES -->
     <aura:attribute name="cardBackgroundColor" type="String" default="#f3f2f2" access="global"/>
-    <aura:attribute name="cardTitle" type="String" default="{!$Label.c.Label_for_Division_Selection}" access="global"/>
+    <aura:attribute name="cardTitle" type="String" default="Select the location in which you are tracking:" access="global"/>
 
     <aura:attribute name="healthAuthorities" type="List"/>
     <aura:attribute name="hospitals" type="List"/>
