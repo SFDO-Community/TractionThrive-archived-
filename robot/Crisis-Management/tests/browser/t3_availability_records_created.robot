@@ -43,8 +43,7 @@ ${status2}    Not Available
     Current Page Should Be                               Detail                                  Contact
     Navigate And Verify Availability Related List        Available                               14
 
-2 Create a new staff with status equals Not Available
-    [tags]                                               unstable
+2. Create a new staff with status equals Not Available
     Go To Page                                           Listing                                 Contact
     Click Object Button                                  New
     Wait For Modal                                       New                                     Staff
