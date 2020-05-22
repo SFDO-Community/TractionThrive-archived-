@@ -2,7 +2,6 @@
  * Created by Heather Purvis on 2020-03-24.
  */
 ({
-
     /**
      * @description Gets relevant accounts for each picklist for this user
      * @param component
@@ -170,9 +169,9 @@
      * @description Fires an event containing the division selected up to the parent component
      * @param component
      */
-    fireDivisionSetEvent: function (component) {
-        let setEvent = component.getEvent("setAttribute");
-        setEvent.setParams({"attributeValue":component.get("v.selectedDivision")});
+    fireFacilitySetEvent: function (component) {
+        let setEvent = $A.get("e." + "c" + ":setFacilityEvent");
+        setEvent.setParams({ "facilityId" : component.get("v.selectedDivision" )});
         setEvent.fire();
     },
 
@@ -193,5 +192,4 @@
 
         toastEvent.fire();
     },
-
 })

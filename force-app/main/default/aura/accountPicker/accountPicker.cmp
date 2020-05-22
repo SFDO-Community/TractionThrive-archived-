@@ -1,12 +1,15 @@
 <!--
  - Created by Heather Purvis on 2020-03-24.
  -->
-
-<aura:component description="accountPicker"
+<aura:component description="facilitySelector"
+                implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes"
                 controller="AccountPickerCtrl"
                 access="global">
 
     <!-- ATTRIBUTES -->
+    <aura:attribute name="cardBackgroundColor" type="String" default="#f3f2f2" access="global"/>
+    <aura:attribute name="cardTitle" type="String" default="{!$Label.c.Label_for_Division_Selection}" access="global"/>
+
     <aura:attribute name="healthAuthorities" type="List"/>
     <aura:attribute name="hospitals" type="List"/>
     <aura:attribute name="divisions" type="List"/>
@@ -22,18 +25,18 @@
     <aura:handler name="init" value="{! this }" action="{! c.init }"/>
 
     <!--  EVENTS  -->
-    <aura:registerEvent name="setAttribute" type="c:setAttributeEvent"/>
+    <aura:registerEvent name="setFacility" type="c:setFacilityEvent"/>
 
     <!-- MARKUP -->
-    <div class="c-container">
+    <div class="c-container" style="{! 'background-color: ' + v.cardBackgroundColor}">
         <lightning:layout multipleRows="true" class="slds-box">
             <lightning:layoutItem size="12" class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
-                    <lightning:formattedText class="slds-text-title_bold" value="{!$Label.c.Label_for_Division_Selection}"/>
+                    <lightning:formattedText class="slds-text-title_bold" value="{!v.cardTitle}"/>
                 </div>
             </lightning:layoutItem>
             <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="3" largeDeviceSize="3"
-                                                         class="slds-p-around--x-small">
+                                  class="slds-p-around--x-small">
                 <div class="slds-size--1-of-1">
                     <lightning:combobox name="authority"
                                         label="{!$Label.c.Health_Authority_Label}"
