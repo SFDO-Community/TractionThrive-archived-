@@ -20,7 +20,6 @@ Initialize test data
 *** Test Cases ***
 
 Navigate To Community Home
-    [tags]                                          unstable
     Go to thrive home
     Go to community                                 ${CONTACT_ID}
     Verify User Details On Community Home Tab       Name=John Doe

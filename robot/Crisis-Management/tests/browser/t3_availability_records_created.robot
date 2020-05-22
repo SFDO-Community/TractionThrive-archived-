@@ -44,6 +44,7 @@ ${status2}    Not Available
     Navigate And Verify Availability Related List        Available                               14
 
 2 Create a new staff with status equals Not Available
+    [tags]                                               unstable
     Go To Page                                           Listing                                 Contact
     Click Object Button                                  New
     Wait For Modal                                       New                                     Staff
