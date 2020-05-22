@@ -28,7 +28,11 @@
     <types>
         <members>*</members>
         <name>MatchingRule</name>
-    </types>  
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>    
     <types>
         <members>*</members>
         <name>Profile</name>
