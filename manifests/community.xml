@@ -28,6 +28,10 @@
         <members>*</members>
         <name>Letterhead</name>
     </types>
+    <types>    
+        <members>Traction Thrive</members>
+        <name>ManagedTopics</name>
+    </types>    
     <types>
         <members>*</members>
         <name>Network</name>
