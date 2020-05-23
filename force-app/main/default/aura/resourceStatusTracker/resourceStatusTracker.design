@@ -2,9 +2,15 @@
  - Created by Heather Purvis on 2020-03-18.
  -->
 
-<design:component>
-    <design:attribute name="title" label="Title"/>
+<design:component label="Status Report Card">
+    <design:attribute name="isReadOnly" label="Read Only" description="Whether the card is editable or not"/>
+    <design:attribute name="title" label="Card Title"/>
+    <design:attribute name="helpText" label="Help Text" description="Help text, possibly used to define units"/>
     <design:attribute name="iconURL" label="Icon URL" description="Url of icon"/>
-    <design:attribute name="resource" label="Resource" datasource="apex://StatusReportTypePicklist"/>
+    <design:attribute name="resource" label="Resource Type" datasource="apex://StatusReportTypePicklist"/>
     <design:attribute name="status" label="Status" datasource="apex://StatusReportStatusPicklist"/>
+    <design:attribute name="cardBorderColor" label="Card Border Color"
+                      description="Enter a color for the border of the card"/>
+    <design:attribute name="titleBackgroundColor" label="Title Background Color"
+                      description="Enter a color for the background of the Title section"/>
 </design:component>
