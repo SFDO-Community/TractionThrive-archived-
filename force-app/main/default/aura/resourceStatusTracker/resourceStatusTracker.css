@@ -3,10 +3,11 @@
  */
 .THIS .cmp-main {
     max-width: 400px;
-}.THIS .input{
+}
+.THIS .input{
     font-size: 2em;
     border: none;
-}
+ }
 .THIS .cmp-icon {
     height: 45px;
 }
@@ -24,7 +25,6 @@
     border: none;
 }
 .THIS .slds-modal__header {
-    background-color: #e7ecf2;
     border: none;
     padding: 1em;
     margin: 0;

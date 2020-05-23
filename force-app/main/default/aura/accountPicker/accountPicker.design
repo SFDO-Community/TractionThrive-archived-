@@ -1,0 +1,8 @@
+<!--
+ - Created by Heather Purvis on 2020-05-22.
+ -->
+
+<design:component label="Facility Selector">
+    <design:attribute name="cardBackgroundColor" label="Background Color" description="Enter a color for the background"/>
+    <design:attribute name="cardTitle" label="Title"/>
+</design:component>
