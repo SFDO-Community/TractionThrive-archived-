@@ -36,7 +36,7 @@
       "type" : "component"
     }, {
       "componentAttributes" : {
-        "relatedListApiName" : "Credentials__r",
+        "relatedListApiName" : "%%%NAMESPACE%%%Credentials__r",
         "relatedListComponentOverride" : "GRID",
         "width" : "MEDIUM"
       },
@@ -47,7 +47,7 @@
       "type" : "component"
     }, {
       "componentAttributes" : {
-        "relatedListApiName" : "StaffAccess__r",
+        "relatedListApiName" : "%%%NAMESPACE%%%StaffAccess__r",
         "relatedListComponentOverride" : "GRID",
         "width" : "MEDIUM"
       },
