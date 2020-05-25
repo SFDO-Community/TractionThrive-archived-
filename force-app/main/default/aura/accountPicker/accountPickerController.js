@@ -22,9 +22,11 @@
     handleAuthorityChange: function (component, event, helper) {
         helper.getHospitals(component, event, helper);
         component.set("v.selectedHospital", null);
-        component.set("v.selectedDivision", null);
         component.set("v.divisions", null);
-        helper.fireDivisionSetEvent(component);
+        if(component.get("v.selectedDivision") != null) {
+            component.set("v.selectedDivision", null);
+            helper.fireFacilitySetEvent(component);
+        }
     },
 
     /**
@@ -35,9 +37,12 @@
      * @param helper
      */
     handleHospitalChange: function (component, event, helper) {
+        if(component.get("v.selectedDivision") != null) {
+            component.set("v.selectedDivision", null);
+            helper.fireFacilitySetEvent(component);
+        }
         helper.getDivisions(component, event, helper);
-        component.set("v.selectedDivision", null);
-        helper.fireDivisionSetEvent(component);
+
     },
 
     /**
@@ -47,7 +52,6 @@
      * @param helper
      */
     handleDivisionChange: function (component, event, helper) {
-        helper.fireDivisionSetEvent(component);
+        helper.fireFacilitySetEvent(component);
     },
-
 })
