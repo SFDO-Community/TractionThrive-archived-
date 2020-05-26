@@ -311,6 +311,13 @@ tasks:
             sobject: Opportunity
             internal_sharing_model: Private
             external_sharing_model: Private
+    
+    check_account_owd:
+        class_path: tasks.owd_preflight.CheckOWDForObject
+        options:
+            sobject: Account
+            internal_sharing_model: ReadWrite
+            external_sharing_model: ReadWrite
 
     add_standard_value_set_entries:
         options:
@@ -603,6 +610,9 @@ plans:
             - when: "not tasks.check_opportunity_owd()"
               action: error
               message: "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing."
+            - when: "tasks.check_account_owd()"
+              action: error
+              message: "Please set the External Organization-Wide Defaults to Read or Private for the Account object prior to installing."              
         steps:
             1:
                 task: add_standard_value_set_entries
