@@ -27,6 +27,12 @@
     ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
     POSSIBILITY OF SUCH DAMAGE.
 */
-trigger StatusReport on Status_Report__c (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
-//    SObjectDomain.triggerHandler(StatusReports.class);
+trigger StatusReport on Status_Report__c (after insert) {
+	StatusReportService statusReportService = new StatusReportService();
+
+	if (Trigger.isAfter) {
+		if (Trigger.isInsert) {
+			statusReportService.onAfterInsert(Trigger.new);
+		}
+	}
 }
