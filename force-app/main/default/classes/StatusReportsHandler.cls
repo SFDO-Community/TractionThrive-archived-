@@ -61,12 +61,14 @@ public with sharing class StatusReportsHandler {
      * @description Sends the created status report to mulesoft
      */
 	public void sendStatusReportRequest() {
-		if (IS_DATA_SHARING_ACTIVE && (statusReports[0].Category__c == 'Equipment' || statusReports[0].Category__c == 'Supplies')) {
-			IngressAsset asset = new IngressAsset(statusReports[0]);
-			futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_ASSETS);
-		} else if (statusReports[0].Category__c == 'Patient') {
-			IngressInfection asset = new IngressInfection(statusReports[0]);
-			futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_INFECTIONS);
+		if (IS_DATA_SHARING_ACTIVE) {
+			if (statusReports[0].Category__c == 'Equipment' || statusReports[0].Category__c == 'Supplies') {
+				IngressAsset asset = new IngressAsset(statusReports[0]);
+				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_ASSETS);
+			} else if (statusReports[0].Category__c == 'Patient') {
+				IngressInfection asset = new IngressInfection(statusReports[0]);
+				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_INFECTIONS);
+			}
 		}
 	}
 
