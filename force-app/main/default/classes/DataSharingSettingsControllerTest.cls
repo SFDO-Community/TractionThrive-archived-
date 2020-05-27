@@ -39,16 +39,19 @@ public with sharing class DataSharingSettingsControllerTest {
 	@IsTest
 	public static void test() {
 
-		Data_Sharing__c dataSharing = DataSharingSettingsController.getSettings();
+		Data_Sharing__c dataSharing = new Data_Sharing__c(
+			Is_Active__c = true,
+			Client_ID__c = 'TEST CLIENT ID',
+			Client_Secret__c = 'TEST SECRET',
+			Endpoint__c = 'TEST ENDPOINT'
+		);
 
-		dataSharing.Is_Active__c = true;
-		dataSharing.Client_ID__c = 'TEST CLIENT ID';
-		dataSharing.Client_Secret__c = 'TEST SECRET';
-		dataSharing.Endpoint__c = 'TEST ENDPOINT';
+		insert dataSharing;
 
-		DataSharingSettingsController.save(dataSharing);
+		dataSharing = DataSharingSettingsController.getSettings();
+		dataSharing.Endpoint__c = 'TEST ENDPOINT 2';
 
-		System.assertNotEquals(NULL, dataSharing.Id);
+		System.assertEquals(DataSharingSettingsController.save(dataSharing).Endpoint__c, dataSharing.Endpoint__c);
 
 	}
 
