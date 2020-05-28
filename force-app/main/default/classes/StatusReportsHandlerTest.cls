@@ -66,7 +66,6 @@ public with sharing class StatusReportsHandlerTest {
 
 		List<Status_Report__c> statusReports = [Select Id, Aggregate_Send_Error__c, Is_Sent_To_Aggregator__c FROM Status_Report__c];
 		System.assertEquals(1, statusReports.size());
-		System.debug('test PEDRO : '+ [Select Id, Aggregate_Send_Error__c, Is_Sent_To_Aggregator__c FROM Status_Report__c]);
 		System.assertEquals(true, statusReports[0].Is_Sent_To_Aggregator__c);
 		System.assertEquals(null, statusReports[0].Aggregate_Send_Error__c);
 	}
