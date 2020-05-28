@@ -40,19 +40,77 @@ public with sharing class StatusReportsHandler {
 //    @TestVisible private static final String AVAILABLE = 'Available';
 //    @TestVisible private static final String INACTIVE = 'Inactive';
 //
-//    private List<Status_Report__c> statusReports;
-//    private Map<Id, Status_Report__c> oldStatusReports;
-//
-//    /**
-//    * @description          Constructor
-//    *
-//    * @param statusReports     [Trigger.new StatusReports]
-//    * @param oldStatusReports  [Trigger.oldMap StatusReports]
-//    */
-//    public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
-//        this.statusReports = statusReports;
-//        this.oldStatusReports = oldStatusReports;
-//    }
+	private static final Boolean IS_DATA_SHARING_ACTIVE = DataSharingSettingsController.getSettings().Is_Active__c;
+	private static final String ENDPOINT_ASSETS = DataSharingSettingsController.getSettings().Endpoint__c+'assets';
+	private static final String ENDPOINT_INFECTIONS = DataSharingSettingsController.getSettings().Endpoint__c+'infections';
+	private List<Status_Report__c> statusReports;
+    private Map<Id, Status_Report__c> oldStatusReports;
+
+    /**
+    * @description          Constructor
+    *
+    * @param statusReports     [Trigger.new StatusReports]
+    * @param oldStatusReports  [Trigger.oldMap StatusReports]
+    */
+    public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
+        this.statusReports = statusReports;
+        this.oldStatusReports = oldStatusReports;
+    }
+
+	/**
+     * @description Sends the created status report to mulesoft
+     */
+	public void sendStatusReportRequest() {
+		if (IS_DATA_SHARING_ACTIVE) {
+			if (statusReports[0].Category__c == 'Equipment' || statusReports[0].Category__c == 'Supplies') {
+				IngressAsset asset = new IngressAsset(statusReports[0]);
+				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_ASSETS);
+			} else if (statusReports[0].Category__c == 'Patient') {
+				IngressInfection asset = new IngressInfection(statusReports[0]);
+				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_INFECTIONS);
+			}
+		}
+	}
+
+	@Future(callout=true)
+	private static void futureRequest(String jsonToSend, Id statusReportId, String endpoint) {
+		HttpResponse response = IngressRestRequest.sendRequest(jsonToSend, endpoint);
+
+		Status_Report__c statusReportToUpdate = new Status_Report__c(
+				Id = statusReportId
+		);
+
+		//Write the appropriate fields
+		switch on response.getStatusCode() {
+			when 201, 204 {
+				//If success then set the field to true
+				statusReportToUpdate.Is_Sent_To_Aggregator__c = true;
+			} when else {
+				//If an error then populate the aggregate send error with the response body
+				statusReportToUpdate.Aggregate_Send_Error__c = 'Error code '+response.getStatusCode()+': ' +response.getBody();
+			}
+		}
+
+		System.enqueueJob(new UpdateStatusReport(new List<Status_Report__c>{statusReportToUpdate}));
+	}
+
+	/**
+	 * Class to queue the update after a request has been sent
+	 */
+	private class UpdateStatusReport implements Queueable {
+
+		List <Status_Report__c> statusReportToUpdate= new List<Status_Report__c>();
+
+		public UpdateStatusReport (List<Status_Report__c> statusReportsToUpdate )
+		{
+			this.statusReportToUpdate = statusReportsToUpdate ;
+		}
+		public void execute(QueueableContext context)
+		{
+			update statusReportToUpdate;
+		}
+	}
+
 //
 //    /**
 //     * Update the accounts bed amount with Count__c
