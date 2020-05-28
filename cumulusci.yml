@@ -506,17 +506,6 @@ flows:
             8:
                 task: create_community_users
 
-    qa_org_robot_community:
-        steps:
-            1:
-                flow: config_scratch_start
-            2:
-                task: switch_community_template
-            3:
-                flow: config_scratch_finish
-            4:
-                task: create_community_users
-
     config_packaging:
         steps:
             1:
