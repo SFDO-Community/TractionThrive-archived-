@@ -9,6 +9,15 @@ cm_lex_locators = {
         "title": "//label[contains(text(), '{}')]/following::input[contains(@class, 'slds-input slds-combobox__input') and @role='textbox']",
         "value": "//*[contains(@class, 'slds-listbox__option') and @data-value='{}']",
     },
+    'modal-form':{
+        'label':'//div[./*/*[text()="{}"]]',
+    },
+    'checkbox':{
+        'model-checkbox':'//div[contains(@class,"uiInputCheckbox")]/label/span[text()="{}"]/../following-sibling::input[@type="checkbox"]',
+        'details-checkbox':'//label[@class="slds-checkbox__label"][./span[text()="{}"]]/following-sibling::div//input',
+        'table_checkbox':'//tbody/tr[./td[2]/a[text()="{}"]]/td/input[@type="checkbox"]',
+        'id':'//input[@type="checkbox" and contains(@id,"{}")]',
+    },
     "package": {
         "name": "//table[@class='list']/tbody/tr[{}]/th/a",
         "version": "//table[@class='list']/tbody/tr[{}]/td[4]",
@@ -18,6 +27,7 @@ cm_lex_locators = {
         "lookup2": "//mark[text() = '{}']/ancestor::a",
         "lookup3": "//div[contains(@class,'slds-listbox__option-text') and text()='{}']"
     },
+    'availability':'//table/tbody/tr/td/span/span[@class = "slds-truncate" and contains(text(), "{}")]',
     'button':'//input[contains(@value,"{}")]',
     'link-text':'//a[text()="{}"]',
     "close_tab": "//div[contains(@class, 'oneGlobalNav')]/descendant::*[@data-key='close']/ancestor::button",
@@ -48,6 +58,20 @@ cm_lex_locators = {
         "link": "//a[@title='{}']",
         "login_to_community": "//a[@title='Log in to Community as User']",
         "show_more_actions": "//div[contains(@class, 'actionsContainer')]/descendant::li[contains(@class, 'oneActionsDropDown')]/descendant::a[contains(@title, 'more actions')]",
+    },
+
+    "community_home_locators":{
+        "contact_info_buttons": "//button[contains(@title,'{}')]",
+        "contact_info_fields": "//label[contains(@class,'slds-form-element__label') and text()='{}']",
+        "disabled_field": "//label[text()='{}']//following::input[@disabled]",
+        "dropdown": "//label[text()='{}']/following::lightning-base-combobox//input",
+        "dropdown_values": "//div[@lightning-basecombobox_basecombobox]/lightning-base-combobox-item[@data-value='{}']",
+        "credential_save_button": "//button[text='{}']",
+        "facility_info": "//label[text()='{}']//following::input[@title='{}']",
+        "home_tab": "//a[@href='/TractionThrive/s/']",
+        "staff_info": "//div/lightning-formatted-text[text()='{}']",
+        "staff_contact_info": "//lightning-input[@data-field='{}']//input",
+
     }
 
 }

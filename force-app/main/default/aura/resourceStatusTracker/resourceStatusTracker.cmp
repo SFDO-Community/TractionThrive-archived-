@@ -1,21 +1,22 @@
 <!--
  - Created by Heather Purvis on 2020-03-18.
  -->
-
-<aura:component description="resourceStatusTracker"
-                implements="forceCommunity:availableForAllPageTypes"
+<aura:component description="Resource Card"
+                implements="forceCommunity:availableForAllPageTypes, flexipage:availableForAllPageTypes"
                 controller="ResourceStatusTrackerCtrl"
                 access="global"
-                >
+>
 
     <!-- External ATTRIBUTES -->
-    <aura:attribute name="title" type="String" required="true" description="Title of record counter" access="global"/>
-    <aura:attribute name="resource" type="String" required="true" description="Resource being tracked" access="global"/>
-    <aura:attribute name="status" type="String" required="true" description="Status of resource" access="global"/>
-    <aura:attribute name="iconURL" type="String" required="true" description="Location of Icon" access="global"/>
-    <aura:attribute name="helpText" type="String" required="false" description="Help Text - i.e. units" access="global"/>
-    <aura:attribute name="divisionId" type="Id" required="true" description="Division to track resource in" access="global"/>
+    <aura:attribute name="divisionId" type="Id" required="false" description="Division to track resource in" access="global"/>
     <aura:attribute name="isReadOnly" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="title" type="String" required="false" description="Title of record counter" access="global"/>
+    <aura:attribute name="helpText" type="String" required="false" description="Help Text - i.e. units" access="global"/>
+    <aura:attribute name="iconURL" type="String" required="false" description="Location of Icon" access="global"/>
+    <aura:attribute name="resource" type="String" required="false" description="Resource being tracked" access="global"/>
+    <aura:attribute name="status" type="String" required="false" description="Status of resource" access="global"/>
+    <aura:attribute name="cardBorderColor" type="String" default="#dddbda" access="global"/>
+    <aura:attribute name="titleBackgroundColor" type="String" default="#f3f2f2" access="global"/>
 
     <!-- Internal ATTRIBUTES -->
     <aura:attribute name="lastUpdated" type="Datetime" description="Time count last updated"/>
@@ -24,46 +25,51 @@
 
     <!-- HANDLERS -->
     <aura:handler name="init" value="{! this }" action="{! c.init }"/>
-    <aura:handler name="change" value="{!v.divisionId}" action="{!c.init}"/>
+    <aura:handler event="c:setFacilityEvent" action="{!c.init}"/>
 
     <!-- MARKUP -->
-    <div class="slds-card cmp-main">
-        <div aura:id="resourceTracker" class="container cmp-main">
-            <div class="slds-modal__header title slds-m-vertical--small">
-        <span class="slds-m-right_small">
-            <img class="cmp-icon" src="{!v.iconURL}"/>
-        </span>
-            <lightning:formattedText class="slds-text-heading--small cmp-title-text slds-p-left--x-small" value="{!v.title}"/>
-            <aura:if isTrue="{! v.helpText != null}">
-                <lightning:helptext class="slds-p-left--x-small" content="{! v.helpText }"/>
-            </aura:if>
-        </div>
-        <lightning:layout horizontalAlign="center" verticalAlign="center" multipleRows="true" class="slds-box">
-            <lightning:layoutItem size="12" class="slds-p-around--xxx-small">
-            </lightning:layoutItem>
-            <lightning:layoutItem class="slds-p-around--xxx-small slds-max-small-size--1-of-3 slds-size--1-of-3">
-                <lightning:input aura:id="count" type="number" min="0" step="1" label="" variant="label-hidden"
-                                 onchange="{!c.handleChange}" disabled="{! v.isReadOnly }" value="{! v.count }"/>
-            </lightning:layoutItem>
-            <lightning:layoutItem class="slds-p-around--small">
-                <lightning:buttonIcon iconName="utility:down" size="large" variant="bare" alternativeText="Down"
-                                      onclick="{!c.decreaseCount}" disabled="{! v.isReadOnly }"/>
-            </lightning:layoutItem>
-            <lightning:layoutItem class="slds-p-around--small">
-                <lightning:buttonIcon iconName="utility:up" size="large" variant="bare" alternativeText="Add"
-                                      onclick="{!c.increaseCount}" disabled="{! v.isReadOnly }"/>
-            </lightning:layoutItem>
-            <lightning:layoutItem class="slds-p-around--x-small">
-                <lightning:button aura:id="save" variant="brand" label="{!$Label.c.Save_Action}" onclick="{!c.handleUpdate}"
-                                  disabled="true"/>
-            </lightning:layoutItem>
-            <lightning:layoutItem size="12" class="slds-p-vertical--xx-small">
-                <div class="slds-text-align_center">
-                    <lightning:formattedText value="{!if(v.statusReport==null, '', 'Updated By: ' + v.statusReport.LastModifiedBy.Name)}"/>
-                    <br/>
-                    <lightning:formattedText value="{!if(v.statusReport.LastModifiedDate==null,'',' on ')}"/>
-                    <lightning:formattedDateTime value="{!v.statusReport.LastModifiedDate}" month="short" day="numeric"
-                                                 hour="2-digit" minute="2-digit"/>
+    <div class="slds-card cmp-main" style="{! 'border-color:' + v.cardBorderColor}">
+        <div aura:id="resourceTracker" class="container">
+            <div class="slds-modal__header title slds-m-vertical--small" style="{! 'background-color: ' + v.titleBackgroundColor}">
+                <aura:if isTrue="{! v.iconURL != null}">
+                    <span class="slds-m-right_small">
+                        <img class="cmp-icon" src="{!v.iconURL}"/>
+                    </span>
+                </aura:if>
+                <lightning:formattedText class="slds-text-heading--small cmp-title-text slds-p-left--x-small" value="{!v.title}"/>
+                <aura:if isTrue="{! v.helpText != null}">
+                    <lightning:helptext class="slds-p-left--x-small" content="{! v.helpText }"/>
+                </aura:if>
+            </div>
+            <lightning:layout horizontalAlign="center"
+                              verticalAlign="center"
+                              multipleRows="true"
+                              class="slds-box">
+                <lightning:layoutItem size="12" class="slds-p-around--xxx-small">
+                </lightning:layoutItem>
+                <lightning:layoutItem class="slds-p-around--xxx-small slds-max-small-size--1-of-3 slds-size--1-of-3">
+                    <lightning:input aura:id="count" type="number" min="0" step="1" label="" variant="label-hidden"
+                                     onchange="{!c.handleChange}" disabled="{! v.isReadOnly || v.divisionId==null }" value="{! v.count }"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="slds-p-around--small">
+                    <lightning:buttonIcon iconName="utility:down" size="large" variant="bare" alternativeText="Down"
+                                          onclick="{!c.decreaseCount}" disabled="{! v.isReadOnly || v.divisionId==null }"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="slds-p-around--small">
+                    <lightning:buttonIcon iconName="utility:up" size="large" variant="bare" alternativeText="Add"
+                                          onclick="{!c.increaseCount}" disabled="{! v.isReadOnly || v.divisionId==null }"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="slds-p-around--x-small">
+                    <lightning:button aura:id="save" variant="brand" label="{!$Label.c.Save_Action}" onclick="{!c.handleUpdate}"
+                                      disabled="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="12" class="slds-p-vertical--xx-small">
+                    <div class="slds-text-align_center">
+                        <lightning:formattedText value="{!if(v.statusReport==null, '', 'Updated By: ' + v.statusReport.LastModifiedBy.Name)}"/>
+                        <br/>
+                        <lightning:formattedText value="{!if(v.statusReport.LastModifiedDate==null,'',' on ')}"/>
+                        <lightning:formattedDateTime value="{!v.statusReport.LastModifiedDate}" month="short" day="numeric"
+                                                     hour="2-digit" minute="2-digit"/>
 
                     </div>
                 </lightning:layoutItem>

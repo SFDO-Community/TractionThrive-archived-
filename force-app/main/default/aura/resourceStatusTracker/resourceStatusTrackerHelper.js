@@ -10,12 +10,17 @@
      * @param helper
      */
     getStatusReport: function (component, event, helper) {
+        let facilityId = component.get("v.divisionId");
+        if(!facilityId){
+            return;
+        }
+
         let action = component.get("c.getStatusReport");
 
         action.setParams({
             resourceType: component.get("v.resource"),
             status: component.get("v.status"),
-            divisionId: component.get("v.divisionId")
+            divisionId: facilityId
         });
 
         action.setCallback(this, $A.getCallback(function (response) {
@@ -55,7 +60,7 @@
      * @param helper
      */
     setCount: function (component, event, helper) {
-        if(component.get("v.isReadOnly")) {
+        if(component.get("v.isReadOnly") || !component.get("v.divisionId")) {
             return;
         }
 
@@ -96,8 +101,9 @@
     activateSaveButton: function (component) {
         let saveButton = component.find("save");
         let isReadOnly = component.get("v.isReadOnly");
+        let facilityId = component.get("v.divisionId");
 
-        if(saveButton && !isReadOnly) {
+        if(saveButton && !isReadOnly && facilityId) {
             saveButton.set("v.disabled",false);
         }
     },
