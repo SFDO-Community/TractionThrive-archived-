@@ -44,18 +44,18 @@ public with sharing class StatusReportsHandler {
 	private static final String ENDPOINT_ASSETS = DataSharingSettingsController.getSettings().Endpoint__c+'assets';
 	private static final String ENDPOINT_INFECTIONS = DataSharingSettingsController.getSettings().Endpoint__c+'infections';
 	private List<Status_Report__c> statusReports;
-    private Map<Id, Status_Report__c> oldStatusReports;
+	private Map<Id, Status_Report__c> oldStatusReports;
 
-    /**
-    * @description          Constructor
-    *
-    * @param statusReports     [Trigger.new StatusReports]
-    * @param oldStatusReports  [Trigger.oldMap StatusReports]
-    */
-    public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
-        this.statusReports = statusReports;
-        this.oldStatusReports = oldStatusReports;
-    }
+	/**
+	* @description          Constructor
+	*
+	* @param statusReports     [Trigger.new StatusReports]
+	* @param oldStatusReports  [Trigger.oldMap StatusReports]
+	*/
+	public StatusReportsHandler(List<Status_Report__c> statusReports, Map<Id, Status_Report__c> oldStatusReports) {
+		this.statusReports = statusReports;
+		this.oldStatusReports = oldStatusReports;
+	}
 
 	/**
      * @description Sends the created status report to mulesoft
@@ -73,7 +73,7 @@ public with sharing class StatusReportsHandler {
 	}
 
 	@Future(callout=true)
-	private static void futureRequest(String jsonToSend, Id statusReportId, String endpoint) {
+	public static void futureRequest(String jsonToSend, Id statusReportId, String endpoint) {
 		HttpResponse response = IngressRestRequest.sendRequest(jsonToSend, endpoint);
 
 		Status_Report__c statusReportToUpdate = new Status_Report__c(
@@ -97,7 +97,7 @@ public with sharing class StatusReportsHandler {
 	/**
 	 * Class to queue the update after a request has been sent
 	 */
-	private class UpdateStatusReport implements Queueable {
+	public class UpdateStatusReport implements Queueable {
 
 		List <Status_Report__c> statusReportToUpdate= new List<Status_Report__c>();
 
