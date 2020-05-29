@@ -29,14 +29,16 @@
 */
 /**
  * @author  Pedro Serquiz, Traction on Demand
- * @date    2020-05-27
+ * @date    2020-05-28
  */
 @IsTest
-public with sharing class StatusReportsHandlerTest {
+public with sharing class IngressBatchTest {
 	private final static String jsonBody = '{"justATest":"Test"}';
 	private final static String jsonBodyError = '{"success": false, "apiName": "test-api", "version": "1.0", "correlationId": "g7w633gxuhsu", "timestamp": "2015-07-04T21:00:00","errorDetails": [{"code": "AC", "message": "jahsa", "additionalInfo": "2015-07-04T21:00:00"}]}';
+
 	@TestSetup
 	static void prepareData() {
+		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMock());
 		Data_Sharing__c dataSharingCustomSetting = new Data_Sharing__c(
 				Client_ID__c = 'ClientIDTest',
 				Client_Secret__c = 'ClientSecretTest',
@@ -63,57 +65,85 @@ public with sharing class StatusReportsHandlerTest {
 				ShippingCountry = 'testShippingCountry'
 		);
 		insert department;
+
+		List<Status_Report__c> statusReportsEquipment = new List<Status_Report__c>();
+		for (Integer i = 0; i < 51; i++) {
+			Status_Report__c statusReport = new Status_Report__c(
+					Type__c = 'Ventilator Beds',
+					Status__c = 'Total',
+					Date_Time__c = System.now(),
+					Count__c = 2,
+					Category__c = 'Equipment',
+					Department__c = department.Id
+			);
+			statusReportsEquipment.add(statusReport);
+		}
+		insert statusReportsEquipment;
+
+		List<Status_Report__c> statusReportsPatient = new List<Status_Report__c>();
+		for (Integer i = 0; i < 51; i++) {
+			Status_Report__c statusReport = new Status_Report__c(
+					Type__c = 'Ventilator Beds',
+					Status__c = 'Total',
+					Date_Time__c = System.now(),
+					Count__c = 2,
+					Category__c = 'Patient',
+					Department__c = department.Id
+			);
+			statusReportsPatient.add(statusReport);
+		}
+		insert statusReportsPatient;
 	}
 
 	@IsTest
-	public static void sendStatusReportRequest() {
+	public static void IngressBatch_sendStatusReportsData_success() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMock());
-		List<Account> department = [SELECT Id FROM Account];
-		Status_Report__c statusReport = new Status_Report__c(
-				Type__c = 'Ventilator Beds',
-				Status__c = 'Total',
-				Date_Time__c = System.now(),
-				Count__c = 2,
-				Category__c = 'Equipment',
-				Department__c = department[0].Id
-		);
-
-		IngressAsset wrappedAsset = new IngressAsset(statusReport);
-		wrappedAsset.getJsonString();
 		Test.startTest();
-		insert statusReport;
+		IngressBatch batchInstance = new IngressBatch();
+		Database.executeBatch(batchInstance);
 		Test.stopTest();
-
-		List<Status_Report__c> statusReports = [Select Id, Aggregate_Send_Error__c, Is_Sent_To_Aggregator__c FROM Status_Report__c];
-		System.assertEquals(1, statusReports.size());
-		System.assertEquals(true, statusReports[0].Is_Sent_To_Aggregator__c);
-		System.assertEquals(null, statusReports[0].Aggregate_Send_Error__c);
+		List<Status_Report__c> statusReports = [SELECT Id, Is_Sent_To_Aggregator__c, Aggregate_Send_Error__c FROM Status_Report__c];
+		for (Status_Report__c statusReport : statusReports) {
+			System.assertEquals(true, statusReport.Is_Sent_To_Aggregator__c);
+			System.assertEquals(null, statusReport.Aggregate_Send_Error__c);
+		}
 	}
 
 	@IsTest
-	public static void sendStatusReportRequest_error() {
+	public static void IngressBatch_sendStatusReportsData_error() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMockError());
-		List<Account> department = [SELECT Id FROM Account];
-		System.debug('pedro: '+ department);
-		Status_Report__c statusReport = new Status_Report__c(
-				Type__c = 'Ventilator Beds',
-				Status__c = 'Total',
-				Date_Time__c = System.now(),
-				Count__c = 2,
-				Category__c = 'Equipment',
-				Department__c = department[0].Id
-		);
-
-		IngressAsset wrappedAsset = new IngressAsset(statusReport);
-		wrappedAsset.getJsonString();
 		Test.startTest();
-		insert statusReport;
+		IngressBatch batchInstance = new IngressBatch();
+		Database.executeBatch(batchInstance, 100);
 		Test.stopTest();
+		List<Status_Report__c> statusReports = [SELECT Id, Is_Sent_To_Aggregator__c, Aggregate_Send_Error__c FROM Status_Report__c WHERE Is_Sent_To_Aggregator__c = false];
+		System.assertEquals(100, statusReports.size());
+		for (Status_Report__c statusReport : statusReports) {
+			System.assertEquals(false, statusReport.Is_Sent_To_Aggregator__c);
+			System.assertEquals('Error code 400: '+jsonBodyError, statusReport.Aggregate_Send_Error__c);
+		}
+	}
 
-		List<Status_Report__c> statusReports = [Select Id, Aggregate_Send_Error__c, Is_Sent_To_Aggregator__c FROM Status_Report__c];
-		System.assertEquals(1, statusReports.size());
-		System.assertEquals(false, statusReports[0].Is_Sent_To_Aggregator__c);
-		System.assertEquals('Error code 400: '+jsonBodyError, statusReports[0].Aggregate_Send_Error__c);
+	@IsTest
+	public static void IngressBatch_sendStatusReportsData_scheduledJob() {
+		String jobName = 'Scheduled Job Test';
+		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMockError());
+		System.schedule(jobName, '0 45 * * * ?', new IngressBatch());
+		CronJobDetail ctd = [SELECT Id, Name, JobType FROM CronJobDetail WHERE Name =: jobName Limit 1];
+		System.assertEquals(jobName, ctd.Name);
+		//check if the job is 7—Scheduled Apex
+		System.assertEquals('7', ctd.JobType);
+	}
+
+	@IsTest
+	public static void IngressBatch_sendStatusReportsData_querySize() {
+		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMockError());
+		Database.BatchableContext bc;
+		IngressBatch batchInstance = new IngressBatch();
+		Database.QueryLocator queryLocator = batchInstance.start(bc);
+		List<Status_Report__c> statusReports = Database.query(queryLocator.getQuery());
+		System.assertEquals(100, statusReports.size());
+
 	}
 
 	private with sharing class StatusReportHttpCalloutMock implements HttpCalloutMock {
