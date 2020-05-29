@@ -44,18 +44,38 @@ public with sharing class StatusReportsHandlerTest {
 				Is_Active__c = true
 		);
 		insert dataSharingCustomSetting;
+
+		Account departmentParent = new Account(
+				RecordTypeId = Constants.HOSPITAL_RECORDTYPE_ID,
+				Name = 'DepartmentTestParent'
+		);
+		insert departmentParent;
+		Account department = new Account(
+				Name = 'DepartmentTest',
+				ParentId = departmentParent.Id,
+				BillingStreet = 'testBillingStreet',
+				BillingState = 'testBillingState',
+				BillingCountry = 'testBillingCountry',
+				ShippingStreet = 'testShippingStreet',
+				ShippingCity = 'testShippingCity',
+				ShippingState = 'testShippingState',
+				ShippingPostalCode = '123123',
+				ShippingCountry = 'testShippingCountry'
+		);
+		insert department;
 	}
 
 	@IsTest
 	public static void sendStatusReportRequest() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMock());
+		List<Account> department = [SELECT Id FROM Account];
 		Status_Report__c statusReport = new Status_Report__c(
 				Type__c = 'Ventilator Beds',
 				Status__c = 'Total',
 				Date_Time__c = System.now(),
 				Count__c = 2,
 				Category__c = 'Equipment',
-				Department__c = '0010U000012J6S8'
+				Department__c = department[0].Id
 		);
 
 		IngressAsset wrappedAsset = new IngressAsset(statusReport);
@@ -73,13 +93,15 @@ public with sharing class StatusReportsHandlerTest {
 	@IsTest
 	public static void sendStatusReportRequest_error() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMockError());
+		List<Account> department = [SELECT Id FROM Account];
+		System.debug('pedro: '+ department);
 		Status_Report__c statusReport = new Status_Report__c(
 				Type__c = 'Ventilator Beds',
 				Status__c = 'Total',
 				Date_Time__c = System.now(),
 				Count__c = 2,
 				Category__c = 'Equipment',
-				Department__c = '0010U000012J6S8'
+				Department__c = department[0].Id
 		);
 
 		IngressAsset wrappedAsset = new IngressAsset(statusReport);

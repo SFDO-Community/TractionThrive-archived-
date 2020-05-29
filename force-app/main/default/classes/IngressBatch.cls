@@ -37,8 +37,8 @@ global with sharing class IngressBatch implements Schedulable, Database.Batchabl
 	private static final String ENDPOINT_INFECTIONS = DataSharingSettingsController.getSettings().Endpoint__c+'infections';
 
 	public Database.QueryLocator start(Database.BatchableContext BC){
-		String queryString = 'SELECT Type__c, Status__c, Date_Time__c, Count__c, Category__c, ' +
-				'Department__c, Department__r.Name, Department__r.Parent.ParentId, Department__r.Parent.Parent.Name, ' +
+		String queryString = 'SELECT Type__c, Status__c, Date_Time__c, Count__c, Category__c, Department__r.ShippingStreet, Department__r.ShippingCity, Department__r.ShippingCountry, ' +
+				'Department__r.ShippingState, Department__r.ShippingPostalCode, Department__c, Department__r.Name, Department__r.Parent.ParentId, Department__r.Parent.Parent.Name, ' +
 				'Department__r.ParentId, Department__r.Parent.Name, Department__r.BillingStreet, Department__r.BillingState, ' +
 				'Department__r.BillingCountry, Is_Sent_To_Aggregator__c ' +
 				'FROM Status_Report__c WHERE Is_Sent_To_Aggregator__c = false';

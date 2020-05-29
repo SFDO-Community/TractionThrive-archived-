@@ -47,6 +47,24 @@ public with sharing class IngressBatchTest {
 		);
 		insert dataSharingCustomSetting;
 
+		Account departmentParent = new Account(
+				RecordTypeId = Constants.HOSPITAL_RECORDTYPE_ID,
+				Name = 'DepartmentTestParent'
+		);
+		insert departmentParent;
+		Account department = new Account(
+				Name = 'DepartmentTest',
+				ParentId = departmentParent.Id,
+				BillingStreet = 'testBillingStreet',
+				BillingState = 'testBillingState',
+				BillingCountry = 'testBillingCountry',
+				ShippingStreet = 'testShippingStreet',
+				ShippingCity = 'testShippingCity',
+				ShippingState = 'testShippingState',
+				ShippingPostalCode = '123123',
+				ShippingCountry = 'testShippingCountry'
+		);
+		insert department;
 		List<Status_Report__c> statusReportsEquipment = new List<Status_Report__c>();
 		for (Integer i = 0; i < 51; i++) {
 			Status_Report__c statusReport = new Status_Report__c(
@@ -55,7 +73,7 @@ public with sharing class IngressBatchTest {
 					Date_Time__c = System.now(),
 					Count__c = 2,
 					Category__c = 'Equipment',
-					Department__c = '0010U000012J6S8'
+					Department__c = department.Id
 			);
 			statusReportsEquipment.add(statusReport);
 		}
@@ -69,7 +87,7 @@ public with sharing class IngressBatchTest {
 					Date_Time__c = System.now(),
 					Count__c = 2,
 					Category__c = 'Patient',
-					Department__c = '0010U000012J6S8'
+					Department__c = department.Id
 			);
 			statusReportsPatient.add(statusReport);
 		}
