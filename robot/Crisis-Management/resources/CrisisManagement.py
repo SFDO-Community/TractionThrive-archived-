@@ -213,7 +213,59 @@ class CrisisManagement(SalesforceRobotLibraryBase):
     def click_element_with_locator(self, path, *args, **kwargs):
         """Pass the locator and its values for the element you want to click """
         locator=self.get_locator(path, *args, **kwargs)  
-        self.selenium.click_element(locator)         
+        self.selenium.click_element(locator)  
+
+    def click_template_button(self, value):
+        """Click on the template buttons. Eg: Create,Get Started"""
+        locator= cm_lex_locators["community_template"]["template_button"].format(value)
+        self.selenium.wait_until_page_contains_element(locator, 
+                                    error=f"Button with the '{locator}', does not exist on the community")
+        element = self.selenium.get_webelement(locator)
+        self.selenium.driver.execute_script("arguments[0].click()", element)
+    
+    def wait_for_template_name_input_page(self,title):
+        """Waits until the entered title appears in the  community """
+        title_locator= cm_lex_locators["community_template"]["title"].format(title)
+        self.selenium.wait_until_page_contains_element(title_locator)
+
+    def click_template_header(self, value):
+        """Click on the template header"""
+        locator= cm_lex_locators["community_template"]["template_header"].format(value)
+        title_locator= cm_lex_locators["community_template"]["title"].format("Traction Thrive")
+        self.selenium.wait_until_page_contains_element(locator, 
+                                    error=f"Template header with the '{locator}', does not exist on the community")
+        self.selenium.click_element(locator)
+        self.selenium.wait_until_page_contains_element(title_locator)
+
+    @capture_screenshot_on_error
+    def create_community_template(self,template_name, button_name):
+        """This function helps us to create community template
+         The following actions are handled here:
+            1. Entering the name of the template
+            2. Clicking on the Create button
+            3. Waiting until the Add Metrics is displayed, to make sure community template creation is completed
+        """
+        locator= cm_lex_locators["community_template"]["add_metrics"].format("Add Metrics")
+        self.enter_values(template_name)
+        self.click_template_button(button_name)
+        self.selenium.wait_until_page_contains_element(locator, timeout=600, error=f"Add Metrics with the '{locator}' does not exist")
+        self.selenium.capture_page_screenshot()
+    
+    def enter_values(self,value):
+        """Provide the values you would want to pass in to the input field """
+        locator = cm_lex_locators["community_template"]["template_name"]
+        self.selenium.wait_until_page_contains_element(locator,timeout=60)
+        self.selenium.get_webelement(locator).send_keys(value)
+
+    def go_to_community_template(self, domain_name, community_id):
+        """Navigate to the community template with the url
+        domain_name & community_id are required to build the url.
+        """
+        url = f"https://{domain_name}.builder.salesforce-communities.com/sfsites/picasso/core/config/wizard.jsp?networkId={community_id}"
+        self.builtin.log(url)
+        self.selenium.go_to(url)
+        self.selenium.wait_until_location_contains(url)
+        self.selenium.log_location()
 
     def format_all(self, loc, value):
         """ Formats the given locator with the value for all {} occurrences """
