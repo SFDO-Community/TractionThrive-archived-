@@ -65,7 +65,6 @@ public with sharing class IngressBatchTest {
 				ShippingCountry = 'testShippingCountry'
 		);
 		insert department;
-
 		List<Status_Report__c> statusReportsEquipment = new List<Status_Report__c>();
 		for (Integer i = 0; i < 51; i++) {
 			Status_Report__c statusReport = new Status_Report__c(

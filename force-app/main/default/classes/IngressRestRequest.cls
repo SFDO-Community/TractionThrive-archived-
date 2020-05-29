@@ -36,7 +36,6 @@ public with sharing class IngressRestRequest {
 	private static final String CLIENT_SECRET = DataSharingSettingsController.getSettings().Client_Secret__c;
 
 	public static HttpResponse sendRequest(String body, String endpoint) {
-		Http http = new Http();
 		HttpRequest request = new HttpRequest();
 		request.setEndpoint(endpoint);
 		request.setMethod('POST');
@@ -44,6 +43,7 @@ public with sharing class IngressRestRequest {
 		request.setHeader('client_secret', CLIENT_SECRET);
 		request.setHeader('Content-Type', 'application/json');
 		request.setBody(body);
+		Http http = new Http();
 		HttpResponse response = http.send(request);
 		return response;
 	}
