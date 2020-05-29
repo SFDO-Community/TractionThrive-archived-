@@ -52,6 +52,7 @@ public with sharing class StatusReportsHandlerTest {
 		insert departmentParent;
 		Account department = new Account(
 				Name = 'DepartmentTest',
+				RecordTypeId = Constants.DIVISION_RECORDTYPE_ID,
 				ParentId = departmentParent.Id,
 				BillingStreet = 'testBillingStreet',
 				BillingState = 'testBillingState',
@@ -68,7 +69,7 @@ public with sharing class StatusReportsHandlerTest {
 	@IsTest
 	public static void sendStatusReportRequest() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMock());
-		List<Account> department = [SELECT Id FROM Account];
+		List<Account> department = [SELECT Id FROM Account WHERE RecordTypeId =: Constants.DIVISION_RECORDTYPE_ID];
 		Status_Report__c statusReport = new Status_Report__c(
 				Type__c = 'Ventilator Beds',
 				Status__c = 'Total',
@@ -93,8 +94,7 @@ public with sharing class StatusReportsHandlerTest {
 	@IsTest
 	public static void sendStatusReportRequest_error() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMockError());
-		List<Account> department = [SELECT Id FROM Account];
-		System.debug('pedro: '+ department);
+		List<Account> department = [SELECT Id FROM Account WHERE RecordTypeId =: Constants.DIVISION_RECORDTYPE_ID];
 		Status_Report__c statusReport = new Status_Report__c(
 				Type__c = 'Ventilator Beds',
 				Status__c = 'Total',
