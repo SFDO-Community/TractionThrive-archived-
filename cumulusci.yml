@@ -155,7 +155,23 @@ tasks:
         options:
             suites: tasks/create_community_users.robot
             vars: BROWSER:headlesschrome
-            options: {'outputdir': 'robot/Crisis-Management/results'}        
+            options: {'outputdir': 'robot/Crisis-Management/results'}
+
+    switch_community_template:
+        description: Switches to the community template page and creates a community
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: tasks/switch_community_template.robot
+            vars: BROWSER:headlesschrome
+            options: {'outputdir': 'robot/Crisis-Management/results'}
+
+    switch_community_template:
+        description: Switch community templates using Robot Framework
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: tasks/switch_community_template.robot
+            vars: BROWSER:headlesschrome
+            options: {'outputdir': 'robot/Crisis-Management/results'}
 
     robot:
         options:
@@ -176,7 +192,7 @@ tasks:
                   external_sharing_model: ReadWrite
                 # - api_name: Contact
                 #   internal_sharing_model: ControlledByParent
-                #   external_sharing_model: ControlledByParent                  
+                #   external_sharing_model: ControlledByParent
                 #- api_name: Assignment__c
                 #  internal_sharing_model: ReadWrite
                 #  external_sharing_model: ReadWrite
@@ -288,7 +304,7 @@ tasks:
             sobject: Case
             internal_sharing_model: Private
             external_sharing_model: Private
-    
+
     check_opportunity_owd:
         class_path: tasks.owd_preflight.CheckOWDForObject
         options:
@@ -325,17 +341,17 @@ tasks:
     reset_nmg_sql:
         description: Reset network member group load file to prevent modified file for commit
         class_path: tasks.nmg_sql_reset.NgmSqlReset
-    
+
     # load custom settings
     load_custom_settings:
         options:
             settings_path: unpackaged/config/custom-settings/customsettings.yml
-    
+
     # load namespaced custom settings
     load_ns_custom_settings:
         class_path: cumulusci.tasks.salesforce.LoadCustomSettings
         options:
-            settings_path: unpackaged/config/custom-settings/ns_customsettings.yml        
+            settings_path: unpackaged/config/custom-settings/ns_customsettings.yml
 
 
 flows:
@@ -366,17 +382,17 @@ flows:
                 task: deploy_community_config
             4:
                 task: publish_community
-    
+
     config_scratch_start:
         description: SCRATCH org start build
         steps:
-            1: 
+            1:
                 flow: dependencies
-            2: 
+            2:
                 flow: deploy_unmanaged
             3:
                 task: deploy_post
-            4: 
+            4:
                 task: update_admin_profile
             5:
                 task: load_custom_settings
@@ -384,8 +400,8 @@ flows:
                 task: deploy_wave_config
             7:
                 task: create_community_scratch_org
-            
-                
+
+
     config_scratch_finish:
         description: SCRATCH org finish build
         steps:
@@ -405,7 +421,7 @@ flows:
                 task: set_organization_wide_defaults
             8:
                 task: set_user_role_scratch_org
-                when: org_config.scratch                
+                when: org_config.scratch
 
     config_managed:
         steps:
@@ -468,8 +484,27 @@ flows:
                 flow: config_default
             4:
                 task: create_community_users
+            # 5:
+            #     flow: add_nmg_permissions
+
+    qa_org:
+        steps:
+            1:
+                flow: None
+            2:
+                flow: None
+            3:
+                flow: None
+            4:
+                task: None
             5:
-                flow: add_nmg_permissions
+                flow: config_scratch_start
+            6:
+                task: switch_community_template
+            7:
+                flow: config_scratch_finish
+            8:
+                task: create_community_users
 
     config_packaging:
         steps:
@@ -532,7 +567,7 @@ flows:
         steps:
             1:
                 task: extract_dataset
-                options: 
+                options:
                     mapping: datasets/mapping-nmg-extract.yml
                     sql_path: datasets/nmg-extract.sql
             2:
@@ -587,7 +622,7 @@ plans:
                 task: load_ns_custom_settings
                 ui_options:
                     name: "Load custom settings defaults"
-                    is_required: False                
+                    is_required: False
             5:
                 task: deploy_wave_config
                 ui_options:

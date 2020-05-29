@@ -71,7 +71,14 @@ cm_lex_locators = {
         "home_tab": "//a[@href='/TractionThrive/s/']",
         "staff_info": "//div/lightning-formatted-text[text()='{}']",
         "staff_contact_info": "//lightning-input[@data-field='{}']//input",
+    },
 
+    "community_template":{
+        "add_metrics": "//a[text()='{}']",
+        "template_button": "//button[@title='{}']",
+        "template_header": "//div[contains(@class,'cb-StartWizard-TemplateTitle')]/header[contains(text(),'{}')]",
+        "template_name"  : "//input[@id='cb-StartWizard-propertyInput-Name']",
+        "title" : "//*[text()='{}']",
     }
 
 }
