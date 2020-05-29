@@ -267,6 +267,7 @@ tasks:
                     - Contact-fr
                     - Contact-hi
                     - Credential__c-en_US
+                    - Data_Sharing__c-en_US
                     - Division_Role__c-en_US
                     - Division_Role__c-es
                     - Division_Role__c-fr
