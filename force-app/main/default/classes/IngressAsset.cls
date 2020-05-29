@@ -80,9 +80,9 @@ public with sharing class IngressAsset {
 			'Coveralls & Available' => 'coverallAvailableCt'
 	};
 
-	public static List<IngressAsset> wrap(List<Status_Report__c> memberships) {
+	public static List<IngressAsset> wrap(List<Status_Report__c> statusReports) {
 		List<IngressAsset> wrappers = new List<IngressAsset>();
-		for (Status_Report__c m : memberships) {
+		for (Status_Report__c m : statusReports) {
 			wrappers.add(new IngressAsset(m));
 		}
 		return wrappers;
