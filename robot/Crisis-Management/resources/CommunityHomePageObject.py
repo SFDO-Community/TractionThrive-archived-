@@ -127,10 +127,12 @@ class CommunityHomePage(BaseCMPage,HomePage):
                 error=f"'{key}' with the '{value}' is not available in the community page")
 
 
-    def click_user_info(self,value):
+    def click_user_info(self,name,value):
         """ Click on user name on the Community Home page
         """
-        locator = cm_lex_locators["community_home_locators"]["user_info"].format(value)
+        locator = cm_lex_locators["community_home_locators"]["user_info"].format(name)
         field = self.selenium.get_webelement(locator)
         self.selenium.click_element(field)
-        
+        locator = cm_lex_locators["community_home_locators"]["user_sub_info"].format(value)
+        field = self.selenium.get_webelement(locator)
+        self.selenium.click_element(field)

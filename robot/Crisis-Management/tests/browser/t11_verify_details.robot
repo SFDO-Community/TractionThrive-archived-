@@ -19,7 +19,7 @@ Verify_community_user_detail
     Go to record home           ${community_contact}
     Current page should be      Detail      Contact
     Login to community as user
-    Click Element     title:John Doe
-    Click Element      title:My Account
+    Current page should be      Home    Community
+    Click user info     John Doe            My Account
     Page Should Contain  COVID19 Division
     Page Should Contain  Robot Hospital
