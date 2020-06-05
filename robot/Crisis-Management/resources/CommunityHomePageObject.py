@@ -133,6 +133,10 @@ class CommunityHomePage(BaseCMPage,HomePage):
         locator = cm_lex_locators["community_home_locators"]["user_info"].format(name)
         field = self.selenium.get_webelement(locator)
         self.selenium.click_element(field)
-        locator = cm_lex_locators["community_home_locators"]["user_sub_info"].format(value)
+        locator = cm_lex_locators["community_home_locators"]["user_info"].format(value)
         field = self.selenium.get_webelement(locator)
         self.selenium.click_element(field)
+        if value == 'My Account':
+            self.selenium.page_should_contain("COVID19 Division")
+            self.selenium.page_should_contain("Robot Hospital")
+

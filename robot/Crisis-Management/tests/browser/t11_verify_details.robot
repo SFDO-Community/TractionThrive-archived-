@@ -21,5 +21,5 @@ Verify_community_user_detail
     Login to community as user
     Current page should be      Home    Community
     Click user info     John Doe            My Account
-    Page Should Contain  COVID19 Division
-    Page Should Contain  Robot Hospital
+    
+    

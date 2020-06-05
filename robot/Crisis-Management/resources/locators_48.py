@@ -71,8 +71,7 @@ cm_lex_locators = {
         "home_tab": "//a[@href='/TractionThrive/s/']",
         "staff_info": "//div/lightning-formatted-text[text()='{}']",
         "staff_contact_info": "//lightning-input[@data-field='{}']//input",
-        "user_info": "//div[contains(@title, '{}')]",
-        "user_sub_info": "//a[contains(@title, '{}')]",
+        "user_info": "//*[contains(@title, '{}')]",
         
     },
 
