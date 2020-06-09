@@ -24,7 +24,9 @@ Verify User Deatils For Resident
 *** Test Cases ***
 
 Navigate To Community Home
-    Login To Community As Resident
+    # Login To Community As Julian Joseph
+    [tags]                  unstable
+    Login To Community As User
     Verify Traction Thrive Image Link Visible
-    Verify User Deatils For Resident
+    Verify User Details On Home Tab     &{staff}[Name]   &{staff}[Role_Global__c]    &{division}[Name]      &{hospital}[Name]
     Verify Origin Store Is On About Us

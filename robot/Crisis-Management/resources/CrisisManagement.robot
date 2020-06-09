@@ -84,7 +84,7 @@ API Get Name Based on Id
     ...                         ${field_name}=${field_value}
     &{Name} =               Get From List  ${records}  0
     [return]                &{Name}[Name]
-
+    
 Login To Community As Julian Joseph
     @{community_contact}=   Salesforce Query  Contact   select=Id,Name   email=jjoseph@salesforce.com
     Go To Page              Details           Contact   object_id=${community_contact}[0][Id]
