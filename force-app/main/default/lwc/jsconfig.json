@@ -29,6 +29,9 @@
             ],
             "c/staffAvailabilityItem": [
                 "staffAvailabilityItem/staffAvailabilityItem.js"
+            ],
+            "c/dataSharingSettings": [
+                "dataSharingSettings/dataSharingSettings.js"
             ]
         }
     },
