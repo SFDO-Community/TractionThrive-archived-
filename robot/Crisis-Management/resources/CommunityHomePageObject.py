@@ -125,4 +125,18 @@ class CommunityHomePage(BaseCMPage,HomePage):
                 locator = cm_lex_locators["community_home_locators"]["staff_info"].format(value)
                 self.selenium.wait_until_page_contains_element(locator,
                 error=f"'{key}' with the '{value}' is not available in the community page")
-        
+
+
+    def click_user_info(self,name,value):
+        """ Click on user name on the Community Home page
+        """
+        locator = cm_lex_locators["community_home_locators"]["user_info"].format(name)
+        field = self.selenium.get_webelement(locator)
+        self.selenium.click_element(field)
+        locator = cm_lex_locators["community_home_locators"]["user_info"].format(value)
+        field = self.selenium.get_webelement(locator)
+        self.selenium.click_element(field)
+        if value == 'My Account':
+            self.selenium.page_should_contain("COVID19 Division")
+            self.selenium.page_should_contain("Robot Hospital")
+
