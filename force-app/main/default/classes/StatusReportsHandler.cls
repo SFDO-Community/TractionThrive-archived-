@@ -61,21 +61,22 @@ public with sharing class StatusReportsHandler {
      * @description Sends the created status report to mulesoft
      */
 	public void sendStatusReportRequest() {
+		List<Status_Report__c> statusReportsForIntegration = StatusReportSelector.getStatusReportForIntegration(statusReports);
 		if (IS_DATA_SHARING_ACTIVE) {
-			if (statusReports[0].Category__c == 'Equipment' || statusReports[0].Category__c == 'Supplies') {
-				IngressAsset asset = new IngressAsset(statusReports[0]);
-				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_ASSETS);
-			} else if (statusReports[0].Category__c == 'Patient') {
-				IngressInfection asset = new IngressInfection(statusReports[0]);
-				futureRequest(asset.getJsonString(), statusReports[0].Id, ENDPOINT_INFECTIONS);
+			if (statusReportsForIntegration[0].Category__c == 'Equipment' || statusReportsForIntegration[0].Category__c == 'Supplies') {
+				IngressAsset asset = new IngressAsset(statusReportsForIntegration[0]);
+				futureRequest(asset.getJsonString(), statusReportsForIntegration[0].Id, ENDPOINT_ASSETS);
+			} else if (statusReportsForIntegration[0].Category__c == 'Patient') {
+				IngressInfection asset = new IngressInfection(statusReportsForIntegration[0]);
+				futureRequest(asset.getJsonString(), statusReportsForIntegration[0].Id, ENDPOINT_INFECTIONS);
 			}
 		}
+		stampExternalIdsOnAccounts(statusReportsForIntegration[0].Id);
 	}
 
 	@Future(callout=true)
 	public static void futureRequest(String jsonToSend, Id statusReportId, String endpoint) {
 		HttpResponse response = IngressRestRequest.sendRequest(jsonToSend, endpoint);
-
 		Status_Report__c statusReportToUpdate = new Status_Report__c(
 				Id = statusReportId
 		);
@@ -109,6 +110,35 @@ public with sharing class StatusReportsHandler {
 		{
 			update statusReportToUpdate;
 		}
+	}
+
+	/**
+		 * @description Stamp external Id on accounts
+     */
+	private static void stampExternalIdsOnAccounts(Id statusReportId) {
+		Status_Report__c statusReport = StatusReportSelector.getStatusReportForExternalId(statusReportId);
+		Set <Id> accountIds = new Set<Id>();
+		if(statusReport.Department__r != NULL){
+			accountIds.add(statusReport.Department__r.Id);
+			accountIds.add(statusReport.Department__r.ParentId);
+			if(statusReport.Department__r.Parent != NULL){
+				accountIds.add(statusReport.Department__r.Parent.ParentId);
+			}
+		}
+		List<Account> accounts = AccountsSelector.getAccountsForExternalId(accountIds);
+		for(Account thisAccount : accounts){
+			thisAccount.External_ID__c = String.valueOf(thisAccount.ShippingLatitude.setScale(5));
+			thisAccount.External_ID__c += '/'+String.valueOf(thisAccount.ShippingLongitude.setScale(5));
+			if(thisAccount.RecordTypeId == Constants.HEALTH_AUTH_RECORDTYPE_ID){
+				thisAccount.External_ID__c += '-1-';
+			}else if(thisAccount.RecordTypeId == Constants.HOSPITAL_RECORDTYPE_ID){
+				thisAccount.External_ID__c += '-2-';
+			}else if(thisAccount.RecordTypeId == Constants.DIVISION_RECORDTYPE_ID){
+				thisAccount.External_ID__c += '-3-';
+			}
+			thisAccount.External_ID__c += thisAccount.Name.replaceAll('[^a-zA-Z0-9\\s+]', '').replaceAll(' ', '');
+		}
+		update  accounts;
 	}
 
 //

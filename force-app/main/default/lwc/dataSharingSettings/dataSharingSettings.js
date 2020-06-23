@@ -25,6 +25,7 @@ export default class DataSharingSettings extends LightningElement {
 			Client_ID__c: this.template.querySelector('.cmp-client-id').value,
 			Client_Secret__c: this.template.querySelector('.cmp-client-secret').value,
 			Endpoint__c: this.template.querySelector('.cmp-endpoint').value,
+			Data_Source_Name__c: this.template.querySelector('.cmp-data-source-name').value,
 		};
 
 		console.log('SAVE PAYLOAD', payload);

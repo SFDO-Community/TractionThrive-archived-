@@ -65,4 +65,57 @@ public with sharing class StatusReportSelector {
         }
         return result;
     }
+
+    /**
+     * @description Gets the latest status report of a resource
+     *
+     * @param resourceType  E.g. ventilator beds, patients with symptoms
+     * @param status        E.g. in use, available, inactive
+     * @param departmentId  The location of this resource
+     *
+     * @return Status_Report__c
+     */
+    public static List<Status_Report__c> getStatusReportForIntegration(List<Status_Report__c> statusReports) {
+        List<Status_Report__c> statusReport = [
+                SELECT  Id,
+                        Type__c,
+                        Status__c,
+                        Date_Time__c,
+                        Count__c,
+                        Category__c,
+                        Department__r.ShippingStreet,
+                        Department__r.ShippingCity,
+                        Department__r.ShippingCountry,
+                        Department__r.ShippingState,
+                        Department__r.ShippingPostalCode,
+                        Department__c,
+                        Department__r.Name,
+                        Department__r.Parent.ParentId,
+                        Department__r.Parent.Parent.Name,
+                        Department__r.ParentId,
+                        Department__r.Parent.Name,
+                        Department__r.BillingStreet,
+                        Department__r.BillingState,
+                        Department__r.BillingCountry,
+                        Is_Sent_To_Aggregator__c
+                FROM Status_Report__c
+                WHERE Id IN :statusReports
+
+        ];
+
+        return statusReport;
+    }
+
+    public static Status_Report__c getStatusReportForExternalId(Id statusReportId) {
+        Status_Report__c statusReport = [
+                SELECT  Id,
+                        Department__r.Id,
+                        Department__r.ParentId,
+                        Department__r.Parent.ParentId
+                FROM Status_Report__c
+                WHERE Id =:statusReportId
+
+        ];
+        return statusReport;
+    }
 }

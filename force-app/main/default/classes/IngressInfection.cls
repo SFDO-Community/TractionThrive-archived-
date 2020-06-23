@@ -46,6 +46,7 @@ public with sharing class IngressInfection {
 	String locationShippingProvinceStateName;
 	String locationShippingPostalCodeTxt;
 	String locationShippingCountryName;
+	String dataSourceName;
 
 	Map<String, String> targetFieldMap = new Map<String,String> {
 			'Presumptive COVID' => 'presumptiveInfectedCt',
@@ -78,6 +79,7 @@ public with sharing class IngressInfection {
 		this.count = sr.Count__c;
 		this.type = sr.Type__c;
 		this.status = sr.Status__c;
+		this.dataSourceName = DataSharingSettingsController.getSettings().Data_Source_Name__c;
 	}
 
 	public String getJsonString(){
@@ -92,13 +94,18 @@ public with sharing class IngressInfection {
 				'locationtShippingCityName' => locationtShippingCityName,
 				'locationShippingProvinceStateName' => locationShippingProvinceStateName,
 				'locationShippingPostalCodeTxt' => locationShippingPostalCodeTxt,
-				'locationShippingCountryName' => locationShippingCountryName
+				'locationShippingCountryName' => locationShippingCountryName,
+				'dataSourceName' => dataSourceName
 		};
 
 		if (targetFieldMap.get(type) != null) {
 			ingressMapStrings.put(targetFieldMap.get(type), count);
 		}
-
-		return JSON.serialize(ingressMapStrings);
+		Map<String, Map<String, Object>> ingressMapObject = new Map<String, Map<String, Object>>();
+		ingressMapObject.put('disasterObservationReport',  ingressMapStrings);
+		ingressMapObject.put('assetObservationReport', new Map<String, Map<String, Object>>());
+		List<Map<String, Map<String, Object>>> ingressMapList = new List<Map<String, Map<String, Object>>>();
+		ingressMapList.add(ingressMapObject);
+		return JSON.serialize(ingressMapList);
 	}
 }

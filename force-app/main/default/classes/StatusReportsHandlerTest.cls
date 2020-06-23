@@ -47,7 +47,14 @@ public with sharing class StatusReportsHandlerTest {
 
 		Account departmentParent = new Account(
 				RecordTypeId = Constants.HOSPITAL_RECORDTYPE_ID,
-				Name = 'DepartmentTestParent'
+				Name = 'DepartmentTestParent',
+				ShippingStreet = '13364 102 avenue',
+				ShippingCity = 'Surrey',
+				ShippingState = 'Bc',
+				ShippingPostalCode = 'V3T5L8',
+				ShippingCountry = 'Canada',
+				ShippingLatitude = 49.187930196516376,
+				ShippingLongitude = -122.8515252928122
 		);
 		insert departmentParent;
 		Account department = new Account(
@@ -57,11 +64,13 @@ public with sharing class StatusReportsHandlerTest {
 				BillingStreet = 'testBillingStreet',
 				BillingState = 'testBillingState',
 				BillingCountry = 'testBillingCountry',
-				ShippingStreet = 'testShippingStreet',
-				ShippingCity = 'testShippingCity',
-				ShippingState = 'testShippingState',
-				ShippingPostalCode = '123123',
-				ShippingCountry = 'testShippingCountry'
+				ShippingStreet = '13364 102 avenue',
+				ShippingCity = 'Surrey',
+				ShippingState = 'Bc',
+				ShippingPostalCode = 'V3T5L8',
+				ShippingCountry = 'Canada',
+				ShippingLatitude = 49.187930196516376,
+				ShippingLongitude = -122.8515252928122
 		);
 		insert department;
 	}
@@ -69,7 +78,7 @@ public with sharing class StatusReportsHandlerTest {
 	@IsTest
 	public static void sendStatusReportRequest() {
 		Test.setMock(HttpCalloutMock.class, new StatusReportHttpCalloutMock());
-		List<Account> department = [SELECT Id FROM Account WHERE RecordTypeId =: Constants.DIVISION_RECORDTYPE_ID];
+		List<Account> department = [SELECT Id, ShippingLatitude, ShippingLongitude FROM Account WHERE RecordTypeId =: Constants.DIVISION_RECORDTYPE_ID];
 		Status_Report__c statusReport = new Status_Report__c(
 				Type__c = 'Ventilator Beds',
 				Status__c = 'Total',
@@ -84,7 +93,14 @@ public with sharing class StatusReportsHandlerTest {
 		Test.startTest();
 		insert statusReport;
 		Test.stopTest();
-
+		List<Account> accounts = [SELECT Id, External_ID__c, RecordTypeId FROM Account];
+		for(Account thisAccount : accounts){
+			if(thisAccount.RecordTypeId == Constants.HOSPITAL_RECORDTYPE_ID){
+				System.assertEquals('49.18793/-122.85153-2-DepartmentTestParent', thisAccount.External_ID__c);
+			}else if(thisAccount.RecordTypeId == Constants.DIVISION_RECORDTYPE_ID){
+				System.assertEquals('49.18793/-122.85153-3-DepartmentTest', thisAccount.External_ID__c);
+			}
+		}
 		List<Status_Report__c> statusReports = [Select Id, Aggregate_Send_Error__c, Is_Sent_To_Aggregator__c FROM Status_Report__c];
 		System.assertEquals(1, statusReports.size());
 		System.assertEquals(true, statusReports[0].Is_Sent_To_Aggregator__c);

@@ -46,6 +46,7 @@ public with sharing class IngressAsset {
 	String providerBillingCountryName;
 	String departmentAccountId;
 	String departmentAccountName;
+	String dataSourceName;
 	Map<String, String> targetFieldMap = new Map<String,String> {
 			'Ventilator Beds & Total' => 'ventilatorsCt',
 			'Ventilator Beds & In Use' => 'ventilatorsInUseCt',
@@ -103,6 +104,7 @@ public with sharing class IngressAsset {
 		this.count = sr.Count__c;
 		this.type = sr.Type__c;
 		this.status = sr.Status__c;
+		this.dataSourceName = DataSharingSettingsController.getSettings().Data_Source_Name__c;
 	}
 
 	public String getJsonString(){
@@ -117,14 +119,19 @@ public with sharing class IngressAsset {
 				'providerBillingCityName' => providerBillingCityName,
 				'providerBillingCountryName' => providerBillingCountryName,
 				'departmentAccountId' => departmentAccountId,
-				'departmentAccountName' => departmentAccountName
+				'departmentAccountName' => departmentAccountName,
+				'dataSourceName' => dataSourceName
 		};
 
 		String fieldKey = type + ' & ' + status;
 		if (targetFieldMap.get(fieldKey) != null) {
 			ingressMapStrings.put(targetFieldMap.get(fieldKey), count);
 		}
-
-		return JSON.serialize(ingressMapStrings);
+		Map<String, Map<String, Object>> ingressMapObject = new Map<String, Map<String, Object>>();
+		ingressMapObject.put('disasterObservationReport',  new Map<String, Map<String, Object>>());
+		ingressMapObject.put('assetObservationReport', ingressMapStrings);
+		List<Map<String, Map<String, Object>>> ingressMapList = new List<Map<String, Map<String, Object>>>();
+		ingressMapList.add(ingressMapObject);
+		return JSON.serialize(ingressMapList);
 	}
 }
