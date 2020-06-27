@@ -40,6 +40,7 @@ global with sharing class IngressBatch implements Schedulable, Database.Batchabl
 		String queryString = 'SELECT Type__c, Status__c, Date_Time__c, Count__c, Category__c, Department__r.ShippingStreet, Department__r.ShippingCity, Department__r.ShippingCountry, ' +
 				'Department__r.ShippingState, Department__r.ShippingPostalCode, Department__c, Department__r.Name, Department__r.Parent.ParentId, Department__r.Parent.Parent.Name, ' +
 				'Department__r.ParentId, Department__r.Parent.Name, Department__r.BillingStreet, Department__r.BillingState, ' +
+				'Department__r.External_ID__c, Department__r.Parent.Parent.External_ID__c, Department__r.Parent.External_ID__c, ' +
 				'Department__r.BillingCountry, Is_Sent_To_Aggregator__c ' +
 				'FROM Status_Report__c WHERE Is_Sent_To_Aggregator__c = false';
 		return Database.getQueryLocator(queryString);

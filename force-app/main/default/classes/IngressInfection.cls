@@ -67,7 +67,7 @@ public with sharing class IngressInfection {
 	public IngressInfection(Status_Report__c sr) {
 		this.reportedDateTm = sr.Date_Time__c;
 		this.reportDt = sr.Date_Time__c;
-		this.reportProviderAccountId = sr.Department__r.Parent.ParentId == null ? '' : sr.Department__r.Parent.ParentId;
+		this.reportProviderAccountId = sr.Department__r.Parent.Parent.External_ID__c == null ? '' : sr.Department__r.Parent.Parent.External_ID__c;
 		this.reportProviderAccountName = sr.Department__r.Parent.Parent.Name == null ? '' : sr.Department__r.Parent.Parent.Name;
 		this.provinceStateName = sr.Department__r.BillingState == null ? '' : sr.Department__r.BillingState;
 		this.countyName = sr.Department__r.BillingCountry == null ? '' : sr.Department__r.BillingCountry;

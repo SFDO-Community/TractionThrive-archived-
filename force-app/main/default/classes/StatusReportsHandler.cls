@@ -61,6 +61,7 @@ public with sharing class StatusReportsHandler {
      * @description Sends the created status report to mulesoft
      */
 	public void sendStatusReportRequest() {
+		stampExternalIdsOnAccounts(statusReports[0].Id);
 		List<Status_Report__c> statusReportsForIntegration = StatusReportSelector.getStatusReportForIntegration(statusReports);
 		if (IS_DATA_SHARING_ACTIVE) {
 			if (statusReportsForIntegration[0].Category__c == 'Equipment' || statusReportsForIntegration[0].Category__c == 'Supplies') {
@@ -71,7 +72,6 @@ public with sharing class StatusReportsHandler {
 				futureRequest(asset.getJsonString(), statusReportsForIntegration[0].Id, ENDPOINT_INFECTIONS);
 			}
 		}
-		stampExternalIdsOnAccounts(statusReportsForIntegration[0].Id);
 	}
 
 	@Future(callout=true)
