@@ -30,6 +30,7 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Data_Sharing</tabs>
     <tabs>About_Us</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Bed_Crisis_Management_UtilityBar</utilityBar>
