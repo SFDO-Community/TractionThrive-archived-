@@ -10,6 +10,7 @@
      */
     init: function (component, event, helper) {
         helper.getAccountData(component, event, helper);
+        helper.getOrgNamespace(component);
     },
 
     /**
@@ -25,7 +26,7 @@
         component.set("v.divisions", null);
         if(component.get("v.selectedDivision") != null) {
             component.set("v.selectedDivision", null);
-            helper.handlefireFacilitySetEvent(component, helper);
+            helper.fireFacilitySetEvent(component);
         }
     },
 
@@ -39,7 +40,7 @@
     handleHospitalChange: function (component, event, helper) {
         if(component.get("v.selectedDivision") != null) {
             component.set("v.selectedDivision", null);
-            helper.handlefireFacilitySetEvent(component, helper);
+            helper.fireFacilitySetEvent(component);
         }
         helper.getDivisions(component, event, helper);
 
@@ -52,6 +53,6 @@
      * @param helper
      */
     handleDivisionChange: function (component, event, helper) {
-        helper.handlefireFacilitySetEvent(component, helper);
+        helper.fireFacilitySetEvent(component);
     },
 })
