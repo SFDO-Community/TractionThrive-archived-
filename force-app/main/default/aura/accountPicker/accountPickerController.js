@@ -25,7 +25,7 @@
         component.set("v.divisions", null);
         if(component.get("v.selectedDivision") != null) {
             component.set("v.selectedDivision", null);
-            helper.fireFacilitySetEvent(component);
+            helper.handlefireFacilitySetEvent(component, helper);
         }
     },
 
@@ -39,7 +39,7 @@
     handleHospitalChange: function (component, event, helper) {
         if(component.get("v.selectedDivision") != null) {
             component.set("v.selectedDivision", null);
-            helper.fireFacilitySetEvent(component);
+            helper.handlefireFacilitySetEvent(component, helper);
         }
         helper.getDivisions(component, event, helper);
 
@@ -52,6 +52,6 @@
      * @param helper
      */
     handleDivisionChange: function (component, event, helper) {
-        helper.fireFacilitySetEvent(component);
+        helper.handlefireFacilitySetEvent(component, helper);
     },
 })
