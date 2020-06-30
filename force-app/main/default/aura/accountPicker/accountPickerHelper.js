@@ -170,25 +170,17 @@
      * @description Fires an event containing the division selected up to the parent component
      * @param component
      */
-    handlefireFacilitySetEvent: function (component, helper) {
-        if(typeof this.NAMESPACE === 'undefined') {
-            helper.getOrgNamespace(component, helper);
-        } else {
-            helper.fireFacilitySetEvent(component);
-        }
-    },
-
-    /**
-     * @description Fires an event containing the division selected up to the parent component
-     * @param component
-     */
     fireFacilitySetEvent: function (component) {
         let setEvent = $A.get("e." + this.NAMESPACE + ":setFacilityEvent");
         setEvent.setParams({ "facilityId" : component.get("v.selectedDivision" )});
         setEvent.fire();
     },
 
-    getOrgNamespace: function (component, helper) {
+    /**
+     * @description Finds the namespace to use
+     * @param component
+     */
+    getOrgNamespace: function (component) {
         let utils = component.find('utils');
         utils.getOrgNamespace().then(result => {
             if (result) {
@@ -196,7 +188,6 @@
             } else {
                 this.NAMESPACE = 'c'
             }
-            helper.fireFacilitySetEvent(component);
         });
     },
 
