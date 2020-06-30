@@ -41,8 +41,8 @@ public with sharing class StatusReportsHandler {
 //    @TestVisible private static final String INACTIVE = 'Inactive';
 //
 	private static final Boolean IS_DATA_SHARING_ACTIVE = DataSharingSettingsController.getSettings().Is_Active__c;
-	private static final String ENDPOINT_ASSETS = DataSharingSettingsController.getSettings().Endpoint__c+'assets';
-	private static final String ENDPOINT_INFECTIONS = DataSharingSettingsController.getSettings().Endpoint__c+'infections';
+	private static final String ENDPOINT_ASSETS = DataSharingSettingsController.getSettings().Endpoint__c;
+	private static final String ENDPOINT_INFECTIONS = DataSharingSettingsController.getSettings().Endpoint__c;
 	private List<Status_Report__c> statusReports;
 	private Map<Id, Status_Report__c> oldStatusReports;
 
