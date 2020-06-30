@@ -28,6 +28,8 @@
     <aura:registerEvent name="setFacility" type="c:setFacilityEvent"/>
 
     <!-- MARKUP -->
+    <c:appUtils aura:id="utils"></c:appUtils>
+
     <div class="c-container" style="{! 'background-color: ' + v.cardBackgroundColor}">
         <lightning:layout multipleRows="true" class="slds-box">
             <lightning:layoutItem size="12" class="slds-p-around--x-small">
