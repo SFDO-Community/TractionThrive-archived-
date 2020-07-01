@@ -64,7 +64,6 @@
         <fields>RecordTypeId</fields>
         <fields>VersionNumber</fields>
         <fields>PublishStatus</fields>
-        <fields>ValidationStatus</fields>
         <fields>LastModifiedDate</fields>
         <label>Recommended Compact Layout</label>
     </compactLayouts>
