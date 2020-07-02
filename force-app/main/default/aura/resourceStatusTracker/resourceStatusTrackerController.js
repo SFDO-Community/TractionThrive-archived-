@@ -10,7 +10,10 @@
      */
     init: function (component, event, helper) {
         let facilityId = event.getParam("facilityId");
-        component.set("v.divisionId", facilityId);
+        if(typeof facilityId !== 'undefined'){
+            component.set("v.divisionId", facilityId);
+        }
+
         helper.getStatusReport(component,event,helper);
     },
 
