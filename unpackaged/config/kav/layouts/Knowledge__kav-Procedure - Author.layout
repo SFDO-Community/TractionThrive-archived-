@@ -15,9 +15,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <field>ValidationStatus</field>
-            </layoutItems>
-            <layoutItems>
                 <field>Summary</field>
             </layoutItems>
         </layoutColumns>
@@ -63,46 +60,21 @@
                 <field>LastPublishedDate</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <field>IsVisibleInApp</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInCsp</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInPrm</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInPkb</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Custom Links</label>
+        <layoutColumns/>
+        <layoutColumns/>
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
     <platformActionList>
         <actionListContext>Record</actionListContext>
-        <platformActionListItems>
-            <actionName>RestoreKnowledgeArticleVersion</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>EditDraftKnowledgeArticleVersion</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
         <platformActionListItems>
             <actionName>DeleteDraftKnowledgeArticleVersion</actionName>
             <actionType>StandardButton</actionType>
@@ -112,6 +84,11 @@
             <actionName>PublishKnowledgeArticleVersion</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>EditDraftKnowledgeArticleVersion</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeKnowledgeArticleVersionRecordType</actionName>
@@ -127,6 +104,16 @@
             <actionName>ArchiveKnowledgeArticleVersion</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>RestoreKnowledgeArticleVersion</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.TextPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>

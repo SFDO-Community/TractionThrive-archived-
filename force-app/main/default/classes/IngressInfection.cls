@@ -46,11 +46,11 @@ public with sharing class IngressInfection {
 	String locationShippingProvinceStateName;
 	String locationShippingPostalCodeTxt;
 	String locationShippingCountryName;
+	String dataSourceName;
 
 	Map<String, String> targetFieldMap = new Map<String,String> {
 			'Presumptive COVID' => 'presumptiveInfectedCt',
 			'Comorbidity' => 'comorbidityCt',
-			'Health Care Staff COVID Positive' => 'healthCarePeoplePositiveCt',
 			'COVID Positive' => 'peoplePositiveCasesCt',
 			'COVID Like' => 'covid19LikeSymptomCount'
 	};
@@ -66,7 +66,7 @@ public with sharing class IngressInfection {
 	public IngressInfection(Status_Report__c sr) {
 		this.reportedDateTm = sr.Date_Time__c;
 		this.reportDt = sr.Date_Time__c;
-		this.reportProviderAccountId = sr.Department__r.Parent.ParentId == null ? '' : sr.Department__r.Parent.ParentId;
+		this.reportProviderAccountId = sr.Department__r.Parent.Parent.External_ID__c == null ? '' : sr.Department__r.Parent.Parent.External_ID__c;
 		this.reportProviderAccountName = sr.Department__r.Parent.Parent.Name == null ? '' : sr.Department__r.Parent.Parent.Name;
 		this.provinceStateName = sr.Department__r.BillingState == null ? '' : sr.Department__r.BillingState;
 		this.countyName = sr.Department__r.BillingCountry == null ? '' : sr.Department__r.BillingCountry;
@@ -78,6 +78,7 @@ public with sharing class IngressInfection {
 		this.count = sr.Count__c;
 		this.type = sr.Type__c;
 		this.status = sr.Status__c;
+		this.dataSourceName = DataSharingSettingsController.getSettings().Data_Source_Name__c;
 	}
 
 	public String getJsonString(){
@@ -92,13 +93,18 @@ public with sharing class IngressInfection {
 				'locationtShippingCityName' => locationtShippingCityName,
 				'locationShippingProvinceStateName' => locationShippingProvinceStateName,
 				'locationShippingPostalCodeTxt' => locationShippingPostalCodeTxt,
-				'locationShippingCountryName' => locationShippingCountryName
+				'locationShippingCountryName' => locationShippingCountryName,
+				'dataSourceName' => dataSourceName
 		};
 
 		if (targetFieldMap.get(type) != null) {
 			ingressMapStrings.put(targetFieldMap.get(type), count);
 		}
-
-		return JSON.serialize(ingressMapStrings);
+		Map<String, Map<String, Object>> ingressMapObject = new Map<String, Map<String, Object>>();
+		ingressMapObject.put('disasterObservationReport',  ingressMapStrings);
+		ingressMapObject.put('assetObservationReport', new Map<String, Map<String, Object>>());
+		List<Map<String, Map<String, Object>>> ingressMapList = new List<Map<String, Map<String, Object>>>();
+		ingressMapList.add(ingressMapObject);
+		return JSON.serialize(ingressMapList);
 	}
 }
