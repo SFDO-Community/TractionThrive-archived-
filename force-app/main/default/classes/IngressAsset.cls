@@ -46,6 +46,7 @@ public with sharing class IngressAsset {
 	String providerBillingCountryName;
 	String departmentAccountId;
 	String departmentAccountName;
+	String dataSourceName;
 	Map<String, String> targetFieldMap = new Map<String,String> {
 			'Ventilator Beds & Total' => 'ventilatorsCt',
 			'Ventilator Beds & In Use' => 'ventilatorsInUseCt',
@@ -91,18 +92,20 @@ public with sharing class IngressAsset {
 	public IngressAsset(Status_Report__c sr) {
 		this.reportedDateTm = sr.Date_Time__c;
 		this.reportDt = sr.Date_Time__c;
-		this.parentAccountId = sr.Department__r.Parent.ParentId == null ? '' : sr.Department__r.Parent.ParentId;
+		this.parentAccountId = sr.Department__r.Parent.Parent.External_ID__c == null ? '' : sr.Department__r.Parent.Parent.External_ID__c;
 		this.parentAccountName = sr.Department__r.Parent.Parent.Name == null ? '' : sr.Department__r.Parent.Parent.Name;
-		this.providerAccountId = sr.Department__r.ParentId == null ? '' : sr.Department__r.ParentId;
+		this.providerAccountId = sr.Department__r.Parent.External_ID__c == null ? '' : sr.Department__r.Parent.External_ID__c;
 		this.providerAccountName = sr.Department__r.Parent.Name == null ? '' : sr.Department__r.Parent.Name;
 		this.providerBillingAddressLine1Txt = sr.Department__r.BillingStreet == null ? '' : sr.Department__r.BillingStreet;
 		this.providerBillingCityName = sr.Department__r.BillingState == null ? '' : sr.Department__r.BillingState;
 		this.providerBillingCountryName = sr.Department__r.BillingCountry == null ? '' : sr.Department__r.BillingCountry;
-		this.departmentAccountId = sr.Department__c;
+		this.departmentAccountId = sr.Department__r.External_ID__c == null ? '' : sr.Department__r.External_ID__c;
 		this.departmentAccountName = sr.Department__r.Name == null ? '' : sr.Department__r.Name;
 		this.count = sr.Count__c;
 		this.type = sr.Type__c;
 		this.status = sr.Status__c;
+		this.dataSourceName = DataSharingSettingsController.getSettings().Data_Source_Name__c;
+
 	}
 
 	public String getJsonString(){
@@ -117,14 +120,19 @@ public with sharing class IngressAsset {
 				'providerBillingCityName' => providerBillingCityName,
 				'providerBillingCountryName' => providerBillingCountryName,
 				'departmentAccountId' => departmentAccountId,
-				'departmentAccountName' => departmentAccountName
+				'departmentAccountName' => departmentAccountName,
+				'dataSourceName' => dataSourceName
 		};
 
 		String fieldKey = type + ' & ' + status;
 		if (targetFieldMap.get(fieldKey) != null) {
 			ingressMapStrings.put(targetFieldMap.get(fieldKey), count);
 		}
-
-		return JSON.serialize(ingressMapStrings);
+		Map<String, Map<String, Object>> ingressMapObject = new Map<String, Map<String, Object>>();
+		ingressMapObject.put('disasterObservationReport',  new Map<String, Map<String, Object>>());
+		ingressMapObject.put('assetObservationReport', ingressMapStrings);
+		List<Map<String, Map<String, Object>>> ingressMapList = new List<Map<String, Map<String, Object>>>();
+		ingressMapList.add(ingressMapObject);
+		return JSON.serialize(ingressMapList);
 	}
 }

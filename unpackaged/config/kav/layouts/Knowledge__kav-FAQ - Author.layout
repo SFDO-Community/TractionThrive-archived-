@@ -15,9 +15,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <field>ValidationStatus</field>
-            </layoutItems>
-            <layoutItems>
                 <field>Summary</field>
             </layoutItems>
         </layoutColumns>
@@ -57,26 +54,16 @@
                 <field>LastPublishedDate</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <field>IsVisibleInApp</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInCsp</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInPrm</field>
-            </layoutItems>
-            <layoutItems>
-                <field>IsVisibleInPkb</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Custom Links</label>
+        <layoutColumns/>
+        <layoutColumns/>
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
