@@ -2,7 +2,7 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
 	<apiVersion>48.0</apiVersion>
 	<description>Mulesoft Data Aggregation Integration</description>
-	<isExposed>false</isExposed>
+	<isExposed>true</isExposed>
 	<masterLabel>Data Sharing Settings</masterLabel>
 	<targets>
 		<target>lightning__Tab</target>
