@@ -627,5 +627,9 @@
         <tab>%%%NAMESPACE%%%Status_Report__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
+    <tabVisibilities>
+        <tab>%%%NAMESPACE%%%Data_Sharing</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
 </Profile>

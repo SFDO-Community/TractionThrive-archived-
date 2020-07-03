@@ -120,4 +120,23 @@ public with sharing class AccountsSelector {
         ];
         return accounts;
     }
+
+    /**
+     * @description Gets a list of accounts and their names
+     * @param       accountIds
+     * @return      List of accounts
+     */
+    public static List<Account> getAccountsForExternalId(Set<Id> accountIds) {
+        List<Account> accounts = [
+                SELECT  Id,
+                        Name,
+                        ShippingLatitude,
+                        ShippingLongitude,
+                        RecordTypeId,
+                        External_ID__c
+                FROM    Account
+                WHERE   ID IN :accountIds AND External_ID__c = NULL AND ShippingLongitude != NULL AND ShippingLatitude != NULL
+        ];
+        return accounts;
+    }
 }

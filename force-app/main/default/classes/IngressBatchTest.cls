@@ -49,7 +49,14 @@ public with sharing class IngressBatchTest {
 
 		Account departmentParent = new Account(
 				RecordTypeId = Constants.HOSPITAL_RECORDTYPE_ID,
-				Name = 'DepartmentTestParent'
+				Name = 'DepartmentTestParent',
+				ShippingStreet = '13364 102 avenue',
+				ShippingCity = 'Surrey',
+				ShippingState = 'Bc',
+				ShippingPostalCode = 'V3T5L8',
+				ShippingCountry = 'Canada',
+				ShippingLatitude = 49.187930196516376,
+				ShippingLongitude = -122.8515252928122
 		);
 		insert departmentParent;
 		Account department = new Account(
@@ -58,11 +65,13 @@ public with sharing class IngressBatchTest {
 				BillingStreet = 'testBillingStreet',
 				BillingState = 'testBillingState',
 				BillingCountry = 'testBillingCountry',
-				ShippingStreet = 'testShippingStreet',
-				ShippingCity = 'testShippingCity',
-				ShippingState = 'testShippingState',
-				ShippingPostalCode = '123123',
-				ShippingCountry = 'testShippingCountry'
+				ShippingStreet = '13364 102 avenue',
+				ShippingCity = 'Surrey',
+				ShippingState = 'Bc',
+				ShippingPostalCode = 'V3T5L8',
+				ShippingCountry = 'Canada',
+				ShippingLatitude = 49.187930196516376,
+				ShippingLongitude = -122.8515252928122
 		);
 		insert department;
 
@@ -102,6 +111,14 @@ public with sharing class IngressBatchTest {
 		IngressBatch batchInstance = new IngressBatch();
 		Database.executeBatch(batchInstance);
 		Test.stopTest();
+		List<Account> accounts = [SELECT Id, External_ID__c, RecordTypeId FROM Account];
+		for(Account thisAccount : accounts){
+			if(thisAccount.RecordTypeId == Constants.HOSPITAL_RECORDTYPE_ID){
+				System.assertEquals('49.18793/-122.85153-2-DepartmentTestParent', thisAccount.External_ID__c);
+			}else if(thisAccount.RecordTypeId == Constants.DIVISION_RECORDTYPE_ID){
+				System.assertEquals('49.18793/-122.85153-3-DepartmentTest', thisAccount.External_ID__c);
+			}
+		}
 		List<Status_Report__c> statusReports = [SELECT Id, Is_Sent_To_Aggregator__c, Aggregate_Send_Error__c FROM Status_Report__c];
 		for (Status_Report__c statusReport : statusReports) {
 			System.assertEquals(true, statusReport.Is_Sent_To_Aggregator__c);
