@@ -3,6 +3,23 @@
  */
 ({
     NAMESPACE : null,
+
+    /**
+     * @description Finds the namespace to use
+     * @param component
+     */
+    setupData: function (component, event, helper) {
+        let utils = component.find("utils");
+        utils.getOrgNamespace().then(result => {
+            if (result) {
+                this.NAMESPACE = result;
+            } else {
+                this.NAMESPACE = "c";
+            }
+            this.getAccountData(component, event, helper);
+        });
+    },
+
     /**
      * @description Gets relevant accounts for each picklist for this user
      * @param component
@@ -61,7 +78,7 @@
 
                 if (data.currentDivision) {
                     component.set("v.selectedDivision", data.currentDivision.Id);
-                    helper.fireDivisionSetEvent(component);
+                    helper.fireFacilitySetEvent(component);
                 }
             }
         }
@@ -171,24 +188,12 @@
      * @param component
      */
     fireFacilitySetEvent: function (component) {
+        if(!this.NAMESPACE){
+            console.log("namespace:" + this.NAMESPACE);
+        }
         let setEvent = $A.get("e." + this.NAMESPACE + ":setFacilityEvent");
-        setEvent.setParams({ "facilityId" : component.get("v.selectedDivision" )});
+        setEvent.setParams({ "facilityId" : component.get("v.selectedDivision")});
         setEvent.fire();
-    },
-
-    /**
-     * @description Finds the namespace to use
-     * @param component
-     */
-    getOrgNamespace: function (component) {
-        let utils = component.find('utils');
-        utils.getOrgNamespace().then(result => {
-            if (result) {
-                this.NAMESPACE = result;
-            } else {
-                this.NAMESPACE = 'c'
-            }
-        });
     },
 
     /**

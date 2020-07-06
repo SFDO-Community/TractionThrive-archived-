@@ -3,14 +3,13 @@
  */
 ({
     /**
-     * @description Initialises the component by finding the relevant accounts available for this user
+     * @description Initialises the component by getting the namespace then finding the relevant accounts available for this user
      * @param component
      * @param event
      * @param helper
      */
     init: function (component, event, helper) {
-        helper.getAccountData(component, event, helper);
-        helper.getOrgNamespace(component);
+        helper.setupData(component, event, helper);
     },
 
     /**
