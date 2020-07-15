@@ -41,9 +41,9 @@ public with sharing class IngressAsset {
 	String parentAccountName;
 	String providerAccountId;
 	String providerAccountName;
-	String providerBillingAddressLine1Txt;
-	String providerBillingCityName;
-	String providerBillingCountryName;
+	String providerShippingAddressLine1Txt;
+	String providerShippingCityName;
+	String providerShippingCountryName;
 	String departmentAccountId;
 	String departmentAccountName;
 	String dataSourceName;
@@ -96,9 +96,9 @@ public with sharing class IngressAsset {
 		this.parentAccountName = sr.Department__r.Parent.Parent.Name == null ? '' : sr.Department__r.Parent.Parent.Name;
 		this.providerAccountId = sr.Department__r.Parent.External_ID__c == null ? '' : sr.Department__r.Parent.External_ID__c;
 		this.providerAccountName = sr.Department__r.Parent.Name == null ? '' : sr.Department__r.Parent.Name;
-		this.providerBillingAddressLine1Txt = sr.Department__r.BillingStreet == null ? '' : sr.Department__r.BillingStreet;
-		this.providerBillingCityName = sr.Department__r.BillingState == null ? '' : sr.Department__r.BillingState;
-		this.providerBillingCountryName = sr.Department__r.BillingCountry == null ? '' : sr.Department__r.BillingCountry;
+		this.providerShippingAddressLine1Txt = sr.Department__r.ShippingStreet == null ? '' : sr.Department__r.ShippingStreet;
+		this.providerShippingCityName = sr.Department__r.ShippingState == null ? '' : sr.Department__r.ShippingState;
+		this.providerShippingCountryName = sr.Department__r.ShippingCountry == null ? '' : sr.Department__r.ShippingCountry;
 		this.departmentAccountId = sr.Department__r.External_ID__c == null ? '' : sr.Department__r.External_ID__c;
 		this.departmentAccountName = sr.Department__r.Name == null ? '' : sr.Department__r.Name;
 		this.count = sr.Count__c;
@@ -116,9 +116,9 @@ public with sharing class IngressAsset {
 				'parentAccountName' => parentAccountName,
 				'providerAccountId' => providerAccountId,
 				'providerAccountName' => providerAccountName,
-				'providerBillingAddressLine1Txt' => providerBillingAddressLine1Txt,
-				'providerBillingCityName' => providerBillingCityName,
-				'providerBillingCountryName' => providerBillingCountryName,
+				'providerShippingAddressLine1Txt' => providerShippingAddressLine1Txt,
+				'providerShippingCityName' => providerShippingCityName,
+				'providerShippingCountryName' => providerShippingCountryName,
 				'departmentAccountId' => departmentAccountId,
 				'departmentAccountName' => departmentAccountName,
 				'dataSourceName' => dataSourceName
