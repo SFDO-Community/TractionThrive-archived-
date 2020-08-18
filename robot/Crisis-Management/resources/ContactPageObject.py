@@ -54,4 +54,13 @@ class ContactListingPage(BaseCMPage, ListingPage):
     def click_delete_account_button(self):
         """Clicks on Delete Account button inside the iframe"""
         self.selenium.wait_until_location_contains("/delete", message="Account delete page did not load in 30 seconds")
-        self.npsp.select_frame_and_click_element("vfFrameId","button","Delete Account")    
+        self.npsp.select_frame_and_click_element("vfFrameId","button","Delete Account")   
+
+@pageobject("Detail", "Contact")
+class ContactDetailPage(BaseCMPage, DetailPage):
+    object_name = "Contact"
+    def verify_availability_details(self, numavails):
+        """Gets the avails details from the UI and compares with the expected number of avails"""
+        locator = "//tbody/tr/td[2]/span/span"
+        locs1 = self.selenium.get_webelements(locator)
+        self.builtin.should_be_equal_as_strings(len(locs1), numavails)
