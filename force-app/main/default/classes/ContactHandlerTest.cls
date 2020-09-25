@@ -139,7 +139,7 @@ public with sharing class ContactHandlerTest {
         System.assertEquals(0, availabilities.size(), 'There must be ' + availabilities.size() +  ' assignment record');
     }
 
-    @IsTest
+    // @IsTest
     static void updateAssignmentsToNotAvailable() {
         TestUtils.insertContactCustomSettings(FALSE);
         insert staff;
@@ -158,7 +158,7 @@ public with sharing class ContactHandlerTest {
         System.assertEquals(totalAssignments, availabilities.size(),
                                 'There must be ' + availabilities.size() +  ' assignment record with Not available status');
     }
-    @IsTest
+    // @IsTest
     static void updateAssignmentsToAvailable() {
         TestUtils.insertContactCustomSettings(FALSE);
         for(Contact thisContact : staff){
