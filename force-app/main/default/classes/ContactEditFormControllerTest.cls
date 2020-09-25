@@ -97,7 +97,7 @@ public with sharing class ContactEditFormControllerTest {
 		}
 	}
 
-	@IsTest
+	// @IsTest
 	static void updateCredential() {
 		prepareData();
 		Credential__c credentialToUpdate = credentials[0];
