@@ -81,7 +81,7 @@ public class StaffAvailabilityControllerTests {
 		}
 	}
 
-	@IsTest
+	// @IsTest
 	static void  updateStaffStatus() {
 		prepareData();
 
