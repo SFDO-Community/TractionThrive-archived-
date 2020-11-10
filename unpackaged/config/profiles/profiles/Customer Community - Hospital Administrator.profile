@@ -39,6 +39,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>%%%NAMESPACE%%%AppFieldSetController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>%%%NAMESPACE%%%AppUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>%%%NAMESPACE%%%AvailabilitySelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -97,6 +105,14 @@
     <classAccesses>
         <apexClass>%%%NAMESPACE%%%CredentialsSelectorTest</apexClass>
         <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>%%%NAMESPACE%%%DataSharingSettingController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>%%%NAMESPACE%%%LookupSearchResult</apexClass>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>%%%NAMESPACE%%%ResourceStatusTrackerCtrl</apexClass>
