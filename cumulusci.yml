@@ -580,28 +580,7 @@ flows:
             4:
                 task: reset_nmg_sql
 
-plans:
-    install:
-        slug: install
-        title: Install Traction Thrive
-        tier: primary
-        is_listed: True
-        checks:
-            #- when: "'PID_Customer_Community_Plus' not in tasks.get_available_licenses()"
-            #  action: error
-            #  message: "Please ensure you have Customer Community Plus licenses available prior to installing."
-            - when: "'EinsteinAnalyticsPlusPsl' not in tasks.get_available_psls() or 'EinsteinAnalyticsForCommunityLoginsPsl' not in tasks.get_available_psls()"
-              action: warn
-              message: "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing."
-            - when: "not tasks.check_case_owd()"
-              action: error
-              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Case object prior to installing."
-            - when: "not tasks.check_opportunity_owd()"
-              action: error
-              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing."
-            - when: "tasks.check_account_owd()"
-              action: error
-              message: "Please set the External Organization-Wide Defaults to Read or Private for the Account object prior to installing."              
+    customer_org:
         steps:
             1:
                 task: add_standard_value_set_entries
@@ -662,3 +641,29 @@ plans:
                     is_required: False
                 options:
                     unmanaged: False
+
+plans:
+    install:
+        slug: install
+        title: Install Traction Thrive
+        tier: primary
+        is_listed: True
+        checks:
+            #- when: "'PID_Customer_Community_Plus' not in tasks.get_available_licenses()"
+            #  action: error
+            #  message: "Please ensure you have Customer Community Plus licenses available prior to installing."
+            - when: "'EinsteinAnalyticsPlusPsl' not in tasks.get_available_psls() or 'EinsteinAnalyticsForCommunityLoginsPsl' not in tasks.get_available_psls()"
+              action: warn
+              message: "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing."
+            - when: "not tasks.check_case_owd()"
+              action: error
+              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Case object prior to installing."
+            - when: "not tasks.check_opportunity_owd()"
+              action: error
+              message: "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing."
+            - when: "tasks.check_account_owd()"
+              action: error
+              message: "Please set the External Organization-Wide Defaults to Read or Private for the Account object prior to installing."              
+        steps:
+            1:
+                flow: customer_org
