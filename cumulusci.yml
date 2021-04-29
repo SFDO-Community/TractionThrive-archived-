@@ -517,12 +517,11 @@ flows:
                 task: deploy_kav_config
             4:
                 task: deploy_profile_config
-                namespaced_org: True
             5:
                 task: set_organization_wide_defaults
 
     custom_dependencies:
-        descriptions: Additional custom dependency tasks
+        description: Additional custom dependency tasks
         steps:
             1:
                 task: set_sharing_dependencies
@@ -564,7 +563,7 @@ flows:
                     really_change_files: True
 
     add_nmg_permissions:
-        descriptions: Extracts newtwork and permissions then generates a new files to load permissions for network memeber group
+        description: Extracts newtwork and permissions then generates a new files to load permissions for network memeber group
         steps:
             1:
                 task: extract_dataset
