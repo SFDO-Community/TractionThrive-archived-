@@ -3,6 +3,18 @@
         "title": {
             "message": "Traction Thrive",
             "description": "name of product"
+        },
+        "short_description": {
+            "message": "Critical Care Resource Management System for Salesforce",
+            "description": "tagline of product"
+        },
+        "description": {
+            "message": "As the COVID-19 pandemic continues to expand at an accelerated rate, the medical system is under significant strain, both from a staffing and resource perspective. Facilities have limited beds, equipment, and staff on hand to triage patients and there is no way to effectively communicate, inventory and ease the burden in overtaxed areas.\r\n\r\nThe Traction Thrive Critical Care Resource Management application enables hospitals and healthcare practitioners to more accurately track and distribute critical medical staff and resources to meet the immediate needs of COVID-19 response teams.\r\n\r\nLearn more at [https://tractionondemand.com/traction-thrive/](https://tractionondemand.com/traction-thrive/)\r\n\r\nInstallation Guide available on Salesforce AppExchange: [https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FMvlIUAT](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FMvlIUAT)\r\n\r\nOpen source public GitHub repository: [https://github.com/SFDO-Community/TractionThrive](https://github.com/SFDO-Community/TractionThrive)\r\n\r\n![](https://raw.githubusercontent.com/SFDO-Community/TractionThrive/master/assets/traction_thrive_logo-medium.png)",
+            "description": "shown on product detail page (markdown)"
+        },
+        "click_through_agreement": {
+            "message": "The Traction Thrive Critical Care Resource Management application (\u201cTraction Thrive\u201d) is an open-source package licensed by Traction Sales and Marketing Inc. dba Traction on Demand (\u201cToD\u201c) under the BSD-3 Clause License, found at https://opensource.org/licenses/BSD-3-Clause.\r\n\r\nANY MASTER SUBSCRIPTION AGREEMENT YOU OR YOUR ENTITY MAY HAVE WITH SALESFORCE.ORG LLC (\u201cSFDO\u201d) OR SALESFORCE.COM, INC. (\u201cSALESFORCE\u201d), OR ITS AFFILIATES, DOES NOT APPLY TO YOUR USE OF TRACTION THRIVE. FOR PURPOSES OF THIS AGREEMENT, AN \u201cAFFILIATE\u201d MEANS ANY ENTITY THAT DIRECTLY OR INDIRECTLY CONTROLS, IS CONTROLLED BY, OR IS UNDER COMMON CONTROL WITH THE SUBJECT ENTITY. \u201cCONTROL,\u201d FOR PURPOSES OF THIS DEFINITION, MEANS DIRECT OR INDIRECT OWNERSHIP OR CONTROL OF MORE THAN 50% OF THE VOTING INTERESTS OF THE SUBJECT ENTITY. \r\n\r\nTRACTION THRIVE IS A NON-SFDC APPLICATION OR THIRD-PARTY APPLICATION, AND NOT SERVICES, UNDER ANY MASTER SUBSCRIPTION AGREEMENT YOU HAVE WITH SFDO OR SALESFORCE, OR ITS AFFILIATES. TRACTION THRIVE IS PROVIDED \u201cAS IS\u201d AND AS AVAILABLE. NEITHER SFDO NOR SALESFORCE, OR ITS AFFILIATES, MAKES ANY WARRANTY OF ANY KIND REGARDING TRACTION THRIVE, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, FREEDOM FROM DEFECTS OR NON-INFRINGEMENT, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW. \r\n\r\nNEITHER SFDO NOR SALESFORCE, OR ITS AFFILIATES, WILL HAVE ANY LIABILITY ARISING OUT OF OR RELATED TO YOUR USE OF TRACTION THRIVE FOR ANY DIRECT DAMAGES OR FOR ANY LOST PROFITS, REVENUES, GOODWILL OR INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, COVER, BUSINESS INTERRUPTION OR PUNITIVE DAMAGES, WHETHER AN ACTION IS IN CONTRACT OR TORT AND REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES OR IF A REMEDY OTHERWISE FAILS OF ITS ESSENTIAL PURPOSE. THE FOREGOING DISCLAIMER WILL NOT APPLY TO THE EXTENT PROHIBITED BY LAW. SFDO AND SALESFORCE, AND ITS AFFILIATES, DISCLAIM ALL LIABILITY AND INDEMNIFICATION OBLIGATIONS FOR ANY HARM OR DAMAGES CAUSED BY ANY THIRD-PARTY HOSTING PROVIDERS.\r\n\r\nYOU ARE PROHIBITED FROM SUBMITTING PROTECTED HEALTH INFORMATION INTO  TRACTION THRIVE.",
+            "description": "legal text shown in modal dialog"
         }
     },
     "plan:install": {
@@ -18,6 +30,18 @@
         },
         "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing.": {
             "message": "Please ensure you have Einstein Analytics Plus and Einstein Analytics for Community Logins licenses available prior to installing.",
+            "description": "shown if validation fails"
+        },
+        "Please set the Internal and External Organization-Wide Defaults to Private for the Case object prior to installing.": {
+            "message": "Please set the Internal and External Organization-Wide Defaults to Private for the Case object prior to installing.",
+            "description": "shown if validation fails"
+        },
+        "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing.": {
+            "message": "Please set the Internal and External Organization-Wide Defaults to Private for the Opportunity object prior to installing.",
+            "description": "shown if validation fails"
+        },
+        "Please set the External Organization-Wide Defaults to Read or Private for the Account object prior to installing.": {
+            "message": "Please set the External Organization-Wide Defaults to Read or Private for the Account object prior to installing.",
             "description": "shown if validation fails"
         }
     },
@@ -56,6 +80,22 @@
         },
         "Configure Knowledge": {
             "message": "Configure Knowledge",
+            "description": "title of installation step"
+        },
+        "Add Data Category Groups and Relabel Accounts": {
+            "message": "Add Data Category Groups and Relabel Accounts",
+            "description": "title of installation step"
+        },
+        "Load custom settings defaults": {
+            "message": "Load custom settings defaults",
+            "description": "title of installation step"
+        },
+        "Install Analytics": {
+            "message": "Install Analytics",
+            "description": "title of installation step"
+        },
+        "Install Profiles": {
+            "message": "Install Profiles",
             "description": "title of installation step"
         }
     }
