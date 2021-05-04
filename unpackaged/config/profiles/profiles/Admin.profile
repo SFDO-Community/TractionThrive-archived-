@@ -103,6 +103,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>%%%NAMESPACE%%%DataSharingSettingController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>%%%NAMESPACE%%%LookupSearchResult</apexClass>
         <enabled>true</enabled>
     </classAccesses>
