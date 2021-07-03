@@ -61,6 +61,12 @@ API Create Account
     &{account} =     Salesforce Get  Account  ${account_id}
     [return]         &{account}
 
+Login To Community As Resident
+    @{staff} =                         Salesforce Query    Contact    select=Id,Name,Role_Global__c,Account.Name       email=johndoe@tt.com
+    Set Global Variable                @{RESIDENT}         @{staff}
+    Go To Page                         Detail              Contact    object_id=${RESIDENT}[0][Id]
+    Login To Community As User
+
 API Get Id
     [Documentation]         Returns the ID of a record identified by the given field_name and field_value input for a specific object
     [Arguments]             ${obj_name}    &{fields}
